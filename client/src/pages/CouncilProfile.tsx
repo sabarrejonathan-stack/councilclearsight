@@ -13,6 +13,7 @@ import { useCouncilBySlug } from "@/lib/staticData";
 import {
   ArrowLeft, ArrowRight, Mail, Phone, Globe, User, BookOpen,
   CheckCircle2, XCircle, MinusCircle, Flag, Scale, FileText,
+  BadgeCheck, Sparkles,
 } from "lucide-react";
 import {
   PILLAR_META, INDICATORS, indicatorsForPillar,
@@ -80,7 +81,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
                 <span className="text-xs text-muted-foreground font-mono">{council.methodology_version}</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Assessed on {council.indicators.filter(i => i.assessed).length} of {INDICATORS.length} indicators. Where we have not yet gathered evidence, the indicator is "Not Assessed" and excluded from the denominator.
+                Assessed on {council.indicators.filter(i => i.assessed).length} of {INDICATORS.length} indicators. Where we can't yet observe evidence, the indicator is marked "Not Assessed" and excluded from the denominator — we never punish a council for a gap in our measurement.
               </p>
             </div>
           </div>
@@ -149,6 +150,27 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
         </div>
 
         <aside className="space-y-6">
+          {/* ── Claim CTA (clerks only, but visible to all as social proof) ── */}
+          <Card className="p-5 bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/40">
+            <div className="flex items-center gap-2 mb-2">
+              <BadgeCheck className="w-5 h-5 text-accent" />
+              <h3 className="text-sm font-bold">Are you this council's clerk?</h3>
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+              Claim the page in 60 seconds. Fix the contact fields. Get email alerts when anything changes. From £149/year, cancel any time.
+            </p>
+            <Link href={`/pricing?claim=${council.slug}`}>
+              <Button size="sm" className="w-full bg-accent hover:bg-accent/90 text-white mb-2">
+                <BadgeCheck className="w-3.5 h-3.5 mr-1.5" />Claim this page
+              </Button>
+            </Link>
+            <Link href="/for-clerks">
+              <Button size="sm" variant="outline" className="w-full text-xs">
+                <Sparkles className="w-3.5 h-3.5 mr-1.5" />What Pro adds (£449/yr)
+              </Button>
+            </Link>
+          </Card>
+
           <Card className="p-5 bg-white">
             <h3 className="text-sm font-semibold mb-3">Contact the council</h3>
             <div className="space-y-2.5 text-sm">
@@ -180,8 +202,10 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
 
           <Card className="p-5 bg-primary text-white">
             <Flag className="w-5 h-5 mb-3 text-accent" />
-            <h3 className="font-semibold mb-2">Think a score is wrong?</h3>
-            <p className="text-xs text-white/75 leading-relaxed mb-4">Submit evidence and we'll respond within five working days. Decisions are logged publicly.</p>
+            <h3 className="font-semibold mb-2">Think something's wrong?</h3>
+            <p className="text-xs text-white/75 leading-relaxed mb-4">
+              Any resident, clerk, or councillor can challenge any score. Submit evidence, we'll respond within five working days, and the decision is logged publicly.
+            </p>
             <Link href={`/challenge?slug=${council.slug}`}>
               <Button size="sm" className="w-full bg-white text-primary hover:bg-white/90">Challenge a score <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button>
             </Link>

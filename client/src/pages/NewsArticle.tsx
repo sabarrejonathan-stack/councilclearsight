@@ -101,7 +101,7 @@ export default function NewsArticle() {
   }
 
   const related = relatedPosts?.filter((p: any) => p.slug !== slug).slice(0, 3) || [];
-  const ctaText = (post as any).ctaText || "See how your council compares \u2014 check your free VDTI score on Council ClearSight.";
+  const ctaText = (post as any).ctaText || "See how your council compares \u2014 check your free CC-TI score on Council ClearSight.";
 
   return (
     <PublicLayout>

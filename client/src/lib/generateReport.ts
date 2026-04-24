@@ -401,7 +401,7 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
-  doc.text(`VDTI Score: ${Math.round(overall)} out of 100 (public assessment cap)`, margin + 48, y + 22);
+  doc.text(`CC-TI Score: ${Math.round(overall)} out of 100 (public assessment cap)`, margin + 48, y + 22);
   
   // Rankings
   if (council.vdtiOverallRank) {
@@ -508,11 +508,11 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `The VDTI (Verifiable Digital Transparency Index) assesses parish and town councils across four equal pillars, each worth 25 points: Digital Presence, Contact Transparency, Governance & Compliance, and Financial Accountability. Each pillar is scored using publicly verifiable indicators — data that any resident, journalist, or councillor can independently check.`,
+    `Council ClearSight (CC-TI v3.0) assesses every parish, town, city and community council in England across four pillars and fourteen observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
     ``,
-    `Scores above 88 typically require subscriber-level manual verification to confirm engagement evidence and internal governance documents. Subscribing councils receive a full assessment within 4 weeks, including a detailed improvement roadmap.`,
+    `Where a council cannot yet be observed (no website, robots.txt opt-out, or scraper error), affected indicators are marked "Not Assessed" and excluded from the denominator rather than penalised. Pro subscribers receive a full personalised audit within seven days of subscribing, with a written improvement roadmap.`,
     ``,
-    `Scores are size-normalised to ensure fair comparison between councils serving populations of 500 and those serving 50,000+. The methodology version used for this assessment is VDTI v2.0.`,
+    `Every score carries an evidence URL and can be challenged via the public disputes queue. Methodology version: CC-TI v3.0.`,
   ];
   const methodLines = doc.splitTextToSize(methodText.join("\n"), contentWidth);
   doc.text(methodLines, margin, y);
@@ -575,7 +575,7 @@ export function generateCouncilReport(data: ReportInput): void {
       theme: "striped",
       headStyles: { fillColor: [...NAVY], textColor: [...WHITE], fontSize: 8, fontStyle: "bold" },
       styles: { fontSize: 8, cellPadding: 2.5, textColor: [...DARK] },
-      head: [["Rank", "Council", "VDTI Score"]],
+      head: [["Rank", "Council", "CC-TI Score"]],
       body: topPeers.map((peer, i) => [
         String(i + 1),
         peer.name + (peer.name === council.name ? " *" : ""),
@@ -630,7 +630,7 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
-  doc.text("Each recommendation is specific, achievable, and linked to a measurable VDTI score impact.", margin, y + 4);
+  doc.text("Each recommendation is specific, achievable, and linked to a measurable CC-TI score impact.", margin, y + 4);
   y += 12;
 
   // RECOMMENDATION 1 - FULLY VISIBLE
@@ -849,13 +849,10 @@ export function generateCouncilReport(data: ReportInput): void {
   // Disclaimer
   doc.setFontSize(6.5);
   doc.setTextColor(...SLATE);
-  const disclaimer = `This report is produced by Council ClearSight using publicly available data. All indicators are independently verifiable. Scores reflect data collected during the January-March 2026 assessment window and may not reflect changes made after 31 March 2026. The VDTI methodology (v2.0) is published in full at councilclearsight.org.uk/methodology. Council ClearSight is an independent assessment service and is not affiliated with any local authority, government department, or regulatory body. For queries about this report, please contact info@councilclearsight.org.uk.`;
+  const disclaimer = `This report is produced by Council ClearSight using publicly available data. All indicators are independently verifiable. Scores reflect data collected during the current assessment window (refreshed April 2026) and may not reflect changes made after 31 March 2026. The CC-TI methodology (v3.0) is published in full at councilclearsight.org.uk/methodology. Council ClearSight is an independent assessment service and is not affiliated with any local authority, government department, or regulatory body. For queries about this report, please contact info@councilclearsight.org.uk.`;
   const disclaimerLines = doc.splitTextToSize(disclaimer, contentWidth);
   doc.text(disclaimerLines, margin, y);
 
   addPageFooter(pageNum.value);
 
-  // ─── Save ──────────────────────────────────────────────────────────────────
-  const filename = `Council_ClearSight_Report_${council.name.replace(/[^a-zA-Z0-9]/g, "_")}_2026.pdf`;
-  doc.save(filename);
-}
+  // ─── Save ───────────────────────────────────────────────────�

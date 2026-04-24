@@ -19,7 +19,7 @@ const GROUPS = [
       { label: "Evidence trail", body: "Every source link, last-verified date, and input value." },
       { label: "Methodology document", body: "Plain English. Versioned in a changelog." },
       { label: "Public challenge route", body: "Any member of the public can challenge any indicator." },
-      { label: "Directory search & sort", body: "All 11,000+ councils, searchable and sortable." },
+      { label: "Directory search & sort", body: "All 7,031 councils in England, searchable and sortable." },
     ],
   },
   {

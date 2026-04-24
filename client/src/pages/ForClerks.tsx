@@ -49,8 +49,11 @@ export default function ForClerks() {
             Your council has a page here,<br/>
             <span className="text-accent">whether you engage with us or not.</span>
           </h1>
+          <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-4">
+            We publish an independent score for every parish, town, city and community council in England — based entirely on whether the council is meeting transparency duties it already owes residents under law.
+          </p>
           <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
-            Here's what's on it, how it got there, what you can fix for free, and what the two subscription tiers buy if you decide you want our help.
+            Here's what's on your page, how it got there, what you can fix for free, and what the two subscription tiers buy if you decide you want our help.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">See your council's page <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
@@ -66,8 +69,11 @@ export default function ForClerks() {
             <div>
               <div className="font-mono text-[11px] uppercase tracking-wider text-amber-700 mb-1">Read this first</div>
               <h2 className="text-xl font-bold text-amber-950 mb-3">Is this a threat, or an opportunity?</h2>
+              <p className="text-sm text-amber-900 leading-relaxed mb-2">
+                An opportunity. Council ClearSight doesn't invent transparency requirements — Parliament did. The Transparency Code 2015, the Local Government Act 1972, the Accounts &amp; Audit Regulations 2015, and the Accessibility Regulations 2018 already require councils to publish specific things. We aggregate what's required, check whether it's there, and publish the result.
+              </p>
               <p className="text-sm text-amber-900 leading-relaxed">
-                An opportunity. We make existing legal transparency requirements visible in one place. We're a publishing project with a support offering, not an enforcement body. If we have something wrong, tell us — we'll fix it within five working days, no subscription required.
+                We're a publishing project with a support offering, not an enforcement body. If we've got something wrong, tell us — we fix it within five working days, no subscription required.
               </p>
             </div>
           </div>

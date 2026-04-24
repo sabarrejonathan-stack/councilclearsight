@@ -217,7 +217,7 @@ export default function Legal() {
                       <span className="font-semibold text-foreground">Cancellation:</span> You may cancel your subscription at any time via your account settings. Cancellation is effective at the end of your current billing period. No refund is issued for partial months.
                     </div>
                     <div>
-                      <span className="font-semibold text-foreground">Pro-rata refunds:</span> If a council's CC-TI score drops by 10 or more points during your subscription period, you may request a pro-rata refund for the remainder of your term. {/* placeholder — see PRICING_MODEL.md for exact policy */}
+                      <span className="font-semibold text-foreground">Score-drop refund (Pro tier):</span> If a council's CC-TI score drops by 5 or more points during an active Pro subscription through no fault of the council itself, the subscriber may request a pro-rata refund for the remainder of the term. Fault includes (but is not limited to) ignoring the improvement roadmap, removing already-published documents, or failing to respond to identified errors.
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">Service suspension:</span> We may suspend your subscription if payment fails or if you breach these terms. We will notify you before suspension.

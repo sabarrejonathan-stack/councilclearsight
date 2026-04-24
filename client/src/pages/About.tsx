@@ -33,7 +33,7 @@ export default function About() {
             Built by someone who spent too long searching for parish minutes.
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-            Council ClearSight exists because transparency in local government should not be a hunt. It should be observable, independent, and fair.
+            England has 10,000+ parish, town, city and community councils. They collectively hold more than £1bn in annual precept. Council ClearSight exists because the law already requires them to publish what we measure — we just make it visible, in one place, pinned to evidence.
           </p>
         </div>
       </section>
@@ -47,19 +47,19 @@ export default function About() {
             {[
               {
                 title: "10,000+ councils, no independent observability",
-                body: "England has 11,337 parish, town, community and city councils. Residents have no single place to see which councils publish their minutes, which ones are reachable, which ones are transparent. Councils themselves have little idea how they compare to peers.",
+                body: "England has more than 10,000 parish, town, city and community councils. Residents have no single place to see which ones publish their minutes, which are reachable, which are transparent. Councils themselves have little idea how they compare to peers. As of April 2026 we've scored 7,031 of them; the remainder are being onboarded.",
               },
               {
                 title: "£1 billion in precept, unscrutinised",
-                body: "Parish and town councils collectively hold more than £1bn in annual precept. Yet the tools available to residents, journalists, and auditors to scrutinise that spend are fragmented, time-consuming, and often unreliable.",
+                body: "Parish and town councils collectively raise more than £1bn in annual precept. Yet the tools for residents, journalists and auditors to scrutinise that spend are fragmented, time-consuming, and often unreliable. Councils are already legally required to publish accounts — we just aggregate what's required into one searchable place.",
               },
               {
                 title: "Clerks deserve better support",
-                body: "Parish clerks are doing a hard job with little support. Many have no formal training and inherit outdated practices. They need independent feedback on what's working, not self-assessment surveys.",
+                body: "Parish clerks are doing a hard job with little support. Many have no formal training and inherit decades of practice from their predecessors. They need independent feedback on what's working and what isn't, delivered without judgement and with the specific documents to publish next.",
               },
               {
                 title: "Methodology has been a black box",
-                body: "When a council receives a low transparency score, there is nowhere to go. Is it fair? How was it calculated? What would improve it? Before ClearSight, those answers were not public, making scores feel arbitrary rather than actionable.",
+                body: "When a council receives a low transparency score elsewhere, there is rarely anywhere to go. Is it fair? How was it calculated? What would improve it? We publish every rule, every weight, every input snapshot, and the evidence URL for every score — on every council's page. No black box. No arbitrary judgements.",
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-4">

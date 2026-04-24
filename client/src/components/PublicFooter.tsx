@@ -35,8 +35,7 @@ export default function PublicFooter() {
             <div className="space-y-1">
               <h3 className="font-bold text-primary-foreground text-lg">The ClearSight Dispatch</h3>
               <p className="text-sm text-primary-foreground/60 max-w-sm">
-                Monthly insights on council transparency, ranking updates, and governance best practice.
-                Unsubscribe any time.
+                One email a month. Top movers, methodology updates, and the transparency practices separating Exemplary councils from the rest. Unsubscribe any time.
               </p>
             </div>
             <div className="w-full md:w-auto">
@@ -60,8 +59,7 @@ export default function PublicFooter() {
               <span className="font-semibold text-lg">Council ClearSight</span>
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed mb-4">
-              Independent performance assessment for parish and town councils in England.
-              Rigorous, transparent, constructive.
+              An independent score for every parish, town, city and community council in England — the public proof councils are meeting their legal transparency duties.
             </p>
             <div className="space-y-1.5 text-xs text-primary-foreground/50 mb-5">
               <p>Council ClearSight Ltd</p>
@@ -99,15 +97,15 @@ export default function PublicFooter() {
         {/* Trust bar */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40 mb-6">
-            <span>14 verifiable indicators</span>
+            <span>7,031 councils scored</span>
             <span className="hidden sm:inline">·</span>
-            <span>4 equal-weight pillars</span>
+            <span>4 pillars · 14 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>
-            <span>11,000+ councils assessed</span>
+            <span>CC-TI v3.0</span>
             <span className="hidden sm:inline">·</span>
-            <span>Methodology v2.0</span>
+            <span>Refreshed April 2026</span>
             <span className="hidden sm:inline">·</span>
-            <span>Assessment window: Jan–Mar 2026</span>
+            <span>Every claim pinned to an evidence URL</span>
           </div>
         </div>
 

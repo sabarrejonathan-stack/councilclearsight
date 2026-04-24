@@ -23,8 +23,8 @@ import {
 export default function Snapshot() {
   useSEO({
     title: "Council Snapshot | Council ClearSight \u2014 Your Council at a Glance",
-    description: "Get a transparency snapshot for your parish or town council. See your VDTI score, pillar breakdown, and how you compare to peers.",
-    keywords: "council snapshot, parish council score, transparency report, council VDTI score",
+    description: "Get a transparency snapshot for your parish or town council. See your CC-TI score, pillar breakdown, and how you compare to peers.",
+    keywords: "council snapshot, parish council score, transparency report, council CC-TI score",
     canonicalPath: "/snapshot",
   });
   const [step, setStep] = useState<"search" | "email" | "sent">("search");
@@ -76,11 +76,11 @@ export default function Snapshot() {
             Free — no payment required
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Your council's VDTI score,<br />
+            Your council's CC-TI score,<br />
             <span className="text-[#2a9d8f]">delivered free to your inbox</span>
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-4">
-            Search for your council, enter your email address, and receive a personalised one-page Snapshot showing your VDTI score, pillar breakdown, national ranking, and your two most impactful improvement opportunities.
+            Search for your council, enter your email address, and receive a personalised one-page Snapshot showing your CC-TI score, pillar breakdown, national ranking, and your two most impactful improvement opportunities.
           </p>
           <p className="text-sm text-slate-400">
             No payment. No commitment. No forms to fill in beyond your email address.
@@ -166,7 +166,7 @@ export default function Snapshot() {
                   <div className="text-right">
                     <span className="text-3xl font-black text-[#2a9d8f]">{parseFloat(selectedCouncil.vdtiScore).toFixed(0)}</span>
                     <span className="text-sm text-slate-400">/100</span>
-                    <p className="text-xs text-slate-500">VDTI Score</p>
+                    <p className="text-xs text-slate-500">CC-TI Score</p>
                   </div>
                 )}
               </div>
@@ -222,7 +222,7 @@ export default function Snapshot() {
               </div>
               <h2 className="text-2xl font-bold text-[#0f2942] mb-3">Your Snapshot is on its way</h2>
               <p className="text-slate-600 mb-2">
-                We've sent your personalised VDTI Snapshot for <strong>{selectedCouncil?.name}</strong> to <strong>{email}</strong>.
+                We've sent your personalised CC-TI Snapshot for <strong>{selectedCouncil?.name}</strong> to <strong>{email}</strong>.
               </p>
               <p className="text-sm text-slate-500 mb-8">
                 Check your inbox — it should arrive within a few minutes. If you don't see it, check your spam folder.
@@ -230,7 +230,7 @@ export default function Snapshot() {
               <div className="bg-slate-50 rounded-xl p-5 mb-6 text-left">
                 <p className="text-sm font-semibold text-[#0f2942] mb-3">Want the full picture?</p>
                 <p className="text-sm text-slate-600 mb-4">
-                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £390/yr (+ VAT).
+                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £449/yr (Pro tier).
                 </p>
                 <Link href="/pricing">
                   <Button className="w-full bg-[#0f2942] hover:bg-[#1a3a5c] text-white">
@@ -262,10 +262,10 @@ export default function Snapshot() {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 14 observable indicators across four pillars." },
+              { icon: BarChart3, title: "CC-TI Score", body: "Your council's overall score out of 100, calculated from 14 observable indicators across four pillars." },
               { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Digital Presence, Contact Transparency, Governance & Compliance, and Financial Accountability." },
               { icon: Users, title: "National Ranking", body: "Where your council sits among 10,800+ assessed councils nationally and within your region." },
-              { icon: Zap, title: "Top 2 Opportunities", body: "The two most impactful improvements your council could make to increase its VDTI score, with specific recommended actions." },
+              { icon: Zap, title: "Top 2 Opportunities", body: "The two most impactful improvements your council could make to increase its CC-TI score, with specific recommended actions." },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">
                 <div className="w-12 h-12 rounded-xl bg-[#2a9d8f]/10 flex items-center justify-center mx-auto mb-4">
@@ -289,7 +289,7 @@ export default function Snapshot() {
             The full Council ClearSight report is 21 pages, includes 8 evidence-based recommendations, peer benchmarking, and a resident-facing summary PDF.
           </p>
           <p className="text-white/60 text-sm mb-8">
-            From £390/yr (+ VAT) · Annual billing · Less than £8 per week
+            From £449/yr (Pro tier) · Annual billing · Less than £8 per week
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing">

@@ -183,7 +183,7 @@ export default function RegionalDirectory() {
                 {context?.description ?? `Parish and town council transparency rankings for ${regionName}.`}
               </p>
               <p className="text-slate-400 text-sm">
-                Rankings are based on the Council ClearSight VDTI (Verifiable Digital Transparency Index), computed
+                Rankings are based on the Council ClearSight CC-TI (Council ClearSight Transparency Index), computed
                 entirely from publicly observable data. Every score can be independently verified.{" "}
                 <Link href="/methodology" className="text-teal-300 hover:underline">Read the methodology →</Link>
               </p>
@@ -292,7 +292,7 @@ export default function RegionalDirectory() {
                   {regionName} — Full Rankings
                 </CardTitle>
                 <p className="text-sm text-slate-500 mt-1">
-                  Ranked by VDTI overall score. Click any council to view its full score breakdown.
+                  Ranked by CC-TI overall score. Click any council to view its full score breakdown.
                 </p>
               </div>
               <Link href="/contact">
@@ -399,7 +399,7 @@ export default function RegionalDirectory() {
             About these rankings
           </h3>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Rankings are produced using the Council ClearSight VDTI (Verifiable Digital Transparency Index), a scoring
+            Rankings are produced using the Council ClearSight CC-TI (Council ClearSight Transparency Index), a scoring
             framework built on 14 publicly observable indicators across four pillars: Digital Presence, Contact
             Transparency, Governance & Compliance, and Financial Accountability. Every indicator is derived from
             data recorded in the Council ClearSight database, which is itself compiled from publicly available sources

@@ -56,8 +56,8 @@ function getGrade(score: number) {
 export default function PublicScorecard() {
   useSEO({
       "title": "Public Scorecard | Council ClearSight — National Overview",
-      "description": "View the national public scorecard for parish and town councils in England. Explore VDTI scores, regional averages, and performance trends.",
-      "keywords": "public scorecard, national council scores, parish council performance overview, VDTI national average",
+      "description": "View the national public scorecard for parish and town councils in England. Explore CC-TI scores, regional averages, and performance trends.",
+      "keywords": "public scorecard, national council scores, parish council performance overview, CC-TI national average",
       "canonicalPath": "/scorecard"
   });
   const [search, setSearch] = useState("");
@@ -77,7 +77,7 @@ export default function PublicScorecard() {
   const isLoading = search.length >= 2 ? searchQuery.isLoading : topCouncils.isLoading;
 
   const shareText = (name: string, score: number) =>
-    `${name} has a Council ClearSight VDTI score of ${score}/100. Is your council on Council ClearSight? Check at councilclearsight.co.uk`;
+    `${name} has a Council ClearSight CC-TI score of ${score}/100. Is your council on Council ClearSight? Check at councilclearsight.co.uk`;
 
   const handleShare = (name: string, score: number) => {
     if (navigator.share) {
@@ -122,7 +122,7 @@ export default function PublicScorecard() {
                 {search.length >= 2 ? `Results for "${search}"` : "Top-scoring councils"}
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                {search.length >= 2 ? `${displayCouncils.length} councils found` : "Highest VDTI scores nationally"}
+                {search.length >= 2 ? `${displayCouncils.length} councils found` : "Highest CC-TI scores nationally"}
               </p>
             </div>
             <Link href="/directory">
@@ -214,7 +214,7 @@ export default function PublicScorecard() {
                   Ask your council to get a Council ClearSight score
                 </h2>
                 <p className="text-slate-600 mb-4 leading-relaxed">
-                  If your council doesn't have a Council ClearSight score yet, you can ask them to get one. Every council in England has a public VDTI score — and a full subscription with detailed recommendations starts from £390/yr (+ VAT).
+                  If your council doesn't have a Council ClearSight score yet, you can ask them to get one. Every council in England has a public CC-TI score — and a full subscription with detailed recommendations starts from £449/yr (Pro tier).
                 </p>
                 <p className="text-slate-600 mb-6 leading-relaxed">
                   Copy the message below and send it to your Parish Clerk, or raise it at the next Annual Parish Meeting.
@@ -223,14 +223,14 @@ export default function PublicScorecard() {
               <div className="bg-white rounded-xl border border-amber-200 p-5">
                 <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Message to copy</p>
                 <p className="text-sm text-slate-700 leading-relaxed italic mb-4">
-                  "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full subscription with detailed recommendations is £390/yr. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
+                  "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a CC-TI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Pro subscription with the personalised roadmap, peer benchmarking and direct support is £449/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
                 </p>
                 <Button
                   size="sm"
                   className="w-full bg-amber-500 hover:bg-amber-600 text-white"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full subscription with detailed recommendations is £390/yr. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
+                      "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a CC-TI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Pro subscription with the personalised roadmap, peer benchmarking and direct support is £449/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
                     );
                   }}
                 >
@@ -248,7 +248,7 @@ export default function PublicScorecard() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-[#0f2942] mb-3">How the score is calculated</h2>
             <p className="text-slate-600 max-w-xl mx-auto">
-              The VDTI score is calculated from 14 observable indicators across four pillars, using only publicly available evidence.
+              The CC-TI score is calculated from 14 observable indicators across four pillars, using only publicly available evidence.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-5">
@@ -283,7 +283,7 @@ export default function PublicScorecard() {
             Are you a Parish Clerk or Councillor?
           </h2>
           <p className="text-white/80 mb-8">
-            Look up your council's VDTI score and see how it compares nationally.
+            Look up your council's CC-TI score and see how it compares nationally.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/snapshot">

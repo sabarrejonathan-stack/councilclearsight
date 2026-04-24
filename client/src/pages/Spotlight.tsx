@@ -154,7 +154,7 @@ export default function Spotlight() {
                 Crewkerne Town Council serves approximately 7,000 residents in the Somerset market town of Crewkerne. With a precept published on the council's finance page, significant housing development pressure from a proposed 325-home development on Station Road, and a community navigating the loss of its last bank branch, the council faces a defining period.
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
-                This Spotlight analysis examines Crewkerne's performance against the Council ClearSight VDTI framework — what the publicly available evidence shows, where the council excels, and where specific, achievable improvements would have the greatest impact.
+                This Spotlight analysis examines Crewkerne's performance against the Council ClearSight CC-TI framework — what the publicly available evidence shows, where the council excels, and where specific, achievable improvements would have the greatest impact.
               </p>
               <div className="flex items-center gap-2 text-xs text-slate-500">
                 <Clock className="w-3.5 h-3.5" />
@@ -162,7 +162,7 @@ export default function Spotlight() {
               </div>
             </div>
             <div className="bg-white/5 rounded-2xl border border-white/10 p-6 text-center">
-              <p className="text-slate-400 text-xs uppercase tracking-wide mb-3">VDTI Score 2024/25</p>
+              <p className="text-slate-400 text-xs uppercase tracking-wide mb-3">CC-TI Score 2024/25</p>
               <div className="text-7xl font-black text-[#2a9d8f] mb-1">{overallScore}</div>
               <p className="text-slate-400 text-sm mb-1">out of 100 (public max)</p>
               <p className="text-slate-500 text-xs mb-4">Full 100-point scale available to subscribers</p>
@@ -257,7 +257,7 @@ export default function Spotlight() {
               <Badge className="mb-4 bg-[#0f2942]/10 text-[#0f2942] border-[#0f2942]/20">Local context</Badge>
               <h2 className="text-2xl font-bold text-[#0f2942] mb-6">What the numbers don't capture</h2>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                The VDTI measures observable transparency and governance practice. It does not capture the full complexity of the challenges a council faces — but understanding that context is essential to interpreting the score fairly.
+                The CC-TI measures observable transparency and governance practice. It does not capture the full complexity of the challenges a council faces — but understanding that context is essential to interpreting the score fairly.
               </p>
               <div className="space-y-4">
                 {[
@@ -341,7 +341,7 @@ export default function Spotlight() {
           <div className="mb-10">
             <Badge className="mb-4 bg-[#2a9d8f]/10 text-[#2a9d8f] border-[#2a9d8f]/20">Evidence-based recommendations</Badge>
             <h2 className="text-2xl font-bold text-[#0f2942] mb-2">Top 4 improvement opportunities</h2>
-            <p className="text-slate-600">Each recommendation is specific, achievable, and linked to a measurable VDTI score impact. Full implementation guidance is included in the subscriber report.</p>
+            <p className="text-slate-600">Each recommendation is specific, achievable, and linked to a measurable CC-TI score impact. Full implementation guidance is included in the subscriber report.</p>
           </div>
           <div className="space-y-5">
             {topRecommendations.map((rec) => (
@@ -433,7 +433,7 @@ export default function Spotlight() {
                 Your council's assessment is already underway
               </h2>
               <p className="text-slate-300 mb-4 leading-relaxed">
-                Council ClearSight assesses councils during the standard annual window of January to March each year. Your council's public VDTI score will be published following the next assessment cycle.
+                Council ClearSight assesses councils during the standard annual window of January to March each year. Your council's public CC-TI score will be published following the next assessment cycle.
               </p>
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Subscribing councils receive their full report — including the 5 additional points available through direct verification — within <strong className="text-white">4 weeks</strong> of subscribing. This means you can see your complete score, with tailored recommendations, before the next public assessment is published.
@@ -454,7 +454,7 @@ export default function Spotlight() {
             <div className="space-y-3">
               <p className="text-slate-400 text-xs uppercase tracking-wide mb-4">Coming up in the Spotlight series</p>
               {[
-                { council: "A high-scoring rural parish council", county: "Wiltshire", date: "Next issue", teaser: "How a small parish with under 1,000 residents achieved one of the highest VDTI scores in the South West — and what larger councils can learn from it." },
+                { council: "A high-scoring rural parish council", county: "Wiltshire", date: "Next issue", teaser: "How a small parish with under 1,000 residents achieved one of the highest CC-TI scores in the South West — and what larger councils can learn from it." },
                 { council: "A council that improved significantly", county: "Lancashire", date: "Following issue", teaser: "From Emerging to Advanced in 12 months: the specific, low-cost actions that drove the biggest score improvements." },
                 { council: "A council navigating major development", county: "Oxfordshire", date: "Future issue", teaser: "How to maintain governance excellence while managing a 500-home development consultation and rising precept pressure." },
               ].map((item, i) => (
@@ -494,7 +494,7 @@ export default function Spotlight() {
               { text: "Public Sector Bodies Accessibility Regulations 2018", url: "https://www.legislation.gov.uk/uksi/2018/952/made" },
               { text: "NALC/SLCC Local Council Award Scheme criteria (2023)", url: "https://www.nalc.gov.uk/support/local-council-award-scheme.html" },
               { text: "Equality Act 2010", url: "https://www.legislation.gov.uk/ukpga/2010/15/contents" },
-              { text: "Council ClearSight VDTI Methodology", url: "/methodology" },
+              { text: "Council ClearSight CC-TI Methodology", url: "/methodology" },
             ].map((source, i) => (
               <a
                 key={i}

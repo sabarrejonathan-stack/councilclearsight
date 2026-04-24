@@ -43,7 +43,7 @@ export default function Pricing() {
             <span className="text-accent">Improving it is where we help.</span>
           </h1>
           <p className="text-lg lg:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-8">
-            Every council's score, rank and evidence trail is publicly visible to everyone. Subscriptions pay for the tools and personal support that help you move up the rankings and engage your residents more effectively.
+            Every council's score, rank and evidence trail is publicly visible — forever, to everyone. Subscriptions pay for the tools and personal support that help you meet transparency duties you already owe residents under law, and move up the rankings as you do.
           </p>
           <div className="flex items-center justify-center gap-1 p-1 bg-white/10 rounded-full w-fit mx-auto text-sm">
             {(["annual","monthly"] as const).map((b) => (

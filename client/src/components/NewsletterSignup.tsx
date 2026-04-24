@@ -11,7 +11,7 @@ interface NewsletterSignupProps {
 }
 
 const NEWSLETTER_FEATURES = [
-  "Monthly VDTI rankings update — see who's moved up (or down)",
+  "Monthly CC-TI rankings update — see who's moved up (or down)",
   "Case studies: how councils improved their transparency score",
   "School engagement evidence — community connectivity in action",
   "Policy & legislation updates affecting parish councils",
