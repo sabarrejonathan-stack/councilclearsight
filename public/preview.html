@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Council ClearSight — CC-TI v3.0 preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0f2942', 700: '#0f2942', 600: '#153a5c' },
+            accent:  { DEFAULT: '#2a9d8f', 600: '#247e73' },
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .dot-grid { background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 24px 24px; }
+    summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+<!-- NAV -->
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50 backdrop-blur bg-white/95">
+  <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-7 h-7 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xs">CC</div>
+      <span class="font-semibold">Council ClearSight</span>
+      <span class="mono text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded ml-1">CC-TI v3.0</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+      <a href="#home" class="hover:text-primary">Home</a>
+      <a href="#methodology" class="hover:text-primary">Methodology</a>
+      <a href="#directory" class="hover:text-primary">Directory</a>
+      <a href="#council" class="hover:text-primary">Council page</a>
+      <a href="#pricing" class="hover:text-primary">Pricing</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME HERO (mirrors web/pages/Home.tsx) -->
+<section id="home" class="bg-primary relative overflow-hidden">
+  <div class="absolute inset-0 dot-grid pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto px-6 py-20 lg:py-28 relative">
+    <span class="inline-block mb-6 text-[11px] mono text-accent bg-accent/20 border border-accent/30 px-2.5 py-1 rounded-full tracking-wide">CC-TI v3.0 · published 24 April 2026</span>
+    <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-[1.05] tracking-tight">
+      How transparent is your council,<br>
+      <span class="text-accent">really?</span>
+    </h1>
+    <p class="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
+      An independent, open-methodology scoreboard for every parish, town and city council in England. No surveys. No self-reports. Every score is reproducible from public data using our open-source engine.
+    </p>
+    <div class="flex items-center gap-2 bg-white rounded-2xl p-1.5 pl-4 shadow-lg max-w-xl">
+      <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" placeholder="Find your council by name…" class="flex-1 py-2.5 text-base outline-none placeholder-slate-400" />
+      <button class="bg-primary text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary/90">Browse all</button>
+    </div>
+    <div class="flex flex-wrap gap-6 mt-10 text-xs text-white/60">
+      <span>Observable evidence only</span>
+      <span>No paywalled scores</span>
+      <span>Open-source engine</span>
+      <span>Audit CSV for every council</span>
+    </div>
+  </div>
+</section>
+
+<!-- THREE RECEIPTS -->
+<section class="bg-slate-50 border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-3">Three receipts, every time</h2>
+      <p class="text-slate-600 text-sm max-w-2xl mx-auto">Every score ships with three public artefacts. If any doesn't match, the score is wrong — and we want to know.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+        <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <h3 class="font-bold text-lg mb-2">The methodology</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-5">Every rule, every weight, every edge case, written in plain English. One document; no appendices contradicting each other.</p>
+        <button class="w-full py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50">Read the full methodology →</button>
+      </div>
+      <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+        <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M15 3h6V9"/><path d="M6 9v6"/><path d="M21 9a9 9 0 0 1-9 9"/></svg></div>
+        <h3 class="font-bold text-lg mb-2">The engine</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-5">A single Python script under 20 unit tests. Fork it, read it, run it on the audit CSV, reproduce every number.</p>
+        <button class="w-full py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50">View on GitHub →</button>
+      </div>
+      <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+        <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        <h3 class="font-bold text-lg mb-2">The audit CSV</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-5">Every council: inputs, verdicts, earned, max, denominator, score. Updated nightly. Downloadable.</p>
+        <button class="w-full py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50">Download audit.csv →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY: PILLARS -->
+<section id="methodology" class="max-w-6xl mx-auto px-6 py-20">
+  <div class="max-w-3xl mb-10">
+    <span class="inline-block mb-3 mono text-[10px] text-slate-500 border border-slate-200 px-2 py-0.5 rounded-full">Methodology</span>
+    <h2 class="text-3xl font-bold mb-4 leading-tight">Four pillars. Fourteen indicators. One honest number.</h2>
+    <p class="text-slate-600 leading-relaxed">We measure <strong class="text-slate-900">observable public transparency</strong> — not council quality, not resident satisfaction, not value for money.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="p-5 bg-sky-50 border border-sky-200 rounded-2xl">
+      <div class="flex items-center justify-between mb-3"><span class="mono text-[10px] text-sky-700 uppercase tracking-wider">Pillar 1</span><span class="text-2xl font-bold text-sky-800 mono">30</span></div>
+      <h3 class="font-semibold text-sky-900 mb-1">Digital Presence</h3>
+      <p class="text-xs text-slate-700">Website · .gov.uk domain · accessibility statement</p>
+    </div>
+    <div class="p-5 bg-indigo-50 border border-indigo-200 rounded-2xl">
+      <div class="flex items-center justify-between mb-3"><span class="mono text-[10px] text-indigo-700 uppercase tracking-wider">Pillar 2</span><span class="text-2xl font-bold text-indigo-800 mono">30</span></div>
+      <h3 class="font-semibold text-indigo-900 mb-1">Contact Transparency</h3>
+      <p class="text-xs text-slate-700">Email · phone · named clerk · clerk email</p>
+    </div>
+    <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+      <div class="flex items-center justify-between mb-3"><span class="mono text-[10px] text-emerald-700 uppercase tracking-wider">Pillar 3</span><span class="text-2xl font-bold text-emerald-800 mono">25</span></div>
+      <h3 class="font-semibold text-emerald-900 mb-1">Governance Documents</h3>
+      <p class="text-xs text-slate-700">Agendas · minutes · AGAR financials</p>
+    </div>
+    <div class="p-5 bg-amber-50 border border-amber-200 rounded-2xl">
+      <div class="flex items-center justify-between mb-3"><span class="mono text-[10px] text-amber-700 uppercase tracking-wider">Pillar 4</span><span class="text-2xl font-bold text-amber-800 mono">15</span></div>
+      <h3 class="font-semibold text-amber-900 mb-1">Democratic Openness</h3>
+      <p class="text-xs text-slate-700">Chair · councillors · register of interests</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTORY (REAL DATA) -->
+<section id="directory" class="bg-slate-50 border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+      <div>
+        <span class="inline-block mb-3 mono text-[10px] text-slate-500 border border-slate-200 px-2 py-0.5 rounded-full bg-white">Directory</span>
+        <h2 class="text-3xl font-bold">Every council. One scoreboard.</h2>
+        <p class="text-slate-600 text-sm mt-2">Real sample below from the April 2026 audit run of 7,031 councils.</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto border border-slate-200 rounded-2xl bg-white">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-slate-50 border-b border-slate-200 text-left text-xs uppercase tracking-wider text-slate-500">
+            <th class="py-3 px-4 font-semibold">#</th>
+            <th class="py-3 px-4 font-semibold">Council</th>
+            <th class="py-3 px-4 font-semibold">Type</th>
+            <th class="py-3 px-4 font-semibold">Region</th>
+            <th class="py-3 px-4 font-semibold text-right">Score</th>
+            <th class="py-3 px-4 font-semibold">Band</th>
+            <th class="py-3 px-4 font-semibold text-right">Completeness</th>
+          </tr>
+        </thead>
+        <tbody class="[&>tr]:border-b [&>tr]:border-slate-100 [&>tr:hover]:bg-slate-50/50">
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">1</td>
+            <td class="py-3 px-4 font-medium">Adderstone with Lucker Parish Council<div class="text-xs text-slate-500">Northumberland</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish</td>
+            <td class="py-3 px-4 text-slate-600">North East</td>
+            <td class="py-3 px-4 text-right mono font-semibold">86.6</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Exemplary</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">2</td>
+            <td class="py-3 px-4 font-medium">Alderley Edge Parish Council<div class="text-xs text-slate-500">Cheshire</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish</td>
+            <td class="py-3 px-4 text-slate-600">North West</td>
+            <td class="py-3 px-4 text-right mono font-semibold">86.6</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Exemplary</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">773</td>
+            <td class="py-3 px-4 font-medium">Adlington Parish Council<div class="text-xs text-slate-500">Cheshire</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish</td>
+            <td class="py-3 px-4 text-slate-600">North West</td>
+            <td class="py-3 px-4 text-right mono font-semibold">79.1</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Strong</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">774</td>
+            <td class="py-3 px-4 font-medium">Alnwick Parish Council<div class="text-xs text-slate-500">Northumberland</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish</td>
+            <td class="py-3 px-4 text-slate-600">North East</td>
+            <td class="py-3 px-4 text-right mono font-semibold">79.1</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Strong</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">1,855</td>
+            <td class="py-3 px-4 font-medium">Abbots Bromley Parish Council<div class="text-xs text-slate-500">Staffordshire</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish</td>
+            <td class="py-3 px-4 text-slate-600">West Midlands</td>
+            <td class="py-3 px-4 text-right mono font-semibold">59.7</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Developing</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 mono text-xs text-slate-500">3,160</td>
+            <td class="py-3 px-4 font-medium">Acklam (Parish Meeting)<div class="text-xs text-slate-500">North Yorkshire</div></td>
+            <td class="py-3 px-4 capitalize text-slate-600">parish meeting</td>
+            <td class="py-3 px-4 text-slate-600">Yorkshire and the Humber</td>
+            <td class="py-3 px-4 text-right mono font-semibold">37.3</td>
+            <td class="py-3 px-4"><span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-red-800"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>At Risk</span></td>
+            <td class="py-3 px-4 text-right mono text-xs text-slate-500">67%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-slate-500 mt-4">Completeness is 67% for all councils until the governance-document scraping phase completes. Councils with verified minutes, agendas and AGAR will then reach up to 100% and may re-band.</p>
+  </div>
+</section>
+
+<!-- COUNCIL PROFILE — REAL DATA: Adderbury Parish Council, Oxfordshire -->
+<section id="council" class="max-w-6xl mx-auto px-6 py-20">
+  <div class="flex flex-wrap items-start gap-6 mb-6">
+    <div class="flex-1 min-w-[280px]">
+      <div class="flex flex-wrap items-center gap-2 mb-3 text-xs">
+        <span class="px-2 py-0.5 border border-slate-200 rounded text-slate-600 capitalize">parish council</span>
+        <span class="text-slate-500">Oxfordshire</span>
+        <span class="text-slate-300">·</span>
+        <span class="text-slate-500">South East</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold mb-4 leading-tight">Adderbury Parish Council</h1>
+      <div class="flex flex-wrap gap-5 text-sm text-slate-600">
+        <div><span class="font-semibold text-slate-900">69th</span> of 7,031 nationally</div>
+        <div>Rank within South East and parish peer group is also published</div>
+      </div>
+    </div>
+    <div class="relative w-[150px] h-[150px] flex items-center justify-center rounded-2xl bg-emerald-50 border border-emerald-200">
+      <svg class="absolute inset-0 -rotate-90" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" stroke="#e2e8f0" stroke-width="8" fill="none"/>
+        <circle cx="60" cy="60" r="52" stroke="#065f46" stroke-width="8" fill="none" stroke-dasharray="268 327" stroke-linecap="round"/>
+      </svg>
+      <div class="relative text-center">
+        <div class="text-4xl font-bold text-emerald-800">82.1</div>
+        <div class="text-[10px] text-slate-500 mono uppercase tracking-wider">CC-TI score</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex items-start gap-3 mb-8">
+    <div class="w-2 h-2 rounded-full mt-1.5 bg-emerald-500 flex-shrink-0"></div>
+    <div>
+      <div class="flex flex-wrap items-center gap-3 mb-1">
+        <span class="font-semibold text-emerald-900">Exemplary</span>
+        <span class="text-xs text-slate-500">Completeness 67%</span>
+        <span class="text-xs mono text-slate-500">CC-TI v3.0</span>
+      </div>
+      <p class="text-xs text-slate-600">Assessed on 9 of 14 indicators. Where we have not yet gathered evidence (accessibility statement, governance documents, register of interests) the indicator is shown as "Not Assessed" and excluded from the denominator — not scored as zero.</p>
+    </div>
+  </div>
+
+  <h2 class="text-xl font-bold mb-4">Pillar breakdown</h2>
+  <div class="grid sm:grid-cols-2 gap-3 mb-10">
+    <div class="p-4 border border-sky-200 bg-sky-50 rounded-xl">
+      <div class="flex items-center justify-between mb-2"><span class="mono text-[10px] text-sky-700 uppercase tracking-wider">Pillar 1</span><span class="text-xs text-slate-600">25/25<span class="text-amber-700"> · 5 NA</span></span></div>
+      <div class="font-semibold text-sm mb-3">Digital Presence</div>
+      <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-emerald-500" style="width: 100%"></div></div>
+    </div>
+    <div class="p-4 border border-indigo-200 bg-indigo-50 rounded-xl">
+      <div class="flex items-center justify-between mb-2"><span class="mono text-[10px] text-indigo-700 uppercase tracking-wider">Pillar 2</span><span class="text-xs text-slate-600">30/30</span></div>
+      <div class="font-semibold text-sm mb-3">Contact Transparency</div>
+      <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-emerald-500" style="width: 100%"></div></div>
+    </div>
+    <div class="p-4 border border-emerald-200 bg-emerald-50 rounded-xl">
+      <div class="flex items-center justify-between mb-2"><span class="mono text-[10px] text-emerald-700 uppercase tracking-wider">Pillar 3</span><span class="text-xs text-slate-600">0/0<span class="text-amber-700"> · 25 NA</span></span></div>
+      <div class="font-semibold text-sm mb-3">Governance Documents</div>
+      <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-slate-300" style="width: 0%"></div></div>
+    </div>
+    <div class="p-4 border border-amber-200 bg-amber-50 rounded-xl">
+      <div class="flex items-center justify-between mb-2"><span class="mono text-[10px] text-amber-700 uppercase tracking-wider">Pillar 4</span><span class="text-xs text-slate-600">0/12<span class="text-amber-700"> · 3 NA</span></span></div>
+      <div class="font-semibold text-sm mb-3">Democratic Openness</div>
+      <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-red-500" style="width: 0%"></div></div>
+    </div>
+  </div>
+
+  <div class="flex items-end justify-between mb-4">
+    <div>
+      <h2 class="text-xl font-bold mb-1">Every indicator, every input</h2>
+      <p class="text-xs text-slate-500">Each row is an indicator, the rule applied, and the exact inputs the rule saw.</p>
+    </div>
+    <button class="text-sm border border-slate-200 rounded-lg px-3 py-1.5 hover:bg-slate-50">⬇ This council's audit row</button>
+  </div>
+
+  <div class="space-y-2">
+    <!-- 1.1 PASS -->
+    <details class="border border-slate-200 bg-white rounded-xl">
+      <summary class="p-4 flex items-center gap-3 cursor-pointer hover:bg-slate-50 list-none">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+        <span class="px-1.5 py-0.5 mono text-[10px] border border-slate-200 rounded">1.1</span>
+        <span class="flex-1 font-medium text-sm">Active council website</span>
+        <span class="text-xs mono px-2 py-0.5 rounded-full text-emerald-700 bg-emerald-50 border border-emerald-200">Evidence found</span>
+        <span class="mono font-bold text-sm w-14 text-right">20/20</span>
+      </summary>
+      <div class="px-4 pb-4 border-t border-slate-100 bg-slate-50/50 pt-3">
+        <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Input snapshot (what the rule saw)</div>
+        <pre class="bg-slate-900 text-slate-100 rounded-lg p-3 mono text-xs overflow-x-auto"><span class="text-slate-400">website_url:</span> <span class="text-emerald-300">"https://www.adderburyparishcouncil.gov.uk"</span>
+<span class="text-slate-400">website_resolves:</span> <span class="text-emerald-300">null</span></pre>
+      </div>
+    </details>
+
+    <!-- 1.3 NOT ASSESSED -->
+    <details class="border border-slate-200 bg-white rounded-xl">
+      <summary class="p-4 flex items-center gap-3 cursor-pointer hover:bg-slate-50 list-none">
+        <span class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0"></span>
+        <span class="px-1.5 py-0.5 mono text-[10px] border border-slate-200 rounded">1.3</span>
+        <span class="flex-1 font-medium text-sm">Accessibility statement published</span>
+        <span class="text-xs mono px-2 py-0.5 rounded-full text-slate-600 bg-slate-50 border border-slate-200">Not yet assessed</span>
+        <span class="mono font-bold text-sm w-14 text-right text-slate-400">—/5</span>
+      </summary>
+      <div class="px-4 pb-4 border-t border-slate-100 bg-slate-50/50 pt-3">
+        <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Input snapshot (what the rule saw)</div>
+        <pre class="bg-slate-900 text-slate-100 rounded-lg p-3 mono text-xs overflow-x-auto"><span class="text-slate-400">has_accessibility_statement:</span> <span class="text-emerald-300">null</span>
+<span class="text-slate-400">accessibility_scrape_attempted:</span> <span class="text-emerald-300">null</span></pre>
+        <p class="text-xs text-slate-600 mt-2">Website scraping has not yet visited this council. Indicator excluded from the denominator; not counted as a failure.</p>
+      </div>
+    </details>
+
+    <!-- 2.3 PASS -->
+    <details class="border border-slate-200 bg-white rounded-xl">
+      <summary class="p-4 flex items-center gap-3 cursor-pointer hover:bg-slate-50 list-none">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+        <span class="px-1.5 py-0.5 mono text-[10px] border border-slate-200 rounded">2.3</span>
+        <span class="flex-1 font-medium text-sm">Named clerk identified</span>
+        <span class="text-xs mono px-2 py-0.5 rounded-full text-emerald-700 bg-emerald-50 border border-emerald-200">Evidence found</span>
+        <span class="mono font-bold text-sm w-14 text-right">10/10</span>
+      </summary>
+      <div class="px-4 pb-4 border-t border-slate-100 bg-slate-50/50 pt-3">
+        <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Input snapshot (what the rule saw)</div>
+        <pre class="bg-slate-900 text-slate-100 rounded-lg p-3 mono text-xs overflow-x-auto"><span class="text-slate-400">clerk_name:</span> <span class="text-emerald-300">"Theresa Goss"</span></pre>
+      </div>
+    </details>
+
+    <!-- 4.1 FAIL -->
+    <details class="border border-slate-200 bg-white rounded-xl">
+      <summary class="p-4 flex items-center gap-3 cursor-pointer hover:bg-slate-50 list-none">
+        <span class="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"></span>
+        <span class="px-1.5 py-0.5 mono text-[10px] border border-slate-200 rounded">4.1</span>
+        <span class="flex-1 font-medium text-sm">Chair / Mayor named</span>
+        <span class="text-xs mono px-2 py-0.5 rounded-full text-red-700 bg-red-50 border border-red-200">Evidence not found</span>
+        <span class="mono font-bold text-sm w-14 text-right">0/3</span>
+      </summary>
+      <div class="px-4 pb-4 border-t border-slate-100 bg-slate-50/50 pt-3">
+        <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Input snapshot (what the rule saw)</div>
+        <pre class="bg-slate-900 text-slate-100 rounded-lg p-3 mono text-xs overflow-x-auto"><span class="text-slate-400">chair_name:</span> <span class="text-emerald-300">null</span></pre>
+        <p class="text-xs text-slate-600 mt-2">If this council has published its chair, submit a challenge with the URL and we'll update within 5 working days.</p>
+      </div>
+    </details>
+  </div>
+
+  <p class="text-xs text-slate-500 mt-6">Showing 4 of 14 indicators for brevity. The full React page renders all 14 indicators grouped by pillar, each with its own input snapshot, rule description, and per-indicator challenge link.</p>
+</section>
+
+<!-- PRICING (mirrors web/pages/Pricing.tsx) -->
+<section id="pricing" class="bg-slate-50 border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="inline-block mb-3 mono text-[10px] text-slate-500 border border-slate-200 px-2 py-0.5 rounded-full bg-white">Pricing</span>
+      <h2 class="text-3xl lg:text-5xl font-bold mb-4 leading-tight">The score is free.<br><span class="text-accent">The roadmap costs £449.</span></h2>
+      <p class="text-slate-600 leading-relaxed">Every visitor sees the same score. Subscribers pay for acting on the score — verification, enrichment, guidance — not for knowing it.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- FREE -->
+      <div class=

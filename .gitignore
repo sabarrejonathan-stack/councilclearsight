@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.next/
+.vite/
+.vite-cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Netlify
+.netlify/
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Python cache (for scoring_engine)
+__pycache__/
+*.pyc
+
+# Large working data — regenerate from scoring engine
+/data/
