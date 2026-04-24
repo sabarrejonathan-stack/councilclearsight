@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
-import { trpc } from "@/lib/trpc";
+import { useCouncilBySlug } from "@/lib/staticData";
 import {
   ArrowLeft, ArrowRight, Mail, Phone, Globe, User, BookOpen,
   CheckCircle2, XCircle, MinusCircle, Flag, Scale, FileText,
@@ -23,7 +23,7 @@ import {
 } from "@/lib/scoring";
 
 export default function CouncilProfile({ params }: { params: { slug: string } }) {
-  const { data, isLoading } = trpc.councils.getBySlug.useQuery({ slug: params.slug });
+  const { data, isLoading } = useCouncilBySlug(params.slug);
   const council = data as CouncilScore | undefined;
 
   useSEO({

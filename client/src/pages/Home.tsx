@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
-import { trpc } from "@/lib/trpc";
+import { useDirectory } from "@/lib/staticData";
 import {
   ArrowRight, Search, Eye, BadgeCheck, Sparkles, BookOpen, Flag,
   ShieldCheck, Users, BarChart3, Mail, Globe, Target, MessageCircle,
@@ -159,7 +159,7 @@ export default function Home() {
 
 function CouncilSearchBar() {
   const [q, setQ] = useState("");
-  const { data = [] } = trpc.councils.directory.useQuery(undefined, { enabled: q.length > 1 });
+  const { data = [] } = useDirectory({ enabled: q.length > 1 });
   const suggestions = (data as any[]).filter((r) => r.name.toLowerCase().includes(q.toLowerCase())).slice(0, 6);
   return (
     <div className="relative max-w-xl">

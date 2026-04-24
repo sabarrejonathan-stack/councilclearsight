@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card } from "@/components/ui/card";
 import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
-import { trpc } from "@/lib/trpc";
+import { useDirectory } from "@/lib/staticData";
 import { Search, ArrowUpDown, ExternalLink, Filter } from "lucide-react";
 import { bandColorClasses, formatScore, formatCompleteness, type BandKey } from "@/lib/scoring";
 
@@ -55,7 +55,7 @@ export default function Directory() {
   const [band, setBand] = useState("All bands");
   const [sort, setSort] = useState<SortKey>("rank");
 
-  const { data = [], isLoading } = trpc.councils.directory.useQuery();
+  const { data = [], isLoading } = useDirectory();
 
   const rows = useMemo(() => {
     let filtered = (data as DirectoryRow[])
