@@ -1,16 +1,7 @@
 /**
- * Council Profile page (CC-TI v3) — the public transparency dossier for a single council.
- *
- * Design goals:
- *  1. Every score shows WHY. Each indicator displays the exact input it saw and
- *     the rule verdict, with a link to its row in the audit CSV.
- *  2. "Not Assessed" indicators are shown explicitly, NOT rolled into a silent zero.
- *  3. A single download button gives the user this council's raw audit row,
- *     not a marketing PDF.
- *  4. Dispute path is one click and asks for the specific indicator in question.
+ * CouncilProfile — per-council page with evidence trail (compact, valid).
  */
-
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,38 +11,33 @@ import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
 import { trpc } from "@/lib/trpc";
 import {
-  ArrowRight, ArrowLeft, Mail, Phone, Globe, User, Users, MapPin,
-  ExternalLink, CheckCircle2, XCircle, MinusCircle, BookOpen,
-  AlertTriangle, ShieldCheck, BarChart2, FileText, Scale, Flag,
+  ArrowLeft, ArrowRight, Mail, Phone, Globe, User, BookOpen,
+  CheckCircle2, XCircle, MinusCircle, Flag, Scale, FileText,
 } from "lucide-react";
 import {
   PILLAR_META, INDICATORS, indicatorsForPillar,
-  bandColorClasses, pillarColorClasses, bandFor,
+  bandColorClasses, pillarColorClasses,
   formatScore, formatCompleteness, ordinal,
   METHODOLOGY_VERSION,
-  type CouncilScore, type IndicatorResult, type Pillar,
+  type CouncilScore, type IndicatorResult,
 } from "@/lib/scoring";
-
-const PILLAR_ICONS = { 1: Globe, 2: Mail, 3: ShieldCheck, 4: Scale } as const;
 
 export default function CouncilProfile({ params }: { params: { slug: string } }) {
   const { data, isLoading } = trpc.councils.getBySlug.useQuery({ slug: params.slug });
   const council = data as CouncilScore | undefined;
 
   useSEO({
-    title: council ? `${council.name} · CC-TI Score ${formatScore(council.score)} — Council ClearSight` : "Loading...",
-    description: council ? `Independent transparency assessment of ${council.name}. CC-TI score ${formatScore(council.score)}/100 across four pillars. Open methodology, reproducible from public data.` : undefined,
+    title: council ? `${council.name} · CC-TI Score ${formatScore(council.score)}` : "Loading…",
+    description: council ? `Transparency assessment of ${council.name}. CC-TI score ${formatScore(council.score)}/100.` : undefined,
     canonicalPath: `/council/${params.slug}`,
   });
 
   if (isLoading || !council) return <PublicLayout><div className="container py-24 text-center text-muted-foreground">Loading…</div></PublicLayout>;
 
-  const band = council.band as keyof typeof BAND_LABELS;
   const bandCls = bandColorClasses(council.band as any);
 
   return (
     <PublicLayout>
-      {/* ─── Back-link + council header ─── */}
       <section className="bg-slate-50 border-b border-slate-200">
         <div className="container max-w-6xl py-4">
           <Link href="/directory" className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground">
@@ -69,22 +55,19 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
                 {council.county && <span className="text-muted-foreground">{council.county}</span>}
                 {council.region && <><span className="text-muted-foreground/50">·</span><span className="text-muted-foreground">{council.region}</span></>}
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">{council.name}</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">{council.name}</h1>
               <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
-                {council.rank_national && (
-                  <div><span className="font-semibold text-foreground">{ordinal(council.rank_national)}</span> of {Number(11000).toLocaleString()} nationally</div>
-                )}
-                {council.rank_region && council.region && (
-                  <div><span className="font-semibold text-foreground">{ordinal(council.rank_region)}</span> in {council.region}</div>
-                )}
-                {council.rank_type && (
-                  <div><span className="font-semibold text-foreground">{ordinal(council.rank_type)}</span> among {council.type.replace("_", " ")} councils</div>
-                )}
+                {council.rank_national && <div><span className="font-semibold text-foreground">{ordinal(council.rank_national)}</span> nationally</div>}
+                {council.rank_region && council.region && <div><span className="font-semibold text-foreground">{ordinal(council.rank_region)}</span> in {council.region}</div>}
+                {council.rank_type && <div><span className="font-semibold text-foreground">{ordinal(council.rank_type)}</span> among {council.type.replace("_", " ")} councils</div>}
               </div>
             </div>
 
-            <div className="flex-shrink-0">
-              <ScoreDial score={council.score} band={council.band as any} />
+            <div className={`relative w-[150px] h-[150px] flex items-center justify-center rounded-2xl ${bandCls.bg} ${bandCls.border} border`}>
+              <div className="text-center">
+                <div className={`text-4xl font-bold ${bandCls.text}`}>{formatScore(council.score)}</div>
+                <div className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">CC-TI score</div>
+              </div>
             </div>
           </div>
 
@@ -97,7 +80,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
                 <span className="text-xs text-muted-foreground font-mono">{council.methodology_version}</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Assessed on {council.indicators.filter(i => i.assessed).length} of {INDICATORS.length} indicators. Where we have not yet gathered evidence, the indicator is shown as "Not Assessed" and excluded from the denominator — not scored as zero.
+                Assessed on {council.indicators.filter(i => i.assessed).length} of {INDICATORS.length} indicators. Where we have not yet gathered evidence, the indicator is "Not Assessed" and excluded from the denominator.
               </p>
             </div>
           </div>
@@ -106,31 +89,25 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
 
       <div className="container max-w-6xl py-10 grid lg:grid-cols-[1fr_320px] gap-10">
         <div className="space-y-12 min-w-0">
-
-          {/* ─── Pillar summary ─── */}
           <section>
-            <h2 className="text-xl font-bold text-foreground mb-4">Pillar breakdown</h2>
+            <h2 className="text-xl font-bold mb-4">Pillar breakdown</h2>
             <div className="grid sm:grid-cols-2 gap-3">
-              {([1, 2, 3, 4] as const).map((p) => {
+              {([1,2,3,4] as const).map((p) => {
                 const earned = council.pillar_earned[String(p)] ?? 0;
                 const maxAssessed = council.pillar_max_assessed[String(p)] ?? 0;
                 const total = PILLAR_META[p].max;
                 const notAssessed = total - maxAssessed;
                 const pct = maxAssessed > 0 ? (earned / maxAssessed) : 0;
-                const Icon = PILLAR_ICONS[p];
                 const cls = pillarColorClasses(p);
                 return (
                   <div key={p} className={`p-4 border ${cls.border} ${cls.bg} rounded-xl`}>
                     <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <Icon className={`w-4 h-4 ${cls.text}`} />
-                        <span className={`text-xs font-mono ${cls.text} opacity-70`}>Pillar {p}</span>
-                      </div>
+                      <span className={`text-xs font-mono ${cls.text} opacity-70`}>Pillar {p}</span>
                       <span className="text-xs text-muted-foreground">
                         {earned}/{maxAssessed}{notAssessed > 0 && <span className="text-amber-700"> · {notAssessed} NA</span>}
                       </span>
                     </div>
-                    <div className="font-semibold text-foreground text-sm mb-3">{PILLAR_META[p].label}</div>
+                    <div className="font-semibold text-sm mb-3">{PILLAR_META[p].label}</div>
                     <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
                       <div className={`h-full ${pct >= 0.8 ? "bg-emerald-500" : pct >= 0.6 ? "bg-teal-500" : pct >= 0.4 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${Math.round(pct * 100)}%` }} />
                     </div>
@@ -140,30 +117,25 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             </div>
           </section>
 
-          {/* ─── Indicator detail ─── */}
           <section>
             <div className="flex items-end justify-between mb-4">
               <div>
-                <h2 className="text-xl font-bold text-foreground mb-1">Every indicator, every input</h2>
-                <p className="text-xs text-muted-foreground">Each row below is an indicator, the rule applied, and the exact inputs the rule saw.</p>
+                <h2 className="text-xl font-bold mb-1">Every indicator, every input</h2>
+                <p className="text-xs text-muted-foreground">Each row is an indicator, the rule applied, and what the rule saw.</p>
               </div>
-              <Link href="/methodology">
-                <Button size="sm" variant="outline" className="flex-shrink-0">
-                  <BookOpen className="w-3.5 h-3.5 mr-1.5" /> How this is scored
-                </Button>
-              </Link>
+              <Link href="/methodology"><Button size="sm" variant="outline"><BookOpen className="w-3.5 h-3.5 mr-1.5" /> How this is scored</Button></Link>
             </div>
 
             <Tabs defaultValue="p1" className="w-full">
               <TabsList className="grid w-full grid-cols-4">
-                {([1, 2, 3, 4] as const).map((p) => (
+                {([1,2,3,4] as const).map((p) => (
                   <TabsTrigger key={p} value={`p${p}`} className="text-xs">
                     <span className="hidden sm:inline">P{p}</span>{' '}{PILLAR_META[p].shortLabel}
                   </TabsTrigger>
                 ))}
               </TabsList>
 
-              {([1, 2, 3, 4] as const).map((p) => (
+              {([1,2,3,4] as const).map((p) => (
                 <TabsContent key={p} value={`p${p}`} className="mt-4 space-y-2">
                   {indicatorsForPillar(p).map((indMeta) => {
                     const result = council.indicators.find(i => i.id === indMeta.id);
@@ -174,14 +146,11 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
               ))}
             </Tabs>
           </section>
-
         </div>
 
-        {/* ─── Sidebar ─── */}
         <aside className="space-y-6">
-          {/* Contact block */}
           <Card className="p-5 bg-white">
-            <h3 className="text-sm font-semibold text-foreground mb-3">Contact the council</h3>
+            <h3 className="text-sm font-semibold mb-3">Contact the council</h3>
             <div className="space-y-2.5 text-sm">
               <ContactRow icon={Globe} label="Website" value={inputOf(council, "1.1", "website_url") as string | undefined} href={inputOf(council, "1.1", "website_url") as string | undefined} />
               <ContactRow icon={Mail} label="Email" value={inputOf(council, "2.1", "email") as string | undefined} href={`mailto:${inputOf(council, "2.1", "email")}`} />
@@ -191,60 +160,35 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             </div>
           </Card>
 
-          {/* Transparency links */}
           <Card className="p-5 bg-slate-50 border-slate-200">
-            <h3 className="text-sm font-semibold text-foreground mb-3">Understand this score</h3>
+            <h3 className="text-sm font-semibold mb-3">Understand this score</h3>
             <div className="space-y-2.5 text-xs">
-              <Link href="/methodology" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300 transition-colors">
-                <span className="flex items-center gap-2 text-foreground"><BookOpen className="w-3.5 h-3.5 text-slate-500" />Methodology in plain English</span>
+              <Link href="/methodology" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300">
+                <span className="flex items-center gap-2"><BookOpen className="w-3.5 h-3.5 text-slate-500" />Methodology in plain English</span>
                 <ArrowRight className="w-3 h-3 text-slate-400" />
               </Link>
-              <Link href="/methodology/disputes" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300 transition-colors">
-                <span className="flex items-center gap-2 text-foreground"><Scale className="w-3.5 h-3.5 text-slate-500" />Past dispute decisions</span>
+              <Link href="/methodology/disputes" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300">
+                <span className="flex items-center gap-2"><Scale className="w-3.5 h-3.5 text-slate-500" />Past dispute decisions</span>
                 <ArrowRight className="w-3 h-3 text-slate-400" />
               </Link>
-              <Link href="/methodology/changelog" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300 transition-colors">
-                <span className="flex items-center gap-2 text-foreground"><FileText className="w-3.5 h-3.5 text-slate-500" />Methodology updates</span>
+              <Link href="/methodology/changelog" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300">
+                <span className="flex items-center gap-2"><FileText className="w-3.5 h-3.5 text-slate-500" />Methodology updates</span>
                 <ArrowRight className="w-3 h-3 text-slate-400" />
               </Link>
             </div>
           </Card>
 
-          {/* Dispute CTA */}
           <Card className="p-5 bg-primary text-white">
             <Flag className="w-5 h-5 mb-3 text-accent" />
             <h3 className="font-semibold mb-2">Think a score is wrong?</h3>
-            <p className="text-xs text-white/75 leading-relaxed mb-4">
-              Submit evidence and we'll respond within five working days. Decisions are logged publicly.
-            </p>
-            <Link href={`/challenge/${council.slug}`}>
+            <p className="text-xs text-white/75 leading-relaxed mb-4">Submit evidence and we'll respond within five working days. Decisions are logged publicly.</p>
+            <Link href={`/challenge?slug=${council.slug}`}>
               <Button size="sm" className="w-full bg-white text-primary hover:bg-white/90">Challenge a score <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button>
             </Link>
           </Card>
         </aside>
       </div>
     </PublicLayout>
-  );
-}
-
-// --- components ---------------------------------------------------------
-
-function ScoreDial({ score, band }: { score: number | null; band: any }) {
-  const pct = score ?? 0;
-  const circumference = 2 * Math.PI * 52;
-  const dash = (pct / 100) * circumference;
-  const cls = bandColorClasses(band);
-  return (
-    <div className={`relative w-[150px] h-[150px] flex items-center justify-center rounded-2xl ${cls.bg} ${cls.border} border`}>
-      <svg className="absolute inset-0 -rotate-90" viewBox="0 0 120 120">
-        <circle cx="60" cy="60" r="52" stroke="currentColor" className="text-slate-200" strokeWidth="8" fill="none" />
-        <circle cx="60" cy="60" r="52" stroke="currentColor" className={cls.text} strokeWidth="8" fill="none" strokeDasharray={`${dash} ${circumference}`} strokeLinecap="round" />
-      </svg>
-      <div className="relative text-center">
-        <div className={`text-4xl font-bold ${cls.text}`}>{formatScore(score)}</div>
-        <div className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">CC-TI score</div>
-      </div>
-    </div>
   );
 }
 
@@ -257,16 +201,16 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
 
   return (
     <div className="border border-slate-200 bg-white rounded-xl overflow-hidden">
-      <button onClick={() => setOpen(!open)} className="w-full p-4 flex items-center gap-3 text-left hover:bg-slate-50 transition-colors">
+      <button onClick={() => setOpen(!open)} className="w-full p-4 flex items-center gap-3 text-left hover:bg-slate-50">
         <StatusIcon className={`w-4 h-4 flex-shrink-0 ${status === "pass" ? "text-emerald-600" : status === "fail" ? "text-red-500" : "text-slate-400"}`} />
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="outline" className="text-[10px] font-mono">{indicator.id}</Badge>
-            <span className="font-medium text-sm text-foreground">{indicator.label}</span>
+            <span className="font-medium text-sm">{indicator.label}</span>
           </div>
         </div>
         <div className={`text-xs font-mono px-2 py-0.5 rounded-full border ${statusCls}`}>{statusText}</div>
-        <div className="text-sm font-bold text-foreground w-14 text-right font-mono">
+        <div className="text-sm font-bold w-14 text-right font-mono">
           {indicator.assessed ? `${indicator.earned}/${indicator.max_points}` : <span className="text-slate-400">—/{indicator.max_points}</span>}
         </div>
       </button>
@@ -278,10 +222,7 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
               <div className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">Input snapshot (what the rule saw)</div>
               <div className="bg-slate-900 text-slate-100 rounded-lg p-3 font-mono text-xs overflow-x-auto">
                 {Object.entries(indicator.input_snapshot).map(([k, v]) => (
-                  <div key={k}>
-                    <span className="text-slate-400">{k}: </span>
-                    <span className="text-emerald-300">{JSON.stringify(v)}</span>
-                  </div>
+                  <div key={k}><span className="text-slate-400">{k}: </span><span className="text-emerald-300">{JSON.stringify(v)}</span></div>
                 ))}
               </div>
             </div>
@@ -299,12 +240,7 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
 
 function ContactRow({ icon: Icon, label, value, href, subValue }: { icon: any; label: string; value?: string; href?: string; subValue?: string }) {
   if (!value) {
-    return (
-      <div className="flex items-center gap-2 text-muted-foreground/60 text-xs">
-        <Icon className="w-3.5 h-3.5" />
-        <span>No {label.toLowerCase()} recorded</span>
-      </div>
-    );
+    return <div className="flex items-center gap-2 text-muted-foreground/60 text-xs"><Icon className="w-3.5 h-3.5" /><span>No {label.toLowerCase()} recorded</span></div>;
   }
   return (
     <div className="flex items-start gap-2.5">
@@ -312,9 +248,7 @@ function ContactRow({ icon: Icon, label, value, href, subValue }: { icon: any; l
       <div className="flex-1 min-w-0">
         <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{label}</div>
         {href ? (
-          <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-foreground hover:text-accent break-words text-sm">
-            {value}
-          </a>
+          <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-foreground hover:text-accent break-words text-sm">{value}</a>
         ) : (
           <div className="text-foreground text-sm break-words">{value}</div>
         )}
@@ -324,12 +258,7 @@ function ContactRow({ icon: Icon, label, value, href, subValue }: { icon: any; l
   );
 }
 
-// --- helpers ------------------------------------------------------------
-
-const BAND_LABELS = { Exemplary: true, Strong: true, Developing: true, "At Risk": true, "Not Yet Assessed": true };
-
 function inputOf(council: CouncilScore, indicatorId: string, field: string): unknown {
   const ind = council.indicators.find(i => i.id === indicatorId);
   return ind?.input_snapshot?.[field];
 }
-                                                                                                                                                                                                                                                                                          
