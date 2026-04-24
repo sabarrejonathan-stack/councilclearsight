@@ -1,0 +1,106 @@
+name: Council scraper
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Councils per run (default: all remaining)'
+        required: false
+        default: ''
+  schedule:
+    # Nightly at 02:00 UTC. GitHub Actions has a 6-hour job limit so we may
+    # need multiple runs; the scraper is resume-safe, so just re-trigger.
+    - cron: '0 2 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340   # leave headroom below the 360-min hard cap
+    concurrency:
+      group: scrape-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: pip install -r requirements.txt
+
+      - name: Run test suite (fail fast)
+        working-directory: scraper
+        run: PYTHONPATH=. python -m unittest discover -s tests -v
+
+      - name: Prepare input CSV
+        run: |
+          mkdir -p scraper/data
+          # Convert the directory.json that the site uses into the CSV the scraper expects.
+          python - <<'PY'
+          import json, csv
+          with open('client/public/data/directory.json') as f:
+              rows = json.load(f)
+          with open('scraper/data/councils_input.csv', 'w', newline='') as f:
+              w = csv.writer(f)
+              w.writerow(['council_id','slug','name','website_url'])
+              # We also need website_url, which isn't in directory.json but is in each per-slug file.
+              # Read that out for councils that have a slug JSON file.
+              import os
+              for r in rows:
+                  slug = r.get('slug','')
+                  wurl = ''
+                  path = f"client/public/data/councils/{slug}.json"
+                  if os.path.exists(path):
+                      try:
+                          d = json.load(open(path))
+                          ind11 = next((i for i in d.get('indicators',[]) if i.get('id')=='1.1'), None)
+                          if ind11:
+                              wurl = ind11.get('input_snapshot',{}).get('website_url','') or ''
+                      except Exception:
+                          pass
+                  w.writerow([r.get('id',''), slug, r.get('name',''), wurl])
+          PY
+          wc -l scraper/data/councils_input.csv
+
+      - name: Run scraper
+        working-directory: scraper
+        env:
+          LIMIT: ${{ github.event.inputs.limit }}
+        run: |
+          args=""
+          if [ -n "$LIMIT" ]; then args="--limit $LIMIT"; fi
+          PYTHONPATH=. python -m scraper.runner             --input data/councils_input.csv             --output data/scrape_results.csv             --verbose             $args
+
+      - name: Merge scraper output into scoring inputs
+        run: python scraper/scripts/merge_into_scoring.py
+
+      - name: Re-run scoring engine
+        working-directory: scoring_engine
+        run: |
+          pip install openpyxl
+          python build_audit.py
+
+      - name: Split per-slug files for the front-end
+        run: python scraper/scripts/split_scored_json.py
+
+      - name: Commit + push updated data
+        run: |
+          git config user.name  "ccs-scraper-bot"
+          git config user.email "bot@councilclearsight.org.uk"
+          git add client/public/data/ data/ scraper/data/scrape_results.csv || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "scraper: nightly data refresh"
+            git push
+          fi
