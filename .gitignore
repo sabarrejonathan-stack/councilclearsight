@@ -35,3 +35,13 @@ __pycache__/
 
 # Large working data — regenerate from scoring engine
 /data/
+
+# Scraper working files
+scraper/.venv/
+scraper/data/scrape_results*.csv
+scraper/data/merged_inputs.csv
+scraper/.pytest_cache/
+scraper/**/__pycache__/
+
+# Skill staging folder (installed into user skills dir, not tracked in repo)
+.skill-export/
