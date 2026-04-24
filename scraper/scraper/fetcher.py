@@ -25,7 +25,7 @@ log = logging.getLogger("scraper.fetcher")
 USER_AGENT = (
     "CouncilClearSightBot/1.0 "
     "(+https://councilclearsight.org.uk; operator@councilclearsight.org.uk) "
-    "polite static fetcher — respects robots.txt"
+    "polite static fetcher - respects robots.txt"
 )
 
 PER_HOST_MIN_INTERVAL_S = 3.0
