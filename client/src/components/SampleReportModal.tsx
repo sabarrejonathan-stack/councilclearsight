@@ -201,7 +201,7 @@ export default function SampleReportModal({ open, onOpenChange, council }: Sampl
             <Button variant="outline" className="w-full mt-2" onClick={reset}>
               Close
             </Button>
-          </div>
+          </>
         )}
       </DialogContent>
     </Dialog>
