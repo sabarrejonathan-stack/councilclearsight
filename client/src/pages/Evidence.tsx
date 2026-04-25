@@ -1,5 +1,5 @@
 /**
- * Evidence page — Council ClearSight (CC-TI v3)
+ * Evidence page — Council ClearSight (VDTI v3)
  *
  * The statutory and academic basis for the 14 indicators.
  * Three sections: Statutory basis, Sector literature, Peer review.
@@ -18,7 +18,7 @@ import {
 export default function Evidence() {
   useSEO({
     title: "Evidence base — Council ClearSight Transparency Index",
-    description: "The statutory and academic foundations for every indicator in CC-TI v3. Transparency Code, Accounts & Audit Regs, LGA 1972, and sector guidance.",
+    description: "The statutory and academic foundations for every indicator in VDTI v3. Transparency Code, Accounts & Audit Regs, LGA 1972, and sector guidance.",
     keywords: "evidence base, statutory framework, transparency code, local government law",
     canonicalPath: "/evidence",
   });
@@ -185,11 +185,11 @@ export default function Evidence() {
               <p className="text-muted-foreground leading-relaxed mb-5">
                 Published reviewers will be credited on the methodology page and invited to the annual methodology review board. This is how we keep the index honest.
               </p>
-              <a href="mailto:hello@councilclearsight.org.uk?subject=Peer%20review%20interest">
+              <Link href="/contact?topic=peer-review">
                 <Button size="sm">
                   Express interest in peer review <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -201,7 +201,7 @@ export default function Evidence() {
             <Card className="p-6 bg-white border-slate-200">
               <h3 className="font-semibold text-foreground mb-2">See the full methodology</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Read the complete CC-TI v3 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
+                Read the complete VDTI v3 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
               </p>
               <Link href="/methodology">
                 <Button size="sm" variant="outline" className="w-full">

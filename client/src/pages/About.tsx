@@ -1,5 +1,5 @@
 /**
- * About page — Council ClearSight (CC-TI v3)
+ * About page — Council ClearSight (VDTI v3)
  *
  * Who we are, why we exist, what we believe, and how to reach us.
  */
@@ -86,7 +86,7 @@ export default function About() {
               {
                 icon: ShieldCheck,
                 title: "Methodology is a public artefact",
-                body: "How a council is scored matters as much as the score itself. We publish every rule in plain English, every weight, and the exact evidence behind every score on every council's page. No black-box methodology — no score a resident or clerk can't trace back to something observable.",
+                body: "How a council is scored matters as much as the score itself. We publish every rule clearly, every weight, and the exact evidence behind every score on every council's page. No black-box methodology — no score a resident or clerk can't trace back to something observable.",
               },
               {
                 icon: Target,
@@ -133,17 +133,4 @@ export default function About() {
                   Jonathan built the first transparency index after spending three hours searching for a single parish council's meeting minutes. He spent a decade in local government research and community activism. {/* [placeholder — clerk to edit: Prior roles, qualifications, publications] */}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  He commits to transparent methodology, fair attribution, and building something the sector actually needs rather than something profitable. {/* [placeholder — clerk to edit: add personal note about why this matters to Jonathan] */}
-                </p>
-              </div>
-            </div>
-          </Card>
-          <p className="text-sm text-muted-foreground mt-6 text-center">
-            We're a small, independent team. More details about hiring and collaborators coming soon.
-          </p>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+                  He commits to transparent methodology, fair attribution, and building somethi

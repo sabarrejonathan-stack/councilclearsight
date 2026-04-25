@@ -101,7 +101,7 @@ export default function PublicFooter() {
             <span className="hidden sm:inline">·</span>
             <span>4 pillars · 14 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>
-            <span>CC-TI v3.0</span>
+            <span>VDTI v3.0</span>
             <span className="hidden sm:inline">·</span>
             <span>Refreshed April 2026</span>
             <span className="hidden sm:inline">·</span>

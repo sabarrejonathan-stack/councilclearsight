@@ -116,7 +116,7 @@ function pillarClasses(p: 1|2|3|4) {
 
 export default function Methodology() {
   useSEO({
-    title: "Methodology — How we score every council, in plain English | Council ClearSight",
+    title: "Methodology — How we score every council, explained clearly | Council ClearSight",
     description: "A clear, human explanation of how the Council ClearSight Transparency Index is calculated. Four pillars, fourteen indicators, scored from publicly observable information. No jargon.",
     canonicalPath: "/methodology",
   });
@@ -129,7 +129,7 @@ export default function Methodology() {
         <div className="container max-w-4xl relative">
           <Badge className="mb-5 bg-accent/20 text-accent border-accent/30 font-mono">Methodology</Badge>
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-5 leading-[1.1]">
-            How we score every council,<br/>in plain English.
+            How we score every council,<br/>explained clearly.
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
             Every council in England receives a single score out of 100. The score comes from fourteen specific, observable things — either the council does them or it doesn't. This page explains what each one means, why it matters, and how we check it. No jargon, no formulas, no fine print.
@@ -138,6 +138,28 @@ export default function Methodology() {
       </section>
 
       <div className="container max-w-4xl py-16 space-y-20">
+
+        {/* ─── Trust statement (per April 2026 brief) ───── */}
+        <section className="-mt-4">
+          <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-2xl p-6">
+            <div className="font-mono text-[11px] uppercase tracking-wider text-amber-800 mb-2">Important note for councils and residents</div>
+            <p className="text-sm text-amber-950 leading-relaxed mb-3">
+              <strong>Subscribing to Council ClearSight does not change the public scoring rules and does not buy a higher score.</strong> The score reflects publicly observable evidence and is calculated identically for every council. Subscriptions unlock evidence packs, recommendations and tools to improve future observable transparency.
+            </p>
+            <p className="text-xs text-amber-800/90 leading-relaxed">
+              <strong>What the score measures:</strong> whether key transparency evidence can be found through publicly observable sources. <strong>What it does not measure:</strong> political performance, service quality, financial judgement, councillor conduct, or resident satisfaction.
+            </p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground font-mono">
+            <span>VDTI v3.0</span>
+            <span>·</span>
+            <span>Data extraction: 16 April 2026</span>
+            <span>·</span>
+            <span>Assessment window: January – March 2026</span>
+            <span>·</span>
+            <span>Next assessment: January 2027</span>
+          </div>
+        </section>
 
         {/* ─── The big idea ───────────────────────────────── */}
         <section>
@@ -208,7 +230,7 @@ export default function Methodology() {
 
         {/* ─── Each indicator, explained plainly ──────────── */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">Every indicator, in plain English</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">Every indicator, explained clearly</h2>
           <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">
             Click any indicator to see why it matters, how we check it, and what it's worth. These are the only things that affect a council's score.
           </p>

@@ -232,7 +232,7 @@ export default function News() {
           </h2>
           <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
             Council ClearSight ranks over 10,000 parish and town councils on transparency and accountability. 
-            Check your council's CC-TI score and see how it compares to peers across England.
+            Check your council's VDTI score and see how it compares to peers across England.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/directory">

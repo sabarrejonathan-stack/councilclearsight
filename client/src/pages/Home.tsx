@@ -22,8 +22,8 @@ import { useSEO } from "@/hooks/useSEO";
 import { useDirectory } from "@/lib/staticData";
 import {
   ArrowRight, Search, Eye, BadgeCheck, Sparkles, BookOpen, Flag,
-  ShieldCheck, Users, BarChart3, Mail, Globe, Target, MessageCircle,
-  HeartHandshake, Megaphone, Scale, FileCheck, FileDown,
+  ShieldCheck, Users, BarChart3, Mail, Globe, Target,
+  Megaphone, Scale, FileCheck, FileDown, ClipboardCheck,
 } from "lucide-react";
 import { METHODOLOGY_VERSION } from "@/lib/scoring";
 
@@ -42,12 +42,12 @@ const PROOF = [
 ];
 
 const PRO_FEATURES = [
-  { icon: Target, title: "Personalised roadmap", body: "A written plan of the specific documents to publish, at which URL, for how many points. Delivered within 7 days of subscribing." },
+  { icon: Target, title: "Personalised roadmap", body: "A written plan of the specific documents to publish, at which URL, for how many points. Delivered automatically within 7 days of subscribing." },
   { icon: Megaphone, title: "Engagement templates", body: "Every improvement comes with newsletter wording, social posts, and a meeting announcement you can copy and send." },
-  { icon: BarChart3, title: "Quarterly re-scoring", body: "Your public score updates every 90 days, not every 12 months. Improvements show up fast." },
+  { icon: BarChart3, title: "Quarterly re-scoring", body: "Your score is refreshed every 90 days for subscribers. Improvements show up fast." },
   { icon: Users, title: "Peer benchmarking", body: "See where you sit against 10 councils similar to yours by size, type and region." },
-  { icon: MessageCircle, title: "Direct support", body: "Email a human. One working day response. Not a chatbot, not a helpdesk ticket." },
-  { icon: HeartHandshake, title: "Score-drop refund", body: "If your score drops 5+ points during your subscription through no fault of your own, we refund pro-rata." },
+  { icon: BookOpen, title: "Self-serve guidance library", body: "Every recommendation comes with worked examples, indicator definitions and templates. Help centre and score challenge form for queries." },
+  { icon: ClipboardCheck, title: "Quarterly chair/clerk briefing pack", body: "Auto-generated each quarter from your score, peer movement, evidence gaps and progress. Ready to circulate before the next meeting." },
 ];
 
 const AUDIENCES = [
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-accent">legally required.</span> We make it visible.
             </h1>
             <p className="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              An independent score for every parish, town, city and community council in England. Calculated from fourteen things councils are already required to publish. Explained in plain English. Pinned to evidence.
+              An independent score for every parish, town, city and community council in England. Calculated from fourteen things councils are already required to publish. Explained clearly. Pinned to evidence.
             </p>
             <CouncilSearchBar />
             <div className="flex flex-wrap gap-6 mt-10 text-xs text-white/60">

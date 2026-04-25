@@ -8,8 +8,7 @@
   "principal_authority": "Newcastle City Council",
   "website": "https://www.woolsington-parish-council.com",
   "compiled_at": "2026-04-25",
-  "compiled_method": "Hand-curated dossier — verified directly against the council's published website, Newcastle City Council records, ONS 2021 Census and the Northumberland Association of Local Councils. Used as the spotlight reference for the Council ClearSight Pro tier.",
-
+  "compiled_method": "Compiled from the Council ClearSight VDTI database (16 April 2026 extract), enhanced with evidence checks against the council's published website, Newcastle City Council records, ONS 2021 Census and the Northumberland Association of Local Councils. Used as the spotlight reference for the Council ClearSight Platinum tier.",
   "demographics": {
     "population_2021_census": 8519,
     "population_2011_census": 11160,
@@ -18,10 +17,15 @@
     "uk_born_pct": 91.9,
     "geography_note": "The parish covers Newbiggin Hall, Woolsington village and Newcastle International Airport — a unique mix of suburban residential and major national infrastructure."
   },
-
   "officers": {
-    "chair": { "name": "George Pattison", "ward": "Newbiggin Hall" },
-    "vice_chair": { "name": "Lilian Kennedy", "ward": "Newbiggin Hall" },
+    "chair": {
+      "name": "George Pattison",
+      "ward": "Newbiggin Hall"
+    },
+    "vice_chair": {
+      "name": "Lilian Kennedy",
+      "ward": "Newbiggin Hall"
+    },
     "clerk": {
       "name": "Andrew Richardson",
       "email": "woolsingtonpc@gmail.com",
@@ -29,21 +33,59 @@
       "email_domain_concern": "Personal Gmail address rather than a council-owned domain — institutional risk if the clerk moves on."
     }
   },
-
   "councillors": [
-    { "name": "George Pattison", "ward": "Newbiggin Hall", "role": "Chair" },
-    { "name": "Lilian Kennedy", "ward": "Newbiggin Hall", "role": "Vice-Chair" },
-    { "name": "Jonathan Sabarre", "ward": "Bedeburn", "role": "Councillor" },
-    { "name": "Alexander Hay", "ward": "Bedeburn", "role": "Councillor" },
-    { "name": "Lilian McGuinness", "ward": "Bedeburn", "role": "Councillor" },
-    { "name": "Linda Wright", "ward": "Callerton", "role": "Councillor" },
-    { "name": "John Littleton", "ward": "Woolsington and Bankfoot", "role": "Councillor" },
-    { "name": "Joanne Couchman", "ward": "Woolsington and Bankfoot", "role": "Councillor" },
-    { "name": "Liam Spencer", "ward": "Bedeburn", "role": "Councillor" }
+    {
+      "name": "George Pattison",
+      "ward": "Newbiggin Hall",
+      "role": "Chair"
+    },
+    {
+      "name": "Lilian Kennedy",
+      "ward": "Newbiggin Hall",
+      "role": "Vice-Chair"
+    },
+    {
+      "name": "Jonathan Sabarre",
+      "ward": "Bedeburn",
+      "role": "Councillor"
+    },
+    {
+      "name": "Alexander Hay",
+      "ward": "Bedeburn",
+      "role": "Councillor"
+    },
+    {
+      "name": "Lilian McGuinness",
+      "ward": "Bedeburn",
+      "role": "Councillor"
+    },
+    {
+      "name": "Linda Wright",
+      "ward": "Callerton",
+      "role": "Councillor"
+    },
+    {
+      "name": "John Littleton",
+      "ward": "Woolsington and Bankfoot",
+      "role": "Councillor"
+    },
+    {
+      "name": "Joanne Couchman",
+      "ward": "Woolsington and Bankfoot",
+      "role": "Councillor"
+    },
+    {
+      "name": "Liam Spencer",
+      "ward": "Bedeburn",
+      "role": "Councillor"
+    }
   ],
-
-  "wards_represented": ["Newbiggin Hall", "Bedeburn", "Callerton", "Woolsington and Bankfoot"],
-
+  "wards_represented": [
+    "Newbiggin Hall",
+    "Bedeburn",
+    "Callerton",
+    "Woolsington and Bankfoot"
+  ],
   "evidence": {
     "agar_2024_25": {
       "label": "Audited AGAR 2024–25 with audit certificate (year ending 31 March 2025)",
@@ -76,30 +118,40 @@
       "improvement_note": "Names and wards are public; declared interests register is not yet visible on the site (Localism Act 2011 §29 requires publication)."
     }
   },
-
   "strengths": [
     {
       "title": "Two consecutive AGARs with full audit certificates",
       "summary": "Year ending 31 March 2024 and year ending 31 March 2025 both audited and published. This is the single most demanding indicator under the Accounts and Audit Regulations 2015, and Woolsington has it nailed in consecutive years.",
-      "indicator_ids": ["3.3", "3.3-internal-audit", "3.3-governance-statement"]
+      "indicator_ids": [
+        "3.3",
+        "3.3-internal-audit",
+        "3.3-governance-statement"
+      ]
     },
     {
       "title": "Comprehensive multi-year meeting archive",
       "summary": "Agendas and minutes published going back several years — most parish councils struggle to maintain even the prior year. The volume and continuity of the archive is a meaningful transparency strength.",
-      "indicator_ids": ["3.1", "3.2"]
+      "indicator_ids": [
+        "3.1",
+        "3.2"
+      ]
     },
     {
       "title": "Distributed ward representation",
       "summary": "Eight councillors plus chair, distributed across four geographic wards (Newbiggin Hall, Bedeburn, Callerton, Woolsington and Bankfoot). Each major settlement has a councillor.",
-      "indicator_ids": ["4.1", "4.2"]
+      "indicator_ids": [
+        "4.1",
+        "4.2"
+      ]
     },
     {
       "title": "Code of Conduct publicly published",
       "summary": "Adopted Code of Conduct is downloadable from the council's website — a foundational governance document many parish councils still don't publish.",
-      "indicator_ids": ["lcas:code_of_conduct"]
+      "indicator_ids": [
+        "lcas:code_of_conduct"
+      ]
     }
   ],
-
   "improvement_opportunities": [
     {
       "id": "switch-to-gov-uk-domain",
@@ -191,16 +243,28 @@
       "effort": "Low — adapt the Newcastle template, present at the next Standards Committee meeting, adopt at full council."
     }
   ],
-
   "local_context": {
     "headline_issue": "Newcastle International Airport — economic driver and acoustic challenge",
     "summary": "The parish boundary contains Newcastle International Airport, which is the second-largest airport in the North East and handles approximately 5 million passengers per year. The airport's masterplan envisages further expansion. For the parish council, this creates a unique mix of opportunities (significant business rates contributions, employment for residents, infrastructure investment) and concerns (overflight noise affecting Newbiggin Hall and Callerton wards, ground access traffic). Structured resident engagement on airport-related decisions — a survey of overflight impact, a published council position on the next airspace consultation — is exactly the kind of activity Council ClearSight Platinum-tier tools are designed to support.",
     "demographic_implication": "Median age 39 with 91.9% UK-born suggests residents skew towards established homeowners — a demographic that responds to clear written communication and is well-served by a printed monthly bulletin in addition to digital.",
     "north_east_regional_context": "Average CC-TI score for North East parish councils is below the national average. A high Woolsington score creates a strong regional benchmark and a peer-pressure signal for surrounding councils."
   },
-
   "pro_tier_recommendations_summary": {
     "estimated_total_uplift": "+13 points across two indicators (1.2 and 1.3) plus +3 points on register of interests (4.4) — a credible 16-point uplift achievable within one quarter, taking Woolsington from current banding into Strong territory.",
     "non_score_value": "Beyond the scoring uplift, the main Pro-tier value is structuring resident engagement around the airport — a substantive local issue that current parish-council comms doesn't yet address. The Platinum resident-survey hub directly addresses this."
+  },
+  "score": 58,
+  "rank": 1378,
+  "regional_rank": 294,
+  "percentile": 18.2,
+  "band": "Developing",
+  "methodology_version": "VDTI v3.0",
+  "assessment_period": "January – March 2026",
+  "data_extraction_date": "16 April 2026",
+  "pillar_breakdown_db": {
+    "digital": 20,
+    "governance": 20,
+    "community": 8,
+    "accessibility": 10
   }
 }

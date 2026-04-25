@@ -39,6 +39,7 @@ interface Opportunity {
   evidence_source?: string;
   source_url?: string;
 }
+interface PillarBreakdownDb { digital?: number; governance?: number; community?: number; accessibility?: number; }
 interface Dossier {
   slug: string;
   name: string;
@@ -47,6 +48,15 @@ interface Dossier {
   district: string;
   region: string;
   principal_authority: string;
+  score?: number;
+  rank?: number;
+  regional_rank?: number;
+  percentile?: number;
+  band?: string;
+  methodology_version?: string;
+  data_extraction_date?: string;
+  assessment_period?: string;
+  pillar_breakdown_db?: PillarBreakdownDb;
   website: string;
   compiled_at: string;
   compiled_method: string;
@@ -109,7 +119,7 @@ export default function Spotlight() {
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
             <div>
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">
-                CC-TI v3.0 · Refreshed April 2026 · Hand-verified spotlight
+                {d.methodology_version || "VDTI v3.0"} · Data extracted {d.data_extraction_date || "16 April 2026"} · Spotlight council
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-3 leading-tight">{d.name}</h1>
               <div className="flex flex-wrap items-center gap-2 text-sm text-white/70 mb-6">
@@ -136,12 +146,19 @@ export default function Spotlight() {
                 </Link>
               </div>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 min-w-[260px]">
-              <div className="text-xs uppercase tracking-wider text-white/60 mb-1 font-mono">Pro-tier headline</div>
-              <div className="text-3xl font-bold mb-1">+{totalUplift} pts</div>
-              <p className="text-sm text-white/80 leading-relaxed mb-4">
-                {d.pro_tier_recommendations_summary?.estimated_total_uplift || "Score-uplift potential within one quarter."}
-              </p>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 min-w-[280px]">
+              <div className="text-xs uppercase tracking-wider text-white/60 mb-1 font-mono">VDTI score</div>
+              <div className="text-5xl font-bold mb-1 text-accent">{d.score ?? "—"}<span className="text-xl text-white/60 font-normal">/100</span></div>
+              <div className="text-xs text-white/60 mb-3">{d.band} · National rank {d.rank?.toLocaleString()} · Regional rank {d.regional_rank}</div>
+              {d.pillar_breakdown_db && (
+                <div className="border-t border-white/10 pt-3 space-y-1 text-xs text-white/75 mb-4">
+                  <div className="flex justify-between"><span>Digital</span><span className="font-mono">{d.pillar_breakdown_db.digital}/25</span></div>
+                  <div className="flex justify-between"><span>Governance</span><span className="font-mono">{d.pillar_breakdown_db.governance}/25</span></div>
+                  <div className="flex justify-between"><span>Community</span><span className="font-mono">{d.pillar_breakdown_db.community}/25</span></div>
+                  <div className="flex justify-between"><span>Accessibility</span><span className="font-mono">{d.pillar_breakdown_db.accessibility}/25</span></div>
+                </div>
+              )}
+              <div className="text-xs text-accent mb-3">+{totalUplift} pts uplift available with Platinum roadmap</div>
               <Link href="/pricing"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Subscribe to Platinum</Button></Link>
             </div>
           </div>
@@ -186,7 +203,7 @@ export default function Spotlight() {
             The parish covers an unusual mix of suburban residential (Newbiggin Hall, Woolsington village, Bedeburn, Callerton, Bankfoot) and major national infrastructure (Newcastle International Airport). For a council of {d.demographics.population_2021_census.toLocaleString()} residents, hosting a piece of nationally-significant infrastructure means transparency duties carry an extra weight: airport-related decisions affect every ward, and structured resident engagement on those decisions is exactly the kind of activity Platinum-tier tools are designed to support.
           </p>
           <p>
-            This report identifies <strong>{highPriority.length} high-priority, {mediumPriority.length} medium-priority and {lowPriority.length} low-priority improvement opportunities</strong>, with a combined achievable score uplift of <strong>+{totalUplift} CC-TI points within one quarter</strong>.
+            This report identifies <strong>{highPriority.length} high-priority, {mediumPriority.length} medium-priority and {lowPriority.length} low-priority improvement opportunities</strong>, with a combined achievable score uplift of <strong>+{totalUplift} VDTI points within one quarter</strong>.
           </p>
         </div>
       </section>
@@ -302,7 +319,7 @@ export default function Spotlight() {
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">How this report is compiled</Badge>
           <h2 className="text-3xl font-bold mb-5">Verified, statute-grounded, evidence-pinned</h2>
           <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-            {d.compiled_method} Compiled {d.compiled_at} using CC-TI v3.0 methodology.
+            {d.compiled_method} Compiled {d.compiled_at} using VDTI v3.0 methodology.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/methodology">
@@ -352,36 +369,4 @@ function RecGroup({ priority, label, recs }: { priority: string; label: string; 
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <Badge variant="outline" className="text-[10px] font-mono">{o.pillar}</Badge>
                   {o.estimated_uplift_points > 0 && (
-                    <Badge className="bg-accent/15 text-accent border-accent/30 text-[10px]">
-                      +{o.estimated_uplift_points} pts available
-                    </Badge>
-                  )}
-                </div>
-                <h3 className="font-bold text-lg mb-2">{o.title}</h3>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">{o.rationale}</p>
-            <div className="grid md:grid-cols-2 gap-3 text-xs pt-3 border-t border-slate-100">
-              <div>
-                <span className="font-semibold text-foreground">Effort:</span>
-                <span className="text-muted-foreground"> {o.effort}</span>
-              </div>
-              {o.evidence_source && (
-                <div>
-                  <span className="font-semibold text-foreground">Source:</span>{" "}
-                  {o.source_url ? (
-                    <a href={o.source_url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      {o.evidence_source} <ExternalLink className="w-3 h-3 inline" />
-                    </a>
-                  ) : (
-                    <span className="text-muted-foreground">{o.evidence_source}</span>
-                  )}
-                </div>
-              )}
-            </div>
-          </Card>
-        ))}
-      </div>
-    </div>
-  );
-}
+                    <Badge className="bg-accent/1

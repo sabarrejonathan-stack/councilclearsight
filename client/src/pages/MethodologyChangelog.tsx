@@ -48,7 +48,7 @@ const PROCESS = [
 export default function MethodologyChangelog() {
   useSEO({
     title: "Methodology changelog — every rule change | Council ClearSight",
-    description: "A public log of every change to the CC-TI scoring methodology.",
+    description: "A public log of every change to the VDTI scoring methodology.",
     canonicalPath: "/methodology/changelog",
   });
   return (
@@ -57,7 +57,7 @@ export default function MethodologyChangelog() {
         <div className="container max-w-4xl">
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono">Changelog</Badge>
           <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">Every methodology change, versioned and signed.</h1>
-          <p className="text-white/80 text-sm leading-relaxed max-w-2xl">A public log of every change to the CC-TI scoring rules. Every proposal sits for seven days of public comment; every accepted change carries a named reviewer.</p>
+          <p className="text-white/80 text-sm leading-relaxed max-w-2xl">A public log of every change to the VDTI scoring rules. Every proposal sits for seven days of public comment; every accepted change carries a named reviewer.</p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Link href="/contact?topic=methodology"><Button variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10"><Mail className="w-4 h-4 mr-2" /> Propose a methodology change</Button></Link>
           </div>

@@ -179,7 +179,7 @@ export default function ClerkSuccess({ params }: { params?: { councilSlug?: stri
               <ul className="space-y-2.5 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span>Your council's CC-TI score and ranking</span>
+                  <span>Your council's VDTI score and ranking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />

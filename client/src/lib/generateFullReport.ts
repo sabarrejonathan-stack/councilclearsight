@@ -138,7 +138,7 @@ function generateFullRecommendations(council: CouncilData) {
     pillar: "Governance & Compliance",
     effort: "Low cost (template provided)",
     urgency: "Before next Annual Parish Meeting",
-    body: `Only 12% of parish councils publish an annual transparency report that goes beyond the statutory AGAR. Yet LGA research shows that 49% of residents feel poorly informed about their council's work. For ${council.name}, publishing a clear, jargon-free annual report — covering how precept money was spent, what was achieved, and what is planned — would directly address this information gap. Councils that publish annual reports score on average 18 points higher on the CC-TI than those that do not. This single action has the highest return on effort of any recommendation in this report.`,
+    body: `Only 12% of parish councils publish an annual transparency report that goes beyond the statutory AGAR. Yet LGA research shows that 49% of residents feel poorly informed about their council's work. For ${council.name}, publishing a clear, jargon-free annual report — covering how precept money was spent, what was achieved, and what is planned — would directly address this information gap. Councils that publish annual reports score on average 18 points higher on the VDTI than those that do not. This single action has the highest return on effort of any recommendation in this report.`,
     evidence: `LGA Resident Satisfaction Polling Round 40 (October 2025): 49% of residents feel poorly informed. NALC data shows parish precepts have risen by £654m over five years, increasing resident scrutiny. The Transparency Code 2015 requires councils with turnover exceeding £25,000 to publish specified financial information, but an annual report goes further and builds trust proactively.`,
     action: `Download the Council ClearSight annual report template (available to subscribers). Customise it with your council's financial summary, key achievements, and priorities for the year ahead. Publish it on your website and distribute a summary to residents via your newsletter, social media, and at the Annual Parish Meeting. Budget: £0-£150 for printing costs.`,
     source: "Local Government Transparency Code 2015; LGA Resident Satisfaction Polling Round 40; NALC Annual Report on Parish Precepts 2025",
@@ -181,9 +181,9 @@ function generateFullRecommendations(council: CouncilData) {
       effort: "Low-moderate",
       urgency: "Within 8 weeks",
       body: `${council.name} has an established web presence, but there is significant opportunity to enhance it. The highest-scoring councils publish meeting agendas at least 5 clear days before meetings (exceeding the 3-day statutory minimum), upload draft minutes within 14 days, and provide a searchable archive of all council documents. Adding a resident notification system — allowing residents to subscribe to updates on specific topics — would place ${council.name} in the top 15% of councils nationally for digital engagement.`,
-      evidence: `Analysis of the top 100 CC-TI-scoring councils shows that 94% publish agendas more than 3 days in advance, 87% publish draft minutes within 14 days, and 62% offer email notification systems for residents. The average Digital Presence pillar score for councils with document notification systems is 21.3/25, compared to 14.7/25 for those without.`,
+      evidence: `Analysis of the top 100 VDTI-scoring councils shows that 94% publish agendas more than 3 days in advance, 87% publish draft minutes within 14 days, and 62% offer email notification systems for residents. The average Digital Presence pillar score for councils with document notification systems is 21.3/25, compared to 14.7/25 for those without.`,
       action: `Implement a document publication schedule: agendas 5+ clear days before meetings, draft minutes within 14 days, approved minutes within 28 days. Add an email subscription feature for council updates. Create a searchable document archive organised by year and meeting type.`,
-      source: "Local Government Act 1972, Schedule 12; Council ClearSight CC-TI analysis of top-performing councils",
+      source: "Local Government Act 1972, Schedule 12; Council ClearSight VDTI analysis of top-performing councils",
     });
   }
 
@@ -223,7 +223,7 @@ function generateFullRecommendations(council: CouncilData) {
     pillar: "Financial Accountability",
     effort: "Moderate (requires council resolution)",
     urgency: "Next Full Council meeting",
-    body: `The Local Council Award Scheme (LCAS) is the sector's quality standard, administered by NALC and SLCC. Council ClearSight's four-pillar framework maps directly to LCAS criteria at Foundation, Quality, and Quality Gold levels. ${council.name}'s current CC-TI score of ${Math.round(overall)} suggests ${overall >= 65 ? "strong alignment with Quality level criteria" : overall >= 45 ? "readiness for Foundation level with clear pathway to Quality" : "several areas where focused improvement would support a Foundation level application"}. Achieving LCAS accreditation demonstrates to residents and principal authorities that your council meets recognised standards of governance and community engagement — increasingly important as devolution creates new expectations for parish councils.`,
+    body: `The Local Council Award Scheme (LCAS) is the sector's quality standard, administered by NALC and SLCC. Council ClearSight's four-pillar framework maps directly to LCAS criteria at Foundation, Quality, and Quality Gold levels. ${council.name}'s current VDTI score of ${Math.round(overall)} suggests ${overall >= 65 ? "strong alignment with Quality level criteria" : overall >= 45 ? "readiness for Foundation level with clear pathway to Quality" : "several areas where focused improvement would support a Foundation level application"}. Achieving LCAS accreditation demonstrates to residents and principal authorities that your council meets recognised standards of governance and community engagement — increasingly important as devolution creates new expectations for parish councils.`,
     evidence: `NALC/SLCC Local Council Award Scheme criteria (2023). Council ClearSight LCAS evidence mapping (available on the For Clerks page). The English Devolution and Community Empowerment Bill references "well-governed local councils" as candidates for devolved responsibilities. Currently fewer than 15% of parish councils hold any LCAS accreditation.`,
     action: `Review the Council ClearSight LCAS evidence mapping on our For Clerks page. Present the LCAS opportunity to Full Council with the template agenda item provided. Use your Council ClearSight report as baseline evidence. Gold subscribers receive a dedicated LCAS evidence pack mapping their scores to specific LCAS criteria.`,
     source: "NALC/SLCC Local Council Award Scheme criteria (2023); English Devolution and Community Empowerment Bill 2025-26",
@@ -347,7 +347,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(8);
   const typeLabel = council.councilType.charAt(0).toUpperCase() + council.councilType.slice(1);
   doc.text(`${typeLabel} Council · ${council.county || "England"} · ${council.region || "England"}`, margin, 77);
-  doc.text("CC-TI Methodology v3.0 · Refreshed April 2026", margin, 83);
+  doc.text("VDTI Methodology v3.0 · Refreshed April 2026", margin, 83);
 
   // Score summary box
   y = 105;
@@ -377,7 +377,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
-  doc.text(`CC-TI Score: ${Math.round(overall)} out of 100`, margin + 50, y + 22);
+  doc.text(`VDTI Score: ${Math.round(overall)} out of 100`, margin + 50, y + 22);
   if (council.vdtiOverallRank) {
     doc.text(`National rank: ${council.vdtiOverallRank.toLocaleString()} of ${nationalStats.totalCouncils.toLocaleString()}`, margin + 50, y + 29);
   }
@@ -456,7 +456,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(7.5);
   doc.setTextColor(...TEAL);
   doc.setFont("helvetica", "bold");
-  doc.text("Refreshed April 2026 · CC-TI Methodology v3.0", margin + 4, y + 5);
+  doc.text("Refreshed April 2026 · VDTI Methodology v3.0", margin + 4, y + 5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
   doc.text("Scores reflect publicly available data as of 31 March 2026. Subscribers can request updated assessments at any time.", margin + 4, y + 10);
@@ -480,7 +480,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (CC-TI v3.0) assesses every parish, town, city and community council in England across four pillars and fourteen observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
+    `Council ClearSight (VDTI v3.0) assesses every parish, town, city and community council in England across four pillars and fourteen observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
     ``,
     `Evidence is gathered from council websites (via the ClearSight scraper, which respects robots.txt and enforces a 3-second politeness gate per host), the MHCLG council database, and published governance documents. Where a council cannot yet be observed, affected indicators are marked "Not Assessed" and excluded from the denominator.`,
     ``,
@@ -548,7 +548,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
       theme: "striped",
       headStyles: { fillColor: [...NAVY], textColor: [...WHITE], fontSize: 8, fontStyle: "bold" },
       styles: { fontSize: 8, cellPadding: 2.5, textColor: [...DARK] },
-      head: [["Rank", "Council", "CC-TI Score", "Band"]],
+      head: [["Rank", "Council", "VDTI Score", "Band"]],
       body: topPeers.map((peer, i) => [
         String(i + 1),
         peer.name + (peer.name === council.name ? " ★" : ""),
@@ -604,7 +604,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
-  doc.text("Each recommendation is specific, evidence-based, and linked to a measurable CC-TI score impact.", margin, y + 4);
+  doc.text("Each recommendation is specific, evidence-based, and linked to a measurable VDTI score impact.", margin, y + 4);
   doc.text("Recommendations are ordered by projected impact. All sources are publicly verifiable.", margin, y + 9);
   y += 16;
 
@@ -803,13 +803,11 @@ export function generateFullCouncilReport(data: ReportInput): void {
   // Disclaimer
   doc.setFontSize(6.5);
   doc.setTextColor(...SLATE);
-  const disclaimer = `This is a sample full report produced by Council ClearSight to demonstrate the depth and quality of a subscriber assessment. All data is based on publicly available sources collected during the current assessment window (refreshed April 2026). The CC-TI methodology (v3.0) is published in full at councilclearsight.org.uk/methodology. Council ClearSight is an independent assessment service and is not affiliated with any local authority, government department, or regulatory body. © Council ClearSight 2026.`;
+  const disclaimer = `This is a sample full report produced by Council ClearSight to demonstrate the depth and quality of a subscriber assessment. All data is based on publicly available sources collected during the current assessment window (refreshed April 2026). The VDTI methodology (v3.0) is published in full at councilclearsight.org.uk/methodology. Council ClearSight is an independent assessment service and is not affiliated with any local authority, government department, or regulatory body. © Council ClearSight 2026.`;
   const disclaimerLines = doc.splitTextToSize(disclaimer, contentWidth);
   doc.text(disclaimerLines, margin, y);
 
   addPageFooter(pageNum.value);
 
   // ─── Save ──────────────────────────────────────────────────────────────────
-  const filename = `Council_ClearSight_FullReport_${(data.name || "council").replace(/[^a-z0-9]/gi, "_")}.pdf`;
-  doc.save(filename);
-}
+  const filename = `Council_

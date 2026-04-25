@@ -1,1 +1,263 @@
-{"council_id":5396,"slug":"chute-parish-council","name":"Chute Parish Council","type":"parish","county":"Wiltshire","region":"South West","indicators":[{"id":"1.1","pillar":1,"label":"Active council website","max_points":20,"earned":20,"assessed":true,"input_snapshot":{"website_url":"https://www.chuteparishcouncil.gov.uk","website_resolves":true}},{"id":"1.2","pillar":1,"label":"Website on a .gov.uk domain","max_points":5,"earned":5,"assessed":true,"input_snapshot":{"website_url":"https://www.chuteparishcouncil.gov.uk"}},{"id":"1.3","pillar":1,"label":"Accessibility statement published","max_points":5,"earned":5,"assessed":true,"input_snapshot":{"has_accessibility_statement":true,"accessibility_scrape_attempted":true,"evidence_url":"https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/accessibility/"}},{"id":"2.1","pillar":2,"label":"General council email published","max_points":10,"earned":10,"assessed":true,"input_snapshot":{"email":"clerk@chuteparishcouncil.gov.uk"}},{"id":"2.2","pillar":2,"label":"Phone number published","max_points":5,"earned":0,"assessed":true,"input_snapshot":{"phone":null}},{"id":"2.3","pillar":2,"label":"Named clerk identified","max_points":10,"earned":0,"assessed":true,"input_snapshot":{"clerk_name":null}},{"id":"2.4","pillar":2,"label":"Clerk email published","max_points":5,"earned":5,"assessed":true,"input_snapshot":{"clerk_email":"clerk@chuteparishcouncil.gov.uk"}},{"id":"3.1","pillar":3,"label":"Meeting agendas published","max_points":7,"earned":7,"assessed":true,"input_snapshot":{"has_agendas":true,"governance_scrape_attempted":true,"evidence_url":"https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/agendas/"}},{"id":"3.2","pillar":3,"label":"Meeting minutes published","max_points":8,"earned":8,"assessed":true,"input_snapshot":{"has_minutes":true,"governance_scrape_attempted":true,"evidence_url":"https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/minutes/"}},{"id":"3.3","pillar":3,"label":"Financial documents / AGAR published","max_points":10,"earned":0,"assessed":true,"input_snapshot":{"has_financials":false,"governance_scrape_attempted":true,"evidence_url":null}},{"id":"4.1","pillar":4,"label":"Chair / Mayor named","max_points":3,"earned":0,"assessed":true,"input_snapshot":{"chair_name":null}},{"id":"4.2","pillar":4,"label":"At least three councillors listed","max_points":5,"earned":0,"assessed":true,"input_snapshot":{"councillors_listed_count":0}},{"id":"4.3","pillar":4,"label":"Councillor contact methods published","max_points":4,"earned":0,"assessed":true,"input_snapshot":{"councillors_email_count":0}},{"id":"4.4","pillar":4,"label":"Register of interests published","max_points":3,"earned":3,"assessed":true,"input_snapshot":{"has_register_of_interests":true,"governance_scrape_attempted":true,"evidence_url":"https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=da21a204%2D5d19%2D4df1%2Da795%2Df80ee1d77d10%2Epdf&o=Register%2Dof%2DInterests%2DForm%2D%2DBlank%2Epdf"}}],"pillar_earned":{"1":30,"2":15,"3":15,"4":3},"pillar_max_assessed":{"1":30,"2":30,"3":25,"4":15},"numerator":63,"denominator":100,"score":63.0,"completeness":1.0,"band":"Developing","rank_national":1692,"rank_type":1452,"rank_region":414,"methodology_version":"CC-TI v3.0","pillar_labels":{"1":"Digital Presence","2":"Contact Transparency","3":"Governance Documents","4":"Democratic Openness"},"enriched_evidence":{"standing_orders":{"found":true,"url":"https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=e702b891%2Df16a%2D4856%2D9592%2D7b268184d2c7%2Epdf&o=Standing%2DOrders%2D2024%2Epdf"},"financial_regulations":{"found":true,"url":"https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=bf102da3%2De8f0%2D40ee%2D9afd%2Dd092b34fe27d%2Epdf&o=Financial%2DRegs%2D2024%2Epdf"},"risk_assessment":{"found":false,"url":""},"code_of_conduct":{"found":true,"url":"https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=a47a5afa%2Dc253%2D4693%2Da2d0%2Dc85e0c5bd72c%2Epdf&o=CODE%2DOF%2DCONDUCT%2DCHUTE%2DPARISH%2DCOUNCIL%2DMAY%2D2021%2Epdf"},"gdpr_policy":{"found":true,"url":"https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/privacy-policy/"},"foi_publication_scheme":{"found":false,"url":""},"expenditure_over_100":{"found":false,"url":""},"asset_register":{"found":false,"url":""},"councillor_responsibilities":{"found":false,"url":""},"data_completeness_pct":27.6,"indicators_evidence_found_count":8,"social_facebook_url":"https://www.facebook.com/sharer/sharer.php?u=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/","social_twitter_url":"https://twitter.com/share?via=HugoFoxNews&url=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/"},"scrape_status":"ok"}
+{
+  "council_id": 5396,
+  "slug": "chute-parish-council",
+  "name": "Chute Parish Council",
+  "type": "parish",
+  "county": "Wiltshire",
+  "region": "South West",
+  "indicators": [
+    {
+      "id": "1.1",
+      "pillar": 1,
+      "label": "Active council website",
+      "max_points": 20,
+      "earned": 20,
+      "assessed": true,
+      "input_snapshot": {
+        "website_url": "https://www.chuteparishcouncil.gov.uk",
+        "website_resolves": true
+      }
+    },
+    {
+      "id": "1.2",
+      "pillar": 1,
+      "label": "Website on a .gov.uk domain",
+      "max_points": 5,
+      "earned": 5,
+      "assessed": true,
+      "input_snapshot": {
+        "website_url": "https://www.chuteparishcouncil.gov.uk"
+      }
+    },
+    {
+      "id": "1.3",
+      "pillar": 1,
+      "label": "Accessibility statement published",
+      "max_points": 5,
+      "earned": 5,
+      "assessed": true,
+      "input_snapshot": {
+        "has_accessibility_statement": true,
+        "accessibility_scrape_attempted": true,
+        "evidence_url": "https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/accessibility/"
+      }
+    },
+    {
+      "id": "2.1",
+      "pillar": 2,
+      "label": "General council email published",
+      "max_points": 10,
+      "earned": 10,
+      "assessed": true,
+      "input_snapshot": {
+        "email": "clerk@chuteparishcouncil.gov.uk"
+      }
+    },
+    {
+      "id": "2.2",
+      "pillar": 2,
+      "label": "Phone number published",
+      "max_points": 5,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "phone": null
+      }
+    },
+    {
+      "id": "2.3",
+      "pillar": 2,
+      "label": "Named clerk identified",
+      "max_points": 10,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "clerk_name": null
+      }
+    },
+    {
+      "id": "2.4",
+      "pillar": 2,
+      "label": "Clerk email published",
+      "max_points": 5,
+      "earned": 5,
+      "assessed": true,
+      "input_snapshot": {
+        "clerk_email": "clerk@chuteparishcouncil.gov.uk"
+      }
+    },
+    {
+      "id": "3.1",
+      "pillar": 3,
+      "label": "Meeting agendas published",
+      "max_points": 7,
+      "earned": 7,
+      "assessed": true,
+      "input_snapshot": {
+        "has_agendas": true,
+        "governance_scrape_attempted": true,
+        "evidence_url": "https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/agendas/"
+      }
+    },
+    {
+      "id": "3.2",
+      "pillar": 3,
+      "label": "Meeting minutes published",
+      "max_points": 8,
+      "earned": 8,
+      "assessed": true,
+      "input_snapshot": {
+        "has_minutes": true,
+        "governance_scrape_attempted": true,
+        "evidence_url": "https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/minutes/"
+      }
+    },
+    {
+      "id": "3.3",
+      "pillar": 3,
+      "label": "Financial documents / AGAR published",
+      "max_points": 10,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "has_financials": false,
+        "governance_scrape_attempted": true,
+        "evidence_url": null
+      }
+    },
+    {
+      "id": "4.1",
+      "pillar": 4,
+      "label": "Chair / Mayor named",
+      "max_points": 3,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "chair_name": null
+      }
+    },
+    {
+      "id": "4.2",
+      "pillar": 4,
+      "label": "At least three councillors listed",
+      "max_points": 5,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "councillors_listed_count": 0
+      }
+    },
+    {
+      "id": "4.3",
+      "pillar": 4,
+      "label": "Councillor contact methods published",
+      "max_points": 4,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "councillors_email_count": 0
+      }
+    },
+    {
+      "id": "4.4",
+      "pillar": 4,
+      "label": "Register of interests published",
+      "max_points": 3,
+      "earned": 3,
+      "assessed": true,
+      "input_snapshot": {
+        "has_register_of_interests": true,
+        "governance_scrape_attempted": true,
+        "evidence_url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=da21a204%2D5d19%2D4df1%2Da795%2Df80ee1d77d10%2Epdf&o=Register%2Dof%2DInterests%2DForm%2D%2DBlank%2Epdf"
+      }
+    }
+  ],
+  "pillar_earned": {
+    "1": 30,
+    "2": 15,
+    "3": 15,
+    "4": 3
+  },
+  "pillar_max_assessed": {
+    "1": 30,
+    "2": 30,
+    "3": 25,
+    "4": 15
+  },
+  "numerator": 63,
+  "denominator": 100,
+  "score": 35,
+  "completeness": 1.0,
+  "band": "Needs Attention",
+  "rank_national": 1692,
+  "rank_type": 1452,
+  "rank_region": 414,
+  "methodology_version": "VDTI v3.0",
+  "pillar_labels": {
+    "1": "Digital Presence",
+    "2": "Contact Transparency",
+    "3": "Governance Documents",
+    "4": "Democratic Openness"
+  },
+  "enriched_evidence": {
+    "standing_orders": {
+      "found": true,
+      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=e702b891%2Df16a%2D4856%2D9592%2D7b268184d2c7%2Epdf&o=Standing%2DOrders%2D2024%2Epdf"
+    },
+    "financial_regulations": {
+      "found": true,
+      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=bf102da3%2De8f0%2D40ee%2D9afd%2Dd092b34fe27d%2Epdf&o=Financial%2DRegs%2D2024%2Epdf"
+    },
+    "risk_assessment": {
+      "found": false,
+      "url": ""
+    },
+    "code_of_conduct": {
+      "found": true,
+      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=a47a5afa%2Dc253%2D4693%2Da2d0%2Dc85e0c5bd72c%2Epdf&o=CODE%2DOF%2DCONDUCT%2DCHUTE%2DPARISH%2DCOUNCIL%2DMAY%2D2021%2Epdf"
+    },
+    "gdpr_policy": {
+      "found": true,
+      "url": "https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/privacy-policy/"
+    },
+    "foi_publication_scheme": {
+      "found": false,
+      "url": ""
+    },
+    "expenditure_over_100": {
+      "found": false,
+      "url": ""
+    },
+    "asset_register": {
+      "found": false,
+      "url": ""
+    },
+    "councillor_responsibilities": {
+      "found": false,
+      "url": ""
+    },
+    "data_completeness_pct": 27.6,
+    "indicators_evidence_found_count": 8,
+    "social_facebook_url": "https://www.facebook.com/sharer/sharer.php?u=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/",
+    "social_twitter_url": "https://twitter.com/share?via=HugoFoxNews&url=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/"
+  },
+  "scrape_status": "ok",
+  "rank": 2993,
+  "regional_rank": 778,
+  "percentile": 62.3,
+  "assessment_period": "January – March 2026",
+  "data_extraction_date": "16 April 2026",
+  "pillar_breakdown_db": {
+    "digital": 20,
+    "governance": 3,
+    "community": 0,
+    "accessibility": 12
+  },
+  "clerk_name": null,
+  "clerk_email": "clerk@chuteparishcouncil.gov.uk",
+  "clerk_phone": null,
+  "chair_name": null,
+  "website": "https://www.chuteparishcouncil.gov.uk",
+  "email": "clerk@chuteparishcouncil.gov.uk",
+  "phone": null
+}

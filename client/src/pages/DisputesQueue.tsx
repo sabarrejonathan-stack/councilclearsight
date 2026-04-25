@@ -50,7 +50,7 @@ const DECISION_META: Record<Decision, { label: string; cls: string; icon: any }>
 export default function DisputesQueue() {
   useSEO({
     title: "Public disputes queue — every challenge, every decision | Council ClearSight",
-    description: "The public log of every score challenge ever filed against the CC-TI index, and every decision we've made on it. Full transparency, including the evidence reviewed.",
+    description: "The public log of every score challenge ever filed against the VDTI index, and every decision we've made on it. Full transparency, including the evidence reviewed.",
     canonicalPath: "/methodology/disputes",
   });
 

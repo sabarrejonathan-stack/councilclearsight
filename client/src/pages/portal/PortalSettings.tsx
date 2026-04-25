@@ -300,7 +300,7 @@ export default function PortalSettings() {
                   Embeddable badge
                 </h3>
                 <p className="text-xs text-muted-foreground mb-4">
-                  Drop this snippet on your council website to show your live CC-TI score.
+                  Drop this snippet on your council website to show your live VDTI score.
                 </p>
                 <div className="mb-4 p-3 bg-slate-900 text-slate-100 rounded-lg font-mono text-xs overflow-x-auto">
                   &lt;iframe src="https://councilclearsight.org.uk/embed/{councilScore.slug}"&gt;&lt;/iframe&gt;
@@ -366,7 +366,7 @@ export default function PortalSettings() {
                 Email notifications
               </h3>
               <div className="space-y-3">
-                <CheckboxField label="Score change" defaultChecked={true} description="When your CC-TI score changes (up or down)" />
+                <CheckboxField label="Score change" defaultChecked={true} description="When your VDTI score changes (up or down)" />
                 <CheckboxField label="Monthly digest" defaultChecked={true} description="A summary of what changed this month" />
                 <CheckboxField label="Challenge decision" defaultChecked={true} description="When we respond to a score challenge" />
                 <CheckboxField label="Pro features update" defaultChecked={false} description="New features and improvements (for Pro subscribers)" />

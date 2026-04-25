@@ -30,8 +30,8 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
   const [reportOpen, setReportOpen] = useState(false);
 
   useSEO({
-    title: council ? `${council.name} · CC-TI Score ${formatScore(council.score)}` : "Loading…",
-    description: council ? `Transparency assessment of ${council.name}. CC-TI score ${formatScore(council.score)}/100.` : undefined,
+    title: council ? `${council.name} · VDTI Score ${formatScore(council.score)}` : "Loading…",
+    description: council ? `Transparency assessment of ${council.name}. VDTI score ${formatScore(council.score)}/100.` : undefined,
     canonicalPath: `/council/${params.slug}`,
   });
 
@@ -93,7 +93,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             <div className={`relative w-[150px] h-[150px] flex items-center justify-center rounded-2xl ${bandCls.bg} ${bandCls.border} border`}>
               <div className="text-center">
                 <div className={`text-4xl font-bold ${bandCls.text}`}>{formatScore(council.score)}</div>
-                <div className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">CC-TI score</div>
+                <div className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">VDTI score</div>
               </div>
             </div>
           </div>
@@ -118,6 +118,24 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
 
       <div className="container max-w-6xl py-10 grid lg:grid-cols-[1fr_320px] gap-10">
         <div className="space-y-12 min-w-0">
+
+          {/* ── Resident-facing explanation (per April 2026 brief) ── */}
+          <section className="bg-sky-50 border-l-4 border-sky-500 rounded-r-2xl p-5">
+            <div className="font-mono text-[10px] uppercase tracking-wider text-sky-800 mb-2">For residents</div>
+            <h2 className="text-base font-bold text-sky-950 mb-2">What this score does — and what it does not — measure</h2>
+            <div className="text-sm text-sky-900/90 leading-relaxed space-y-2">
+              <p>
+                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same fourteen observable indicators across four pillars.
+              </p>
+              <p>
+                A lower score does not automatically mean poor decision-making. It means important evidence may not be easy to find publicly. If something appears missing, you can <Link href="/challenge" className="underline text-sky-700 hover:text-sky-900">submit a score challenge with evidence</Link>, or contact the council constructively to ask where it can be found.
+              </p>
+              <p className="text-xs text-sky-800/80 pt-1">
+                Last updated: 16 April 2026 · Assessed during January – March 2026 · Next assessment: January 2027
+              </p>
+            </div>
+          </section>
+
           <section>
             <h2 className="text-xl font-bold mb-4">Pillar breakdown</h2>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -214,7 +232,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             <h3 className="text-sm font-semibold mb-3">Understand this score</h3>
             <div className="space-y-2.5 text-xs">
               <Link href="/methodology" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300">
-                <span className="flex items-center gap-2"><BookOpen className="w-3.5 h-3.5 text-slate-500" />Methodology in plain English</span>
+                <span className="flex items-center gap-2"><BookOpen className="w-3.5 h-3.5 text-slate-500" />Methodology explained clearly</span>
                 <ArrowRight className="w-3 h-3 text-slate-400" />
               </Link>
               <Link href="/methodology/disputes" className="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-lg hover:border-slate-300">
@@ -375,4 +393,3 @@ function DataStateDisclaimer({ council }: { council: CouncilScore }) {
   }
 
   return null;
-}

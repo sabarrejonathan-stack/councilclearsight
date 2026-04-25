@@ -69,7 +69,7 @@ export default function Legal() {
                   <h3 className="text-lg font-semibold mb-3">Who we are</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {/* placeholder — user to supply legal entity name, company registration number, and address */}
-                    Council ClearSight (registered company number {/* number here */}) operates the website councilclearsight.org.uk and the Council ClearSight Transparency Index (CC-TI).
+                    Council ClearSight (registered company number {/* number here */}) operates the website councilclearsight.org.uk and the Council ClearSight Transparency Index (VDTI).
                   </p>
                 </div>
 
@@ -214,10 +214,10 @@ export default function Legal() {
                       <span className="font-semibold text-foreground">Billing:</span> Subscriptions renew automatically on the anniversary of your purchase. You will be notified of renewal at least 7 days before charging.
                     </div>
                     <div>
-                      <span className="font-semibold text-foreground">Cancellation:</span> You may cancel your subscription at any time via your account settings. Cancellation is effective at the end of your current billing period. No refund is issued for partial months.
+                      <span className="font-semibold text-foreground">Cancellation:</span> You may cancel your subscription at any time via your account settings. Cancellation is effective at the end of your current billing period. No refund is issued for partial periods of an annual subscription.
                     </div>
                     <div>
-                      <span className="font-semibold text-foreground">Score-drop refund (Pro tier):</span> If a council's CC-TI score drops by 5 or more points during an active Pro subscription through no fault of the council itself, the subscriber may request a pro-rata refund for the remainder of the term. Fault includes (but is not limited to) ignoring the improvement roadmap, removing already-published documents, or failing to respond to identified errors.
+                      <span className="font-semibold text-foreground">No score guarantee:</span> Subscribing to Council ClearSight does not change the public scoring rules and does not buy a higher score. The score reflects publicly observable evidence and is calculated identically for every council. Subscriptions are non-refundable on the basis of subsequent score movement.
                     </div>
                     <div>
                       <span className="font-semibold text-foreground">Service suspension:</span> We may suspend your subscription if payment fails or if you breach these terms. We will notify you before suspension.
@@ -240,7 +240,7 @@ export default function Legal() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3">Changes to the methodology</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    The CC-TI methodology is versioned and published at <Link href="/methodology" className="text-accent hover:underline">/methodology</Link>. Updates are made through a transparent change-control process and announced at least 7 days in advance. Your score may change as a result of a methodology update; this is not grounds for a refund but we will explain the delta in a published blog post.
+                    The VDTI methodology is versioned and published at <Link href="/methodology" className="text-accent hover:underline">/methodology</Link>. Updates are made through a transparent change-control process and announced at least 7 days in advance. Your score may change as a result of a methodology update; this is not grounds for a refund but we will explain the delta in a published blog post.
                   </p>
                 </div>
 
@@ -442,11 +442,4 @@ export default function Legal() {
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed mt-6">
             {/* placeholder — user to supply ICO registration number and link */}
-            We are registered with the Information Commissioner's Office (ICO) under registration number {/* ICO number here */}.
-          </p>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+            We are registered with the Information Commissioner's Office (ICO) under registration number {/* I

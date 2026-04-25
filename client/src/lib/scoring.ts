@@ -6,7 +6,7 @@
  * metadata, and helpers for the UI to present them consistently.
  */
 
-export const METHODOLOGY_VERSION = "CC-TI v3.0";
+export const METHODOLOGY_VERSION = "VDTI v3.0";
 export const METHODOLOGY_CHANGELOG_PATH = "/methodology/changelog";
 export const DISPUTES_QUEUE_PATH = "/methodology/disputes";
 

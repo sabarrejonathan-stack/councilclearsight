@@ -13,11 +13,11 @@ import { ArrowRight, AlertCircle, CheckCircle2, BadgeCheck, Sparkles, Target, Me
 const STEPS = [
   { n: "01", title: "Find your council", body: "Search the directory. Open your page. Read the fourteen indicators.", cta: "Open the directory", href: "/directory" },
   { n: "02", title: "Submit a correction", body: "If a field is wrong — an old email, a changed URL — file a challenge. No account required.", cta: "Submit a challenge", href: "/challenge" },
-  { n: "03", title: "Read the methodology", body: "How your score is calculated, in plain English. Share it with your chair.", cta: "Read the methodology", href: "/methodology" },
+  { n: "03", title: "Read the methodology", body: "How your score is calculated, explained clearly. Share it with your chair.", cta: "Read the methodology", href: "/methodology" },
 ];
 
 const FAQS = [
-  { q: "Our council already has a Quality Council Award. Why add this?", a: "LCAS is self-assessed and point-in-time. CC-TI is externally observed and continuously updated. Most Quality and Quality Gold councils we've spoken to subscribe to Gold as a continuous proof-of-work." },
+  { q: "Our council already has a Quality Council Award. Why add this?", a: "LCAS is self-assessed and point-in-time. VDTI is externally observed and continuously updated. Most Quality and Quality Gold councils we've spoken to subscribe to Gold as a continuous proof-of-work." },
   { q: "What if a councillor reads our score as criticism?", a: "The score is a diagnostic — a specific, fixable to-do list, not a judgement of the council's work. Platinum&apos;s roadmap is literally designed to give you the talking points for that council meeting." },
   { q: "Does Platinum help with engagement or just the score?", a: "Both, deliberately linked. Every transparency improvement is an engagement opportunity. When you publish the May minutes, we help you draft the newsletter that tells residents about it." },
   { q: "Is the data GDPR-compliant?", a: "Yes. We process only publicly-available register data. Our lawful basis is 'public task' under UK GDPR Art. 6(1)(e)." },
@@ -29,9 +29,9 @@ const PRO_STEPS = [
   { n: "Week 1", icon: Target, title: "Personalised audit and roadmap", body: "Within seven days of subscribing, we run a fresh audit and send you a written roadmap." },
   { n: "Week 2", icon: Megaphone, title: "Engagement templates tailored to your council", body: "Every roadmap item comes with newsletter wording, social post, meeting announcement." },
   { n: "Month 1", icon: TrendingUp, title: "First quarterly re-score", body: "Improvements you've made are reflected publicly within the month." },
-  { n: "Month 2", icon: MessageCircle, title: "Direct support channel", body: "Any time you hit a specific question, email the support channel. One working day response." },
-  { n: "Month 3", icon: Users, title: "Peer benchmarking + strategy call", body: "See where you sit against ten similar councils. Your 60-minute call plans next quarter's push." },
-  { n: "Ongoing", icon: HeartHandshake, title: "We keep showing up", body: "New templates. Re-audits. Score-drop refund if anything goes backwards without your fault." },
+  { n: "Month 2", icon: MessageCircle, title: "Help centre and score challenge route", body: "Any time you hit a specific question, the self-serve help centre and score challenge form route the answer to you. We aim to acknowledge enquiries within two working days." },
+  { n: "Month 3", icon: Users, title: "Peer benchmarking", body: "See where you sit against ten matched councils, plus county and regional comparisons. Use the dashboard to plan next quarter's push." },
+  { n: "Ongoing", icon: HeartHandshake, title: "Continuous automated value", body: "New templates, automated quarterly re-scores, peer movement alerts, fresh evidence prompts. Self-serve, scalable, no human-support burden." },
 ];
 
 export default function ForClerks() {
@@ -133,10 +133,10 @@ export default function ForClerks() {
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Resident engagement playbook</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Content templates</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Peer benchmarking vs. 10 councils</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Direct email support (1 day)</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Score-drop refund guarantee</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Quarterly chair/clerk briefing pack (auto-generated)</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Help centre + score challenge form (acknowledged within two working days)</li>
               </ul>
-              <Link href="/subscribe/platinum"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum — 14-day trial <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
+              <Link href="/subscribe/platinum"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             </Card>
           </div>
         </div>
@@ -172,24 +172,4 @@ export default function ForClerks() {
         <div className="text-center mb-8"><h2 className="text-3xl font-bold">What clerks ask before signing up</h2></div>
         <Accordion type="single" collapsible className="space-y-2">
           {FAQS.map((item, i) => (
-            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl px-4 bg-white">
-              <AccordionTrigger className="text-sm font-medium hover:no-underline py-3">{item.q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{item.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
-
-      <section className="bg-primary text-white">
-        <div className="container max-w-4xl py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to take ownership of your page?</h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">Start with the free clerk badge, then upgrade to Platinum for the full roadmap and resident-engagement playbook.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-            <Link href="/pricing"><Button size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10">See pricing</Button></Link>
-          </div>
-        </div>
-      </section>
-    </PublicLayout>
-  );
-}
+            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl

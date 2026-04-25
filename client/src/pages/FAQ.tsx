@@ -1,5 +1,5 @@
 /**
- * FAQ page — Council ClearSight (CC-TI v3)
+ * FAQ page — Council ClearSight (VDTI v3)
  *
  * Answers to the 12 real questions residents, clerks, and researchers ask.
  * Grouped into three sections: For residents, For clerks, About the methodology.
@@ -59,7 +59,7 @@ export default function FAQ() {
               },
               {
                 q: "How often are scores updated?",
-                a: "The public score is updated once per year (next scheduled update: April 2027). If you file a challenge that results in new evidence, the score updates within 5 working days and the decision is logged publicly. If a council is a CC-TI Pro subscriber, their score is recalculated every 90 days, so improvements show up faster.",
+                a: "The public score is updated once per year (next scheduled update: April 2027). If you file a challenge that results in new evidence, the score updates within 5 working days and the decision is logged publicly. If a council is a VDTI Pro subscriber, their score is recalculated every 90 days, so improvements show up faster.",
               },
               {
                 q: "Can I see the exact inputs you used for my council?",
@@ -93,15 +93,15 @@ export default function FAQ() {
             {[
               {
                 q: "How does this differ from the NALC Award Scheme (LCAS)?",
-                a: "The NALC Local Council Award Scheme is self-assessed by councils and accredits councils that meet published standards — it's a badge of honour. CC-TI is independently observed and scores all councils the same way, whether they engage with us or not. They're complementary. You can have both: LCAS accreditation shows your council's commitment to self-improvement; CC-TI shows what a resident can independently verify. Many councils use LCAS as a roadmap and CC-TI as a benchmark.",
+                a: "The NALC Local Council Award Scheme is self-assessed by councils and accredits councils that meet published standards — it's a badge of honour. VDTI is independently observed and scores all councils the same way, whether they engage with us or not. They're complementary. You can have both: LCAS accreditation shows your council's commitment to self-improvement; VDTI shows what a resident can independently verify. Many councils use LCAS as a roadmap and VDTI as a benchmark.",
               },
               {
                 q: "What if I disagree with a score?",
-                a: "File a challenge via your council's page. The process: (1) tell us which indicator you're challenging, (2) provide evidence (a URL, screenshot, or PDF), (3) we review it within 5 working days, (4) we publish the decision and any resulting score change. If your council is a CC-TI Verified or Pro subscriber, challenges get a 3-day SLA. All disputes are logged on a public queue.",
+                a: "File a challenge via your council's page. The process: (1) tell us which indicator you're challenging, (2) provide evidence (a URL, screenshot, or PDF), (3) we review it within 5 working days, (4) we publish the decision and any resulting score change. If your council is a VDTI Verified or Pro subscriber, challenges get a 3-day SLA. All disputes are logged on a public queue.",
               },
               {
                 q: "Do you take down negative information if we ask?",
-                a: "No. CC-TI is built on the principle of public verifiability (see the Methodology). If we've recorded a decision (e.g., 'council does not publish minutes'), and that decision was based on evidence we can show, it stays. What changes is the *input* — if you publish minutes next month, the input row updates and the score improves. We don't rewrite history, but we do update as councils improve.",
+                a: "No. VDTI is built on the principle of public verifiability (see the Methodology). If we've recorded a decision (e.g., 'council does not publish minutes'), and that decision was based on evidence we can show, it stays. What changes is the *input* — if you publish minutes next month, the input row updates and the score improves. We don't rewrite history, but we do update as councils improve.",
               },
               {
                 q: "My council is a Pro subscriber — how do quarterly re-scores work?",

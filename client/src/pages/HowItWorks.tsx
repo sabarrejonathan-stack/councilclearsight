@@ -1,5 +1,5 @@
 /**
- * How It Works page — Council ClearSight (CC-TI v3)
+ * How It Works page — Council ClearSight (VDTI v3)
  *
  * A five-step walkthrough of the scoring pipeline: discover → verify → score → publish → challenge.
  */
@@ -11,7 +11,7 @@ import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
 import {
   ArrowRight, Search, CheckCircle2, Zap, Upload, Scale,
-  Globe, Mail, ShieldCheck, FileText, Scale,
+  Globe, Mail, ShieldCheck, FileText,
 } from "lucide-react";
 
 export default function HowItWorks() {
@@ -121,7 +121,7 @@ export default function HowItWorks() {
             {
               icon: ShieldCheck,
               title: "Read the methodology",
-              body: "Every rule in plain English. No hidden formulae, no jargon. Residents and clerks can follow every step.",
+              body: "Every rule explained clearly. No hidden formulae, no jargon. Residents and clerks can follow every step.",
               cta: "Read methodology",
               href: "/methodology",
               external: false,
@@ -174,7 +174,7 @@ export default function HowItWorks() {
             {[
               "Every score is traceable to the specific evidence on the council's own public sources.",
               "No subscriber sees a different score than the public sees. There is no paywalled 'real score'.",
-              "The methodology is published in plain English and implemented in testable Python code.",
+              "The methodology is published clearly and implemented in testable Python code.",
               "All challenges and disputes are logged publicly; you can see how we respond to disagreement.",
               "Every change to the methodology is versioned and published with impact analysis.",
             ].map((item, i) => (
@@ -190,3 +190,4 @@ export default function HowItWorks() {
     </PublicLayout>
   );
 }
+        
