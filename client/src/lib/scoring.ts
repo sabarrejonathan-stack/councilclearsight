@@ -12,11 +12,15 @@ export const DISPUTES_QUEUE_PATH = "/methodology/disputes";
 
 export type Pillar = 1 | 2 | 3 | 4;
 
+// Database VDTI methodology — 4 equal-weight pillars × 25 = 100.
+// Reflects the Council ClearSight scoring engine output as of the 16 April 2026
+// data extract. Pillar weighting and indicator definitions match the
+// methodology published in the database.
 export const PILLAR_META: Record<Pillar, { label: string; shortLabel: string; max: number; description: string; tone: string }> = {
-  1: { label: "Digital Presence",       shortLabel: "Digital",       max: 30, description: "Can a resident find the council online and use the site?", tone: "digital" },
-  2: { label: "Contact Transparency",   shortLabel: "Contact",       max: 30, description: "Can a resident reach a named human at the council?",     tone: "contact" },
-  3: { label: "Governance Documents",   shortLabel: "Governance",    max: 25, description: "Does the council publish the statutory documents?",     tone: "governance" },
-  4: { label: "Democratic Openness",    shortLabel: "Democracy",     max: 15, description: "Can residents identify who represents them?",          tone: "democratic" },
+  1: { label: "Digital Presence",   shortLabel: "Digital",        max: 25, description: "Active website, council email, phone number — the basics of being reachable online.", tone: "digital" },
+  2: { label: "Governance",         shortLabel: "Governance",     max: 25, description: "Named clerk, clerk email, named chair, governance information published.",         tone: "governance" },
+  3: { label: "Community",          shortLabel: "Community",      max: 25, description: "Schools mapped to the council, school density, evidence of community engagement.",  tone: "community" },
+  4: { label: "Accessibility",      shortLabel: "Accessibility",  max: 25, description: "Multiple contact methods, named contact, geographic and ward information.",        tone: "accessibility" },
 };
 
 export type IndicatorMeta = {
@@ -28,21 +32,26 @@ export type IndicatorMeta = {
   statute?: string;
 };
 
+// VDTI database indicators (4 pillars × ~3-4 indicators × 25 max each).
+// These mirror the methodology shipped with the database extract.
 export const INDICATORS: IndicatorMeta[] = [
-  { id: "1.1", pillar: 1, label: "Active council website",                 max: 20, inputFields: ["website_url", "website_resolves"] },
-  { id: "1.2", pillar: 1, label: "Website on a .gov.uk domain",            max: 5,  inputFields: ["website_url"], statute: "GDS Standard" },
-  { id: "1.3", pillar: 1, label: "Accessibility statement published",      max: 5,  inputFields: ["has_accessibility_statement"], statute: "Accessibility Regs 2018" },
-  { id: "2.1", pillar: 2, label: "General council email published",        max: 10, inputFields: ["email"] },
-  { id: "2.2", pillar: 2, label: "Phone number published",                 max: 5,  inputFields: ["phone"] },
-  { id: "2.3", pillar: 2, label: "Named clerk identified",                 max: 10, inputFields: ["clerk_name"], statute: "LGA 1972 s.112" },
-  { id: "2.4", pillar: 2, label: "Clerk email published",                  max: 5,  inputFields: ["clerk_email"] },
-  { id: "3.1", pillar: 3, label: "Meeting agendas published",              max: 7,  inputFields: ["has_agendas"], statute: "LGA 1972" },
-  { id: "3.2", pillar: 3, label: "Meeting minutes published",              max: 8,  inputFields: ["has_minutes"], statute: "LGA 1972" },
-  { id: "3.3", pillar: 3, label: "Financial documents / AGAR published",   max: 10, inputFields: ["has_financials"], statute: "Accounts & Audit Regs 2015" },
-  { id: "4.1", pillar: 4, label: "Chair / Mayor named",                    max: 3,  inputFields: ["chair_name"] },
-  { id: "4.2", pillar: 4, label: "At least three councillors listed",      max: 5,  inputFields: ["councillors_listed_count"] },
-  { id: "4.3", pillar: 4, label: "Councillor contact methods published",   max: 4,  inputFields: ["councillors_email_count"] },
-  { id: "4.4", pillar: 4, label: "Register of interests published",        max: 3,  inputFields: ["has_register_of_interests"], statute: "Localism Act 2011" },
+  // Pillar 1 — Digital Presence (25)
+  { id: "1.1", pillar: 1, label: "Active council website",                 max: 15, inputFields: ["website_url", "has_website"] },
+  { id: "1.2", pillar: 1, label: "Council email address published",        max: 5,  inputFields: ["email"] },
+  { id: "1.3", pillar: 1, label: "Phone number published",                 max: 5,  inputFields: ["phone"] },
+  // Pillar 2 — Governance (25)
+  { id: "2.1", pillar: 2, label: "Named clerk identified",                 max: 10, inputFields: ["clerk_name"], statute: "LGA 1972 s.112" },
+  { id: "2.2", pillar: 2, label: "Clerk email published",                  max: 5,  inputFields: ["clerk_email"] },
+  { id: "2.3", pillar: 2, label: "Chair / Mayor named",                    max: 5,  inputFields: ["chair_name"] },
+  { id: "2.4", pillar: 2, label: "Governance information published",       max: 5,  inputFields: ["has_agendas", "has_minutes"], statute: "LGA 1972" },
+  // Pillar 3 — Community (25)
+  { id: "3.1", pillar: 3, label: "Schools mapped within council area",     max: 10, inputFields: ["school_count"] },
+  { id: "3.2", pillar: 3, label: "School density (schools per population)", max: 5, inputFields: ["school_count", "population_band"] },
+  { id: "3.3", pillar: 3, label: "Engagement evidence published",          max: 10, inputFields: ["has_minutes", "school_count"] },
+  // Pillar 4 — Accessibility (25)
+  { id: "4.1", pillar: 4, label: "Multiple contact methods provided",      max: 10, inputFields: ["email", "phone"] },
+  { id: "4.2", pillar: 4, label: "Named contact identified",               max: 10, inputFields: ["clerk_name", "chair_name"] },
+  { id: "4.3", pillar: 4, label: "Geographic and ward information",        max: 5,  inputFields: ["region", "county"] },
 ];
 
 export function indicatorsForPillar(p: Pillar): IndicatorMeta[] {

@@ -99,7 +99,7 @@ export default function PublicFooter() {
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40 mb-6">
             <span>7,031 councils scored</span>
             <span className="hidden sm:inline">·</span>
-            <span>4 pillars · 14 indicators · 100 points</span>
+            <span>4 pillars · 13 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>
             <span>VDTI v3.0</span>
             <span className="hidden sm:inline">·</span>
@@ -121,3 +121,4 @@ export default function PublicFooter() {
     </footer>
   );
 }
+  

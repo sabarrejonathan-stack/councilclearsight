@@ -125,7 +125,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             <h2 className="text-base font-bold text-sky-950 mb-2">What this score does — and what it does not — measure</h2>
             <div className="text-sm text-sky-900/90 leading-relaxed space-y-2">
               <p>
-                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same fourteen observable indicators across four pillars.
+                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same thirteen observable indicators across four pillars.
               </p>
               <p>
                 A lower score does not automatically mean poor decision-making. It means important evidence may not be easy to find publicly. If something appears missing, you can <Link href="/challenge" className="underline text-sky-700 hover:text-sky-900">submit a score challenge with evidence</Link>, or contact the council constructively to ask where it can be found.
@@ -366,31 +366,4 @@ function DataStateDisclaimer({ council }: { council: CouncilScore }) {
             This council's <code className="font-mono">robots.txt</code> directs automated transparency tools not to read the site. We respect that opt-out — but it means we can't observe whether agendas, minutes, the AGAR or the register of interests are published. Pillars 3 and 4 are recorded as <strong>Not Assessed</strong>.
           </p>
           <p className="text-xs text-sky-900 leading-relaxed">
-            <strong>If you're the clerk:</strong> a one-line addition to <code className="font-mono">robots.txt</code> allowing the <code className="font-mono">CouncilClearSightBot</code> user-agent will let the next refresh score Pillars 3 and 4 properly. <Link href="/challenge" className="text-sky-700 underline font-semibold">Or submit your evidence directly</Link>.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  if (status === "unreachable") {
-    return (
-      <div className="mb-6 p-4 bg-rose-50 border-2 border-rose-200 rounded-xl flex items-start gap-3">
-        <WifiOff className="w-5 h-5 text-rose-700 flex-shrink-0 mt-0.5" />
-        <div className="flex-1">
-          <div className="font-semibold text-rose-950 text-sm mb-1">Website was unreachable at last assessment</div>
-          <p className="text-xs text-rose-900 leading-relaxed mb-2">
-            The website URL we have for {council.name} did not respond at the last assessment. Pillar 1.1 reflects this as a measurement of "no working website"; Pillars 3 and 4 are marked <strong>Not Assessed</strong>.
-          </p>
-          <p className="text-xs text-rose-900 leading-relaxed">
-            <strong>If your website has moved,</strong>{" "}
-            <Link href={`/challenge?slug=${council.slug}&indicator=1.1`} className="text-rose-700 underline font-semibold">tell us the new URL</Link>
-            {" "}and we'll re-scan within 14 working days.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  return null;
-}
+            <strong>If you're the clerk:</strong> a one-line addition to <code className="font-mono">robots.txt</co

@@ -1,7 +1,7 @@
 /**
  * Evidence page — Council ClearSight (VDTI v3)
  *
- * The statutory and academic basis for the 14 indicators.
+ * The statutory and academic basis for the 13 indicators.
  * Three sections: Statutory basis, Sector literature, Peer review.
  */
 
@@ -228,3 +228,4 @@ export default function Evidence() {
     </PublicLayout>
   );
 }
+                                      

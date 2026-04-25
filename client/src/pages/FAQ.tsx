@@ -63,7 +63,7 @@ export default function FAQ() {
               },
               {
                 q: "Can I see the exact inputs you used for my council?",
-                a: "Yes — every council page shows each of the fourteen indicators with the exact evidence we found: the website URL we checked, the email address we recorded, the clerk's name, the meeting document we saw. Click any indicator to expand the details. If something looks wrong, there's a one-click challenge button next to it.",
+                a: "Yes — every council page shows each of the thirteen indicators with the exact evidence we found: the website URL we checked, the email address we recorded, the clerk's name, the meeting document we saw. Click any indicator to expand the details. If something looks wrong, there's a one-click challenge button next to it.",
               },
               {
                 q: "What's a good score for a council our size?",

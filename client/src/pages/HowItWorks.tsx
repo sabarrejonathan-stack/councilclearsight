@@ -63,15 +63,15 @@ export default function HowItWorks() {
               icon: Zap,
               title: "Score",
               summary: "We apply fourteen binary rules across four pillars.",
-              body: "Each of the fourteen indicators is checked against the verified inputs for every council. Each rule either earns maximum points (when the evidence is present) or zero (when it isn't). If we haven't yet checked an indicator for a particular council, it's marked 'Not assessed' and excluded from the denominator — a missing check never masquerades as a fail. The final score is the points earned divided by the points we could assess, on a 0–100 scale.",
-              sources: "14 binary indicators · 4 pillars · Max 100 points",
+              body: "Each of the thirteen indicators is checked against the verified inputs for every council. Each rule either earns maximum points (when the evidence is present) or zero (when it isn't). If we haven't yet checked an indicator for a particular council, it's marked 'Not assessed' and excluded from the denominator — a missing check never masquerades as a fail. The final score is the points earned divided by the points we could assess, on a 0–100 scale.",
+              sources: "13 binary indicators · 4 pillars · Max 100 points",
             },
             {
               step: 4,
               icon: Upload,
               title: "Publish",
               summary: "Every council page is regenerated with the latest evidence.",
-              body: "Every council page on the site is updated to reflect the latest verdicts — the score, the band, the rank, and the specific evidence behind each of the fourteen indicators. What you see on a council's page is exactly what the scoring process produced; there's no editorial layer between the evidence and the score.",
+              body: "Every council page on the site is updated to reflect the latest verdicts — the score, the band, the rank, and the specific evidence behind each of the thirteen indicators. What you see on a council's page is exactly what the scoring process produced; there's no editorial layer between the evidence and the score.",
               sources: "Public annual refresh · Quarterly for Pro subscribers · Full evidence trail",
             },
             {

@@ -21,7 +21,7 @@ import {
   HelpCircle, ChevronRight,
 } from "lucide-react";
 
-// ─── Layman's explanations for each of the 14 indicators ──────────────
+// ─── Layman's explanations for each of the 13 indicators ──────────────
 // Warm, specific, and honest. Every explanation answers three questions:
 //   Why this matters · How we check · What it's worth
 
@@ -117,7 +117,7 @@ function pillarClasses(p: 1|2|3|4) {
 export default function Methodology() {
   useSEO({
     title: "Methodology — How we score every council, explained clearly | Council ClearSight",
-    description: "A clear, human explanation of how the Council ClearSight Transparency Index is calculated. Four pillars, fourteen indicators, scored from publicly observable information. No jargon.",
+    description: "A clear, human explanation of how the Council ClearSight Transparency Index is calculated. Four pillars, thirteen indicators, scored from publicly observable information. No jargon.",
     canonicalPath: "/methodology",
   });
 
@@ -199,7 +199,7 @@ export default function Methodology() {
         {/* ─── Four pillars overview ──────────────────────── */}
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">Four pillars</h2>
-          <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">The fourteen indicators are grouped into four pillars, each answering a slightly different question about a council.</p>
+          <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">The thirteen indicators are grouped into four pillars, each answering a slightly different question about a council.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {([1,2,3,4] as const).map((p) => {
               const meta = PILLAR_META[p];
@@ -318,7 +318,7 @@ export default function Methodology() {
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">The evidence for every score lives on the council's page</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Open any council in the directory and you'll see each of the fourteen indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
+                Open any council in the directory and you'll see each of the thirteen indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/directory"><Button>Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
@@ -331,26 +331,4 @@ export default function Methodology() {
         {/* ─── What the score is not ───────────────────────── */}
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">What the score isn't</h2>
-          <p className="text-muted-foreground text-sm mb-5 max-w-3xl leading-relaxed">It's easy to read any single number as broader judgement than it's meant to be. Four things the score does <em>not</em> measure:</p>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              { title: "Whether a council makes good decisions",   body: "A council can publish every document on time and still make decisions residents disagree with. The score is about visibility, not quality of judgement." },
-              { title: "Whether residents are happy with it",      body: "We don't survey residents. A council might be loved by its community and still score modestly; or score highly and have difficult relationships — the score is about the artefacts, not the atmosphere." },
-              { title: "Whether the precept is good value",        body: "Precept efficiency, procurement, value-for-money — none of these are measured. A separate question, for a separate day." },
-              { title: "Whether the clerk or councillors are competent", body: "The score describes what has been published, not the people who published it. A new clerk at a previously-silent council can move a score dramatically in three months." },
-            ].map((p) => (
-              <div key={p.title} className="p-4 bg-slate-50 border border-slate-200 rounded-lg flex items-start gap-2.5">
-                <AlertCircle className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-medium text-foreground mb-1">{p.title}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{p.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+          <p className="text-muted-foreground text-sm mb-5 max-w-3xl leading-relaxed">It's easy to read any single number as broader judgement than it's meant to be. Four things the score does <em>not</em> measure
