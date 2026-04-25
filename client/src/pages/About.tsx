@@ -133,4 +133,14 @@ export default function About() {
                   Jonathan built the first transparency index after spending three hours searching for a single parish council's meeting minutes. He spent a decade in local government research and community activism. {/* [placeholder — clerk to edit: Prior roles, qualifications, publications] */}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  He commits to transparent methodology, fair attribution, and building somethi
+                  He commits to transparent methodology, fair attribution, and building something the sector actually needs rather than something that simply scales.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+      </div>
+    </PublicLayout>
+  );
+}

@@ -441,5 +441,11 @@ export default function Legal() {
             </div>
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed mt-6">
-            {/* placeholder — user to supply ICO registration number and link */}
-            We are registered with the Information Commissioner's Office (ICO) under registration number {/* I
+            We are registered with the Information Commissioner's Office (ICO).
+          </p>
+        </section>
+
+      </div>
+    </PublicLayout>
+  );
+}

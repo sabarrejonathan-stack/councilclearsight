@@ -393,3 +393,4 @@ function DataStateDisclaimer({ council }: { council: CouncilScore }) {
   }
 
   return null;
+}
