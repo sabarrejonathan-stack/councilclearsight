@@ -192,6 +192,18 @@ export default function SampleReportModal({ open, onOpenChange, council }: Sampl
                     <span className="font-bold text-sm">Want the full Platinum report?</span>
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    8 prioritised recommendations, peer benchmarking, demographic context, quarterly updates. £499/yr.
+                    12 prioritised recommendations, peer benchmarking, demographic context, quarterly updates, automated resident engagement tools. £499/yr.
                   </p>
-        
+                </div>
+              </Link>
+            </div>
+
+            <Button variant="outline" className="w-full mt-2" onClick={reset}>
+              Close
+            </Button>
+          </div>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}

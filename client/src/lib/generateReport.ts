@@ -855,4 +855,7 @@ export function generateCouncilReport(data: ReportInput): void {
 
   addPageFooter(pageNum.value);
 
-  // ─── Save ───────────────────────────────────────────────────
+  // ─── Save ──────────────────────────────────────────────────────────────────
+  const filename = `Council_ClearSight_Report_${(data.council?.name || "report").replace(/[^a-z0-9]/gi, "_")}.pdf`;
+  doc.save(filename);
+}
