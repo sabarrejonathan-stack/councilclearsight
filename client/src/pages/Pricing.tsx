@@ -225,6 +225,23 @@ export default function Pricing() {
       {/* ── Outcome-grouped feature comparison ─────── */}
       <section className="bg-slate-50 border-y border-slate-200">
         <div className="container max-w-5xl py-16">
+
+          {/* ─── Feature tour video ──────────────────────────── */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-black">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full h-auto block"
+                aria-label="Council ClearSight Gold and Platinum feature tour"
+              >
+                <source src="/videos/pricing-feature-tour.mp4" type="video/mp4" />
+                Your browser does not support embedded video. The full feature comparison is also tabulated below.
+              </video>
+            </div>
+          </div>
+
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <Badge variant="outline" className="mb-3 font-mono text-[10px]">Compare in detail</Badge>
             <h2 className="text-3xl font-bold mb-3">Every feature, grouped by what it does for you</h2>
