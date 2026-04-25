@@ -157,4 +157,8 @@ export default function Pricing() {
             <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Find your council first <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             <Link href="/contact?topic=pricing"><Button size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10">Ask us a question</Button></Link>
           </div>
-        </div
+        </div>
+      </section>
+    </PublicLayout>
+  );
+}

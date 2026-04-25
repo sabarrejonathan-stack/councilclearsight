@@ -281,7 +281,8 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
             <div className="flex flex-wrap gap-3 text-xs">
               <Link href={`/challenge?slug=${slug}&indicator=${indicator.id}`} className="text-accent hover:underline inline-flex items-center gap-1">
                 <Flag className="w-3 h-3" />Think this is wrong? Challenge it.
-              </Link            </div>
+              </Link>
+            </div>
           </div>
         </div>
       )}
