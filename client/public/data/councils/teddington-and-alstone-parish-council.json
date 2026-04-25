@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Gloucestershire",
   "region": "South West",
+  "website": "https://www.teddington-and-alstone-parish-council.org.uk",
+  "email": "clerk@teddington-and-alstone-parish-council.org.uk",
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": "clerk@teddington-and-alstone-parish-council.org.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.teddington-and-alstone-parish-council.org.uk"
+        "website": "https://www.teddington-and-alstone-parish-council.org.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@teddington-and-alstone-parish-council.org.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@teddington-and-alstone-parish-council.org.uk",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South West",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 20,
-    "2": 3,
+    "2": 5,
     "3": 0,
-    "4": 12
+    "4": 10
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -173,75 +181,14 @@
   "score": 35,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 1758,
-  "rank_type": 1510,
-  "rank_region": 436,
+  "rank": 3148,
+  "rank_national": 3148,
+  "regional_rank": 626,
+  "rank_region": 626,
+  "rank_type": 2620,
+  "percentile": 55.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": true,
-      "url": "https://teddington-and-alstone-parish-council.org.uk/document-category/standing-orders/"
-    },
-    "financial_regulations": {
-      "found": true,
-      "url": "https://teddington-and-alstone-parish-council.org.uk/financial-regulations/"
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": true,
-      "url": "https://teddington-and-alstone-parish-council.org.uk/code-of-conduct/"
-    },
-    "gdpr_policy": {
-      "found": false,
-      "url": ""
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": true,
-      "url": "https://teddington-and-alstone-parish-council.org.uk/asset-register/"
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 37.9,
-    "indicators_evidence_found_count": 11,
-    "social_facebook_url": "",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 2993,
-  "regional_rank": 869,
-  "percentile": 60.8,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 3,
-    "community": 0,
-    "accessibility": 12
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@teddington-and-alstone-parish-council.org.uk",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://www.teddington-and-alstone-parish-council.org.uk",
-  "email": "clerk@teddington-and-alstone-parish-council.org.uk",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

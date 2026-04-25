@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Staffordshire",
   "region": "West Midlands",
+  "website": "http://caverswall.org.uk/parish-council/",
+  "email": "clerk@caverswall.staffslc.gov.uk",
+  "phone": "07811 879627",
+  "clerk_name": null,
+  "clerk_email": "clerk@caverswall.staffslc.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "http://caverswall.org.uk/parish-council/"
+        "website": "http://caverswall.org.uk/parish-council/"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@caverswall.staffslc.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 8,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -158,8 +166,8 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 3,
-    "3": 15,
+    "2": 5,
+    "3": 5,
     "4": 15
   },
   "pillar_max_assessed": {
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 58,
+  "numerator": 50,
   "denominator": 100,
-  "score": 58,
+  "score": 50,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 1882,
-  "rank_type": 1627,
-  "rank_region": 128,
+  "rank": 1708,
+  "rank_national": 1708,
+  "regional_rank": 125,
+  "rank_region": 125,
+  "rank_type": 1428,
+  "percentile": 75.7,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1378,
-  "regional_rank": 139,
-  "percentile": 83.3,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 3,
-    "community": 15,
-    "accessibility": 15
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@caverswall.staffslc.gov.uk",
-  "clerk_phone": "07811 879627",
-  "chair_name": null,
-  "website": "http://caverswall.org.uk/parish-council/",
-  "email": "clerk@caverswall.staffslc.gov.uk",
-  "phone": "07811 879627"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Somerset",
   "region": "South West",
+  "website": "https://www.clatworthy-parish.uk",
+  "email": "clatworthyparish@gmail.com",
+  "phone": null,
+  "clerk_name": "Norma Martin",
+  "clerk_email": "clatworthyparish@gmail.com",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.clatworthy-parish.uk"
+        "website": "https://www.clatworthy-parish.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Norma Martin"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clatworthyparish@gmail.com"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 11,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Norma Martin",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South West",
@@ -160,7 +168,7 @@
     "1": 20,
     "2": 15,
     "3": 0,
-    "4": 22
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 57,
+  "numerator": 55,
   "denominator": 100,
-  "score": 57,
+  "score": 55,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 1260,
-  "rank_type": 1083,
-  "rank_region": 311,
+  "rank": 1353,
+  "rank_national": 1353,
+  "regional_rank": 331,
+  "rank_region": 331,
+  "rank_type": 1096,
+  "percentile": 80.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1625,
-  "regional_rank": 447,
-  "percentile": 80.3,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 15,
-    "community": 0,
-    "accessibility": 22
-  },
-  "clerk_name": "Norma Martin",
-  "clerk_email": "clatworthyparish@gmail.com",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://www.clatworthy-parish.uk",
-  "email": "clatworthyparish@gmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

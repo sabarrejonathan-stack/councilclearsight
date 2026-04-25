@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Somerset",
   "region": "South West",
+  "website": "https://www.luccombe.org/parish-council/",
+  "email": "clerk@luccombe.org",
+  "phone": "01643 862006",
+  "clerk_name": "Dr Alison Flind",
+  "clerk_email": "clerk@luccombe.org",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.luccombe.org/parish-council/"
+        "website": "https://www.luccombe.org/parish-council/"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Dr Alison Flind"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@luccombe.org"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -173,75 +181,14 @@
   "score": 65,
   "completeness": 1.0,
   "band": "Good",
-  "rank_national": 152,
-  "rank_type": 123,
-  "rank_region": 32,
+  "rank": 580,
+  "rank_national": 580,
+  "regional_rank": 146,
+  "rank_region": 146,
+  "rank_type": 440,
+  "percentile": 91.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/03/LPC-Standing-Orders-26-27.pdf"
-    },
-    "financial_regulations": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/03/LPC-financial-regulations-26-27.pdf"
-    },
-    "risk_assessment": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/04/LPC-Risk-Assessment-26-27.pdf"
-    },
-    "code_of_conduct": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/03/LPC-Councillor-Code-of-Conduct-26-27.pdf"
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.luccombe.org/privacy-notice/"
-    },
-    "foi_publication_scheme": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/04/model-publication-scheme.pdf"
-    },
-    "expenditure_over_100": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/04/luccombe-transparency-code-25-26.pdf"
-    },
-    "asset_register": {
-      "found": true,
-      "url": "https://www.luccombe-pc.gov.uk/wp-content/uploads/2026/04/LPC-Asset-Register-25-26.pdf"
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 48.3,
-    "indicators_evidence_found_count": 14,
-    "social_facebook_url": "",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 706,
-  "regional_rank": 306,
-  "percentile": 88.6,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 0,
-    "accessibility": 25
-  },
-  "clerk_name": "Dr Alison Flind",
-  "clerk_email": "clerk@luccombe.org",
-  "clerk_phone": "01643 862006",
-  "chair_name": null,
-  "website": "https://www.luccombe.org/parish-council/",
-  "email": "clerk@luccombe.org",
-  "phone": "01643 862006"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

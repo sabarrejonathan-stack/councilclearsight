@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "Northumberland",
   "region": "North East",
+  "website": null,
+  "email": "griggbill@gmail.com",
+  "phone": null,
+  "clerk_name": "Mr W C Grigg",
+  "clerk_email": "griggbill@gmail.com",
+  "chair_name": "Trevor Cessford;Amanda Earnshaw;Alan John Kelly;Cristina Liliana Knox;Anthony D'Auvergne Oake",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 5,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "griggbill@gmail.com"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr W C Grigg"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "griggbill@gmail.com"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Trevor Cessford;Amanda Earnshaw;Alan John Kelly;Cristina Liliana Knox;Anthony D'Auvergne Oake"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 5
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 5
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 5
+        "school_count": 5,
+        "has_minutes": false
       }
     },
     {
@@ -136,11 +144,11 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr W C Grigg",
-        "chair_name": "Trevor Cessford;Amanda Earnshaw;Alan John Kelly;Cristina Liliana Knox;Anthony D'Auvergne Oake"
+        "chair_name": null
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North East",
@@ -160,7 +168,7 @@
     "1": 5,
     "2": 15,
     "3": 15,
-    "4": 18
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 53,
+  "numerator": 55,
   "denominator": 100,
-  "score": 53,
+  "score": 55,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 3109,
-  "rank_type": 2689,
-  "rank_region": 88,
+  "rank": 1353,
+  "rank_national": 1353,
+  "regional_rank": 55,
+  "rank_region": 55,
+  "rank_type": 1096,
+  "percentile": 80.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1921,
-  "regional_rank": 67,
-  "percentile": 77.2,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 15,
-    "community": 15,
-    "accessibility": 18
-  },
-  "clerk_name": "Mr W C Grigg",
-  "clerk_email": "griggbill@gmail.com",
-  "clerk_phone": null,
-  "chair_name": "Trevor Cessford;Amanda Earnshaw;Alan John Kelly;Cristina Liliana Knox;Anthony D'Auvergne Oake",
-  "website": null,
-  "email": "griggbill@gmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

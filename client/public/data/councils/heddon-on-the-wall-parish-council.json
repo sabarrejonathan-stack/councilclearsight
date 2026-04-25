@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "East Riding of Yorkshire",
   "region": "Yorkshire and the Humber",
+  "website": null,
+  "email": null,
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -81,8 +89,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -173,33 +181,14 @@
   "score": 5,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 5367,
-  "rank_type": 4553,
-  "rank_region": 853,
+  "rank": 5468,
+  "rank_national": 5468,
+  "regional_rank": 827,
+  "rank_region": 827,
+  "rank_type": 4673,
+  "percentile": 22.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 5470,
-  "regional_rank": 1368,
-  "percentile": 24.3,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 0,
-    "governance": 0,
-    "community": 0,
-    "accessibility": 5
-  },
-  "clerk_name": null,
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": null,
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

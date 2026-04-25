@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Wiltshire",
   "region": "South West",
+  "website": "https://www.chuteparishcouncil.gov.uk",
+  "email": "clerk@chuteparishcouncil.gov.uk",
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": "clerk@chuteparishcouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.chuteparishcouncil.gov.uk"
+        "website": "https://www.chuteparishcouncil.gov.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@chuteparishcouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@chuteparishcouncil.gov.uk",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South West",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 20,
-    "2": 3,
+    "2": 5,
     "3": 0,
-    "4": 12
+    "4": 10
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -173,75 +181,14 @@
   "score": 35,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 1692,
-  "rank_type": 1452,
-  "rank_region": 414,
+  "rank": 3148,
+  "rank_national": 3148,
+  "regional_rank": 626,
+  "rank_region": 626,
+  "rank_type": 2620,
+  "percentile": 55.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": true,
-      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=e702b891%2Df16a%2D4856%2D9592%2D7b268184d2c7%2Epdf&o=Standing%2DOrders%2D2024%2Epdf"
-    },
-    "financial_regulations": {
-      "found": true,
-      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=bf102da3%2De8f0%2D40ee%2D9afd%2Dd092b34fe27d%2Epdf&o=Financial%2DRegs%2D2024%2Epdf"
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": true,
-      "url": "https://www.chuteparishcouncil.gov.uk/shared/attachments.asp?f=a47a5afa%2Dc253%2D4693%2Da2d0%2Dc85e0c5bd72c%2Epdf&o=CODE%2DOF%2DCONDUCT%2DCHUTE%2DPARISH%2DCOUNCIL%2DMAY%2D2021%2Epdf"
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/privacy-policy/"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 27.6,
-    "indicators_evidence_found_count": 8,
-    "social_facebook_url": "https://www.facebook.com/sharer/sharer.php?u=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/",
-    "social_twitter_url": "https://twitter.com/share?via=HugoFoxNews&url=https://www.chuteparishcouncil.gov.uk/community/chute-parish-council-16701/home/"
-  },
-  "scrape_status": "ok",
-  "rank": 2993,
-  "regional_rank": 778,
-  "percentile": 62.3,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 3,
-    "community": 0,
-    "accessibility": 12
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@chuteparishcouncil.gov.uk",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://www.chuteparishcouncil.gov.uk",
-  "email": "clerk@chuteparishcouncil.gov.uk",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

@@ -3,8 +3,17 @@
   "slug": "thorpe-constantine-parish-council",
   "name": "Thorpe Constantine Parish Council",
   "type": "parish",
-  "county": "",
+  "county": null,
   "region": "West Midlands",
+  "website": null,
+  "email": "info@trowbridge.gov.uk",
+  "phone": "01225 765072",
+  "clerk_name": null,
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 0,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "info@trowbridge.gov.uk"
@@ -34,7 +42,7 @@
       "pillar": 1,
       "label": "Phone number published",
       "max_points": 5,
-      "earned": 0,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "phone": "01225 765072"
@@ -81,8 +89,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 0,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "email": "info@trowbridge.gov.uk",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 0,
+      "earned": 3,
       "assessed": true,
       "input_snapshot": {
         "region": "West Midlands",
@@ -157,10 +165,10 @@
     }
   ],
   "pillar_earned": {
-    "1": 0,
+    "1": 10,
     "2": 0,
     "3": 0,
-    "4": 0
+    "4": 13
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 0,
+  "numerator": 23,
   "denominator": 100,
-  "score": 0,
+  "score": 23,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 4132,
-  "rank_type": 3426,
-  "rank_region": 293,
+  "rank": 3989,
+  "rank_national": 3989,
+  "regional_rank": 283,
+  "rank_region": 283,
+  "rank_type": 3323,
+  "percentile": 43.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 6491,
-  "regional_rank": 998,
-  "percentile": 2.2,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 0,
-    "governance": 0,
-    "community": 0,
-    "accessibility": 0
-  },
-  "clerk_name": null,
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": "info@trowbridge.gov.uk",
-  "phone": "01225 765072"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

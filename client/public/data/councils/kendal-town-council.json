@@ -5,6 +5,15 @@
   "type": "town",
   "county": "Cumbria",
   "region": "North West",
+  "website": "https://www.kendaltowncouncil.gov.uk",
+  "email": "office@kendaltowncouncil.gov.uk",
+  "phone": "01539 793490",
+  "clerk_name": "Chris Bagshaw",
+  "clerk_email": "office@kendaltowncouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 20,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.kendaltowncouncil.gov.uk"
+        "website": "https://www.kendaltowncouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Chris Bagshaw"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "office@kendaltowncouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 20
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 20
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 20
+        "school_count": 20,
+        "has_minutes": false
       }
     },
     {
@@ -159,7 +167,7 @@
   "pillar_earned": {
     "1": 25,
     "2": 15,
-    "3": 18,
+    "3": 15,
     "4": 25
   },
   "pillar_max_assessed": {
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 83,
+  "numerator": 80,
   "denominator": 100,
-  "score": 83,
+  "score": 80,
   "completeness": 1.0,
   "band": "Excellent",
-  "rank_national": 1649,
-  "rank_type": 221,
-  "rank_region": 90,
+  "rank": 2,
+  "rank_national": 2,
+  "regional_rank": 1,
+  "rank_region": 1,
+  "rank_type": 1,
+  "percentile": 100.0,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.kendaltowncouncil.gov.uk/index.php/privacy-policy/"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 10.3,
-    "indicators_evidence_found_count": 3,
-    "social_facebook_url": "https://www.facebook.com/kendaltowncouncil?locale=en_GB",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 41,
-  "regional_rank": 30,
-  "percentile": 98.8,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 18,
-    "accessibility": 25
-  },
-  "clerk_name": "Chris Bagshaw",
-  "clerk_email": "office@kendaltowncouncil.gov.uk",
-  "clerk_phone": "01539 793490",
-  "chair_name": null,
-  "website": "https://www.kendaltowncouncil.gov.uk",
-  "email": "office@kendaltowncouncil.gov.uk",
-  "phone": "01539 793490"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

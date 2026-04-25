@@ -5,17 +5,25 @@
   "type": "parish_meeting",
   "county": "Nottinghamshire",
   "region": "East Midlands",
+  "website": null,
+  "email": "warbocm@hotmail.com",
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": "warbocm@hotmail.com",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "warbocm@hotmail.com"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 0,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "warbocm@hotmail.com"
@@ -81,8 +89,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "warbocm@hotmail.com",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "East Midlands",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 5,
-    "2": 0,
+    "2": 5,
     "3": 0,
-    "4": 8
+    "4": 10
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 13,
+  "numerator": 20,
   "denominator": 100,
-  "score": 13,
+  "score": 20,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 4131,
-  "rank_type": 392,
-  "rank_region": 373,
+  "rank": 3992,
+  "rank_national": 3992,
+  "regional_rank": 358,
+  "rank_region": 358,
+  "rank_type": 350,
+  "percentile": 43.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 5054,
-  "regional_rank": 775,
-  "percentile": 35.4,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 0,
-    "community": 0,
-    "accessibility": 8
-  },
-  "clerk_name": null,
-  "clerk_email": "warbocm@hotmail.com",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": "warbocm@hotmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

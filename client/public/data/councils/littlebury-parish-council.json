@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Essex",
   "region": "East of England",
+  "website": "https://www.littleburyparishcouncil.gov.uk",
+  "email": "Clerk@littleburyparishcouncil.gov.uk",
+  "phone": "01223 894462",
+  "clerk_name": null,
+  "clerk_email": "Clerk@littleburyparishcouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.littleburyparishcouncil.gov.uk"
+        "website": "https://www.littleburyparishcouncil.gov.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "Clerk@littleburyparishcouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -158,7 +166,7 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 3,
+    "2": 5,
     "3": 0,
     "4": 15
   },
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 43,
+  "numerator": 45,
   "denominator": 100,
-  "score": 43,
+  "score": 45,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 1334,
-  "rank_type": 1142,
-  "rank_region": 240,
+  "rank": 2362,
+  "rank_national": 2362,
+  "regional_rank": 425,
+  "rank_region": 425,
+  "rank_type": 1960,
+  "percentile": 66.4,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2292,
-  "regional_rank": 523,
-  "percentile": 71.4,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 3,
-    "community": 0,
-    "accessibility": 15
-  },
-  "clerk_name": null,
-  "clerk_email": "Clerk@littleburyparishcouncil.gov.uk",
-  "clerk_phone": "01223 894462",
-  "chair_name": null,
-  "website": "https://www.littleburyparishcouncil.gov.uk",
-  "email": "Clerk@littleburyparishcouncil.gov.uk",
-  "phone": "01223 894462"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

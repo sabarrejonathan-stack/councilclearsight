@@ -220,11 +220,11 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
           <Card className="p-5 bg-white">
             <h3 className="text-sm font-semibold mb-3">Contact the council</h3>
             <div className="space-y-2.5 text-sm">
-              <ContactRow icon={Globe} label="Website" value={inputOf(council, "1.1", "website_url") as string | undefined} href={inputOf(council, "1.1", "website_url") as string | undefined} />
-              <ContactRow icon={Mail} label="Email" value={inputOf(council, "2.1", "email") as string | undefined} href={`mailto:${inputOf(council, "2.1", "email")}`} />
-              <ContactRow icon={Phone} label="Phone" value={inputOf(council, "2.2", "phone") as string | undefined} />
-              <ContactRow icon={User} label="Clerk" value={inputOf(council, "2.3", "clerk_name") as string | undefined} subValue={inputOf(council, "2.4", "clerk_email") as string | undefined} />
-              <ContactRow icon={User} label="Chair" value={inputOf(council, "4.1", "chair_name") as string | undefined} />
+              <ContactRow icon={Globe} label="Website" value={(council as any).website || undefined} href={(council as any).website || undefined} />
+              <ContactRow icon={Mail} label="Email" value={(council as any).email || undefined} href={(council as any).email ? `mailto:${(council as any).email}` : undefined} />
+              <ContactRow icon={Phone} label="Phone" value={(council as any).phone || undefined} />
+              <ContactRow icon={User} label="Clerk" value={(council as any).clerk_name || undefined} subValue={(council as any).clerk_email || undefined} />
+              <ContactRow icon={User} label="Chair" value={validChair((council as any).chair_name)} />
             </div>
           </Card>
 
@@ -326,6 +326,14 @@ function ContactRow({ icon: Icon, label, value, href, subValue }: { icon: any; l
       </div>
     </div>
   );
+}
+
+// A chair_name field with semicolons is a councillor list mis-attributed to chair.
+// Don't display such records — the data is unreliable.
+function validChair(name: string | null | undefined): string | undefined {
+  if (!name) return undefined;
+  if (name.includes(";")) return undefined;
+  return name;
 }
 
 function inputOf(council: CouncilScore, indicatorId: string, field: string): unknown {

@@ -77,6 +77,19 @@ export type CouncilScore = {
   type: string;
   county: string;
   region: string;
+  // Flat observable fields — single source of truth for display + scoring
+  website?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  clerk_name?: string | null;
+  clerk_email?: string | null;
+  chair_name?: string | null;
+  has_agendas?: boolean;
+  has_minutes?: boolean;
+  school_count?: number;
+  data_extraction_date?: string;
+  assessment_period?: string;
+  // Derived
   indicators: IndicatorResult[];
   pillar_earned: Record<string, number>;
   pillar_max_assessed: Record<string, number>;
@@ -88,8 +101,120 @@ export type CouncilScore = {
   rank_national: number | null;
   rank_type: number | null;
   rank_region: number | null;
+  rank?: number | null;
+  regional_rank?: number | null;
+  percentile?: number | null;
   methodology_version: string;
 };
+
+// ─── Deterministic scoring function ─────────────────────────────────────
+// Single source of truth: takes observable fields, returns score breakdown.
+// Every indicator is binary-graded against an observable field. The displayed
+// score is reproducible from the same fields shown in the contact panel.
+
+export type CouncilFields = {
+  website?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  clerk_name?: string | null;
+  clerk_email?: string | null;
+  chair_name?: string | null;
+  has_agendas?: boolean;
+  has_minutes?: boolean;
+  school_count?: number;
+  region?: string | null;
+  county?: string | null;
+};
+
+// Treat a value as "present" if it's a non-empty trimmed string OR a truthy non-string.
+function present(v: unknown): boolean {
+  if (v == null) return false;
+  if (typeof v === "string") return v.trim().length > 0;
+  return Boolean(v);
+}
+
+// A chair name with semicolons is almost always a councillor list mis-attributed
+// to the chair field — we don't credit such records.
+function isValidChair(v: unknown): boolean {
+  if (!present(v)) return false;
+  return !String(v).includes(";");
+}
+
+function isValidEmail(v: unknown): boolean {
+  if (!present(v)) return false;
+  return /@/.test(String(v));
+}
+
+export type ScoredResult = {
+  indicators: IndicatorResult[];
+  pillar_earned: Record<string, number>;
+  pillar_max_assessed: Record<string, number>;
+  score: number;
+  numerator: number;
+  denominator: number;
+  completeness: number;
+};
+
+export function scoreCouncil(f: CouncilFields): ScoredResult {
+  const inds: IndicatorResult[] = [];
+
+  const hasWebsite = present(f.website);
+  const hasEmail = isValidEmail(f.email);
+  const hasPhone = present(f.phone);
+  const hasClerk = present(f.clerk_name);
+  const hasClerkEmail = isValidEmail(f.clerk_email);
+  const hasChair = isValidChair(f.chair_name);
+  const hasAgendas = !!f.has_agendas;
+  const hasMinutes = !!f.has_minutes;
+  const schools = Number(f.school_count) || 0;
+
+  const push = (id: string, pillar: Pillar, label: string, max: number, earned: number, snap: Record<string, unknown>) => {
+    inds.push({ id, pillar, label, max_points: max, earned, assessed: true, input_snapshot: snap });
+  };
+
+  // Pillar 1 — Digital Presence (25)
+  push("1.1", 1, "Active council website", 15, hasWebsite ? 15 : 0, { website: f.website || null });
+  push("1.2", 1, "Council email address published", 5, hasEmail ? 5 : 0, { email: f.email || null });
+  push("1.3", 1, "Phone number published", 5, hasPhone ? 5 : 0, { phone: f.phone || null });
+
+  // Pillar 2 — Governance (25)
+  push("2.1", 2, "Named clerk identified", 10, hasClerk ? 10 : 0, { clerk_name: f.clerk_name || null });
+  push("2.2", 2, "Clerk email published", 5, hasClerkEmail ? 5 : 0, { clerk_email: f.clerk_email || null });
+  push("2.3", 2, "Chair / Mayor named", 5, hasChair ? 5 : 0, { chair_name: f.chair_name || null });
+  push("2.4", 2, "Governance documents published", 5, (hasAgendas || hasMinutes) ? 5 : 0, { has_agendas: hasAgendas, has_minutes: hasMinutes });
+
+  // Pillar 3 — Community (25)
+  const schoolsPts = schools >= 3 ? 10 : (schools >= 1 ? 5 : 0);
+  const densityPts = schools >= 4 ? 5 : (schools >= 2 ? 3 : 0);
+  const engagementPts = (schools >= 3 && hasMinutes) ? 10 : (hasMinutes ? 5 : 0);
+  push("3.1", 3, "Schools mapped within council area", 10, schoolsPts, { school_count: schools });
+  push("3.2", 3, "School density", 5, densityPts, { school_count: schools });
+  push("3.3", 3, "Engagement evidence published", 10, engagementPts, { school_count: schools, has_minutes: hasMinutes });
+
+  // Pillar 4 — Accessibility (25)
+  const multiContact = (hasEmail && hasPhone) ? 10 : ((hasEmail || hasPhone) ? 5 : 0);
+  const namedContact = hasClerk ? 10 : (hasChair ? 5 : 0);
+  const geoPts = (present(f.region) && present(f.county)) ? 5 : (present(f.region) ? 3 : 0);
+  push("4.1", 4, "Multiple contact methods provided", 10, multiContact, { email: f.email || null, phone: f.phone || null });
+  push("4.2", 4, "Named contact identified", 10, namedContact, { clerk_name: f.clerk_name || null, chair_name: f.chair_name || null });
+  push("4.3", 4, "Geographic and ward information", 5, geoPts, { region: f.region || null, county: f.county || null });
+
+  // Aggregate
+  const pillar_earned: Record<string, number> = { "1": 0, "2": 0, "3": 0, "4": 0 };
+  for (const i of inds) pillar_earned[String(i.pillar)] += i.earned;
+  const pillar_max_assessed: Record<string, number> = { "1": 25, "2": 25, "3": 25, "4": 25 };
+  const score = inds.reduce((s, i) => s + i.earned, 0);
+
+  return {
+    indicators: inds,
+    pillar_earned,
+    pillar_max_assessed,
+    score,
+    numerator: score,
+    denominator: 100,
+    completeness: 1.0,
+  };
+}
 
 // ─── Display helpers ───────────────────────────────────────────────────
 

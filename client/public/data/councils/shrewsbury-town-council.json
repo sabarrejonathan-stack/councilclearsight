@@ -5,6 +5,15 @@
   "type": "town",
   "county": "Shropshire",
   "region": "West Midlands",
+  "website": "https://www.shrewsburytowncouncil.gov.uk",
+  "email": "Helen.ball@shrewsburytowncouncil.gov.uk",
+  "phone": "01743 281010",
+  "clerk_name": "Ms H Ball",
+  "clerk_email": "Helen.ball@shrewsburytowncouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 53,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.shrewsburytowncouncil.gov.uk"
+        "website": "https://www.shrewsburytowncouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Ms H Ball"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "Helen.ball@shrewsburytowncouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 53
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 53
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 53
+        "school_count": 53,
+        "has_minutes": false
       }
     },
     {
@@ -159,7 +167,7 @@
   "pillar_earned": {
     "1": 25,
     "2": 15,
-    "3": 18,
+    "3": 15,
     "4": 25
   },
   "pillar_max_assessed": {
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 83,
+  "numerator": 80,
   "denominator": 100,
-  "score": 83,
+  "score": 80,
   "completeness": 1.0,
   "band": "Excellent",
-  "rank_national": 632,
-  "rank_type": 97,
-  "rank_region": 45,
+  "rank": 2,
+  "rank_national": 2,
+  "regional_rank": 1,
+  "rank_region": 1,
+  "rank_type": 1,
+  "percentile": 100.0,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/policies-standing-orders-financial-regulations/"
-    },
-    "financial_regulations": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/policies-standing-orders-financial-regulations/"
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/privacy-policy/"
-    },
-    "foi_publication_scheme": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/contact-us/freedom-of-information/"
-    },
-    "expenditure_over_100": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/town-council/finance/council-payments/"
-    },
-    "asset_register": {
-      "found": true,
-      "url": "https://www.shrewsburytowncouncil.gov.uk/assets-landing-page/your-guide-to-organising-a-street-party-or-a-fete-on-town-council-land/"
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 44.8,
-    "indicators_evidence_found_count": 13,
-    "social_facebook_url": "https://www.facebook.com/shrewsburytowncouncil/",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 41,
-  "regional_rank": 5,
-  "percentile": 99.1,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 18,
-    "accessibility": 25
-  },
-  "clerk_name": "Ms H Ball",
-  "clerk_email": "Helen.ball@shrewsburytowncouncil.gov.uk",
-  "clerk_phone": "01743 281010",
-  "chair_name": null,
-  "website": "https://www.shrewsburytowncouncil.gov.uk",
-  "email": "Helen.ball@shrewsburytowncouncil.gov.uk",
-  "phone": "01743 281010"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "East Riding of Yorkshire",
   "region": "Yorkshire and the Humber",
+  "website": "https://aldbroughparishcouncil.co.uk",
+  "email": null,
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://aldbroughparishcouncil.co.uk"
+        "website": "https://aldbroughparishcouncil.co.uk"
       }
     },
     {
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 8,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 8,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "Yorkshire and the Humber",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 15,
-    "2": 2,
-    "3": 15,
-    "4": 8
+    "2": 0,
+    "3": 5,
+    "4": 5
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 40,
+  "numerator": 25,
   "denominator": 100,
-  "score": 40,
+  "score": 25,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 4195,
-  "rank_type": 3471,
-  "rank_region": 644,
+  "rank": 3862,
+  "rank_national": 3862,
+  "regional_rank": 589,
+  "rank_region": 589,
+  "rank_type": 3223,
+  "percentile": 45.1,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": false,
-      "url": ""
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 0.0,
-    "indicators_evidence_found_count": 0,
-    "social_facebook_url": "",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 2915,
-  "regional_rank": 626,
-  "percentile": 64.8,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 15,
-    "governance": 2,
-    "community": 15,
-    "accessibility": 8
-  },
-  "clerk_name": null,
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://aldbroughparishcouncil.co.uk",
-  "email": null,
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Somerset",
   "region": "South West",
+  "website": "https://draytonsomerset.co.uk/drayton-parish-council/",
+  "email": "clerk@draytonpc-somerset.net",
+  "phone": null,
+  "clerk_name": "Zoe Godden (Locum Clerk)",
+  "clerk_email": "clerk@draytonpc-somerset.net",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 11,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://draytonsomerset.co.uk/drayton-parish-council/"
+        "website": "https://draytonsomerset.co.uk/drayton-parish-council/"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Zoe Godden (Locum Clerk)"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@draytonpc-somerset.net"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 11
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 11
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 11
+        "school_count": 11,
+        "has_minutes": false
       }
     },
     {
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 11,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Zoe Godden (Locum Clerk)",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South West",
@@ -159,8 +167,8 @@
   "pillar_earned": {
     "1": 20,
     "2": 15,
-    "3": 18,
-    "4": 22
+    "3": 15,
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 75,
+  "numerator": 70,
   "denominator": 100,
-  "score": 75,
+  "score": 70,
   "completeness": 1.0,
   "band": "Good",
-  "rank_national": 1038,
-  "rank_type": 891,
-  "rank_region": 249,
+  "rank": 261,
+  "rank_national": 261,
+  "regional_rank": 58,
+  "rank_region": 58,
+  "rank_type": 139,
+  "percentile": 96.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://draytonsomerset.co.uk/"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": true,
-      "url": "https://draytonsomerset.co.uk/drayton-parish-council/public-land-building-assets/"
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 27.6,
-    "indicators_evidence_found_count": 8,
-    "social_facebook_url": "",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 559,
-  "regional_rank": 164,
-  "percentile": 93.6,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 15,
-    "community": 18,
-    "accessibility": 22
-  },
-  "clerk_name": "Zoe Godden (Locum Clerk)",
-  "clerk_email": "clerk@draytonpc-somerset.net",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://draytonsomerset.co.uk/drayton-parish-council/",
-  "email": "clerk@draytonpc-somerset.net",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

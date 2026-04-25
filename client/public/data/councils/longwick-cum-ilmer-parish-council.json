@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "Buckinghamshire",
   "region": "South East",
+  "website": null,
+  "email": "clerk@longwickcumilmer.org.uk",
+  "phone": "01296 668206",
+  "clerk_name": "c/o Longwick Post Office",
+  "clerk_email": "clerk@longwickcumilmer.org.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@longwickcumilmer.org.uk"
@@ -34,7 +42,7 @@
       "pillar": 1,
       "label": "Phone number published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "phone": "01296 668206"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "c/o Longwick Post Office"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@longwickcumilmer.org.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@longwickcumilmer.org.uk",
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "c/o Longwick Post Office",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South East",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 10,
-    "2": 10,
+    "2": 15,
     "3": 0,
-    "4": 22
+    "4": 25
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 42,
+  "numerator": 50,
   "denominator": 100,
-  "score": 42,
+  "score": 50,
   "completeness": 1.0,
-  "band": "Needs Attention",
-  "rank_national": 2855,
-  "rank_type": 2480,
-  "rank_region": 593,
+  "band": "Developing",
+  "rank": 1708,
+  "rank_national": 1708,
+  "regional_rank": 369,
+  "rank_region": 369,
+  "rank_type": 1428,
+  "percentile": 75.7,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2576,
-  "regional_rank": 765,
-  "percentile": 69.5,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 10,
-    "governance": 10,
-    "community": 0,
-    "accessibility": 22
-  },
-  "clerk_name": "c/o Longwick Post Office",
-  "clerk_email": "clerk@longwickcumilmer.org.uk",
-  "clerk_phone": "01296 668206",
-  "chair_name": null,
-  "website": null,
-  "email": "clerk@longwickcumilmer.org.uk",
-  "phone": "01296 668206"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

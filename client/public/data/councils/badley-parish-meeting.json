@@ -5,17 +5,25 @@
   "type": "parish_meeting",
   "county": "Suffolk",
   "region": "East of England",
+  "website": null,
+  "email": null,
+  "phone": "01449 672714",
+  "clerk_name": "Mr E Morton",
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -34,7 +42,7 @@
       "pillar": 1,
       "label": "Phone number published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "phone": "01449 672714"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr E Morton"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr E Morton",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "East of England",
@@ -160,7 +168,7 @@
     "1": 5,
     "2": 10,
     "3": 0,
-    "4": 18
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 33,
+  "numerator": 35,
   "denominator": 100,
-  "score": 33,
+  "score": 35,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 3823,
-  "rank_type": 304,
-  "rank_region": 692,
+  "rank": 3148,
+  "rank_national": 3148,
+  "regional_rank": 540,
+  "rank_region": 540,
+  "rank_type": 224,
+  "percentile": 55.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 3368,
-  "regional_rank": 778,
-  "percentile": 57.4,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 10,
-    "community": 0,
-    "accessibility": 18
-  },
-  "clerk_name": "Mr E Morton",
-  "clerk_email": null,
-  "clerk_phone": "01449 672714",
-  "chair_name": null,
-  "website": null,
-  "email": null,
-  "phone": "01449 672714"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

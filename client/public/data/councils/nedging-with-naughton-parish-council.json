@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Suffolk",
   "region": "East of England",
+  "website": "https://www.nedgingwithnaughton-pc.gov.uk",
+  "email": "clerk@nedgingwithnaughton-pc.gov.uk",
+  "phone": "07837 953266",
+  "clerk_name": "Ms L Allum",
+  "clerk_email": "clerk@nedgingwithnaughton-pc.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.nedgingwithnaughton-pc.gov.uk"
+        "website": "https://www.nedgingwithnaughton-pc.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Ms L Allum"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@nedgingwithnaughton-pc.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -173,33 +181,14 @@
   "score": 65,
   "completeness": 1.0,
   "band": "Good",
-  "rank_national": 316,
-  "rank_type": 256,
-  "rank_region": 50,
+  "rank": 580,
+  "rank_national": 580,
+  "regional_rank": 96,
+  "rank_region": 96,
+  "rank_type": 440,
+  "percentile": 91.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 706,
-  "regional_rank": 210,
-  "percentile": 88.2,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 0,
-    "accessibility": 25
-  },
-  "clerk_name": "Ms L Allum",
-  "clerk_email": "clerk@nedgingwithnaughton-pc.gov.uk",
-  "clerk_phone": "07837 953266",
-  "chair_name": null,
-  "website": "https://www.nedgingwithnaughton-pc.gov.uk",
-  "email": "clerk@nedgingwithnaughton-pc.gov.uk",
-  "phone": "07837 953266"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

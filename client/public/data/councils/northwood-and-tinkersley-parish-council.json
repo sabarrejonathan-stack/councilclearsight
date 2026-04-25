@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Derbyshire",
   "region": "East Midlands",
+  "website": "https://www.northwoodandtinkersleyparishcouncil.gov.uk",
+  "email": "clerk@northwoodandtinkersleyparishcouncil.gov.uk",
+  "phone": "07460434310",
+  "clerk_name": "Steven Tomlinson",
+  "clerk_email": "clerk@northwoodandtinkersleyparishcouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.northwoodandtinkersleyparishcouncil.gov.uk"
+        "website": "https://www.northwoodandtinkersleyparishcouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Steven Tomlinson"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@northwoodandtinkersleyparishcouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -173,75 +181,14 @@
   "score": 65,
   "completeness": 1.0,
   "band": "Good",
-  "rank_national": 976,
-  "rank_type": 841,
-  "rank_region": 82,
+  "rank": 580,
+  "rank_national": 580,
+  "regional_rank": 45,
+  "rank_region": 45,
+  "rank_type": 440,
+  "percentile": 91.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://northwoodandtinkersleyparishcouncil.gov.uk/privacy-policy"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": true,
-      "url": "https://www.england.nhs.uk/publication/nhs-derby-and-derbyshire-icb/"
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 20.7,
-    "indicators_evidence_found_count": 6,
-    "social_facebook_url": "https://www.facebook.com/NorthwoodTinkersleyPC",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 706,
-  "regional_rank": 77,
-  "percentile": 91.0,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 0,
-    "accessibility": 25
-  },
-  "clerk_name": "Steven Tomlinson",
-  "clerk_email": "clerk@northwoodandtinkersleyparishcouncil.gov.uk",
-  "clerk_phone": "07460434310",
-  "chair_name": null,
-  "website": "https://www.northwoodandtinkersleyparishcouncil.gov.uk",
-  "email": "clerk@northwoodandtinkersleyparishcouncil.gov.uk",
-  "phone": "07460434310"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

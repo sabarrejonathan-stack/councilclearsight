@@ -5,6 +5,15 @@
   "type": "town",
   "county": "Kent",
   "region": "South East",
+  "website": "https://www.folkestone-tc.gov.uk",
+  "email": "toni.brenchley@folkestone-tc.gov.uk",
+  "phone": "01303 257946",
+  "clerk_name": null,
+  "clerk_email": "toni.brenchley@folkestone-tc.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 24,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.folkestone-tc.gov.uk"
+        "website": "https://www.folkestone-tc.gov.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "toni.brenchley@folkestone-tc.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 24
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 24
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 24
+        "school_count": 24,
+        "has_minutes": false
       }
     },
     {
@@ -158,8 +166,8 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 3,
-    "3": 18,
+    "2": 5,
+    "3": 15,
     "4": 15
   },
   "pillar_max_assessed": {
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 61,
+  "numerator": 60,
   "denominator": 100,
-  "score": 61,
+  "score": 60,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 1121,
-  "rank_type": 145,
-  "rank_region": 240,
+  "rank": 1103,
+  "rank_national": 1103,
+  "regional_rank": 194,
+  "rank_region": 194,
+  "rank_type": 153,
+  "percentile": 84.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.folkestone-tc.gov.uk/wp-content/uploads/2025/07/Privacy-Policy.pdf"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 13.8,
-    "indicators_evidence_found_count": 4,
-    "social_facebook_url": "https://www.facebook.com/FolkestoneTownCouncil/",
-    "social_twitter_url": "https://twitter.com/folkestonetc"
-  },
-  "scrape_status": "ok",
-  "rank": 1160,
-  "regional_rank": 339,
-  "percentile": 85.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 3,
-    "community": 18,
-    "accessibility": 15
-  },
-  "clerk_name": null,
-  "clerk_email": "toni.brenchley@folkestone-tc.gov.uk",
-  "clerk_phone": "01303 257946",
-  "chair_name": null,
-  "website": "https://www.folkestone-tc.gov.uk",
-  "email": "toni.brenchley@folkestone-tc.gov.uk",
-  "phone": "01303 257946"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

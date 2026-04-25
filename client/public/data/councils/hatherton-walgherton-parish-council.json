@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Cheshire",
   "region": "North West",
+  "website": "https://www.handwpc.org.uk",
+  "email": "parish.clerk@handwpc.org.uk",
+  "phone": "07919 054776",
+  "clerk_name": "Abbi Miller",
+  "clerk_email": "parish.clerk@handwpc.org.uk",
+  "chair_name": "Ian Bennion;Katie Clinton;Nigel Dibben;Christopher Knibbs;Gerald Laxton",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.handwpc.org.uk"
+        "website": "https://www.handwpc.org.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 8,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Abbi Miller"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "parish.clerk@handwpc.org.uk"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Ian Bennion;Katie Clinton;Nigel Dibben;Christopher Knibbs;Gerald Laxton"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -140,7 +148,7 @@
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Abbi Miller",
-        "chair_name": "Ian Bennion;Katie Clinton;Nigel Dibben;Christopher Knibbs;Gerald Laxton"
+        "chair_name": null
       }
     },
     {
@@ -158,7 +166,7 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 20,
+    "2": 15,
     "3": 0,
     "4": 25
   },
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 70,
+  "numerator": 65,
   "denominator": 100,
-  "score": 70,
+  "score": 65,
   "completeness": 1.0,
   "band": "Good",
-  "rank_national": 1013,
-  "rank_type": 870,
-  "rank_region": 61,
+  "rank": 580,
+  "rank_national": 580,
+  "regional_rank": 37,
+  "rank_region": 37,
+  "rank_type": 440,
+  "percentile": 91.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": false,
-      "url": ""
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 6.9,
-    "indicators_evidence_found_count": 2,
-    "social_facebook_url": "https://www.facebook.com/handwpc",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 664,
-  "regional_rank": 47,
-  "percentile": 92.6,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 20,
-    "community": 0,
-    "accessibility": 25
-  },
-  "clerk_name": "Abbi Miller",
-  "clerk_email": "parish.clerk@handwpc.org.uk",
-  "clerk_phone": "07919 054776",
-  "chair_name": "Ian Bennion;Katie Clinton;Nigel Dibben;Christopher Knibbs;Gerald Laxton",
-  "website": "https://www.handwpc.org.uk",
-  "email": "parish.clerk@handwpc.org.uk",
-  "phone": "07919 054776"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

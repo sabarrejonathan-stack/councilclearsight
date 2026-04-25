@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Cheshire",
   "region": "North West",
+  "website": "https://www.wardleparishcouncil.gov.uk",
+  "email": "Clerk@wardleparishcouncil.gov.uk",
+  "phone": null,
+  "clerk_name": "Muna Clough",
+  "clerk_email": "Clerk@wardleparishcouncil.gov.uk",
+  "chair_name": "Carl Gogerty;Angela Huxley;James Jennings;Elizabeth Leftwick;Keith Roden",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 2,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.wardleparishcouncil.gov.uk"
+        "website": "https://www.wardleparishcouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 8,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Muna Clough"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "Clerk@wardleparishcouncil.gov.uk"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Carl Gogerty;Angela Huxley;James Jennings;Elizabeth Leftwick;Keith Roden"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 8,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 2
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 5,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 2
+        "school_count": 2,
+        "has_minutes": false
       }
     },
     {
@@ -136,11 +144,11 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 11,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Muna Clough",
-        "chair_name": "Carl Gogerty;Angela Huxley;James Jennings;Elizabeth Leftwick;Keith Roden"
+        "chair_name": null
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North West",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 20,
-    "2": 20,
-    "3": 16,
-    "4": 22
+    "2": 15,
+    "3": 8,
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 78,
+  "numerator": 63,
   "denominator": 100,
-  "score": 78,
+  "score": 63,
   "completeness": 1.0,
-  "band": "Good",
-  "rank_national": 465,
-  "rank_type": 383,
-  "rank_region": 32,
+  "band": "Developing",
+  "rank": 1082,
+  "rank_national": 1082,
+  "regional_rank": 72,
+  "rank_region": 72,
+  "rank_type": 917,
+  "percentile": 84.6,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 555,
-  "regional_rank": 39,
-  "percentile": 93.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 20,
-    "community": 16,
-    "accessibility": 22
-  },
-  "clerk_name": "Muna Clough",
-  "clerk_email": "Clerk@wardleparishcouncil.gov.uk",
-  "clerk_phone": null,
-  "chair_name": "Carl Gogerty;Angela Huxley;James Jennings;Elizabeth Leftwick;Keith Roden",
-  "website": "https://www.wardleparishcouncil.gov.uk",
-  "email": "Clerk@wardleparishcouncil.gov.uk",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

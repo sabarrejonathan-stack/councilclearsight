@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Cambridgeshire",
   "region": "East of England",
+  "website": null,
+  "email": null,
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 6,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -81,8 +89,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 6
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 6
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 6
+        "school_count": 6,
+        "has_minutes": false
       }
     },
     {
@@ -159,7 +167,7 @@
   "pillar_earned": {
     "1": 0,
     "2": 0,
-    "3": 16,
+    "3": 15,
     "4": 5
   },
   "pillar_max_assessed": {
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 21,
+  "numerator": 20,
   "denominator": 100,
-  "score": 21,
+  "score": 20,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 6867,
-  "rank_type": 6004,
-  "rank_region": 1207,
+  "rank": 3992,
+  "rank_national": 3992,
+  "regional_rank": 716,
+  "rank_region": 716,
+  "rank_type": 3326,
+  "percentile": 43.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 4000,
-  "regional_rank": 892,
-  "percentile": 51.3,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 0,
-    "governance": 0,
-    "community": 16,
-    "accessibility": 5
-  },
-  "clerk_name": null,
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": null,
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

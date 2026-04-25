@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "Cheshire",
   "region": "North West",
+  "website": null,
+  "email": "clerkeaton@gmail.com",
+  "phone": "01260 280524",
+  "clerk_name": null,
+  "clerk_email": "clerkeaton@gmail.com",
+  "chair_name": "Sue Cook;Richard Garton;Irene Goodwin;Craig Harrison;Julie Lyne",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerkeaton@gmail.com"
@@ -34,7 +42,7 @@
       "pillar": 1,
       "label": "Phone number published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "phone": "01260 280524"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerkeaton@gmail.com"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Sue Cook;Richard Garton;Irene Goodwin;Craig Harrison;Julie Lyne"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "email": "clerkeaton@gmail.com",
@@ -136,11 +144,11 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": null,
-        "chair_name": "Sue Cook;Richard Garton;Irene Goodwin;Craig Harrison;Julie Lyne"
+        "chair_name": null
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North West",
@@ -159,8 +167,8 @@
   "pillar_earned": {
     "1": 10,
     "2": 5,
-    "3": 13,
-    "4": 12
+    "3": 5,
+    "4": 15
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 40,
+  "numerator": 35,
   "denominator": 100,
-  "score": 40,
+  "score": 35,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 3395,
-  "rank_type": 2877,
-  "rank_region": 229,
+  "rank": 3148,
+  "rank_national": 3148,
+  "regional_rank": 238,
+  "rank_region": 238,
+  "rank_type": 2620,
+  "percentile": 55.2,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2915,
-  "regional_rank": 251,
-  "percentile": 64.9,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 10,
-    "governance": 5,
-    "community": 13,
-    "accessibility": 12
-  },
-  "clerk_name": null,
-  "clerk_email": "clerkeaton@gmail.com",
-  "clerk_phone": "01260 280524",
-  "chair_name": "Sue Cook;Richard Garton;Irene Goodwin;Craig Harrison;Julie Lyne",
-  "website": null,
-  "email": "clerkeaton@gmail.com",
-  "phone": "01260 280524"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

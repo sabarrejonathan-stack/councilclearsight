@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "Northumberland",
   "region": "North East",
+  "website": null,
+  "email": "janandersonpc@gmail.com",
+  "phone": null,
+  "clerk_name": "Mrs Jan Anderson",
+  "clerk_email": "janandersonpc@gmail.com",
+  "chair_name": "Donna Lesley Corbin;Louisa Murray;Robert Simpson;Mark Whiteley",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "janandersonpc@gmail.com"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mrs Jan Anderson"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "janandersonpc@gmail.com"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Donna Lesley Corbin;Louisa Murray;Robert Simpson;Mark Whiteley"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -136,11 +144,11 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mrs Jan Anderson",
-        "chair_name": "Donna Lesley Corbin;Louisa Murray;Robert Simpson;Mark Whiteley"
+        "chair_name": null
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North East",
@@ -160,7 +168,7 @@
     "1": 5,
     "2": 15,
     "3": 0,
-    "4": 18
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 38,
+  "numerator": 40,
   "denominator": 100,
-  "score": 38,
+  "score": 40,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 3122,
-  "rank_type": 2702,
-  "rank_region": 99,
+  "rank": 2755,
+  "rank_national": 2755,
+  "regional_rank": 94,
+  "rank_region": 94,
+  "rank_type": 2328,
+  "percentile": 60.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2930,
-  "regional_rank": 126,
-  "percentile": 64.4,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 15,
-    "community": 0,
-    "accessibility": 18
-  },
-  "clerk_name": "Mrs Jan Anderson",
-  "clerk_email": "janandersonpc@gmail.com",
-  "clerk_phone": null,
-  "chair_name": "Donna Lesley Corbin;Louisa Murray;Robert Simpson;Mark Whiteley",
-  "website": null,
-  "email": "janandersonpc@gmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

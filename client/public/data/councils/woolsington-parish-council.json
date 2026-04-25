@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Newcastle upon Tyne",
   "region": "North East",
+  "website": "https://www.woolsington-parish-council.com/",
+  "email": "woolsingtonpc@gmail.com",
+  "phone": "07791014441",
+  "clerk_name": "Andrew Richardson",
+  "clerk_email": null,
+  "chair_name": "George Pattison",
+  "has_agendas": true,
+  "has_minutes": true,
+  "school_count": 3,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.woolsington-parish-council.com/"
+        "website": "https://www.woolsington-parish-council.com/"
       }
     },
     {
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "George Pattison"
@@ -78,7 +86,7 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "has_agendas": true,
@@ -115,8 +123,8 @@
       "earned": 10,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 3
+        "school_count": 3,
+        "has_minutes": true
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "email": "woolsingtonpc@gmail.com",
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Andrew Richardson",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North East",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 22,
+    "2": 20,
     "3": 23,
-    "4": 18
+    "4": 25
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 88,
+  "numerator": 93,
   "denominator": 100,
-  "score": 88,
+  "score": 93,
   "completeness": 1.0,
   "band": "Excellent",
-  "rank_national": 883,
-  "rank_type": 760,
-  "rank_region": 21,
-  "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": true,
-      "url": "https://files.cdn-files-a.com/uploads/4803419/normal_601ff67ae645b.pdf"
-    },
-    "gdpr_policy": {
-      "found": false,
-      "url": ""
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 27.6,
-    "indicators_evidence_found_count": 8,
-    "social_facebook_url": "https://www.facebook.com/groups/410512668233891/",
-    "social_twitter_url": "https://twitter.com/"
-  },
-  "scrape_status": "ok",
   "rank": 1,
+  "rank_national": 1,
   "regional_rank": 1,
-  "percentile": 99.7,
+  "rank_region": 1,
+  "rank_type": 1,
+  "percentile": 100.0,
+  "methodology_version": "VDTI v3.0",
+  "data_extraction_date": "16 April 2026",
   "assessment_period": "January – March 2026",
-  "data_extraction_date": "Personally verified 25 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 22,
-    "community": 23,
-    "accessibility": 18
-  },
-  "clerk_name": "Andrew Richardson",
-  "clerk_email": null,
-  "clerk_phone": "07791014410",
-  "chair_name": "George Pattison",
-  "website": "https://www.woolsington-parish-council.com/",
-  "email": "woolsingtonpc@gmail.com",
-  "phone": "07791014441"
+  "scrape_status": "ok"
 }

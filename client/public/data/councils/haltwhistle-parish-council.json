@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Northumberland",
   "region": "North East",
+  "website": "https://www.bardonmillparishcouncil.gov.uk",
+  "email": "clerk@bardonmillparishcouncil.gov.uk",
+  "phone": "07818915171",
+  "clerk_name": "Mrs Susan Saunders",
+  "clerk_email": "clerk@bardonmillparishcouncil.gov.uk",
+  "chair_name": "Christian Swinburne;Fay Wancke",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.bardonmillparishcouncil.gov.uk"
+        "website": "https://www.bardonmillparishcouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 8,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mrs Susan Saunders"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@bardonmillparishcouncil.gov.uk"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Christian Swinburne;Fay Wancke"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 8,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -140,7 +148,7 @@
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mrs Susan Saunders",
-        "chair_name": "Christian Swinburne;Fay Wancke"
+        "chair_name": null
       }
     },
     {
@@ -158,8 +166,8 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 20,
-    "3": 15,
+    "2": 15,
+    "3": 5,
     "4": 25
   },
   "pillar_max_assessed": {
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 85,
+  "numerator": 70,
   "denominator": 100,
-  "score": 85,
+  "score": 70,
   "completeness": 1.0,
-  "band": "Excellent",
-  "rank_national": 1475,
-  "rank_type": 1260,
-  "rank_region": 37,
+  "band": "Good",
+  "rank": 261,
+  "rank_national": 261,
+  "regional_rank": 13,
+  "rank_region": 13,
+  "rank_type": 139,
+  "percentile": 96.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.bardonmillparishcouncil.gov.uk/community/bardon-mill-parish-council-21104/privacy-policy/"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 13.8,
-    "indicators_evidence_found_count": 4,
-    "social_facebook_url": "https://www.facebook.com/sharer/sharer.php?u=https://www.bardonmillparishcouncil.gov.uk/community/bardon-mill-parish-council-21104/home/",
-    "social_twitter_url": "https://twitter.com/share?via=HugoFoxNews&url=https://www.bardonmillparishcouncil.gov.uk/community/bardon-mill-parish-council-21104/home/"
-  },
-  "scrape_status": "ok",
-  "rank": 23,
-  "regional_rank": 10,
-  "percentile": 99.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 20,
-    "community": 15,
-    "accessibility": 25
-  },
-  "clerk_name": "Mrs Susan Saunders",
-  "clerk_email": "clerk@bardonmillparishcouncil.gov.uk",
-  "clerk_phone": "07818915171",
-  "chair_name": "Christian Swinburne;Fay Wancke",
-  "website": "https://www.bardonmillparishcouncil.gov.uk",
-  "email": "clerk@bardonmillparishcouncil.gov.uk",
-  "phone": "07818915171"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

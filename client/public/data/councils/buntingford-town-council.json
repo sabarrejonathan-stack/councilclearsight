@@ -5,6 +5,15 @@
   "type": "town",
   "county": "Hertfordshire",
   "region": "East of England",
+  "website": "https://www.buntingford-tc.gov.uk",
+  "email": "clerk@buntingford-tc.gov.uk",
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": "clerk@buntingford-tc.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 7,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.buntingford-tc.gov.uk"
+        "website": "https://www.buntingford-tc.gov.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@buntingford-tc.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 7
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 7
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 7
+        "school_count": 7,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@buntingford-tc.gov.uk",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "East of England",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 20,
-    "2": 3,
-    "3": 18,
-    "4": 12
+    "2": 5,
+    "3": 15,
+    "4": 10
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 53,
+  "numerator": 50,
   "denominator": 100,
-  "score": 53,
+  "score": 50,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 1764,
-  "rank_type": 235,
-  "rank_region": 315,
+  "rank": 1708,
+  "rank_national": 1708,
+  "regional_rank": 306,
+  "rank_region": 306,
+  "rank_type": 253,
+  "percentile": 75.7,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.buntingford-tc.gov.uk/privacy"
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 20.7,
-    "indicators_evidence_found_count": 6,
-    "social_facebook_url": "",
-    "social_twitter_url": "https://twitter.com/BuntingfordTC"
-  },
-  "scrape_status": "ok",
-  "rank": 1921,
-  "regional_rank": 425,
-  "percentile": 77.2,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 3,
-    "community": 18,
-    "accessibility": 12
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@buntingford-tc.gov.uk",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://www.buntingford-tc.gov.uk",
-  "email": "clerk@buntingford-tc.gov.uk",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

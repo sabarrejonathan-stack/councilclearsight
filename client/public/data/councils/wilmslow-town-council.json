@@ -5,6 +5,15 @@
   "type": "town",
   "county": "Cheshire",
   "region": "North West",
+  "website": "https://www.wilmslowtowncouncil.gov.uk",
+  "email": "townclerk@wilmslowtowncouncil.gov.uk",
+  "phone": "01625 402907",
+  "clerk_name": "Matthew Jackson",
+  "clerk_email": "townclerk@wilmslowtowncouncil.gov.uk",
+  "chair_name": "Lata Anderson;Elaine Evans;Sarah Firth;Mark Goldsmith;Michael Gorman",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 10,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.wilmslowtowncouncil.gov.uk"
+        "website": "https://www.wilmslowtowncouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 8,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Matthew Jackson"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "townclerk@wilmslowtowncouncil.gov.uk"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Lata Anderson;Elaine Evans;Sarah Firth;Mark Goldsmith;Michael Gorman"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 10
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 10
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 7,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 10
+        "school_count": 10,
+        "has_minutes": false
       }
     },
     {
@@ -140,7 +148,7 @@
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Matthew Jackson",
-        "chair_name": "Lata Anderson;Elaine Evans;Sarah Firth;Mark Goldsmith;Michael Gorman"
+        "chair_name": null
       }
     },
     {
@@ -158,8 +166,8 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 20,
-    "3": 18,
+    "2": 15,
+    "3": 15,
     "4": 25
   },
   "pillar_max_assessed": {
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 88,
+  "numerator": 80,
   "denominator": 100,
-  "score": 88,
+  "score": 80,
   "completeness": 1.0,
   "band": "Excellent",
-  "rank_national": 118,
-  "rank_type": 25,
-  "rank_region": 16,
+  "rank": 2,
+  "rank_national": 2,
+  "regional_rank": 1,
+  "rank_region": 1,
+  "rank_type": 1,
+  "percentile": 100.0,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1,
-  "regional_rank": 9,
-  "percentile": 99.9,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 20,
-    "community": 18,
-    "accessibility": 25
-  },
-  "clerk_name": "Matthew Jackson",
-  "clerk_email": "townclerk@wilmslowtowncouncil.gov.uk",
-  "clerk_phone": "01625 402907",
-  "chair_name": "Lata Anderson;Elaine Evans;Sarah Firth;Mark Goldsmith;Michael Gorman",
-  "website": "https://www.wilmslowtowncouncil.gov.uk",
-  "email": "townclerk@wilmslowtowncouncil.gov.uk",
-  "phone": "01625 402907"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

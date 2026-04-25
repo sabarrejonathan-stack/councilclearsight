@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Kent",
   "region": "South East",
+  "website": "https://www.westkingsdownpc.org.uk",
+  "email": "clerk@westkingsdownpc.org.uk",
+  "phone": "01474 853358",
+  "clerk_name": null,
+  "clerk_email": "clerk@westkingsdownpc.org.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 2,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.westkingsdownpc.org.uk"
+        "website": "https://www.westkingsdownpc.org.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@westkingsdownpc.org.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 8,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 2
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 5,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 2
+        "school_count": 2,
+        "has_minutes": false
       }
     },
     {
@@ -158,8 +166,8 @@
   ],
   "pillar_earned": {
     "1": 25,
-    "2": 3,
-    "3": 16,
+    "2": 5,
+    "3": 8,
     "4": 15
   },
   "pillar_max_assessed": {
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 59,
+  "numerator": 53,
   "denominator": 100,
-  "score": 59,
+  "score": 53,
   "completeness": 1.0,
   "band": "Developing",
-  "rank_national": 2039,
-  "rank_type": 1775,
-  "rank_region": 440,
+  "rank": 1642,
+  "rank_national": 1642,
+  "regional_rank": 342,
+  "rank_region": 342,
+  "rank_type": 1371,
+  "percentile": 76.7,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1288,
-  "regional_rank": 388,
-  "percentile": 84.6,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 3,
-    "community": 16,
-    "accessibility": 15
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@westkingsdownpc.org.uk",
-  "clerk_phone": "01474 853358",
-  "chair_name": null,
-  "website": "https://www.westkingsdownpc.org.uk",
-  "email": "clerk@westkingsdownpc.org.uk",
-  "phone": "01474 853358"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

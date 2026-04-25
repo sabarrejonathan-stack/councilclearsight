@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Cornwall",
   "region": "South West",
+  "website": "https://www.illoganparishcouncil.gov.uk",
+  "email": "enquiries@illoganparishcouncil.gov.uk",
+  "phone": "01209 711433",
+  "clerk_name": "Ms Sarah Rimell",
+  "clerk_email": "enquiries@illoganparishcouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.illoganparishcouncil.gov.uk"
+        "website": "https://www.illoganparishcouncil.gov.uk"
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Ms Sarah Rimell"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "enquiries@illoganparishcouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 8,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -159,7 +167,7 @@
   "pillar_earned": {
     "1": 25,
     "2": 15,
-    "3": 15,
+    "3": 5,
     "4": 25
   },
   "pillar_max_assessed": {
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 80,
+  "numerator": 70,
   "denominator": 100,
-  "score": 80,
+  "score": 70,
   "completeness": 1.0,
-  "band": "Excellent",
-  "rank_national": 125,
-  "rank_type": 100,
-  "rank_region": 27,
+  "band": "Good",
+  "rank": 261,
+  "rank_national": 261,
+  "regional_rank": 58,
+  "rank_region": 58,
+  "rank_type": 139,
+  "percentile": 96.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": true,
-      "url": "https://www.illoganparishcouncil.gov.uk/privacy-policy/"
-    },
-    "foi_publication_scheme": {
-      "found": true,
-      "url": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.facebook.com%2F1396718790639428%2Fposts%2F970649445361584&title=%09%09%09%F0%9F%8C%BF%20Update%20from%20Cornwall%20Council%27s%20Full%20Council%20Meeting%20%F0%9F%8C%BFToday%2C%20the%20Full%20Council%20of%20Cornwall%20Council%20met%20and%20debated%20a%20motion%20regarding%20the%20Public%20Realm%20Weed%20Treatment%20Programme.%20There%20was%20extensive%20discussion%20with%20a%20wide%20range%20of%20views%20expressed%20on%20the%20use%20of%20glyphosate.%20While%20some%20supported%20chemical%20use%20and%20others%20opposed%20it%2C%20there%20was%20broad%20concern%20across%20the%20chamber%20about%20the%20process%20followed%2C%20along%20with%20acknowledgements%20and%20apologies%20regarding%20how%20parish%20and%20town%20councils%20have%20been%20treated.%F0%9F%93%8C%20Cornwall%20Council%20resolutions%3A%E2%9C%94%EF%B8%8F%20Policy%20recognition%20-%20The%20Council%20recognised%20that%20the%20decision%20to%20reintroduce%20chemical%20weed%20treatment%20using%20glyphosate%20represents%20a%20significant%20policy%20reversal%20with%20important%20ecological%2C%20public%20health%2C%20and%20democratic%20implications%20for%20communities%20across%20Cornwall.%E2%8F%B8%EF%B8%8F%20Pause%20on%20rollout%20-%20The%20planned%20commencement%20of%20chemical%20weed%20treatment%20%28scheduled%20for%20May%202026%29%20will%20be%20paused%20until%20a%20meaningful%20public%20consultation%20has%20taken%20place.%F0%9F%93%A3%20Public%20consultation%20%26amp%3B%20opt-out%20extension%20-%20The%20Council%20acknowledged%20that%20the%20three-week%20opt-out%20window%20for%20parish%20and%20town%20councils%20was%20inadequate%20%28and%20included%20the%20Easter%20period%29.%20This%20will%20now%20be%20extended%20to%20%2A%2A30%20days%20following%20publication%20of%20the%20consultation%20results%2A%2A.%F0%9F%93%98%20Clearer%20guidance%20-%20Clearer%20guidance%20will%20be%20provided%20to%20town%20and%20parish%20councils%20on%20the%20minimum%20required%20standards%20of%20the%20urban%20network.%F0%9F%92%B7%20Review%20of%20financial%20terms%20-%20An%20urgent%20review%20will%20be%20undertaken%20of%20the%20financial%20terms%20of%20the%20opt-out%20scheme.%20As%20currently%20structured%3ACouncils%20opting%20out%20of%20glyphosate%20treatment%20would%20lose%20associated%20estate%20improvement%20works.%20They%20would%20only%20receive%20funding%20equivalent%20to%20chemical%20treatment%20costs%20%28%C2%A3343.45%20per%20km%29.%20Additional%20costs%20%28alternative%20weed%20management%2C%20waste%20clearance%2C%20liability%20insurance%29%20would%20fall%20locallyThe%20Council%20has%20committed%20to%20reviewing%20and%20decoupling%20this%20arrangement.%F0%9F%8C%B1%20Further%20updates%20will%20follow%20as%20the%20consultation%20process%20progresses.%09%09%09%09"
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 34.5,
-    "indicators_evidence_found_count": 10,
-    "social_facebook_url": "https://facebook.com/1396718790639428",
-    "social_twitter_url": "https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.facebook.com%2F1396718790639428%2Fposts%2F970649445361584"
-  },
-  "scrape_status": "ok",
-  "rank": 278,
-  "regional_rank": 125,
-  "percentile": 96.4,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 25,
-    "governance": 15,
-    "community": 15,
-    "accessibility": 25
-  },
-  "clerk_name": "Ms Sarah Rimell",
-  "clerk_email": "enquiries@illoganparishcouncil.gov.uk",
-  "clerk_phone": "01209 711433",
-  "chair_name": null,
-  "website": "https://www.illoganparishcouncil.gov.uk",
-  "email": "enquiries@illoganparishcouncil.gov.uk",
-  "phone": "01209 711433"
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

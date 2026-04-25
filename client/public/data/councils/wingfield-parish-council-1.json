@@ -5,6 +5,15 @@
   "type": "parish",
   "county": "Wiltshire",
   "region": "South West",
+  "website": "https://www.wingfieldparishcouncil.gov.uk",
+  "email": "clerk@wingfieldparishcouncil.gov.uk",
+  "phone": null,
+  "clerk_name": null,
+  "clerk_email": "clerk@wingfieldparishcouncil.gov.uk",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 2,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 15,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": "https://www.wingfieldparishcouncil.gov.uk"
+        "website": "https://www.wingfieldparishcouncil.gov.uk"
       }
     },
     {
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@wingfieldparishcouncil.gov.uk"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 8,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 2
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 5,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 2
+        "school_count": 2,
+        "has_minutes": false
       }
     },
     {
@@ -124,7 +132,7 @@
       "pillar": 4,
       "label": "Multiple contact methods provided",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "clerk@wingfieldparishcouncil.gov.uk",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "South West",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 20,
-    "2": 3,
-    "3": 16,
-    "4": 12
+    "2": 5,
+    "3": 8,
+    "4": 10
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,80 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 51,
+  "numerator": 43,
   "denominator": 100,
-  "score": 51,
+  "score": 43,
   "completeness": 1.0,
-  "band": "Developing",
-  "rank_national": 2226,
-  "rank_type": 1952,
-  "rank_region": 572,
+  "band": "Needs Attention",
+  "rank": 2720,
+  "rank_national": 2720,
+  "regional_rank": 529,
+  "rank_region": 529,
+  "rank_type": 2296,
+  "percentile": 61.3,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "enriched_evidence": {
-    "standing_orders": {
-      "found": false,
-      "url": ""
-    },
-    "financial_regulations": {
-      "found": false,
-      "url": ""
-    },
-    "risk_assessment": {
-      "found": false,
-      "url": ""
-    },
-    "code_of_conduct": {
-      "found": false,
-      "url": ""
-    },
-    "gdpr_policy": {
-      "found": false,
-      "url": ""
-    },
-    "foi_publication_scheme": {
-      "found": false,
-      "url": ""
-    },
-    "expenditure_over_100": {
-      "found": false,
-      "url": ""
-    },
-    "asset_register": {
-      "found": false,
-      "url": ""
-    },
-    "councillor_responsibilities": {
-      "found": false,
-      "url": ""
-    },
-    "data_completeness_pct": 6.9,
-    "indicators_evidence_found_count": 2,
-    "social_facebook_url": "https://www.facebook.com/groups/485979642379186/?locale=en_GB",
-    "social_twitter_url": ""
-  },
-  "scrape_status": "ok",
-  "rank": 1955,
-  "regional_rank": 496,
-  "percentile": 76.8,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 20,
-    "governance": 3,
-    "community": 16,
-    "accessibility": 12
-  },
-  "clerk_name": null,
-  "clerk_email": "clerk@wingfieldparishcouncil.gov.uk",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": "https://www.wingfieldparishcouncil.gov.uk",
-  "email": "clerk@wingfieldparishcouncil.gov.uk",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "ok"
 }

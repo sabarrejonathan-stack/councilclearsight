@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "Northumberland",
   "region": "North East",
+  "website": null,
+  "email": "Shilbottlepc.clerk@gmail.com",
+  "phone": null,
+  "clerk_name": "Paul Burns",
+  "clerk_email": "Shilbottlepc.clerk@gmail.com",
+  "chair_name": "Rita Anderson;Sinead Bailey;Mandy Becconsall;Alexander Brewis;Yvonne Douglas",
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "Shilbottlepc.clerk@gmail.com"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Paul Burns"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "Shilbottlepc.clerk@gmail.com"
@@ -67,7 +75,7 @@
       "pillar": 2,
       "label": "Chair / Mayor named",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
         "chair_name": "Rita Anderson;Sinead Bailey;Mandy Becconsall;Alexander Brewis;Yvonne Douglas"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -136,11 +144,11 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Paul Burns",
-        "chair_name": "Rita Anderson;Sinead Bailey;Mandy Becconsall;Alexander Brewis;Yvonne Douglas"
+        "chair_name": null
       }
     },
     {
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "North East",
@@ -159,8 +167,8 @@
   "pillar_earned": {
     "1": 5,
     "2": 15,
-    "3": 13,
-    "4": 18
+    "3": 5,
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 51,
+  "numerator": 45,
   "denominator": 100,
-  "score": 51,
+  "score": 45,
   "completeness": 1.0,
-  "band": "Developing",
-  "rank_national": 3124,
-  "rank_type": 2704,
-  "rank_region": 101,
+  "band": "Needs Attention",
+  "rank": 2362,
+  "rank_national": 2362,
+  "regional_rank": 88,
+  "rank_region": 88,
+  "rank_type": 1960,
+  "percentile": 66.4,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 1955,
-  "regional_rank": 69,
-  "percentile": 76.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 15,
-    "community": 13,
-    "accessibility": 18
-  },
-  "clerk_name": "Paul Burns",
-  "clerk_email": "Shilbottlepc.clerk@gmail.com",
-  "clerk_phone": null,
-  "chair_name": "Rita Anderson;Sinead Bailey;Mandy Becconsall;Alexander Brewis;Yvonne Douglas",
-  "website": null,
-  "email": "Shilbottlepc.clerk@gmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

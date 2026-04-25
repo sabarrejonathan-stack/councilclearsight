@@ -5,6 +5,15 @@
   "type": "parish_meeting",
   "county": "North Yorkshire",
   "region": "Yorkshire and the Humber",
+  "website": null,
+  "email": null,
+  "phone": null,
+  "clerk_name": "Mr D Beal",
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 0,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr D Beal"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -115,8 +123,8 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 0
+        "school_count": 0,
+        "has_minutes": false
       }
     },
     {
@@ -173,33 +181,14 @@
   "score": 25,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 4211,
-  "rank_type": 423,
-  "rank_region": 655,
+  "rank": 3862,
+  "rank_national": 3862,
+  "regional_rank": 589,
+  "rank_region": 589,
+  "rank_type": 325,
+  "percentile": 45.1,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 3711,
-  "regional_rank": 879,
-  "percentile": 55.0,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 0,
-    "governance": 10,
-    "community": 0,
-    "accessibility": 15
-  },
-  "clerk_name": "Mr D Beal",
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": null,
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

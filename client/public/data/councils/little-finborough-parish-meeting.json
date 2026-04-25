@@ -5,6 +5,15 @@
   "type": "parish_meeting",
   "county": "Suffolk",
   "region": "East of England",
+  "website": null,
+  "email": null,
+  "phone": null,
+  "clerk_name": "Mr P Marriage",
+  "clerk_email": null,
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 1,
   "indicators": [
     {
       "id": "1.1",
@@ -14,8 +23,7 @@
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Mr P Marriage"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 3,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 6,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 1
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 1
+        "school_count": 1,
+        "has_minutes": false
       }
     },
     {
@@ -159,7 +167,7 @@
   "pillar_earned": {
     "1": 0,
     "2": 10,
-    "3": 13,
+    "3": 5,
     "4": 15
   },
   "pillar_max_assessed": {
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 38,
+  "numerator": 30,
   "denominator": 100,
-  "score": 38,
+  "score": 30,
   "completeness": 1.0,
   "band": "Needs Attention",
-  "rank_national": 4209,
-  "rank_type": 422,
-  "rank_region": 739,
+  "rank": 3582,
+  "rank_national": 3582,
+  "regional_rank": 622,
+  "rank_region": 622,
+  "rank_type": 255,
+  "percentile": 49.1,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2930,
-  "regional_rank": 642,
-  "percentile": 64.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 0,
-    "governance": 10,
-    "community": 13,
-    "accessibility": 15
-  },
-  "clerk_name": "Mr P Marriage",
-  "clerk_email": null,
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": null,
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }

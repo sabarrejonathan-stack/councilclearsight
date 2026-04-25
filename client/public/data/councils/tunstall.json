@@ -5,17 +5,25 @@
   "type": "parish",
   "county": "North Yorkshire",
   "region": "Yorkshire and the Humber",
+  "website": null,
+  "email": "tunstallpc@hotmail.com",
+  "phone": null,
+  "clerk_name": "Jon MacNamara",
+  "clerk_email": "tunstallpc@hotmail.com",
+  "chair_name": null,
+  "has_agendas": false,
+  "has_minutes": false,
+  "school_count": 6,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
       "label": "Active council website",
       "max_points": 15,
-      "earned": 4,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_website": true,
-        "website_url": null
+        "website": null
       }
     },
     {
@@ -23,7 +31,7 @@
       "pillar": 1,
       "label": "Council email address published",
       "max_points": 5,
-      "earned": 1,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "email": "tunstallpc@hotmail.com"
@@ -45,7 +53,7 @@
       "pillar": 2,
       "label": "Named clerk identified",
       "max_points": 10,
-      "earned": 6,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Jon MacNamara"
@@ -56,7 +64,7 @@
       "pillar": 2,
       "label": "Clerk email published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "tunstallpc@hotmail.com"
@@ -78,11 +86,11 @@
       "pillar": 2,
       "label": "Governance documents published",
       "max_points": 5,
-      "earned": 2,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_agendas": true,
-        "has_minutes": true
+        "has_agendas": false,
+        "has_minutes": false
       }
     },
     {
@@ -90,7 +98,7 @@
       "pillar": 3,
       "label": "Schools mapped within council area",
       "max_points": 10,
-      "earned": 7,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "school_count": 6
@@ -101,7 +109,7 @@
       "pillar": 3,
       "label": "School density",
       "max_points": 5,
-      "earned": 3,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "school_count": 6
@@ -112,11 +120,11 @@
       "pillar": 3,
       "label": "Engagement evidence published",
       "max_points": 10,
-      "earned": 6,
+      "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "has_minutes": true,
-        "school_count": 6
+        "school_count": 6,
+        "has_minutes": false
       }
     },
     {
@@ -136,7 +144,7 @@
       "pillar": 4,
       "label": "Named contact identified",
       "max_points": 10,
-      "earned": 9,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_name": "Jon MacNamara",
@@ -148,7 +156,7 @@
       "pillar": 4,
       "label": "Geographic and ward information",
       "max_points": 5,
-      "earned": 4,
+      "earned": 5,
       "assessed": true,
       "input_snapshot": {
         "region": "Yorkshire and the Humber",
@@ -158,9 +166,9 @@
   ],
   "pillar_earned": {
     "1": 5,
-    "2": 10,
-    "3": 16,
-    "4": 18
+    "2": 15,
+    "3": 15,
+    "4": 20
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -168,38 +176,19 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 49,
+  "numerator": 55,
   "denominator": 100,
-  "score": 49,
+  "score": 55,
   "completeness": 1.0,
-  "band": "Needs Attention",
-  "rank_national": 3371,
-  "rank_type": 2858,
-  "rank_region": 539,
+  "band": "Developing",
+  "rank": 1353,
+  "rank_national": 1353,
+  "regional_rank": 155,
+  "rank_region": 155,
+  "rank_type": 1096,
+  "percentile": 80.8,
   "methodology_version": "VDTI v3.0",
-  "pillar_labels": {
-    "1": "Digital Presence",
-    "2": "Contact Transparency",
-    "3": "Governance Documents",
-    "4": "Democratic Openness"
-  },
-  "scrape_status": "ok",
-  "rank": 2177,
-  "regional_rank": 387,
-  "percentile": 74.7,
-  "assessment_period": "January – March 2026",
   "data_extraction_date": "16 April 2026",
-  "pillar_breakdown_db": {
-    "digital": 5,
-    "governance": 10,
-    "community": 16,
-    "accessibility": 18
-  },
-  "clerk_name": "Jon MacNamara",
-  "clerk_email": "tunstallpc@hotmail.com",
-  "clerk_phone": null,
-  "chair_name": null,
-  "website": null,
-  "email": "tunstallpc@hotmail.com",
-  "phone": null
+  "assessment_period": "January – March 2026",
+  "scrape_status": "no-url"
 }
