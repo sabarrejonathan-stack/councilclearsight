@@ -1,0 +1,206 @@
+{
+  "slug": "woolsington-parish-council",
+  "name": "Woolsington Parish Council",
+  "type": "parish",
+  "county": "Tyne and Wear",
+  "district": "Newcastle upon Tyne",
+  "region": "North East",
+  "principal_authority": "Newcastle City Council",
+  "website": "https://www.woolsington-parish-council.com",
+  "compiled_at": "2026-04-25",
+  "compiled_method": "Hand-curated dossier — verified directly against the council's published website, Newcastle City Council records, ONS 2021 Census and the Northumberland Association of Local Councils. Used as the spotlight reference for the Council ClearSight Pro tier.",
+
+  "demographics": {
+    "population_2021_census": 8519,
+    "population_2011_census": 11160,
+    "households": 3695,
+    "median_age": 39,
+    "uk_born_pct": 91.9,
+    "geography_note": "The parish covers Newbiggin Hall, Woolsington village and Newcastle International Airport — a unique mix of suburban residential and major national infrastructure."
+  },
+
+  "officers": {
+    "chair": { "name": "George Pattison", "ward": "Newbiggin Hall" },
+    "vice_chair": { "name": "Lilian Kennedy", "ward": "Newbiggin Hall" },
+    "clerk": {
+      "name": "Andrew Richardson",
+      "email": "woolsingtonpc@gmail.com",
+      "phone": "07791 014441",
+      "email_domain_concern": "Personal Gmail address rather than a council-owned domain — institutional risk if the clerk moves on."
+    }
+  },
+
+  "councillors": [
+    { "name": "George Pattison", "ward": "Newbiggin Hall", "role": "Chair" },
+    { "name": "Lilian Kennedy", "ward": "Newbiggin Hall", "role": "Vice-Chair" },
+    { "name": "Jonathan Sabarre", "ward": "Bedeburn", "role": "Councillor" },
+    { "name": "Alexander Hay", "ward": "Bedeburn", "role": "Councillor" },
+    { "name": "Lilian McGuinness", "ward": "Bedeburn", "role": "Councillor" },
+    { "name": "Linda Wright", "ward": "Callerton", "role": "Councillor" },
+    { "name": "John Littleton", "ward": "Woolsington and Bankfoot", "role": "Councillor" },
+    { "name": "Joanne Couchman", "ward": "Woolsington and Bankfoot", "role": "Councillor" },
+    { "name": "Liam Spencer", "ward": "Bedeburn", "role": "Councillor" }
+  ],
+
+  "wards_represented": ["Newbiggin Hall", "Bedeburn", "Callerton", "Woolsington and Bankfoot"],
+
+  "evidence": {
+    "agar_2024_25": {
+      "label": "Audited AGAR 2024–25 with audit certificate (year ending 31 March 2025)",
+      "source_page": "https://www.woolsington-parish-council.com/finance",
+      "verified": true,
+      "notes": "Most recent annual return; audit certificate published; full Section 1 and Section 4 documents available."
+    },
+    "agar_2023_24": {
+      "label": "Audited AGAR 2023–24 with audit certificate (year ending 31 March 2024)",
+      "source_page": "https://www.woolsington-parish-council.com/finance",
+      "verified": true,
+      "notes": "Year-on-year continuity is rare for parish councils and is a notable strength."
+    },
+    "code_of_conduct": {
+      "label": "Code of Conduct (PDF)",
+      "url": "https://files.cdn-files-a.com/uploads/4803419/normal_601ff67ae645b.pdf",
+      "verified": true,
+      "improvement_note": "Currently uses Newcastle City Council's template. A council-specific Code of Conduct adopted by Woolsington's own Standards Committee would strengthen accountability."
+    },
+    "meeting_archive": {
+      "label": "Agendas and minutes — 50+ documents covering multiple years",
+      "source_page": "https://www.woolsington-parish-council.com/meeting-agendas-and-minutes",
+      "verified": true,
+      "notes": "Comprehensive historical record — among the strongest meeting archives observed for a parish of this size."
+    },
+    "councillors_directory": {
+      "label": "Councillor directory with names and wards",
+      "source_page": "https://www.woolsington-parish-council.com/your-parish-councillors",
+      "verified": true,
+      "improvement_note": "Names and wards are public; declared interests register is not yet visible on the site (Localism Act 2011 §29 requires publication)."
+    }
+  },
+
+  "strengths": [
+    {
+      "title": "Two consecutive AGARs with full audit certificates",
+      "summary": "Year ending 31 March 2024 and year ending 31 March 2025 both audited and published. This is the single most demanding indicator under the Accounts and Audit Regulations 2015, and Woolsington has it nailed in consecutive years.",
+      "indicator_ids": ["3.3", "3.3-internal-audit", "3.3-governance-statement"]
+    },
+    {
+      "title": "Comprehensive multi-year meeting archive",
+      "summary": "Agendas and minutes published going back several years — most parish councils struggle to maintain even the prior year. The volume and continuity of the archive is a meaningful transparency strength.",
+      "indicator_ids": ["3.1", "3.2"]
+    },
+    {
+      "title": "Distributed ward representation",
+      "summary": "Eight councillors plus chair, distributed across four geographic wards (Newbiggin Hall, Bedeburn, Callerton, Woolsington and Bankfoot). Each major settlement has a councillor.",
+      "indicator_ids": ["4.1", "4.2"]
+    },
+    {
+      "title": "Code of Conduct publicly published",
+      "summary": "Adopted Code of Conduct is downloadable from the council's website — a foundational governance document many parish councils still don't publish.",
+      "indicator_ids": ["lcas:code_of_conduct"]
+    }
+  ],
+
+  "improvement_opportunities": [
+    {
+      "id": "switch-to-gov-uk-domain",
+      "priority": "high",
+      "pillar": "Digital Presence",
+      "estimated_uplift_points": 5,
+      "title": "Move from .com to a .gov.uk domain",
+      "rationale": "The council currently operates on woolsington-parish-council.com — a non-governmental top-level domain. The .gov.uk registry is free for parish councils to use and signals to residents that they're on a verified, official council website rather than a lookalike. The CC-TI methodology awards 5 points for .gov.uk presence (Pillar 1.2).",
+      "effort": "Low — registration is free via the GOV.UK domain registry, and the existing Site123 website can be re-pointed via DNS in under an hour.",
+      "evidence_source": "Public Sector Bodies Use of Digital Services Standard; CC-TI Methodology Pillar 1.2.",
+      "source_url": "https://www.gov.uk/apply-for-and-manage-a-gov-uk-domain-name"
+    },
+    {
+      "id": "publish-accessibility-statement",
+      "priority": "high",
+      "pillar": "Digital Presence",
+      "estimated_uplift_points": 5,
+      "title": "Publish a website accessibility statement",
+      "rationale": "Since 23 September 2020, every public-sector body's website must publish an accessibility statement under the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018 (SI 2018/952). The Woolsington site currently does not. This is a statutory failure; it's also a 5-point CC-TI uplift (Pillar 1.3) and a 30-minute fix using the GOV.UK template.",
+      "effort": "Very low — the GOV.UK model template can be adapted in under an hour. The wider WCAG 2.2 AA audit can follow in a separate workstream.",
+      "evidence_source": "SI 2018/952; GOV.UK Model Accessibility Statement.",
+      "source_url": "https://www.gov.uk/guidance/model-accessibility-statement"
+    },
+    {
+      "id": "move-clerk-email-to-council-domain",
+      "priority": "high",
+      "pillar": "Contact Transparency",
+      "estimated_uplift_points": 0,
+      "title": "Move the clerk's email from Gmail to a council-owned domain",
+      "rationale": "The clerk's contact email is currently a personal Gmail address. While correspondence is reaching its destination, this creates two institutional risks: (1) when the current clerk moves on, the email and contact history go with them, and (2) residents may reasonably question whether they're emailing the council itself or an individual. NALC best-practice guidance recommends a council-owned email like clerk@<council>.gov.uk. CC-TI does not penalise this directly, but the resident-facing scorecard will surface it as a quality concern.",
+      "effort": "Low — most .gov.uk domain registrations include free email. Migrating contact history is a one-day clerk task.",
+      "evidence_source": "NALC Practitioners' Guide §5.3 (Records management and continuity)."
+    },
+    {
+      "id": "host-documents-on-council-domain",
+      "priority": "medium",
+      "pillar": "Governance Documents",
+      "estimated_uplift_points": 0,
+      "title": "Host council documents on the council's own domain rather than a third-party CDN",
+      "rationale": "Every council document — AGARs, minutes, Code of Conduct — currently lives at files.cdn-files-a.com (the Site123 platform's third-party storage). This means continuity of the public record depends on a commercial third party. Hosting on the council's own .gov.uk domain (once migrated) would eliminate that dependency and ensure documents remain reachable even if the website builder changes.",
+      "effort": "Medium — requires either a self-hosted document store or moving to a council-website builder that uses council-owned URLs (e.g. 2commune, Hugo Fox Plus)."
+    },
+    {
+      "id": "publish-register-of-interests",
+      "priority": "high",
+      "pillar": "Democratic Openness",
+      "estimated_uplift_points": 3,
+      "title": "Publish the register of councillors' pecuniary interests on the website",
+      "rationale": "Under the Localism Act 2011 §29 and the Relevant Authorities (Disclosable Pecuniary Interests) Regulations 2012, every councillor's register of interests must be available for public inspection. Newcastle City Council holds the register, but Woolsington does not currently publish a direct link or the register itself on its own website. Publishing — or linking prominently from the council's site — would close a Localism Act compliance gap and is a 3-point CC-TI uplift (Pillar 4.4).",
+      "effort": "Very low — link to Newcastle City Council's existing register from a single page on woolsington-parish-council.com.",
+      "evidence_source": "Localism Act 2011 §29; Relevant Authorities (Disclosable Pecuniary Interests) Regulations 2012 (SI 2012/1464)."
+    },
+    {
+      "id": "publish-asset-register",
+      "priority": "medium",
+      "pillar": "Governance Documents",
+      "estimated_uplift_points": 0,
+      "title": "Publish a public asset register",
+      "rationale": "The Local Government Transparency Code 2015 (paragraph 3.6) requires smaller authorities to publish details of public land and building assets they hold. Woolsington's website does not currently include a published asset register. Even where the asset list is short (or empty), publishing a one-page register with that statement is the compliant approach.",
+      "effort": "Very low — a single A4 PDF.",
+      "evidence_source": "Local Government Transparency Code 2015 §3.6."
+    },
+    {
+      "id": "publish-expenditure-over-100",
+      "priority": "medium",
+      "pillar": "Governance Documents",
+      "estimated_uplift_points": 0,
+      "title": "Publish all items of expenditure over £100",
+      "rationale": "Transparency Code 2015 §3.1 requires councils with annual expenditure over £25,000 to publish details of every item of expenditure over £100 including beneficiary, transaction date, summary description, and amount. The AGAR shows Woolsington's expenditure exceeds the threshold. Publishing a quarterly expenditure summary closes this compliance gap.",
+      "effort": "Low — one CSV or one-page PDF per quarter, covering all transactions over £100.",
+      "evidence_source": "Local Government Transparency Code 2015 §3.1."
+    },
+    {
+      "id": "establish-real-social-media-presence",
+      "priority": "medium",
+      "pillar": "Democratic Openness",
+      "estimated_uplift_points": 0,
+      "title": "Establish a working social media presence",
+      "rationale": "The council website's footer currently has Facebook, Twitter and Instagram icons that link to placeholder URLs rather than real council-operated accounts. Given the parish hosts Newcastle International Airport — a piece of national infrastructure with implications for residents in all four wards — and given the population skews older than the regional average (median age 39), a multi-channel comms strategy that includes both an active Facebook page and a printed monthly bulletin would meaningfully improve reach.",
+      "effort": "Low — a Facebook page can be set up in an afternoon by a councillor. The bigger investment is regular posting (15 minutes per week)."
+    },
+    {
+      "id": "council-specific-code-of-conduct",
+      "priority": "low",
+      "pillar": "Democratic Openness",
+      "estimated_uplift_points": 0,
+      "title": "Adopt a council-specific Code of Conduct",
+      "rationale": "Woolsington currently uses Newcastle City Council's Code of Conduct template. This is permitted but generic. A council-specific Code that references Woolsington's wards, committees and standards procedures would demonstrate active ownership of governance standards.",
+      "effort": "Low — adapt the Newcastle template, present at the next Standards Committee meeting, adopt at full council."
+    }
+  ],
+
+  "local_context": {
+    "headline_issue": "Newcastle International Airport — economic driver and acoustic challenge",
+    "summary": "The parish boundary contains Newcastle International Airport, which is the second-largest airport in the North East and handles approximately 5 million passengers per year. The airport's masterplan envisages further expansion. For the parish council, this creates a unique mix of opportunities (significant business rates contributions, employment for residents, infrastructure investment) and concerns (overflight noise affecting Newbiggin Hall and Callerton wards, ground access traffic). Structured resident engagement on airport-related decisions — a survey of overflight impact, a published council position on the next airspace consultation — is exactly the kind of activity Council ClearSight Platinum-tier tools are designed to support.",
+    "demographic_implication": "Median age 39 with 91.9% UK-born suggests residents skew towards established homeowners — a demographic that responds to clear written communication and is well-served by a printed monthly bulletin in addition to digital.",
+    "north_east_regional_context": "Average CC-TI score for North East parish councils is below the national average. A high Woolsington score creates a strong regional benchmark and a peer-pressure signal for surrounding councils."
+  },
+
+  "pro_tier_recommendations_summary": {
+    "estimated_total_uplift": "+13 points across two indicators (1.2 and 1.3) plus +3 points on register of interests (4.4) — a credible 16-point uplift achievable within one quarter, taking Woolsington from current banding into Strong territory.",
+    "non_score_value": "Beyond the scoring uplift, the main Pro-tier value is structuring resident engagement around the airport — a substantive local issue that current parish-council comms doesn't yet address. The Platinum resident-survey hub directly addresses this."
+  }
+}
