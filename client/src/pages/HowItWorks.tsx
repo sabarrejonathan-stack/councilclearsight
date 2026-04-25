@@ -37,6 +37,27 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      {/* ─── Video walkthrough ──────────────────────────────────── */}
+      <section className="bg-slate-900">
+        <div className="container max-w-5xl py-12">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              className="w-full h-auto block"
+              aria-label="Council ClearSight scoring walkthrough video"
+            >
+              <source src="/videos/how-it-works.mp4" type="video/mp4" />
+              Your browser does not support embedded video. The walkthrough is also explained step by step below.
+            </video>
+          </div>
+          <p className="text-center text-xs text-white/50 mt-4">
+            Two-minute walkthrough of how every council is discovered, verified, scored and published.
+          </p>
+        </div>
+      </section>
+
       <div className="container max-w-5xl py-16 space-y-20">
 
         {/* ─── The five steps ───────────────────────────────────── */}
