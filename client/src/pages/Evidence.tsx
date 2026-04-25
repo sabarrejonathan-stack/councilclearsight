@@ -59,37 +59,36 @@ export default function Evidence() {
               <tbody className="divide-y divide-border">
                 {[
                   {
-                    pillar: "Pillar 1: Digital Presence",
+                    pillar: "Pillar 1: Digital Presence (25 max)",
                     indicators: [
-                      { name: "1.1 — Active website", statute: "LGA 1972 § 96–101 (duty to provide proper notice of business)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "1.2 — .gov.uk domain", statute: "UK Government Digital Service (GDS) guidance for public bodies", link: "https://www.gov.uk/guidance/get-a-govuk-domain" },
-                      { name: "1.3 — Accessibility statement", statute: "Public Sector Bodies (Websites & Mobile Apps) Accessibility Regs 2018", link: "https://www.legislation.gov.uk/statutory-instruments/2018/852" },
+                      { name: "1.1 — Active council website (15)", statute: "LGA 1972 § 96–101 (duty to provide proper notice of business)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
+                      { name: "1.2 — Council email address published (5)", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "1.3 — Phone number published (5)", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
                     ]
                   },
                   {
-                    pillar: "Pillar 2: Contact Transparency",
+                    pillar: "Pillar 2: Governance (25 max)",
                     indicators: [
-                      { name: "2.1 — General email", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "2.2 — Phone number", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "2.3 — Named clerk", statute: "LGA 1972 § 112 (clerk as proper officer)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "2.4 — Clerk email", statute: "Transparency Code 2015 § 2.2 (clerk contact)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "2.1 — Named clerk identified (10)", statute: "LGA 1972 § 112 (clerk as proper officer)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
+                      { name: "2.2 — Clerk email published (5)", statute: "Transparency Code 2015 § 2.2 (clerk contact)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "2.3 — Chair / Mayor named (5)", statute: "LGA 1972 § 15 (chair election & record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
+                      { name: "2.4 — Governance documents published (5)", statute: "LGA 1972 § 100–102 (agendas & minutes); Accounts & Audit Regs 2015 § 10 (AGAR)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
                     ]
                   },
                   {
-                    pillar: "Pillar 3: Governance Documents",
+                    pillar: "Pillar 3: Community (25 max)",
                     indicators: [
-                      { name: "3.1 — Meeting agendas", statute: "LGA 1972 § 100 (right to inspect documents)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "3.2 — Meeting minutes", statute: "LGA 1972 § 100–102 (statutory recording & publication)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "3.3 — AGAR financials", statute: "Accounts & Audit Regs 2015 § 10 (publication of AGAR)", link: "https://www.legislation.gov.uk/statutory-instruments/2015/234" },
+                      { name: "3.1 — Schools mapped within council area (10)", statute: "DfE GIAS register (Get Information about Schools)", link: "https://get-information-schools.service.gov.uk/" },
+                      { name: "3.2 — School density (5)", statute: "Derived from DfE GIAS + ONS parish boundaries", link: "https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography" },
+                      { name: "3.3 — Engagement evidence published (10)", statute: "LGA 1972 § 100 (right to inspect); NALC Good Councillor Guide § 4 (Community Engagement)", link: "https://www.nalc.gov.uk/" },
                     ]
                   },
                   {
-                    pillar: "Pillar 4: Democratic Openness",
+                    pillar: "Pillar 4: Accessibility (25 max)",
                     indicators: [
-                      { name: "4.1 — Chair / Mayor named", statute: "LGA 1972 § 15 (chair election & record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "4.2 — Councillors listed", statute: "LGA 1972 § 15 (electoral framework)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "4.3 — Councillor contact", statute: "Transparency Code 2015 § 2.3 (councillor contact)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "4.4 — Register of interests", statute: "Localism Act 2011 § 29 (member interests)", link: "https://www.legislation.gov.uk/ukpga/2011/20/part/1/chapter/7" },
+                      { name: "4.1 — Multiple contact methods provided (10)", statute: "Public Sector Bodies (Websites & Mobile Apps) Accessibility Regs 2018; Equality Act 2010 § 20 (reasonable adjustments)", link: "https://www.legislation.gov.uk/statutory-instruments/2018/852" },
+                      { name: "4.2 — Named contact identified (10)", statute: "LGA 1972 § 112 (clerk as proper officer); Transparency Code 2015 § 2.2", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "4.3 — Geographic and ward information (5)", statute: "ONS administrative geography; LGA 1972 § 1 (geographic scope of councils)", link: "https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography" },
                     ]
                   },
                 ].map((group, i) => (
