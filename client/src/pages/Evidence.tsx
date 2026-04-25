@@ -215,4 +215,14 @@ export default function Evidence() {
               </p>
               <Link href="/directory">
                 <Button size="sm" variant="outline" className="w-full">
-                  Find your council <ArrowRight class
+                  Find your council <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                </Button>
+              </Link>
+            </Card>
+          </div>
+        </section>
+
+      </div>
+    </PublicLayout>
+  );
+}

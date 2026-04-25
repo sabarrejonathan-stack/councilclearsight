@@ -322,4 +322,13 @@ export default function Methodology() {
 
         {/* ─── What the score is not ───────────────────────── */}
         <section>
-   
+          <h2 className="text-2xl font-bold text-foreground mb-4">What the score isn't</h2>
+          <p className="text-muted-foreground text-sm mb-5 max-w-3xl leading-relaxed">
+            It's easy to read any single number as broader judgement than it's meant to be. Four things the score does <em>not</em> measure: political performance, service quality, financial judgement, or resident satisfaction. Those require different forms of evidence and a different kind of assessment.
+          </p>
+        </section>
+
+      </div>
+    </PublicLayout>
+  );
+}

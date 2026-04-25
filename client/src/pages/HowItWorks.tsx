@@ -190,4 +190,13 @@ export default function HowItWorks() {
 
         {/* ─── The integrity guarantee ────────────────────────────── */}
         <section className="bg-primary/5 border border-primary/20 rounded-2xl p-10">
-          <h2 className="tex
+          <h2 className="text-2xl font-bold mb-4">The integrity guarantee</h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Every score is reproducible from observable evidence. Every change is logged. Every challenge is published. We don't hide failures behind brand language — if a council's score is wrong, we fix it within five working days and publish the decision.
+          </p>
+        </section>
+
+      </div>
+    </PublicLayout>
+  );
+}

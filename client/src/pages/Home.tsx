@@ -330,4 +330,11 @@ function CouncilSearchBar() {
           {suggestions.map((s) => (
             <Link key={s.id} href={`/council/${s.slug}`} className="block px-4 py-3 hover:bg-slate-50 border-b last:border-0">
               <div className="font-medium text-sm">{s.name}</div>
-              <div className="text-xs text-muted-foreground">{s.county} · {s.region} · Score {s.score ?? "—
+              <div className="text-xs text-muted-foreground">{s.county} · {s.region} · Score {s.score ?? "—"}</div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
