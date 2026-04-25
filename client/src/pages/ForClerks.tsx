@@ -17,11 +17,11 @@ const STEPS = [
 ];
 
 const FAQS = [
-  { q: "Our council already has a Quality Council Award. Why add this?", a: "LCAS is self-assessed and point-in-time. CC-TI is externally observed and continuously updated. Most Quality and Quality Gold councils we've spoken to subscribe to Verified as a continuous proof-of-work." },
-  { q: "What if a councillor reads our score as criticism?", a: "The score is a diagnostic — a specific, fixable to-do list, not a judgement of the council's work. Pro's roadmap is literally designed to give you the talking points for that council meeting." },
-  { q: "Does Pro help with engagement or just the score?", a: "Both, deliberately linked. Every transparency improvement is an engagement opportunity. When you publish the May minutes, we help you draft the newsletter that tells residents about it." },
+  { q: "Our council already has a Quality Council Award. Why add this?", a: "LCAS is self-assessed and point-in-time. CC-TI is externally observed and continuously updated. Most Quality and Quality Gold councils we've spoken to subscribe to Gold as a continuous proof-of-work." },
+  { q: "What if a councillor reads our score as criticism?", a: "The score is a diagnostic — a specific, fixable to-do list, not a judgement of the council's work. Platinum&apos;s roadmap is literally designed to give you the talking points for that council meeting." },
+  { q: "Does Platinum help with engagement or just the score?", a: "Both, deliberately linked. Every transparency improvement is an engagement opportunity. When you publish the May minutes, we help you draft the newsletter that tells residents about it." },
   { q: "Is the data GDPR-compliant?", a: "Yes. We process only publicly-available register data. Our lawful basis is 'public task' under UK GDPR Art. 6(1)(e)." },
-  { q: "Our precept is under £3,000/year. £149 is significant.", a: "Email us — councils with a verified precept under £3,000 get Verified free." },
+  { q: "Our precept is under £3,000/year. £349 is significant.", a: "Email us — councils with a verified precept under £3,000 get Gold free." },
   { q: "If we subscribe, does our score improve automatically?", a: "No. Subscribing gets you tools and support; improving the score requires actually publishing more on the council's website." },
 ];
 
@@ -105,29 +105,29 @@ export default function ForClerks() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-7 bg-white border border-slate-200 rounded-3xl">
-              <div className="flex items-center gap-2 mb-4"><BadgeCheck className="w-6 h-6 text-sky-600" /><h3 className="text-2xl font-bold">Verified</h3></div>
-              <div className="flex items-baseline gap-1 mb-2"><span className="text-4xl font-bold">£149</span><span className="text-muted-foreground">/year</span></div>
+              <div className="flex items-center gap-2 mb-4"><BadgeCheck className="w-6 h-6 text-sky-600" /><h3 className="text-2xl font-bold">Gold</h3></div>
+              <div className="flex items-baseline gap-1 mb-2"><span className="text-4xl font-bold">£349</span><span className="text-muted-foreground">/year</span></div>
               <p className="text-xs text-muted-foreground mb-5">Typically fits under parish no-vote purchase thresholds.</p>
               <p className="text-sm mb-5 leading-relaxed">For the clerk who wants to claim the page, fix what's wrong, and know when anything changes.</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Verified badge on the public page</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Verified-clerk badge on the public page (Gold)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Edit contact fields directly</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Alerts when indicators change</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Printable A4 scorecard</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />3-day challenge SLA</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Unlimited council users</li>
               </ul>
-              <Link href="/subscribe/verified"><Button className="w-full">Start Verified <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
+              <Link href="/subscribe/gold"><Button className="w-full">Start Gold <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             </Card>
 
             <Card className="p-7 bg-gradient-to-br from-white to-accent/5 border-2 border-accent rounded-3xl relative shadow-lg">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">Most councils choose this</span>
-              <div className="flex items-center gap-2 mb-4"><Sparkles className="w-6 h-6 text-accent" /><h3 className="text-2xl font-bold">Pro</h3></div>
-              <div className="flex items-baseline gap-1 mb-2"><span className="text-4xl font-bold">£449</span><span className="text-muted-foreground">/year</span></div>
+              <div className="flex items-center gap-2 mb-4"><Sparkles className="w-6 h-6 text-accent" /><h3 className="text-2xl font-bold">Platinum</h3></div>
+              <div className="flex items-baseline gap-1 mb-2"><span className="text-4xl font-bold">£499</span><span className="text-muted-foreground">/year</span></div>
               <p className="text-xs text-muted-foreground mb-5">Less than one hour of professional consultancy per month.</p>
               <p className="text-sm mb-5 leading-relaxed">For councils ready to improve the score AND their relationship with residents.</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2 font-semibold border-b border-slate-200 pb-1 mb-1">Everything in Verified, plus:</li>
+                <li className="flex items-start gap-2 font-semibold border-b border-slate-200 pb-1 mb-1">Everything in Gold, plus:</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Personalised improvement roadmap</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Quarterly re-scoring</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Resident engagement playbook</li>
@@ -136,7 +136,7 @@ export default function ForClerks() {
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Direct email support (1 day)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Score-drop refund guarantee</li>
               </ul>
-              <Link href="/subscribe/pro"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Pro — 14-day trial <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
+              <Link href="/subscribe/platinum"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum — 14-day trial <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             </Card>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function ForClerks() {
       <section className="bg-primary text-white py-20">
         <div className="container max-w-5xl">
           <div className="max-w-3xl mb-10">
-            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">Pro in practice</Badge>
+            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">Platinum in practice</Badge>
             <h2 className="text-3xl font-bold mb-4">The 90-day picture: improving the score AND the conversation with residents</h2>
           </div>
           <div className="space-y-3">
@@ -174,21 +174,4 @@ export default function ForClerks() {
           {FAQS.map((item, i) => (
             <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl px-4 bg-white">
               <AccordionTrigger className="text-sm font-medium hover:no-underline py-3">{item.q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{item.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
-
-      <section className="bg-slate-50 border-t border-slate-200">
-        <div className="container max-w-3xl py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Five minutes to your council's page.</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/directory"><Button size="lg">Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-            <Link href="/pricing"><Button size="lg" variant="outline">Compare the two tiers</Button></Link>
-          </div>
-        </div>
-      </section>
-    </PublicLayout>
-  );
-}
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">

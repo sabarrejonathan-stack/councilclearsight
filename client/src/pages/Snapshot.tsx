@@ -230,7 +230,7 @@ export default function Snapshot() {
               <div className="bg-slate-50 rounded-xl p-5 mb-6 text-left">
                 <p className="text-sm font-semibold text-[#0f2942] mb-3">Want the full picture?</p>
                 <p className="text-sm text-slate-600 mb-4">
-                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £449/yr (Pro tier).
+                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £499/yr (Pro tier).
                 </p>
                 <Link href="/pricing">
                   <Button className="w-full bg-[#0f2942] hover:bg-[#1a3a5c] text-white">
@@ -289,7 +289,7 @@ export default function Snapshot() {
             The full Council ClearSight report is 21 pages, includes 8 evidence-based recommendations, peer benchmarking, and a resident-facing summary PDF.
           </p>
           <p className="text-white/60 text-sm mb-8">
-            From £449/yr (Pro tier) · Annual billing · Less than £8 per week
+            From £499/yr (Pro tier) · Annual billing · Less than £8 per week
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing">

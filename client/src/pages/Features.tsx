@@ -24,10 +24,10 @@ const GROUPS = [
   },
   {
     icon: BadgeCheck,
-    title: "Page ownership (Verified tier)",
-    body: "The Verified tier is for a clerk who wants to claim the page and react to changes.",
+    title: "Page ownership (Gold tier)",
+    body: "The Gold tier is for a clerk who wants to claim the page and react to changes.",
     features: [
-      { label: "Verified badge", body: "Publicly confirms the clerk has claimed the page." },
+      { label: "Verified-clerk badge", body: "Publicly confirms the clerk has claimed the page." },
       { label: "Direct field editing", body: "Change contact details without filing a challenge." },
       { label: "Priority challenge lane", body: "3-day SLA instead of 5." },
       { label: "Score-change alerts", body: "Email the clerk when any indicator flips." },

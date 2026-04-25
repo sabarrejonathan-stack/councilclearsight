@@ -143,7 +143,7 @@ export default function FAQ() {
               },
               {
                 q: "What happens to my data if I cancel my subscription?",
-                a: "Your council's public score, all evidence, and historical data remain on the site — they're public records. The only things you lose are subscriber-only features: the ✓ Verified badge, priority challenge SLA, re-scoring cadence, and improvement roadmap. We do not delete or hide anything when you cancel. Your public page stays online and stays current.",
+                a: "Your council's public score, all evidence, and historical data remain on the site — they're public records. The only things you lose are subscriber-only features: the ✓ Verified-clerk badge, priority challenge SLA, re-scoring cadence, and improvement roadmap. We do not delete or hide anything when you cancel. Your public page stays online and stays current.",
               },
             ].map((item, i) => (
               <AccordionItem key={i} value={`methodology-${i}`} className="border border-border rounded-lg px-5 data-[state=open]:bg-slate-50">

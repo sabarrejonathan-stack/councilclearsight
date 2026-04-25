@@ -765,7 +765,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(...DARK);
-  doc.text("Pro — £449/year", margin + 4, y + 29);
+  doc.text("Pro — £499/year", margin + 4, y + 29);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
   doc.setFontSize(7.5);

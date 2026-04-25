@@ -6,8 +6,8 @@
  *   Proof strip — real numbers (7,031 · 100 · 1,676 · 5 days)
  *   Reality check — your residents and journalists are already here
  *   Four pillars — what we measure, grounded in statute
- *   Commercial ladder — Free · Verified · Pro
- *   Pro in practice — six concrete outcomes
+ *   Commercial ladder — Free · Gold · Platinum
+ *   Platinum in practice — six concrete outcomes
  *   Three audiences — residents, clerks, journalists
  *   Close — find your council
  */
@@ -23,7 +23,7 @@ import { useDirectory } from "@/lib/staticData";
 import {
   ArrowRight, Search, Eye, BadgeCheck, Sparkles, BookOpen, Flag,
   ShieldCheck, Users, BarChart3, Mail, Globe, Target, MessageCircle,
-  HeartHandshake, Megaphone, Scale, FileCheck,
+  HeartHandshake, Megaphone, Scale, FileCheck, FileDown,
 } from "lucide-react";
 import { METHODOLOGY_VERSION } from "@/lib/scoring";
 
@@ -59,7 +59,7 @@ const AUDIENCES = [
 export default function Home() {
   useSEO({
     title: "Council ClearSight — the independent transparency score for every English council",
-    description: "7,031 councils scored on 14 observable indicators — from statutory duty to public proof. Free to view. Verified £149/yr or Pro £449/yr if your council wants help improving.",
+    description: "7,031 councils scored on 14 observable indicators — from statutory duty to public proof. Free to view. Gold £349/yr or Platinum £499/yr if your council wants help improving.",
     canonicalPath: "/",
   });
   return (
@@ -158,38 +158,76 @@ export default function Home() {
           <Badge variant="outline" className="mb-3 font-mono text-[10px]">For councils</Badge>
           <h2 className="text-3xl font-bold mb-4">The score is free. Improving it is where we help.</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Every council page, score and evidence trail is publicly visible — no paywall, no tier for hiding things. Two subscriptions exist to help councils who want to move up the rankings.
+            Every council page, score and evidence trail is publicly visible — forever, to everyone. Two subscriptions exist to help councils who want to move up the rankings.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-4">
           <Card className="p-6 bg-slate-50 border-slate-200 rounded-2xl">
             <div className="flex items-center gap-2 mb-2"><Eye className="w-5 h-5 text-slate-500" /><h3 className="font-bold text-xl">Public</h3></div>
             <div className="mb-4"><span className="text-3xl font-bold">Free</span> <span className="text-muted-foreground">forever</span></div>
-            <p className="text-sm mb-5 leading-relaxed">Read any council's score, rank, indicator-by-indicator breakdown, and the evidence URL behind every claim. Submit a challenge if something looks wrong.</p>
+            <p className="text-sm mb-5 leading-relaxed">Read any council's score, rank, indicator-by-indicator breakdown, and the evidence URL behind every claim.</p>
             <Link href="/directory"><Button variant="outline" className="w-full">Browse every council</Button></Link>
           </Card>
           <Card className="p-6 bg-white border border-slate-200 rounded-2xl">
-            <div className="flex items-center gap-2 mb-2"><BadgeCheck className="w-5 h-5 text-sky-600" /><h3 className="font-bold text-xl">Verified</h3></div>
-            <div className="mb-4"><span className="text-3xl font-bold">£149</span> <span className="text-muted-foreground">/year</span></div>
-            <p className="text-sm mb-5 leading-relaxed">Claim your council's page. Fix incorrect contact fields. Email alerts when anything changes. Priority 3-day challenge lane. Fits under most no-vote purchase thresholds.</p>
-            <Link href="/pricing"><Button variant="outline" className="w-full">Start Verified</Button></Link>
+            <div className="flex items-center gap-2 mb-2"><BadgeCheck className="w-5 h-5 text-sky-600" /><h3 className="font-bold text-xl">Gold</h3></div>
+            <div className="mb-4"><span className="text-3xl font-bold">£349</span> <span className="text-muted-foreground">/year</span></div>
+            <p className="text-sm mb-5 leading-relaxed">Top-5 improvement roadmap, monthly clerk tips, 3 peer comparisons, annual resident summary, automated evidence pack.</p>
+            <Link href="/pricing"><Button variant="outline" className="w-full">Start Gold</Button></Link>
           </Card>
           <Card className="p-6 bg-gradient-to-br from-white to-accent/5 border-2 border-accent rounded-2xl relative">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">Most councils choose this</span>
-            <div className="flex items-center gap-2 mb-2"><Sparkles className="w-5 h-5 text-accent" /><h3 className="font-bold text-xl">Pro</h3></div>
-            <div className="mb-4"><span className="text-3xl font-bold">£449</span> <span className="text-muted-foreground">/year</span></div>
-            <p className="text-sm mb-5 leading-relaxed">Personalised roadmap, quarterly re-scoring, peer benchmarking, engagement templates, direct support. Less than one hour of professional consultancy per month.</p>
-            <Link href="/pricing"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Pro — 14-day trial</Button></Link>
+            <div className="flex items-center gap-2 mb-2"><Sparkles className="w-5 h-5 text-accent" /><h3 className="font-bold text-xl">Platinum</h3></div>
+            <div className="mb-4"><span className="text-3xl font-bold">£499</span> <span className="text-muted-foreground">/year</span></div>
+            <p className="text-sm mb-5 leading-relaxed">Top-12 quarter-sequenced roadmap, weekly tips, 10 peer comparisons + county/regional benchmarking, quarterly re-scoring, resident survey hub.</p>
+            <Link href="/pricing"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum — 14-day trial</Button></Link>
           </Card>
         </div>
-        <p className="text-xs text-center text-muted-foreground mt-6">Both paid tiers include a 14-day trial and cancel-any-time. Score-drop refund on Pro.</p>
+        <p className="text-xs text-center text-muted-foreground mt-6">Both ex VAT. 14-day trial on both. Cancel any time.</p>
+      </section>
+
+      {/* ── Three sample reports ──────────────────── */}
+      <section className="bg-slate-50 border-y border-slate-200">
+        <div className="container max-w-6xl py-20">
+          <div className="max-w-3xl mb-10">
+            <Badge variant="outline" className="mb-3 font-mono text-[10px]">See what subscribers receive</Badge>
+            <h2 className="text-3xl font-bold mb-4">Three real councils. Three sample reports. Free to download.</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              These are the actual sample reports — auto-generated from the same data behind every public council page — for three real councils across the band spectrum. Click any one for the gated 60-second download.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            {SAMPLE_REPORT_COUNCILS.map((c) => (
+              <Link key={c.slug} href={`/council/${c.slug}`}>
+                <Card className="p-6 bg-white border-slate-200 rounded-2xl hover:border-accent hover:shadow-lg transition cursor-pointer h-full">
+                  <div className="flex items-start justify-between mb-4">
+                    <Badge className={`${c.bandClasses} text-[10px]`}>{c.band}</Badge>
+                    <span className="text-2xl font-bold font-mono">{c.score}</span>
+                  </div>
+                  <h3 className="font-bold text-lg mb-1">{c.name}</h3>
+                  <p className="text-xs text-muted-foreground mb-4">{c.region}</p>
+                  <p className="text-sm leading-relaxed mb-4">{c.story}</p>
+                  <div className="flex items-center gap-1.5 text-xs text-accent font-semibold">
+                    <FileDown className="w-3.5 h-3.5" />Get the sample report <ArrowRight className="w-3 h-3 ml-1" />
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/spotlight">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                <Sparkles className="w-4 h-4 mr-2" />See a full Platinum report (Spotlight: Woolsington)
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* ── Pro in practice ────────────────────── */}
       <section className="bg-primary text-white py-20">
         <div className="container max-w-6xl">
           <div className="max-w-3xl mb-12">
-            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">Pro in practice</Badge>
+            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">Platinum in practice</Badge>
             <h2 className="text-3xl font-bold mb-4">We help you improve the score <em>and</em> the conversation with residents.</h2>
             <p className="text-white/70 leading-relaxed">Every item we tell you to publish comes with the words you'd say about it. So publishing becomes a newsletter. Compliance becomes engagement.</p>
           </div>
@@ -245,6 +283,36 @@ export default function Home() {
     </PublicLayout>
   );
 }
+
+const SAMPLE_REPORT_COUNCILS = [
+  {
+    slug: "fordingbridge-town-council",
+    name: "Fordingbridge Town Council",
+    region: "South East",
+    score: 100,
+    band: "Exemplary",
+    bandClasses: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    story: "What perfect transparency looks like — every statutory document published on a current website with valid evidence URLs across all 14 indicators.",
+  },
+  {
+    slug: "allhallows-parish-council",
+    name: "Allhallows Parish Council",
+    region: "North West",
+    score: 60,
+    band: "Developing",
+    bandClasses: "bg-amber-100 text-amber-800 border-amber-200",
+    story: "Mid-band council with strong fundamentals but four specific gaps that are closable in days. The most relatable sample for the typical clerk.",
+  },
+  {
+    slug: "compton-bassett-parish-council",
+    name: "Compton Bassett Parish Council",
+    region: "South West",
+    score: 39,
+    band: "At Risk",
+    bandClasses: "bg-rose-100 text-rose-800 border-rose-200",
+    story: "Where the score is a diagnostic — clear list of statutory publications missing, each with a fixable URL path. Demonstrates the diagnostic value clearly.",
+  },
+];
 
 function CouncilSearchBar() {
   const [q, setQ] = useState("");

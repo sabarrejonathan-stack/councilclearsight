@@ -268,7 +268,7 @@ export default function RegisterInterest() {
               <h3 className="font-bold text-slate-800 mb-4">Transparent, affordable pricing</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white rounded-lg p-4 border border-slate-200">
-                  <div className="text-2xl font-black text-slate-800">£449<span className="text-sm font-normal text-slate-500">/yr</span></div>
+                  <div className="text-2xl font-black text-slate-800">£499<span className="text-sm font-normal text-slate-500">/yr</span></div>
                   <div className="font-semibold text-slate-700 mt-1">Gold</div>
                   <p className="text-xs text-slate-500 mt-1">Annual report + 1 update, CC-TI score, peer benchmarking</p>
                 </div>

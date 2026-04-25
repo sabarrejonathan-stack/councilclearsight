@@ -13,7 +13,7 @@ import { useCouncilBySlug } from "@/lib/staticData";
 import {
   ArrowLeft, ArrowRight, Mail, Phone, Globe, User, BookOpen,
   CheckCircle2, XCircle, MinusCircle, Flag, Scale, FileText,
-  BadgeCheck, Sparkles,
+  BadgeCheck, Sparkles, FileDown, AlertCircle, ShieldOff, WifiOff, Search,
 } from "lucide-react";
 import {
   PILLAR_META, INDICATORS, indicatorsForPillar,
@@ -22,10 +22,12 @@ import {
   METHODOLOGY_VERSION,
   type CouncilScore, type IndicatorResult,
 } from "@/lib/scoring";
+import SampleReportModal from "@/components/SampleReportModal";
 
 export default function CouncilProfile({ params }: { params: { slug: string } }) {
   const { data, isLoading } = useCouncilBySlug(params.slug);
   const council = data as CouncilScore | undefined;
+  const [reportOpen, setReportOpen] = useState(false);
 
   useSEO({
     title: council ? `${council.name} · CC-TI Score ${formatScore(council.score)}` : "Loading…",
@@ -49,6 +51,30 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
 
       <section className="bg-white border-b border-slate-200">
         <div className="container max-w-6xl py-10">
+
+          {/* ── Sample Report CTA — top of every council page ── */}
+          <div className="mb-6 p-5 bg-gradient-to-r from-accent/10 via-accent/5 to-transparent border-2 border-accent/30 rounded-2xl flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-3 flex-1 min-w-[280px]">
+              <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0">
+                <FileDown className="w-5 h-5 text-accent" />
+              </div>
+              <div>
+                <div className="font-bold text-sm">Get the sample report for {council.name}</div>
+                <div className="text-xs text-muted-foreground">4-page PDF · score, indicators, peer comparison &amp; the top improvement opportunity</div>
+              </div>
+            </div>
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-white"
+              onClick={() => setReportOpen(true)}
+            >
+              Get the sample report <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+
+          {/* ── Data-state disclaimer banner ── */}
+          <DataStateDisclaimer council={council} />
+
           <div className="flex flex-wrap items-start gap-6 mb-6">
             <div className="flex-1 min-w-[300px]">
               <div className="flex flex-wrap items-center gap-2 mb-3 text-xs">
@@ -71,6 +97,8 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
               </div>
             </div>
           </div>
+
+          <SampleReportModal open={reportOpen} onOpenChange={setReportOpen} council={council} />
 
           <div className={`${bandCls.bg} ${bandCls.border} border rounded-xl p-4 flex items-start gap-3`}>
             <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${bandCls.dot}`} />
@@ -157,7 +185,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
               <h3 className="text-sm font-bold">Are you this council's clerk?</h3>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-              Claim the page in 60 seconds. Fix the contact fields. Get email alerts when anything changes. From £149/year, cancel any time.
+              Claim the page in 60 seconds. Fix the contact fields. Get email alerts when anything changes. From £349/year, cancel any time.
             </p>
             <Link href={`/pricing?claim=${council.slug}`}>
               <Button size="sm" className="w-full bg-accent hover:bg-accent/90 text-white mb-2">
@@ -166,7 +194,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             </Link>
             <Link href="/for-clerks">
               <Button size="sm" variant="outline" className="w-full text-xs">
-                <Sparkles className="w-3.5 h-3.5 mr-1.5" />What Pro adds (£449/yr)
+                <Sparkles className="w-3.5 h-3.5 mr-1.5" />What Pro adds (£499/yr)
               </Button>
             </Link>
           </Card>
@@ -253,8 +281,7 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
             <div className="flex flex-wrap gap-3 text-xs">
               <Link href={`/challenge?slug=${slug}&indicator=${indicator.id}`} className="text-accent hover:underline inline-flex items-center gap-1">
                 <Flag className="w-3 h-3" />Think this is wrong? Challenge it.
-              </Link>
-            </div>
+              </Link            </div>
           </div>
         </div>
       )}
@@ -285,4 +312,66 @@ function ContactRow({ icon: Icon, label, value, href, subValue }: { icon: any; l
 function inputOf(council: CouncilScore, indicatorId: string, field: string): unknown {
   const ind = council.indicators.find(i => i.id === indicatorId);
   return ind?.input_snapshot?.[field];
+}
+
+function DataStateDisclaimer({ council }: { council: CouncilScore }) {
+  const status = (council as any).scrape_status || "unknown";
+  if (status === "ok" || status === "unknown") return null;
+
+  if (status === "no-url") {
+    return (
+      <div className="mb-6 p-4 bg-amber-50 border-2 border-amber-200 rounded-xl flex items-start gap-3">
+        <Search className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
+        <div className="flex-1">
+          <div className="font-semibold text-amber-950 text-sm mb-1">No website on file for this council</div>
+          <p className="text-xs text-amber-900 leading-relaxed mb-2">
+            We don't currently have a website URL for {council.name}. Pillar 1 (Digital Presence) is scored against absence; Pillars 3 and 4 are marked <strong>Not Assessed</strong> rather than zero — we don't punish a council for a gap in our measurement.
+          </p>
+          <p className="text-xs text-amber-900 leading-relaxed">
+            <strong>If you're the clerk and your council does have a website,</strong>{" "}
+            <Link href={`/challenge?slug=${council.slug}&indicator=1.1`} className="text-amber-700 underline font-semibold">tell us about it</Link>
+            {" "}— scores update within 14 working days of new evidence being verified.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (status === "robots-disallow") {
+    return (
+      <div className="mb-6 p-4 bg-sky-50 border-2 border-sky-200 rounded-xl flex items-start gap-3">
+        <ShieldOff className="w-5 h-5 text-sky-700 flex-shrink-0 mt-0.5" />
+        <div className="flex-1">
+          <div className="font-semibold text-sky-950 text-sm mb-1">Site blocks automated transparency tools</div>
+          <p className="text-xs text-sky-900 leading-relaxed mb-2">
+            This council's <code className="font-mono">robots.txt</code> directs automated transparency tools not to read the site. We respect that opt-out — but it means we can't observe whether agendas, minutes, the AGAR or the register of interests are published. Pillars 3 and 4 are recorded as <strong>Not Assessed</strong>.
+          </p>
+          <p className="text-xs text-sky-900 leading-relaxed">
+            <strong>If you're the clerk:</strong> a one-line addition to <code className="font-mono">robots.txt</code> allowing the <code className="font-mono">CouncilClearSightBot</code> user-agent will let the next refresh score Pillars 3 and 4 properly. <Link href="/challenge" className="text-sky-700 underline font-semibold">Or submit your evidence directly</Link>.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (status === "unreachable") {
+    return (
+      <div className="mb-6 p-4 bg-rose-50 border-2 border-rose-200 rounded-xl flex items-start gap-3">
+        <WifiOff className="w-5 h-5 text-rose-700 flex-shrink-0 mt-0.5" />
+        <div className="flex-1">
+          <div className="font-semibold text-rose-950 text-sm mb-1">Website was unreachable at last assessment</div>
+          <p className="text-xs text-rose-900 leading-relaxed mb-2">
+            The website URL we have for {council.name} did not respond at the last assessment. Pillar 1.1 reflects this as a measurement of "no working website"; Pillars 3 and 4 are marked <strong>Not Assessed</strong>.
+          </p>
+          <p className="text-xs text-rose-900 leading-relaxed">
+            <strong>If your website has moved,</strong>{" "}
+            <Link href={`/challenge?slug=${council.slug}&indicator=1.1`} className="text-rose-700 underline font-semibold">tell us the new URL</Link>
+            {" "}and we'll re-scan within 14 working days.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
 }

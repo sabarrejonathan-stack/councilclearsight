@@ -115,9 +115,4 @@ export default function PublicFooter() {
           </p>
           <p className="text-xs text-primary-foreground/50">
             Data processed in accordance with UK GDPR. Not affiliated with any local authority or government body.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+  

@@ -18,18 +18,18 @@ import {
 type Billing = "annual" | "monthly";
 
 const FAQS = [
-  { q: "Do we need a council vote to subscribe?", a: "Most councils' standing orders allow subscriptions under £250 without a vote. Verified (£149) typically fits. Pro (£449) usually needs a vote but is normal small-contract territory." },
-  { q: "What's the difference between Verified and Pro?", a: "Verified lets you own and react — claim the page, see changes, fix errors. Pro adds proactive help: roadmap, quarterly re-scoring, peer benchmarking, templates, direct support." },
-  { q: "If we subscribe to Pro and nothing changes, what then?", a: "The score-drop refund: if your score drops 5+ points during your subscription without your fault, we refund pro-rata." },
-  { q: "Our precept is very small — is this for us?", a: "Councils with precept under £3,000/year get Verified free — email us to confirm via MHCLG data." },
+  { q: "Do we need a council vote to subscribe?", a: "Most councils' standing orders allow subscriptions under £250 without a vote. Gold (£349) typically fits. Platinum (£499) usually needs a vote but is normal small-contract territory." },
+  { q: "What's the difference between Gold and Platinum?", a: "Gold lets you own and react — claim the page, see changes, fix errors. Platinum adds proactive help: roadmap, quarterly re-scoring, peer benchmarking, templates, direct support." },
+  { q: "If we subscribe to Platinum and nothing changes, what then?", a: "The score-drop refund: if your score drops 5+ points during your subscription without your fault, we refund pro-rata." },
+  { q: "Our precept is very small — is this for us?", a: "Councils with precept under £3,000/year get Gold free — email us to confirm via MHCLG data." },
   { q: "Will subscribing improve our score automatically?", a: "No. Subscribing gets you tools and support; improving the score requires publishing more. We tell you exactly what to publish and help you draft it." },
-  { q: "Can we cancel any time?", a: "Yes. Your public page remains online and scored. Cancelling removes the Verified badge and subscription benefits. No data held hostage." },
+  { q: "Can we cancel any time?", a: "Yes. Your public page remains online and scored. Cancelling removes the Verified-clerk badge and subscription benefits. No data held hostage." },
 ];
 
 export default function Pricing() {
   useSEO({
     title: "Pricing — two tiers to help your council improve | Council ClearSight",
-    description: "Every council's score is free. Subscribe (£149 Verified / £449 Pro) for tools and personal support to improve your score and engage residents.",
+    description: "Every council's score is free. Subscribe (£349 Gold / £499 Platinum) for tools and personal support to improve your score and engage residents.",
     canonicalPath: "/pricing",
   });
   const [billing, setBilling] = useState<Billing>("annual");
@@ -58,20 +58,20 @@ export default function Pricing() {
       <section className="container max-w-5xl -mt-10 relative z-10 mb-16">
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="p-7 bg-white border border-slate-200 rounded-3xl">
-            <div className="flex items-center gap-2 mb-4"><BadgeCheck className="w-6 h-6 text-sky-600" /><h2 className="text-2xl font-bold">Verified</h2></div>
+            <div className="flex items-center gap-2 mb-4"><BadgeCheck className="w-6 h-6 text-sky-600" /><h2 className="text-2xl font-bold">Gold</h2></div>
             <p className="text-sm mb-6 leading-relaxed">Own your council's page. React to changes. Fix what's wrong.</p>
             <div className="mb-5">
               <div className="flex items-baseline gap-1">
-                <span className="text-5xl font-bold">£{billing === "annual" ? "149" : "15"}</span>
+                <span className="text-5xl font-bold">£{billing === "annual" ? "349" : "35"}</span>
                 <span className="text-muted-foreground">{billing === "annual" ? "/year" : "/month"}</span>
               </div>
-              {billing === "annual" && <p className="text-[11px] text-accent mt-1">£12.42/month equivalent.</p>}
+              {billing === "annual" && <p className="text-[11px] text-accent mt-1">£29.08/month equivalent.</p>}
             </div>
-            <Link href="/subscribe/verified"><Button className="w-full" size="lg">Start Verified <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
+            <Link href="/subscribe/gold"><Button className="w-full" size="lg">Start Gold <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             <p className="text-[11px] text-center text-muted-foreground mt-2">14-day trial · cancel any time</p>
             <div className="mt-6 pt-6 border-t border-slate-200">
               <ul className="space-y-2.5 text-sm">
-                <li className="flex items-start gap-2.5"><BadgeCheck className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Verified badge on your public page</li>
+                <li className="flex items-start gap-2.5"><BadgeCheck className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Verified-clerk badge on your public page (Gold)</li>
                 <li className="flex items-start gap-2.5"><Shield className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Edit contact fields directly</li>
                 <li className="flex items-start gap-2.5"><Bell className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Email alerts on indicator changes</li>
                 <li className="flex items-start gap-2.5"><FileText className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />Printable A4 scorecard</li>
@@ -83,19 +83,19 @@ export default function Pricing() {
 
           <Card className="p-7 bg-gradient-to-br from-white to-accent/5 border-2 border-accent rounded-3xl relative shadow-lg">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold px-4 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">Most councils choose this</span>
-            <div className="flex items-center gap-2 mb-4"><Sparkles className="w-6 h-6 text-accent" /><h2 className="text-2xl font-bold">Pro</h2></div>
+            <div className="flex items-center gap-2 mb-4"><Sparkles className="w-6 h-6 text-accent" /><h2 className="text-2xl font-bold">Platinum</h2></div>
             <p className="text-sm mb-6 leading-relaxed">Active help to improve your score AND engage residents. Roadmap, templates, and us on email.</p>
             <div className="mb-5">
               <div className="flex items-baseline gap-1">
-                <span className="text-5xl font-bold">£{billing === "annual" ? "449" : "45"}</span>
+                <span className="text-5xl font-bold">£{billing === "annual" ? "499" : "45"}</span>
                 <span className="text-muted-foreground">{billing === "annual" ? "/year" : "/month"}</span>
               </div>
-              {billing === "annual" && <p className="text-[11px] text-accent mt-1">£37.42/month equivalent.</p>}
+              {billing === "annual" && <p className="text-[11px] text-accent mt-1">£41.58/month equivalent.</p>}
             </div>
-            <Link href="/subscribe/pro"><Button className="w-full bg-accent hover:bg-accent/90 text-white" size="lg">Start Pro — 14-day trial <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
+            <Link href="/subscribe/platinum"><Button className="w-full bg-accent hover:bg-accent/90 text-white" size="lg">Start Platinum — 14-day trial <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             <p className="text-[11px] text-center text-muted-foreground mt-2">Score-drop refund guarantee</p>
             <div className="mt-6 pt-6 border-t border-slate-200">
-              <p className="text-xs uppercase tracking-wider text-accent font-semibold mb-3">Everything in Verified, plus</p>
+              <p className="text-xs uppercase tracking-wider text-accent font-semibold mb-3">Everything in Gold, plus</p>
               <ul className="space-y-2.5 text-sm">
                 <li className="flex items-start gap-2.5"><Target className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Personalised improvement roadmap</li>
                 <li className="flex items-start gap-2.5"><TrendingUp className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Quarterly re-scoring (public is annual)</li>
@@ -157,8 +157,4 @@ export default function Pricing() {
             <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Find your council first <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             <Link href="/contact?topic=pricing"><Button size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10">Ask us a question</Button></Link>
           </div>
-        </div>
-      </section>
-    </PublicLayout>
-  );
-}
+        </div
