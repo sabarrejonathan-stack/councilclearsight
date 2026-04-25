@@ -508,7 +508,7 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (VDTI v3.0) assesses every parish, town, city and community council in England across four pillars and thirteen observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
+    `Council ClearSight (VDTI v3.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
     ``,
     `Where a council cannot yet be observed (no website, robots.txt opt-out, or scraper error), affected indicators are marked "Not Assessed" and excluded from the denominator rather than penalised. Pro subscribers receive a full personalised audit within seven days of subscribing, with a written improvement roadmap.`,
     ``,

@@ -262,7 +262,7 @@ export default function Snapshot() {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 13 observable indicators across four pillars." },
+              { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 12 observable indicators across four pillars." },
               { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Digital Presence, Contact Transparency, Governance & Compliance, and Financial Accountability." },
               { icon: Users, title: "National Ranking", body: "Where your council sits among 10,800+ assessed councils nationally and within your region." },
               { icon: Zap, title: "Top 2 Opportunities", body: "The two most impactful improvements your council could make to increase its VDTI score, with specific recommended actions." },

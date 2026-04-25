@@ -13,14 +13,16 @@
   "chair_name": null,
   "has_agendas": false,
   "has_minutes": false,
-  "school_count": 1,
+  "has_financials": false,
+  "has_accessibility_statement": false,
+  "councillors_listed_raw": null,
   "indicators": [
     {
       "id": "1.1",
       "pillar": 1,
-      "label": "Active council website",
-      "max_points": 15,
-      "earned": 15,
+      "label": "Working council website",
+      "max_points": 10,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "website": "https://www.parsondrove-pc.gov.uk"
@@ -49,10 +51,10 @@
       }
     },
     {
-      "id": "2.1",
-      "pillar": 2,
+      "id": "1.4",
+      "pillar": 1,
       "label": "Named clerk identified",
-      "max_points": 10,
+      "max_points": 5,
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
@@ -60,19 +62,52 @@
       }
     },
     {
+      "id": "2.1",
+      "pillar": 2,
+      "label": "Meeting agendas published",
+      "max_points": 15,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "has_agendas": false
+      }
+    },
+    {
       "id": "2.2",
       "pillar": 2,
-      "label": "Clerk email published",
-      "max_points": 5,
-      "earned": 5,
+      "label": "Meeting minutes published",
+      "max_points": 10,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "has_minutes": false
+      }
+    },
+    {
+      "id": "3.1",
+      "pillar": 3,
+      "label": "AGAR / annual financial statement published",
+      "max_points": 15,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "has_financials": false
+      }
+    },
+    {
+      "id": "3.2",
+      "pillar": 3,
+      "label": "Clerk email — correspondence channel for audit",
+      "max_points": 10,
+      "earned": 10,
       "assessed": true,
       "input_snapshot": {
         "clerk_email": "clerk@parsondrove-pc.gov.uk"
       }
     },
     {
-      "id": "2.3",
-      "pillar": 2,
+      "id": "4.1",
+      "pillar": 4,
       "label": "Chair / Mayor named",
       "max_points": 5,
       "earned": 0,
@@ -82,93 +117,45 @@
       }
     },
     {
-      "id": "2.4",
-      "pillar": 2,
-      "label": "Governance documents published",
-      "max_points": 5,
-      "earned": 0,
-      "assessed": true,
-      "input_snapshot": {
-        "has_agendas": false,
-        "has_minutes": false
-      }
-    },
-    {
-      "id": "3.1",
-      "pillar": 3,
-      "label": "Schools mapped within council area",
-      "max_points": 10,
-      "earned": 5,
-      "assessed": true,
-      "input_snapshot": {
-        "school_count": 1
-      }
-    },
-    {
-      "id": "3.2",
-      "pillar": 3,
-      "label": "School density",
-      "max_points": 5,
-      "earned": 0,
-      "assessed": true,
-      "input_snapshot": {
-        "school_count": 1
-      }
-    },
-    {
-      "id": "3.3",
-      "pillar": 3,
-      "label": "Engagement evidence published",
-      "max_points": 10,
-      "earned": 0,
-      "assessed": true,
-      "input_snapshot": {
-        "school_count": 1,
-        "has_minutes": false
-      }
-    },
-    {
-      "id": "4.1",
-      "pillar": 4,
-      "label": "Multiple contact methods provided",
-      "max_points": 10,
-      "earned": 10,
-      "assessed": true,
-      "input_snapshot": {
-        "email": "clerk@parsondrove-pc.gov.uk",
-        "phone": "07595 353424"
-      }
-    },
-    {
       "id": "4.2",
       "pillar": 4,
-      "label": "Named contact identified",
-      "max_points": 10,
+      "label": "At least one councillor identified",
+      "max_points": 5,
       "earned": 0,
       "assessed": true,
       "input_snapshot": {
-        "clerk_name": null,
-        "chair_name": null
+        "councillors_listed": false
       }
     },
     {
       "id": "4.3",
       "pillar": 4,
-      "label": "Geographic and ward information",
+      "label": "Accessibility statement published",
+      "max_points": 10,
+      "earned": 0,
+      "assessed": true,
+      "input_snapshot": {
+        "has_accessibility_statement": false
+      }
+    },
+    {
+      "id": "4.4",
+      "pillar": 4,
+      "label": "Secure connection (HTTPS)",
       "max_points": 5,
       "earned": 5,
       "assessed": true,
       "input_snapshot": {
-        "region": "East of England",
-        "county": "Cambridgeshire"
+        "website": "https://www.parsondrove-pc.gov.uk",
+        "https": true
       }
     }
   ],
   "pillar_earned": {
-    "1": 25,
-    "2": 5,
-    "3": 5,
-    "4": 15
+    "1": 20,
+    "2": 0,
+    "3": 10,
+    "4": 5
   },
   "pillar_max_assessed": {
     "1": 25,
@@ -176,18 +163,18 @@
     "3": 25,
     "4": 25
   },
-  "numerator": 50,
+  "numerator": 35,
   "denominator": 100,
-  "score": 50,
+  "score": 35,
   "completeness": 1.0,
-  "band": "Developing",
-  "rank": 1708,
-  "rank_national": 1708,
-  "regional_rank": 306,
-  "rank_region": 306,
-  "rank_type": 1428,
-  "percentile": 75.7,
-  "methodology_version": "VDTI v3.0",
+  "band": "Needs Attention",
+  "rank": 957,
+  "rank_national": 957,
+  "regional_rank": 180,
+  "rank_region": 180,
+  "rank_type": 820,
+  "percentile": 86.4,
+  "methodology_version": "VDTI v4.0",
   "data_extraction_date": "16 April 2026",
   "assessment_period": "January – March 2026",
   "scrape_status": "ok"

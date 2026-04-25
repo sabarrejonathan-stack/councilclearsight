@@ -28,15 +28,15 @@ import {
 import { METHODOLOGY_VERSION } from "@/lib/scoring";
 
 const PILLARS = [
-  { n: 1, icon: Globe,       label: "Digital Presence", max: 25, items: "Active council website · email address · phone number" },
-  { n: 2, icon: ShieldCheck, label: "Governance",       max: 25, items: "Named clerk · clerk email · chair · governance documents" },
-  { n: 3, icon: Users,       label: "Community",        max: 25, items: "Schools mapped · school density · engagement evidence" },
-  { n: 4, icon: Mail,        label: "Accessibility",    max: 25, items: "Multiple contact methods · named contact · ward information" },
+  { n: 1, icon: Globe,       label: "Core Reachability",              max: 25, items: "Working website · council email · phone · named clerk (LGA 1972 § 112)" },
+  { n: 2, icon: ShieldCheck, label: "Statutory Meeting Transparency", max: 25, items: "Agendas (LGA 1972 § 100B) · minutes (LGA 1972 § 100C)" },
+  { n: 3, icon: BarChart3,   label: "Financial Accountability",       max: 25, items: "AGAR (Accounts & Audit Regs 2015 § 10) · contactable clerk for audit" },
+  { n: 4, icon: Users,       label: "Democratic & Accessibility",     max: 25, items: "Chair named · councillor identified · accessibility statement · HTTPS" },
 ];
 
 const PROOF = [
   { n: "7,031",   label: "councils scored",          sub: "every parish, town, city and community council in England" },
-  { n: "100",     label: "points per council",       sub: "across 4 pillars and 13 observable indicators" },
+  { n: "100",     label: "points per council",       sub: "across 4 pillars and 12 observable indicators" },
   { n: "1,676",   label: "fully audited by scraper", sub: "every agenda, minute and AGAR link is a live URL" },
   { n: "5 days",  label: "to resolve a challenge",   sub: "evidence in, published decision out" },
 ];
@@ -59,7 +59,7 @@ const AUDIENCES = [
 export default function Home() {
   useSEO({
     title: "Council ClearSight — the independent transparency score for every English council",
-    description: "7,031 councils scored on 13 observable indicators — from statutory duty to public proof. Free to view. Gold £349/yr or Platinum £499/yr if your council wants help improving.",
+    description: "7,031 councils scored on 12 observable indicators — from statutory duty to public proof. Free to view. Gold £349/yr or Platinum £499/yr if your council wants help improving.",
     canonicalPath: "/",
   });
   return (
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-accent">legally required.</span> We make it visible.
             </h1>
             <p className="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              An independent score for every parish, town, city and community council in England. Calculated from thirteen things councils are already required to publish. Explained clearly. Pinned to evidence.
+              An independent score for every parish, town, city and community council in England. Calculated from twelve things councils are already required to publish. Explained clearly. Pinned to evidence.
             </p>
             <CouncilSearchBar />
             <div className="flex flex-wrap gap-6 mt-10 text-xs text-white/60">
@@ -292,7 +292,7 @@ const SAMPLE_REPORT_COUNCILS = [
     score: 100,
     band: "Exemplary",
     bandClasses: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    story: "What perfect transparency looks like — every statutory document published on a current website with valid evidence URLs across all 13 indicators.",
+    story: "What perfect transparency looks like — every statutory document published on a current website with valid evidence URLs across all 12 indicators.",
   },
   {
     slug: "allhallows-parish-council",
@@ -330,11 +330,4 @@ function CouncilSearchBar() {
           {suggestions.map((s) => (
             <Link key={s.id} href={`/council/${s.slug}`} className="block px-4 py-3 hover:bg-slate-50 border-b last:border-0">
               <div className="font-medium text-sm">{s.name}</div>
-              <div className="text-xs text-muted-foreground">{s.county} · {s.region} · Score {s.score ?? "—"}</div>
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+              <div className="text-xs text-muted-foreground">{s.county} · {s.region} · Score {s.score ?? "—

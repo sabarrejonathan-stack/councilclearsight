@@ -11,7 +11,7 @@ import { useSEO } from "@/hooks/useSEO";
 import { ArrowRight, AlertCircle, CheckCircle2, BadgeCheck, Sparkles, Target, Megaphone, TrendingUp, MessageCircle, HeartHandshake, Users } from "lucide-react";
 
 const STEPS = [
-  { n: "01", title: "Find your council", body: "Search the directory. Open your page. Read the thirteen indicators.", cta: "Open the directory", href: "/directory" },
+  { n: "01", title: "Find your council", body: "Search the directory. Open your page. Read the twelve indicators.", cta: "Open the directory", href: "/directory" },
   { n: "02", title: "Submit a correction", body: "If a field is wrong — an old email, a changed URL — file a challenge. No account required.", cta: "Submit a challenge", href: "/challenge" },
   { n: "03", title: "Read the methodology", body: "How your score is calculated, explained clearly. Share it with your chair.", cta: "Read the methodology", href: "/methodology" },
 ];
@@ -172,24 +172,4 @@ export default function ForClerks() {
         <div className="text-center mb-8"><h2 className="text-3xl font-bold">What clerks ask before signing up</h2></div>
         <Accordion type="single" collapsible className="space-y-2">
           {FAQS.map((item, i) => (
-            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl px-4 bg-white">
-              <AccordionTrigger className="text-sm font-medium hover:no-underline py-3">{item.q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{item.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
-
-      <section className="bg-primary text-white">
-        <div className="container max-w-4xl py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to take ownership of your page?</h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">Start with the free clerk badge, then upgrade to Platinum for the full automation-led roadmap.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-            <Link href="/pricing"><Button size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10">See pricing</Button></Link>
-          </div>
-        </div>
-      </section>
-    </PublicLayout>
-  );
-}
+            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl

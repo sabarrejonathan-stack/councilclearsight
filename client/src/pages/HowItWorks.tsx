@@ -84,15 +84,15 @@ export default function HowItWorks() {
               icon: Zap,
               title: "Score",
               summary: "We apply fourteen binary rules across four pillars.",
-              body: "Each of the thirteen indicators is checked against the verified inputs for every council. Each rule either earns maximum points (when the evidence is present) or zero (when it isn't). If we haven't yet checked an indicator for a particular council, it's marked 'Not assessed' and excluded from the denominator — a missing check never masquerades as a fail. The final score is the points earned divided by the points we could assess, on a 0–100 scale.",
-              sources: "13 binary indicators · 4 pillars · Max 100 points",
+              body: "Each of the twelve indicators is checked against the verified inputs for every council. Each rule either earns maximum points (when the evidence is present) or zero (when it isn't). If we haven't yet checked an indicator for a particular council, it's marked 'Not assessed' and excluded from the denominator — a missing check never masquerades as a fail. The final score is the points earned divided by the points we could assess, on a 0–100 scale.",
+              sources: "12 binary indicators · 4 pillars · Max 100 points",
             },
             {
               step: 4,
               icon: Upload,
               title: "Publish",
               summary: "Every council page is regenerated with the latest evidence.",
-              body: "Every council page on the site is updated to reflect the latest verdicts — the score, the band, the rank, and the specific evidence behind each of the thirteen indicators. What you see on a council's page is exactly what the scoring process produced; there's no editorial layer between the evidence and the score.",
+              body: "Every council page on the site is updated to reflect the latest verdicts — the score, the band, the rank, and the specific evidence behind each of the twelve indicators. What you see on a council's page is exactly what the scoring process produced; there's no editorial layer between the evidence and the score.",
               sources: "Public annual refresh · Quarterly for Pro subscribers · Full evidence trail",
             },
             {
@@ -190,24 +190,4 @@ export default function HowItWorks() {
 
         {/* ─── The integrity guarantee ────────────────────────────── */}
         <section className="bg-primary/5 border border-primary/20 rounded-2xl p-10">
-          <h2 className="text-2xl font-bold text-foreground mb-4">The integrity guarantee</h2>
-          <ul className="space-y-3">
-            {[
-              "Every score is traceable to the specific evidence on the council's own public sources.",
-              "No subscriber sees a different score than the public sees. There is no paywalled 'real score'.",
-              "The methodology is published clearly and implemented in testable Python code.",
-              "All challenges and disputes are logged publicly; you can see how we respond to disagreement.",
-              "Every change to the methodology is versioned and published with impact analysis.",
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span className="text-sm text-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+          <h2 className="tex

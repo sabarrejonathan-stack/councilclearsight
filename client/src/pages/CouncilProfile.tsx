@@ -125,7 +125,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             <h2 className="text-base font-bold text-sky-950 mb-2">What this score does — and what it does not — measure</h2>
             <div className="text-sm text-sky-900/90 leading-relaxed space-y-2">
               <p>
-                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same thirteen observable indicators across four pillars.
+                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same twelve observable indicators across four pillars.
               </p>
               <p>
                 A lower score does not automatically mean poor decision-making. It means important evidence may not be easy to find publicly. If something appears missing, you can <Link href="/challenge" className="underline text-sky-700 hover:text-sky-900">submit a score challenge with evidence</Link>, or contact the council constructively to ask where it can be found.
@@ -371,15 +371,4 @@ function DataStateDisclaimer({ council }: { council: CouncilScore }) {
         <div className="flex-1">
           <div className="font-semibold text-sky-950 text-sm mb-1">Site blocks automated transparency tools</div>
           <p className="text-xs text-sky-900 leading-relaxed mb-2">
-            This council's <code className="font-mono">robots.txt</code> directs automated transparency tools not to read the site. We respect that opt-out — but it means we can't observe whether agendas, minutes, the AGAR or the register of interests are published. Pillars 3 and 4 are recorded as <strong>Not Assessed</strong>.
-          </p>
-          <p className="text-xs text-sky-900 leading-relaxed">
-            <strong>If you're the clerk:</strong> a one-line addition to <code className="font-mono">robots.txt</code> would let our scanner observe your council's published evidence again. <Link href="/contact?topic=evidence" className="underline text-sky-700">Tell us</Link> and we'll re-scan within 14 working days.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  return null;
-}
+            This council's <code className="font-mono">robots.txt</code> directs automated transparency tools not to read the site. We respect that opt-out — but it means we can't observe whether agendas, minutes, the AGAR or the register of interests are published. Pillars 3 and 4 are recorded as <strong>Not Assessed</strong>

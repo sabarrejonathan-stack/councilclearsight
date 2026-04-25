@@ -8,7 +8,7 @@
   "principal_authority": "Newcastle City Council",
   "website": "https://www.woolsington-parish-council.com",
   "compiled_at": "2026-04-25",
-  "compiled_method": "Score derived deterministically from observable fields in the Council ClearSight database and personally verified against the council's published website on 25 April 2026 (multi-year meeting archive 2018-2026, audited AGARs every year, named clerk and chair, 5+ schools mapped, biodiversity programme, school partnerships).",
+  "compiled_method": "Score derived under VDTI v4.0 — statute-anchored binary scoring of observable database fields. Personally verified against the council's published website on 25 April 2026 (multi-year meeting archive 2018-2026, audited AGARs every year, named clerk, comprehensive councillor list). Some Pillar 3 / Pillar 4 indicators await verification by scraper_v3 for full credit.",
   "demographics": {
     "population_2021_census": 8519,
     "population_2011_census": 11160,
@@ -253,18 +253,18 @@
     "estimated_total_uplift": "+13 points across two indicators (1.2 and 1.3) plus +3 points on register of interests (4.4) — a credible 16-point uplift achievable within one quarter, taking Woolsington from current banding into Strong territory.",
     "non_score_value": "Beyond the scoring uplift, the main Pro-tier value is structuring resident engagement around the airport — a substantive local issue that current parish-council comms doesn't yet address. The Platinum resident-survey hub directly addresses this."
   },
-  "score": 93,
+  "score": 65,
   "rank": 1,
   "regional_rank": 1,
   "percentile": 100.0,
-  "band": "Excellent",
-  "methodology_version": "VDTI v3.0",
+  "band": "Good",
+  "methodology_version": "VDTI v4.0",
   "assessment_period": "January – March 2026 (data) + 25 April 2026 (personal verification)",
   "data_extraction_date": "Personally verified 25 April 2026",
   "pillar_breakdown_db": {
     "digital": 25,
-    "governance": 20,
-    "community": 23,
-    "accessibility": 25
+    "governance": 25,
+    "community": 0,
+    "accessibility": 15
   }
 }

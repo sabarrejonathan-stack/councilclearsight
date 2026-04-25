@@ -1,7 +1,7 @@
 /**
  * Evidence page — Council ClearSight (VDTI v3)
  *
- * The statutory and academic basis for the 13 indicators.
+ * The statutory and academic basis for the 12 indicators.
  * Three sections: Statutory basis, Sector literature, Peer review.
  */
 
@@ -59,36 +59,35 @@ export default function Evidence() {
               <tbody className="divide-y divide-border">
                 {[
                   {
-                    pillar: "Pillar 1: Digital Presence (25 max)",
+                    pillar: "Pillar 1: Core Reachability (25 max)",
                     indicators: [
-                      { name: "1.1 — Active council website (15)", statute: "LGA 1972 § 96–101 (duty to provide proper notice of business)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "1.2 — Council email address published (5)", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "1.3 — Phone number published (5)", statute: "Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "1.1 — Working council website (10)", statute: "Local Government Act 1972 § 96–101 (duty to give proper notice of business)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
+                      { name: "1.2 — Council email address published (5)", statute: "Local Government Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "1.3 — Phone number published (5)", statute: "Local Government Transparency Code 2015 § 2.2 (contact point)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
+                      { name: "1.4 — Named clerk identified (5)", statute: "Local Government Act 1972 § 112 (clerk as proper officer)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/112" },
                     ]
                   },
                   {
-                    pillar: "Pillar 2: Governance (25 max)",
+                    pillar: "Pillar 2: Statutory Meeting Transparency (25 max)",
                     indicators: [
-                      { name: "2.1 — Named clerk identified (10)", statute: "LGA 1972 § 112 (clerk as proper officer)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "2.2 — Clerk email published (5)", statute: "Transparency Code 2015 § 2.2 (clerk contact)", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "2.3 — Chair / Mayor named (5)", statute: "LGA 1972 § 15 (chair election & record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
-                      { name: "2.4 — Governance documents published (5)", statute: "LGA 1972 § 100–102 (agendas & minutes); Accounts & Audit Regs 2015 § 10 (AGAR)", link: "https://www.legislation.gov.uk/ukpga/1972/70/contents" },
+                      { name: "2.1 — Meeting agendas published (15)", statute: "Local Government Act 1972 § 100B (agendas published 3 clear days before meeting)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/100B" },
+                      { name: "2.2 — Meeting minutes published (10)", statute: "Local Government Act 1972 § 100C (minutes preserved 6 years; right of inspection)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/100C" },
                     ]
                   },
                   {
-                    pillar: "Pillar 3: Community (25 max)",
+                    pillar: "Pillar 3: Financial Accountability (25 max)",
                     indicators: [
-                      { name: "3.1 — Schools mapped within council area (10)", statute: "DfE GIAS register (Get Information about Schools)", link: "https://get-information-schools.service.gov.uk/" },
-                      { name: "3.2 — School density (5)", statute: "Derived from DfE GIAS + ONS parish boundaries", link: "https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography" },
-                      { name: "3.3 — Engagement evidence published (10)", statute: "LGA 1972 § 100 (right to inspect); NALC Good Councillor Guide § 4 (Community Engagement)", link: "https://www.nalc.gov.uk/" },
+                      { name: "3.1 — AGAR / annual financial statement published (15)", statute: "Accounts and Audit Regulations 2015 § 10 (publication of AGAR)", link: "https://www.legislation.gov.uk/uksi/2015/234/regulation/10" },
+                      { name: "3.2 — Clerk email — correspondence channel for audit (10)", statute: "Accounts and Audit Regulations 2015 (proper officer must be contactable for audit and inspection)", link: "https://www.legislation.gov.uk/uksi/2015/234/contents" },
                     ]
                   },
                   {
-                    pillar: "Pillar 4: Accessibility (25 max)",
+                    pillar: "Pillar 4: Democratic & Accessibility Transparency (25 max)",
                     indicators: [
-                      { name: "4.1 — Multiple contact methods provided (10)", statute: "Public Sector Bodies (Websites & Mobile Apps) Accessibility Regs 2018; Equality Act 2010 § 20 (reasonable adjustments)", link: "https://www.legislation.gov.uk/statutory-instruments/2018/852" },
-                      { name: "4.2 — Named contact identified (10)", statute: "LGA 1972 § 112 (clerk as proper officer); Transparency Code 2015 § 2.2", link: "https://www.gov.uk/government/publications/local-council-transparency-code-2015" },
-                      { name: "4.3 — Geographic and ward information (5)", statute: "ONS administrative geography; LGA 1972 § 1 (geographic scope of councils)", link: "https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography" },
+                      { name: "4.1 — Chair / Mayor named (5)", statute: "Local Government Act 1972 § 15 (chair election and record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/15" },
+                      { name: "4.2 — At least one councillor identified (5)", statute: "Local Government Act 1972 § 15 (electoral framework); Localism Act 2011 § 27 (member conduct)", link: "https://www.legislation.gov.uk/ukpga/2011/20/contents" },
+                      { name: "4.3 — Accessibility statement published (10)", statute: "Public Sector Bodies (Websites and Mobile Apps) Accessibility Regulations 2018", link: "https://www.legislation.gov.uk/uksi/2018/952/contents" },
+                      { name: "4.4 — Secure connection (HTTPS) (5)", statute: "UK GDPR Art. 32 (security of processing); NCSC HTTPS guidance for public sector", link: "https://www.ncsc.gov.uk/collection/topic-guides/web-management" },
                     ]
                   },
                 ].map((group, i) => (
@@ -216,14 +215,4 @@ export default function Evidence() {
               </p>
               <Link href="/directory">
                 <Button size="sm" variant="outline" className="w-full">
-                  Find your council <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                </Button>
-              </Link>
-            </Card>
-          </div>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+                  Find your council <ArrowRight class
