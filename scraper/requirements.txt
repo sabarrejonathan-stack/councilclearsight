@@ -3,3 +3,6 @@ beautifulsoup4>=4.12,<5
 lxml>=5.0,<6
 urllib3>=2.0
 tenacity>=8.0
+# scraper_v2 reads the April 2026 legacy Excel for enrichment
+pandas>=2.0
+openpyxl>=3.1
