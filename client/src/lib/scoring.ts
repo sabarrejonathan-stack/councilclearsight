@@ -121,12 +121,14 @@ export function pillarColorClasses(pillar: Pillar) {
   }
 }
 
-export function formatScore(score: number | null): string {
-  if (score === null) return "\u2014";
-  return score.toFixed(1);
+export function formatScore(score: number | null | undefined): string {
+  if (score === null || score === undefined || Number.isNaN(score)) return "\u2014";
+  // Integer if it is one, else 1 decimal place
+  return Number.isInteger(score) ? String(score) : score.toFixed(1);
 }
 
-export function formatCompleteness(c: number): string {
+export function formatCompleteness(c: number | null | undefined): string {
+  if (c === null || c === undefined || Number.isNaN(c)) return "\u2014";
   return `${Math.round(c * 100)}%`;
 }
 

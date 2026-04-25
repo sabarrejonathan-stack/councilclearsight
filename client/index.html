@@ -86,9 +86,9 @@
       Skip to main content
     </a>
 
-    <!-- Hidden static form so Netlify Forms detects sample-report-request at build time.
-         The actual form submitted by the React app sends to "/" via fetch — Netlify
-         routes it to this form by matching the form-name field. -->
+    <!-- Hidden static forms so Netlify Forms detects them at build time.
+         The actual forms submitted by the React app send to "/" via fetch — Netlify
+         routes them to these forms by matching the form-name field. -->
     <form name="sample-report-request" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="bot-field" />
       <input type="text" name="name" />
@@ -97,6 +97,27 @@
       <input type="text" name="council_slug" />
       <input type="text" name="council_name" />
       <input type="text" name="council_score" />
+    </form>
+
+    <form name="general-enquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="organisation" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="evidence-review" netlify netlify-honeypot="bot-field" data-netlify="true" enctype="multipart/form-data" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="postcode" />
+      <input type="text" name="council_name" />
+      <input type="text" name="reviewer_type" />
+      <textarea name="feedback"></textarea>
+      <input type="file" name="evidence" />
     </form>
 
     <div id="root"></div>
