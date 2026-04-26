@@ -143,7 +143,7 @@ export default function Snapshot() {
                 </div>
               )}
               {councilSearch.length < 2 && (
-                <p className="text-xs text-slate-400 mt-3">Type at least 2 characters to search from 10,800+ councils</p>
+                <p className="text-xs text-slate-400 mt-3">Type at least 2 characters to search from 11,057 councils</p>
               )}
             </div>
           )}
@@ -230,7 +230,7 @@ export default function Snapshot() {
               <div className="bg-slate-50 rounded-xl p-5 mb-6 text-left">
                 <p className="text-sm font-semibold text-[#0f2942] mb-3">Want the full picture?</p>
                 <p className="text-sm text-slate-600 mb-4">
-                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £499/yr (Pro tier).
+                  Your Snapshot gives you the headline score and top opportunities. A full Council ClearSight subscription includes a 21-page report with 8 evidence-based recommendations, peer benchmarking, local demographic context, and a resident-facing summary PDF — from just £499/yr (Platinum tier).
                 </p>
                 <Link href="/pricing">
                   <Button className="w-full bg-[#0f2942] hover:bg-[#1a3a5c] text-white">
@@ -263,8 +263,8 @@ export default function Snapshot() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 12 observable indicators across four pillars." },
-              { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Digital Presence, Contact Transparency, Governance & Compliance, and Financial Accountability." },
-              { icon: Users, title: "National Ranking", body: "Where your council sits among 10,800+ assessed councils nationally and within your region." },
+              { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Core Reachability, Statutory Meeting Transparency, Financial Accountability, and Financial Accountability." },
+              { icon: Users, title: "National Ranking", body: "Where your council sits among 1,682 verified councils nationally and within your region." },
               { icon: Zap, title: "Top 2 Opportunities", body: "The two most impactful improvements your council could make to increase its VDTI score, with specific recommended actions." },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">
@@ -289,7 +289,7 @@ export default function Snapshot() {
             The full Council ClearSight report is 21 pages, includes 8 evidence-based recommendations, peer benchmarking, and a resident-facing summary PDF.
           </p>
           <p className="text-white/60 text-sm mb-8">
-            From £499/yr (Pro tier) · Annual billing · Less than £8 per week
+            From £499/yr (Platinum tier) · Annual billing · Less than £8 per week
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing">

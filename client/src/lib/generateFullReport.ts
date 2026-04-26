@@ -74,11 +74,10 @@ function getLetterGrade(score: number): string {
 }
 
 function getScoreBand(score: number): string {
-  if (score >= 85) return "Exemplary";
-  if (score >= 70) return "Strong";
-  if (score >= 55) return "Mid-tier";
-  if (score >= 40) return "Below median";
-  return "High-risk";
+  if (score >= 80) return "Excellent";
+  if (score >= 65) return "Good";
+  if (score >= 50) return "Developing";
+  return "Needs Attention";
 }
 
 function formatPopBand(band: string | null): string {
@@ -123,9 +122,9 @@ function generateFullRecommendations(council: CouncilData) {
 
   // REC 1: Always the highest-impact recommendation based on weakest pillar
   const pillarScores = [
-    { name: "Digital Presence", score: p1, max: 25, idx: 1 },
-    { name: "Contact Transparency", score: p2, max: 25, idx: 2 },
-    { name: "Governance & Compliance", score: p3, max: 25, idx: 3 },
+    { name: "Core Reachability", score: p1, max: 25, idx: 1 },
+    { name: "Statutory Meeting Transparency", score: p2, max: 25, idx: 2 },
+    { name: "Financial Accountability", score: p3, max: 25, idx: 3 },
     { name: "Financial Accountability", score: p4, max: 25, idx: 4 },
   ];
   const weakest = [...pillarScores].sort((a, b) => (a.score / a.max) - (b.score / b.max))[0];
@@ -135,7 +134,7 @@ function generateFullRecommendations(council: CouncilData) {
     number: 1,
     title: "Publish a comprehensive annual transparency report and share it with every household",
     impact: "+8-15 pts",
-    pillar: "Governance & Compliance",
+    pillar: "Financial Accountability",
     effort: "Low cost (template provided)",
     urgency: "Before next Annual Parish Meeting",
     body: `Only 12% of parish councils publish an annual transparency report that goes beyond the statutory AGAR. Yet LGA research shows that 49% of residents feel poorly informed about their council's work. For ${council.name}, publishing a clear, jargon-free annual report — covering how precept money was spent, what was achieved, and what is planned — would directly address this information gap. Councils that publish annual reports score on average 18 points higher on the VDTI than those that do not. This single action has the highest return on effort of any recommendation in this report.`,
@@ -164,7 +163,7 @@ function generateFullRecommendations(council: CouncilData) {
       number: 3,
       title: "Transform your digital presence with an accessible, mobile-first council website",
       impact: "+8-14 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Moderate (£200-£500/year)",
       urgency: "Within 6 weeks",
       body: `${council.name}'s digital presence is ${!council.hasWebsite ? "currently absent" : "below the national average"}, which directly limits residents' ability to access council information. 78% of UK adults now access local government information primarily online (ONS Internet Access Survey 2024). A well-structured, mobile-responsive website with clear navigation, published meeting documents, and accessible contact information is no longer optional — it is the primary channel through which residents interact with their council. The Public Sector Bodies Accessibility Regulations 2018 require all public sector websites to meet WCAG 2.1 AA standards, and non-compliance carries regulatory risk.`,
@@ -177,11 +176,11 @@ function generateFullRecommendations(council: CouncilData) {
       number: 3,
       title: "Enhance your website with real-time meeting document publication and resident portal",
       impact: "+5-10 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Low-moderate",
       urgency: "Within 8 weeks",
       body: `${council.name} has an established web presence, but there is significant opportunity to enhance it. The highest-scoring councils publish meeting agendas at least 5 clear days before meetings (exceeding the 3-day statutory minimum), upload draft minutes within 14 days, and provide a searchable archive of all council documents. Adding a resident notification system — allowing residents to subscribe to updates on specific topics — would place ${council.name} in the top 15% of councils nationally for digital engagement.`,
-      evidence: `Analysis of the top 100 VDTI-scoring councils shows that 94% publish agendas more than 3 days in advance, 87% publish draft minutes within 14 days, and 62% offer email notification systems for residents. The average Digital Presence pillar score for councils with document notification systems is 21.3/25, compared to 14.7/25 for those without.`,
+      evidence: `Analysis of the top 100 VDTI-scoring councils shows that 94% publish agendas more than 3 days in advance, 87% publish draft minutes within 14 days, and 62% offer email notification systems for residents. The average Core Reachability pillar score for councils with document notification systems is 21.3/25, compared to 14.7/25 for those without.`,
       action: `Implement a document publication schedule: agendas 5+ clear days before meetings, draft minutes within 14 days, approved minutes within 28 days. Add an email subscription feature for council updates. Create a searchable document archive organised by year and meeting type.`,
       source: "Local Government Act 1972, Schedule 12; Council ClearSight VDTI analysis of top-performing councils",
     });
@@ -206,10 +205,10 @@ function generateFullRecommendations(council: CouncilData) {
     number: 5,
     title: "Go beyond statutory financial requirements with a resident-friendly budget breakdown",
     impact: "+4-7 pts",
-    pillar: "Governance & Compliance",
+    pillar: "Financial Accountability",
     effort: "Minimal cost",
     urgency: "Before precept-setting (September-January)",
-    body: `The statutory AGAR is a compliance document — it tells the auditor what they need to know, but it does not tell residents how their money is being spent. With parish precepts rising nationally by £654m over five years, residents are asking harder questions about value for money. ${council.name} should publish a clear, visual budget breakdown showing: (1) how much each household pays, (2) what the money is spent on, and (3) what was achieved. Councils that publish resident-friendly financial summaries alongside the statutory AGAR score an average of 5.8 points higher on the Governance & Compliance pillar and report fewer Freedom of Information requests about finances.`,
+    body: `The statutory AGAR is a compliance document — it tells the auditor what they need to know, but it does not tell residents how their money is being spent. With parish precepts rising nationally by £654m over five years, residents are asking harder questions about value for money. ${council.name} should publish a clear, visual budget breakdown showing: (1) how much each household pays, (2) what the money is spent on, and (3) what was achieved. Councils that publish resident-friendly financial summaries alongside the statutory AGAR score an average of 5.8 points higher on the Financial Accountability pillar and report fewer Freedom of Information requests about finances.`,
     evidence: `NALC Annual Report on Parish Precepts (March 2026): parish precepts have risen to £654m nationally. Accounts and Audit Regulations 2015 set the statutory minimum. The Transparency Code 2015 requires additional publication for councils with turnover exceeding £25,000. Council ClearSight analysis: councils publishing visual budget summaries score 5.8 points higher on average.`,
     action: `Create a one-page "Where Your Money Goes" infographic showing precept allocation by category. Publish it on your website, include it in your annual report, and present it at the Annual Parish Meeting. Template available to Council ClearSight subscribers. Time this for September-January when precept decisions are being made.`,
     source: "Accounts and Audit Regulations 2015; Local Government Transparency Code 2015; NALC Annual Report on Parish Precepts 2026",
@@ -398,9 +397,9 @@ export function generateFullCouncilReport(data: ReportInput): void {
   y += 9;
 
   const pillars = [
-    { name: "Digital Presence", score: p1, max: maxP1, weight: "25%" },
-    { name: "Contact Transparency", score: p2, max: maxP2, weight: "25%" },
-    { name: "Governance & Compliance", score: p3, max: maxP3, weight: "25%" },
+    { name: "Core Reachability", score: p1, max: maxP1, weight: "25%" },
+    { name: "Statutory Meeting Transparency", score: p2, max: maxP2, weight: "25%" },
+    { name: "Financial Accountability", score: p3, max: maxP3, weight: "25%" },
     { name: "Financial Accountability", score: p4, max: maxP4, weight: "25%" },
   ];
 
@@ -480,7 +479,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (VDTI v3.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
+    `Council ClearSight (VDTI v4.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Core Reachability (25), Statutory Meeting Transparency (25), Financial Accountability (25), and Democratic & Accessibility (25). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
     ``,
     `Evidence is gathered from council websites (via the ClearSight scraper, which respects robots.txt and enforces a 3-second politeness gate per host), the MHCLG council database, and published governance documents. Where a council cannot yet be observed, affected indicators are marked "Not Assessed" and excluded from the denominator.`,
     ``,
@@ -765,7 +764,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(...DARK);
-  doc.text("Pro — £499/year", margin + 4, y + 29);
+  doc.text("Platinum — £499/year", margin + 4, y + 29);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
   doc.setFontSize(7.5);
@@ -774,7 +773,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(...TEAL);
-  doc.text("Platinum — £690/year (+ VAT)  ★ Most popular", margin + 4, y + 40);
+  doc.text("Platinum — £499/year (per year)  ★ Most popular", margin + 4, y + 40);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...SLATE);
   doc.setFontSize(7.5);

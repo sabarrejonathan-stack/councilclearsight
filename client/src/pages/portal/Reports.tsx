@@ -3,7 +3,7 @@
  *
  * Displays:
  *  1. Printable scorecard (A4 PDF)
- *  2. Detailed audit (Pro only)
+ *  2. Detailed audit (Platinum only)
  *  3. Score history CSV
  *  4. Certificate of claim (Verified+)
  *  5. Snapshot archive with dates
@@ -48,7 +48,7 @@ export default function PortalReports() {
 
   const councilScore = council as CouncilScore;
   const bandCls = bandColorClasses(councilScore.band as any);
-  const isPro = councilScore.tier === "pro";
+  const isPro = councilScore.tier === "platinum";
 
   const handleGenerateScorecard = async () => {
     setGeneratingPDF(true);
@@ -110,7 +110,7 @@ export default function PortalReports() {
             </Button>
           </Card>
 
-          {/* ─── 2. Detailed audit (Pro only) ─── */}
+          {/* ─── 2. Detailed audit (Platinum only) ─── */}
           <Card className="p-6">
             <div className="flex items-start justify-between mb-4">
               <div>
@@ -133,11 +133,11 @@ export default function PortalReports() {
             ) : (
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
                 <p className="text-xs text-amber-900 mb-2">
-                  Available in <span className="font-semibold">Pro</span> tier.
+                  Available in <span className="font-semibold">Platinum</span> tier.
                 </p>
                 <p className="text-[10px] text-amber-800 mb-3">Get detailed evidence for each pillar and action steps.</p>
                 <Button size="sm" variant="outline" className="w-full text-amber-700 border-amber-300 hover:bg-amber-100">
-                  Upgrade to Pro
+                  Upgrade to Platinum
                 </Button>
               </div>
             )}

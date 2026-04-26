@@ -3,7 +3,7 @@
  *
  * Narrative arc:
  *   Hero — legally required, independently visible
- *   Proof strip — real numbers (7,031 · 100 · 1,676 · 5 days)
+ *   Proof strip — real numbers (11,057 · 1,682 · 100 · 5 days)
  *   Reality check — your residents and journalists are already here
  *   Four pillars — what we measure, grounded in statute
  *   Commercial ladder — Free · Gold · Platinum
@@ -223,7 +223,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Pro in practice ────────────────────── */}
+      {/* ── Platinum in practice ────────────────────── */}
       <section className="bg-primary text-white py-20">
         <div className="container max-w-6xl">
           <div className="max-w-3xl mb-12">
@@ -290,7 +290,7 @@ const SAMPLE_REPORT_COUNCILS = [
     name: "Fordingbridge Town Council",
     region: "South East",
     score: 100,
-    band: "Exemplary",
+    band: "Excellent",
     bandClasses: "bg-emerald-100 text-emerald-800 border-emerald-200",
     story: "What perfect transparency looks like — every statutory document published on a current website with valid evidence URLs across all 12 indicators.",
   },
@@ -308,7 +308,7 @@ const SAMPLE_REPORT_COUNCILS = [
     name: "Compton Bassett Parish Council",
     region: "South West",
     score: 39,
-    band: "At Risk",
+    band: "Needs Attention",
     bandClasses: "bg-rose-100 text-rose-800 border-rose-200",
     story: "Where the score is a diagnostic — clear list of statutory publications missing, each with a fixable URL path. Demonstrates the diagnostic value clearly.",
   },
@@ -328,13 +328,4 @@ function CouncilSearchBar() {
       {q.length > 1 && suggestions.length > 0 && (
         <div className="absolute top-full mt-2 w-full bg-white rounded-xl border shadow-xl overflow-hidden z-50">
           {suggestions.map((s) => (
-            <Link key={s.id} href={`/council/${s.slug}`} className="block px-4 py-3 hover:bg-slate-50 border-b last:border-0">
-              <div className="font-medium text-sm">{s.name}</div>
-              <div className="text-xs text-muted-foreground">{s.county} · {s.region} · Score {s.score ?? "—"}</div>
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+        

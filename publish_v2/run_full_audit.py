@@ -1,16 +1,18 @@
-"""publish_v2/run_full_audit.py - end-to-end audit pipeline.
+"""publish_v2/run_full_audit.py - end-to-end audit pipeline (concurrent).
 
-Single sync, resumable, polite. No external API keys.
-See run_full_audit.ps1 for CLI flags and usage.
+Single sync orchestrator with worker pool. Resumable. Polite per-host.
+See run_full_audit.ps1 for CLI flags.
 """
 from __future__ import annotations
 
 import argparse
 import csv
 import sys
+import threading
 import time
 import traceback
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -35,12 +37,12 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def load_canonical() -> list[dict]:
+def load_canonical():
     with CANONICAL.open(newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
 
-def load_existing_v2() -> dict[str, dict]:
+def load_existing_v2():
     if not V2_RESULTS.exists():
         return {}
     out = {}
@@ -51,7 +53,7 @@ def load_existing_v2() -> dict[str, dict]:
     return out
 
 
-def load_excel_contacts() -> dict[str, dict]:
+def load_excel_contacts():
     excel = REPO / "Council_ClearSight_16.04.26.xlsx"
     if not excel.exists():
         return {}
@@ -77,10 +79,8 @@ def load_excel_contacts() -> dict[str, dict]:
     return out
 
 
-def load_progress() -> dict[str, dict]:
-    """Read coverage_progress.csv defensively. Skip rows missing 'slug'.
-    Empty / corrupt / unreadable file -> start fresh."""
-    out: dict[str, dict] = {}
+def load_progress():
+    out = {}
     if not PROGRESS.exists() or PROGRESS.stat().st_size == 0:
         return out
     try:
@@ -88,74 +88,82 @@ def load_progress() -> dict[str, dict]:
             reader = csv.DictReader(f)
             if not reader.fieldnames or "slug" not in reader.fieldnames:
                 print("  warn: coverage_progress.csv has no 'slug' column; "
-                      "ignoring and starting fresh", file=sys.stderr)
+                      "ignoring", file=sys.stderr)
                 return out
             for r in reader:
                 slug = (r.get("slug") or "").strip()
                 if slug:
                     out[slug] = r
     except (csv.Error, UnicodeDecodeError, OSError) as e:
-        print(f"  warn: coverage_progress.csv unreadable ({e}); "
-              "ignoring and starting fresh", file=sys.stderr)
+        print(f"  warn: coverage_progress.csv unreadable ({e}); ignoring",
+              file=sys.stderr)
     return out
 
 
-def append_progress(row: dict) -> None:
-    """Append one row, retrying on Windows / OneDrive lock errors."""
+_progress_lock = threading.Lock()
+_enriched_lock = threading.Lock()
+
+
+def append_progress(row):
     PROGRESS.parent.mkdir(parents=True, exist_ok=True)
-    needs_header = (not PROGRESS.exists()) or PROGRESS.stat().st_size == 0
-    last_err: Exception | None = None
-    for attempt in range(5):
-        try:
-            with PROGRESS.open("a", newline="", encoding="utf-8") as f:
-                w = csv.DictWriter(f, fieldnames=PROGRESS_FIELDS)
-                if needs_header:
-                    w.writeheader()
-                w.writerow({k: row.get(k, "") for k in PROGRESS_FIELDS})
-            return
-        except PermissionError as e:
-            last_err = e
-            time.sleep(0.5 + attempt)
-    print(f"  warn: could not append to {PROGRESS.name} after 5 retries: "
-          f"{last_err}", file=sys.stderr)
+    with _progress_lock:
+        needs_header = (not PROGRESS.exists()) or PROGRESS.stat().st_size == 0
+        for attempt in range(5):
+            try:
+                with PROGRESS.open("a", newline="", encoding="utf-8") as f:
+                    w = csv.DictWriter(f, fieldnames=PROGRESS_FIELDS)
+                    if needs_header:
+                        w.writeheader()
+                    w.writerow({k: row.get(k, "") for k in PROGRESS_FIELDS})
+                return
+            except PermissionError:
+                time.sleep(0.5 + attempt)
 
 
-def append_enriched_row(row: dict, header: list[str]) -> None:
-    new_file = not V2_RESULTS.exists()
-    V2_RESULTS.parent.mkdir(parents=True, exist_ok=True)
-    last_err: Exception | None = None
-    for attempt in range(5):
-        try:
-            with V2_RESULTS.open("a", newline="", encoding="utf-8") as f:
-                w = csv.DictWriter(f, fieldnames=header, extrasaction="ignore")
-                if new_file:
-                    w.writeheader()
-                w.writerow(row)
-            return
-        except PermissionError as e:
-            last_err = e
-            time.sleep(0.5 + attempt)
-    raise last_err if last_err else RuntimeError("unknown append error")
+def append_enriched_row(row, header):
+    with _enriched_lock:
+        new_file = not V2_RESULTS.exists()
+        V2_RESULTS.parent.mkdir(parents=True, exist_ok=True)
+        for attempt in range(5):
+            try:
+                with V2_RESULTS.open("a", newline="", encoding="utf-8") as f:
+                    w = csv.DictWriter(f, fieldnames=header,
+                                       extrasaction="ignore")
+                    if new_file:
+                        w.writeheader()
+                    w.writerow(row)
+                return
+            except PermissionError:
+                time.sleep(0.5 + attempt)
 
 
-def get_or_init_enriched_header(sample_row: dict) -> list[str]:
-    if V2_RESULTS.exists() and V2_RESULTS.stat().st_size > 0:
-        with V2_RESULTS.open(encoding="utf-8") as f:
-            return next(csv.reader(f))
-    return list(sample_row.keys())
+_enriched_header = []
+
+
+def get_or_init_enriched_header(sample_row):
+    global _enriched_header
+    if _enriched_header:
+        return _enriched_header
+    with _enriched_lock:
+        if _enriched_header:
+            return _enriched_header
+        if V2_RESULTS.exists() and V2_RESULTS.stat().st_size > 0:
+            with V2_RESULTS.open(encoding="utf-8") as f:
+                _enriched_header = next(csv.reader(f))
+        else:
+            _enriched_header = list(sample_row.keys())
+    return _enriched_header
 
 
 def process_one(canonical_row, existing_v2, excel_contacts, manual_seeds,
-                disc_session, gate, scrape_session, enriched_header_holder,
+                disc_session, gate, scrape_session, fast=False,
                 discover_only=False, no_discover=False):
     slug = canonical_row["slug"]
     name = canonical_row["name"]
-    out = {
-        "slug": slug, "name": name, "audit_status": "pending",
-        "url": "", "discovery_method": "", "scrape_status": "",
-        "indicators_evidence_found_count": "", "error": "",
-        "attempted_at": now_iso(),
-    }
+    out = {"slug": slug, "name": name, "audit_status": "pending",
+           "url": "", "discovery_method": "", "scrape_status": "",
+           "indicators_evidence_found_count": "", "error": "",
+           "attempted_at": now_iso()}
 
     if slug in existing_v2:
         prev = existing_v2[slug]
@@ -174,7 +182,8 @@ def process_one(canonical_row, existing_v2, excel_contacts, manual_seeds,
     if not url and not no_discover:
         try:
             res = discover.discover(slug, name, disc_session,
-                                    manual_seeds=manual_seeds)
+                                    manual_seeds=manual_seeds,
+                                    pause_between=0.3 if fast else 1.0)
         except Exception as e:
             out["audit_status"] = "discovery_error"
             out["error"] = f"{type(e).__name__}: {e}"
@@ -201,10 +210,9 @@ def process_one(canonical_row, existing_v2, excel_contacts, manual_seeds,
             contact_email=excel.get("email", ""),
             clerk_email=excel.get("clerk_email", ""),
             phone=excel.get("phone", ""),
-            gate=gate, session=scrape_session,
+            gate=gate, session=scrape_session, fast=fast,
         )
     except Exception as e:
-        traceback.print_exc()
         out["audit_status"] = "scrape_error"
         out["error"] = f"{type(e).__name__}: {e}"
         return out
@@ -215,9 +223,8 @@ def process_one(canonical_row, existing_v2, excel_contacts, manual_seeds,
     out["error"] = scraped.get("error") or ""
 
     try:
-        if not enriched_header_holder:
-            enriched_header_holder.extend(get_or_init_enriched_header(scraped))
-        append_enriched_row(scraped, enriched_header_holder)
+        header = get_or_init_enriched_header(scraped)
+        append_enriched_row(scraped, header)
     except Exception as e:
         print(f"  warn: enriched-CSV append failed for {slug}: {e}",
               file=sys.stderr)
@@ -233,22 +240,56 @@ def process_one(canonical_row, existing_v2, excel_contacts, manual_seeds,
     return out
 
 
+# Thread-local storage for per-worker sessions
+_tls = threading.local()
+
+
+def get_tls_sessions():
+    if not hasattr(_tls, "disc"):
+        _tls.disc = discover.make_session()
+        _tls.scrape = scrape_lite.make_session()
+    return _tls.disc, _tls.scrape
+
+
+def worker(canonical_row, existing_v2, excel_contacts, manual_seeds, gate,
+           fast, discover_only, no_discover):
+    try:
+        disc, scrape = get_tls_sessions()
+        return process_one(canonical_row, existing_v2, excel_contacts,
+                           manual_seeds, disc, gate, scrape, fast=fast,
+                           discover_only=discover_only,
+                           no_discover=no_discover)
+    except Exception as e:
+        traceback.print_exc()
+        return {"slug": canonical_row.get("slug", ""),
+                "name": canonical_row.get("name", ""),
+                "audit_status": "fatal_error", "url": "",
+                "discovery_method": "", "scrape_status": "",
+                "indicators_evidence_found_count": "",
+                "error": f"uncaught: {type(e).__name__}: {e}",
+                "attempted_at": now_iso()}
+
+
 def main():
     p = argparse.ArgumentParser(
-        description="End-to-end Council ClearSight audit pipeline")
+        description="End-to-end Council ClearSight audit pipeline (concurrent)")
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--rescan", action="store_true")
     p.add_argument("--discover-only", action="store_true")
     p.add_argument("--no-discover", action="store_true")
     p.add_argument("--skip-publish", action="store_true")
-    p.add_argument("--filter-source",
-                   choices=["excel", "ons_only"], default=None)
+    p.add_argument("--filter-source", choices=["excel", "ons_only"], default=None)
+    p.add_argument("--workers", type=int, default=8,
+                   help="Concurrent workers (default 8). 1=serial. Max recommended 32.")
+    p.add_argument("--fast", action="store_true",
+                   help="Skip SSL probe and per-PDF HEAD requests for speed")
     args = p.parse_args()
 
     print("=" * 60)
     print(" Council ClearSight - end-to-end audit pipeline")
     print("=" * 60)
     print(f" Started: {now_iso()}")
+    print(f" Workers: {args.workers}    Fast mode: {args.fast}")
     print()
 
     canonical = load_canonical()
@@ -260,10 +301,8 @@ def main():
 
     existing_v2 = load_existing_v2()
     print(f"Loaded existing v2 results (ok status): {len(existing_v2)}")
-
     excel_contacts = load_excel_contacts()
     print(f"Loaded Excel contacts: {len(excel_contacts)}")
-
     manual_seeds = discover.load_manual_seeds(MANUAL_SEEDS)
     print(f"Loaded manual seeds: {len(manual_seeds)}")
 
@@ -274,13 +313,9 @@ def main():
         try:
             PROGRESS.unlink()
         except PermissionError:
-            print("  warn: cannot unlink locked progress file; "
-                  "will reuse it", file=sys.stderr)
+            print("  warn: cannot unlink locked progress file", file=sys.stderr)
 
-    disc_session = discover.make_session()
-    scrape_session = scrape_lite.make_session()
     gate = scrape_lite.PoliteGate()
-    enriched_header_holder: list[str] = []
 
     todo = [r for r in canonical if r["slug"] not in progress]
     if args.limit:
@@ -288,40 +323,42 @@ def main():
     print(f"To process: {len(todo)}")
     print()
 
-    counts: dict = defaultdict(int)
+    counts = defaultdict(int)
     started = time.time()
 
-    for i, row in enumerate(todo, 1):
+    if args.workers <= 1:
+        # Serial path - keeps a simple code path for debugging
+        for i, row in enumerate(todo, 1):
+            try:
+                result = worker(row, existing_v2, excel_contacts,
+                                manual_seeds, gate, args.fast,
+                                args.discover_only, args.no_discover)
+            except KeyboardInterrupt:
+                print("\nInterrupted. Progress saved.")
+                return 130
+            counts[result["audit_status"]] += 1
+            append_progress(result)
+            if i % 25 == 0 or i == len(todo):
+                _print_progress(i, len(todo), counts, started)
+    else:
+        # Concurrent path
         try:
-            result = process_one(
-                row, existing_v2, excel_contacts, manual_seeds,
-                disc_session, gate, scrape_session, enriched_header_holder,
-                discover_only=args.discover_only,
-                no_discover=args.no_discover,
-            )
+            with ThreadPoolExecutor(max_workers=args.workers) as ex:
+                futures = {ex.submit(worker, row, existing_v2, excel_contacts,
+                                     manual_seeds, gate, args.fast,
+                                     args.discover_only, args.no_discover): row
+                           for row in todo}
+                done = 0
+                for fut in as_completed(futures):
+                    result = fut.result()
+                    counts[result["audit_status"]] += 1
+                    append_progress(result)
+                    done += 1
+                    if done % 25 == 0 or done == len(todo):
+                        _print_progress(done, len(todo), counts, started)
         except KeyboardInterrupt:
-            print("\nInterrupted by user. Progress saved.")
+            print("\nInterrupted. Progress saved (in-flight workers may still be writing).")
             return 130
-        except Exception:
-            traceback.print_exc()
-            result = {
-                "slug": row["slug"], "name": row["name"],
-                "audit_status": "fatal_error", "url": "",
-                "discovery_method": "", "scrape_status": "",
-                "indicators_evidence_found_count": "",
-                "error": "uncaught: see stderr", "attempted_at": now_iso(),
-            }
-        counts[result["audit_status"]] += 1
-        append_progress(result)
-
-        if i % 25 == 0 or i == len(todo):
-            elapsed = time.time() - started
-            rate = i / elapsed if elapsed > 0 else 0
-            eta = (len(todo) - i) / rate if rate > 0 else 0
-            verified = counts.get("verified", 0)
-            print(f"  [{i:>5}/{len(todo)}] verified={verified}  "
-                  f"rate={rate:.2f}/s  eta={eta/60:.1f}m  "
-                  f"counts={dict(counts)}")
 
     print()
     print("=" * 60)
@@ -345,6 +382,15 @@ def main():
             return 1
         print("Publish complete.")
     return 0
+
+
+def _print_progress(done, total, counts, started):
+    elapsed = time.time() - started
+    rate = done / elapsed if elapsed > 0 else 0
+    eta = (total - done) / rate if rate > 0 else 0
+    verified = counts.get("verified", 0)
+    print(f"  [{done:>5}/{total}] verified={verified}  rate={rate:.2f}/s  "
+          f"eta={eta/60:.1f}m  counts={dict(counts)}")
 
 
 if __name__ == "__main__":

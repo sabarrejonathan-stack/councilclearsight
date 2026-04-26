@@ -400,8 +400,8 @@ export default function RegionalDirectory() {
           </h3>
           <p className="text-sm text-slate-600 leading-relaxed">
             Rankings are produced using the Council ClearSight VDTI (Council ClearSight Transparency Index), a scoring
-            framework built on 14 publicly observable indicators across four pillars: Digital Presence, Contact
-            Transparency, Governance & Compliance, and Financial Accountability. Every indicator is derived from
+            framework built on 14 publicly observable indicators across four pillars: Core Reachability, Contact
+            Transparency, Financial Accountability, and Financial Accountability. Every indicator is derived from
             data recorded in the Council ClearSight database, which is itself compiled from publicly available sources
             including council websites, the DfE Get Information About Schools register, and the ICO Data Protection
             Register. No self-reported data is used.

@@ -19,7 +19,7 @@ const GROUPS = [
       { label: "Evidence trail", body: "Every source link, last-verified date, and input value." },
       { label: "Methodology document", body: "Explained clearly. Versioned in a changelog." },
       { label: "Public challenge route", body: "Any member of the public can challenge any indicator." },
-      { label: "Directory search & sort", body: "All 7,031 councils in England, searchable and sortable." },
+      { label: "Directory search & sort", body: "All 11,057 councils in England, searchable and sortable." },
     ],
   },
   {
@@ -43,7 +43,7 @@ const GROUPS = [
       { label: "Personalised roadmap", body: "A specific, actionable checklist generated automatically within 7 days of subscribing." },
       { label: "Quarterly re-scoring", body: "Every 90 days, not every 12 months. Change alerts when indicators flip." },
       { label: "Resident engagement playbook", body: "Newsletter wording, social posts and meeting announcements drawn from your data." },
-      { label: "Content templates", body: "Agendas, minutes, annual reports, newsletters — drawn from Exemplary peers." },
+      { label: "Content templates", body: "Agendas, minutes, annual reports, newsletters — drawn from Excellent peers." },
       { label: "Peer benchmarking", body: "Head-to-head comparison against 10 similar councils + county/regional benchmarking." },
       { label: "Resident survey templates", body: "Self-serve survey builder with automated charts and summary text." },
       { label: "Quarterly chair/clerk briefing pack", body: "Auto-generated each quarter from score, gaps and progress. Ready to circulate." },
@@ -66,7 +66,7 @@ const GROUPS = [
 export default function Features() {
   useSEO({
     title: "Features — every capability mapped to the tier | Council ClearSight",
-    description: "The full feature map across the free public site, Verified, and Pro tiers.",
+    description: "The full feature map across the free public site, Verified, and Platinum tiers.",
     canonicalPath: "/features",
   });
   return (
@@ -121,11 +121,4 @@ export default function Features() {
 
       <section className="container max-w-4xl py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">See features against a real council</h2>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/directory"><Button size="lg">Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-          <Link href="/pricing"><Button size="lg" variant="outline">See pricing</Button></Link>
-        </div>
-      </section>
-    </PublicLayout>
-  );
-}
+        <div className="flex flex-wrap gap-

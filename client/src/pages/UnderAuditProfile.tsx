@@ -160,7 +160,7 @@ export default function UnderAuditProfile({ council }: { council: CouncilScore }
             <Sparkles className="w-5 h-5 mb-3 text-accent" />
             <h3 className="font-semibold mb-2">Auditing every council in England</h3>
             <p className="text-xs text-white/75 leading-relaxed mb-4">
-              1,682 councils verified to date. 9,000+ remaining. Every audit produces a click-through evidence pack — pinned to public documents, never invented.
+              1,682 councils verified to date. 9,375 remaining. Every audit produces a click-through evidence pack — pinned to public documents, never invented.
             </p>
             <Link href="/methodology"><Button size="sm" className="w-full bg-white text-primary hover:bg-white/90">Read the methodology <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link>
           </Card>

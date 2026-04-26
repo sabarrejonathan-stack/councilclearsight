@@ -1,5 +1,5 @@
 /**
- * How It Works page — Council ClearSight (VDTI v3)
+ * How It Works page — Council ClearSight (VDTI v4)
  *
  * A five-step walkthrough of the scoring pipeline: discover → verify → score → publish → challenge.
  */
@@ -68,7 +68,7 @@ export default function HowItWorks() {
               icon: Search,
               title: "Discover",
               summary: "We find every English council and their public contact details.",
-              body: "We start with three authoritative sources: (1) the ONS parish register (10,460 English parishes), (2) the Council ClearSight database of 7,031 councils with contact baselines, and (3) independent .gov.uk domain discovery for additional town and community councils. The merged universe is 11,057 councils — every parish, town, community and city council in England. 1,682 of those have been fully verified end-to-end as of April 2026; the rest progress through audit at ~200 newly-verified per week.",
+              body: "We start with three authoritative sources: (1) the ONS parish register (10,460 English parishes), (2) the Council ClearSight contact database of 7,031 councils with contact baselines, and (3) independent .gov.uk domain discovery for additional town and community councils. The merged universe is 11,057 councils — every parish, town, community and city council in England. 1,682 of those have been fully verified end-to-end as of April 2026; the rest progress through audit at ~200 newly-verified per week.",
               sources: "ClearSight API · .gov.uk domain probe · ModernGov directories",
             },
             {
@@ -93,7 +93,7 @@ export default function HowItWorks() {
               title: "Publish",
               summary: "Every council page is regenerated with the latest evidence.",
               body: "Every council page on the site is updated to reflect the latest verdicts — the score, the band, the rank, and the specific evidence behind each of the twelve indicators. What you see on a council's page is exactly what the scoring process produced; there's no editorial layer between the evidence and the score.",
-              sources: "Public annual refresh · Quarterly for Pro subscribers · Full evidence trail",
+              sources: "Public annual refresh · Quarterly for Platinum subscribers · Full evidence trail",
             },
             {
               step: 5,
@@ -188,15 +188,4 @@ export default function HowItWorks() {
           })}
         </section>
 
-        {/* ─── The integrity guarantee ────────────────────────────── */}
-        <section className="bg-primary/5 border border-primary/20 rounded-2xl p-10">
-          <h2 className="text-2xl font-bold mb-4">The integrity guarantee</h2>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Every score is reproducible from observable evidence. Every change is logged. Every challenge is published. We don't hide failures behind brand language — if a council's score is wrong, we fix it within five working days and publish the decision.
-          </p>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+        {/* ─── The integrity guarantee ──────────────────�

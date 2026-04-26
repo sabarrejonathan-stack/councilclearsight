@@ -6,7 +6,7 @@
  *  2. Completeness breakdown (assessed vs. not-yet-assessed indicators)
  *  3. Top 3 failing indicators sorted by points-available / effort
  *  4. Recent activity feed (score changes, challenges, etc.)
- *  5. Pro upgrade nudge (Verified tier only) — dismissable
+ *  5. Platinum upgrade nudge (Verified tier only) — dismissable
  *  6. Next re-score date with explanation
  */
 
@@ -55,7 +55,7 @@ export default function PortalDashboard() {
   const councilScore = council as CouncilScore;
   const bandCls = bandColorClasses(councilScore.band as any);
   const isVerifiedTier = councilScore.tier === "verified";
-  const isPro = councilScore.tier === "pro";
+  const isPro = councilScore.tier === "platinum";
 
   // Compute score delta (placeholder — real data from query)
   const scoreDelta = councilScore.score_delta ?? 0;
@@ -115,7 +115,7 @@ export default function PortalDashboard() {
           <Card className="p-6 lg:col-span-2">
             <h3 className="text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
               <Zap className="w-4 h-4 text-amber-600" />
-              Quickest wins (Pro feature)
+              Quickest wins (Platinum feature)
             </h3>
             {isPro ? (
               <div className="space-y-2.5">
@@ -137,11 +137,11 @@ export default function PortalDashboard() {
               <div className="flex items-start gap-3 p-4 bg-sky-50 border border-sky-200 rounded-lg">
                 <Lock className="w-4 h-4 text-sky-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm font-medium text-sky-900 mb-2">Available in Pro</p>
+                  <p className="text-sm font-medium text-sky-900 mb-2">Available in Platinum</p>
                   <p className="text-xs text-sky-800 mb-3">See the exact actions with the highest ROI for your council.</p>
                   <Link href="/portal/settings?tab=billing">
                     <Button size="sm" variant="outline" className="text-sky-600 border-sky-300 hover:bg-sky-100">
-                      Upgrade to Pro <ArrowRight className="w-3 h-3 ml-1.5" />
+                      Upgrade to Platinum <ArrowRight className="w-3 h-3 ml-1.5" />
                     </Button>
                   </Link>
                 </div>
@@ -195,7 +195,7 @@ export default function PortalDashboard() {
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 {isPro
-                  ? "Pro subscribers re-score quarterly when we detect changes on your website."
+                  ? "Platinum subscribers re-score quarterly when we detect changes on your website."
                   : "Verified subscribers re-score annually with the public cycle."}
               </p>
               {isPro && (
@@ -207,14 +207,14 @@ export default function PortalDashboard() {
           </Card>
         </div>
 
-        {/* ─── 5. Pro upgrade nudge (Verified only, dismissable) ─── */}
+        {/* ─── 5. Platinum upgrade nudge (Verified only, dismissable) ─── */}
         {isVerifiedTier && !dismissProNudge && (
           <Card className="p-6 bg-gradient-to-r from-indigo-50 to-sky-50 border-indigo-200 mb-10">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
-                <h3 className="text-sm font-semibold text-indigo-900 mb-2">Upgrade to Pro</h3>
+                <h3 className="text-sm font-semibold text-indigo-900 mb-2">Upgrade to Platinum</h3>
                 <p className="text-xs text-indigo-800 mb-3 leading-relaxed">
-                  Councils investing in transparency are upgrading to Pro for quarterly re-scoring, custom action plans, and peer benchmarking.
+                  Councils investing in transparency are upgrading to Platinum for quarterly re-scoring, custom action plans, and peer benchmarking.
                 </p>
                 <div className="space-y-1.5 text-xs text-indigo-800 mb-4">
                   <div className="flex items-center gap-2">

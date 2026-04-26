@@ -104,7 +104,7 @@ export type CouncilScore = {
   denominator: number;
   score: number | null;
   completeness: number;
-  band: string;
+  band: BandKey | string;  // string allowed for backwards-compat; new JSONs use BandKey values
   rank_national: number | null;
   rank_type: number | null;
   rank_region: number | null;

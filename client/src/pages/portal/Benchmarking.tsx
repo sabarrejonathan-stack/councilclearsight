@@ -1,7 +1,7 @@
 /**
- * Portal Benchmarking — peer comparison (Pro only; Verified sees teaser + CTA).
+ * Portal Benchmarking — peer comparison (Platinum only; Verified sees teaser + CTA).
  *
- * Content (Pro):
+ * Content (Platinum):
  *  1. Peer group definition card
  *  2. Peer comparison table: rank, name, score, pillars, delta
  *  3. "What the leaders do differently" card
@@ -46,7 +46,7 @@ export default function PortalBenchmarking() {
   }
 
   const councilScore = council as CouncilScore;
-  const isPro = councilScore.tier === "pro";
+  const isPro = councilScore.tier === "platinum";
 
   return (
     <PortalLayout council={councilScore}>
@@ -64,7 +64,7 @@ export default function PortalBenchmarking() {
                 <Lock className="w-8 h-8 text-indigo-600" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-indigo-900 mb-2">Benchmarking is a Pro feature</h3>
+                <h3 className="text-lg font-bold text-indigo-900 mb-2">Benchmarking is a Platinum feature</h3>
                 <p className="text-sm text-indigo-800 mb-4 leading-relaxed">
                   See which peer councils are beating you on specific pillars. Discover what the top performers publish that you don't. Use those insights to focus your improvement roadmap.
                 </p>
@@ -84,7 +84,7 @@ export default function PortalBenchmarking() {
                 </div>
                 <Link href="/portal/settings?tab=billing">
                   <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">
-                    Upgrade to Pro <ArrowRight className="w-4 h-4 ml-2" />
+                    Upgrade to Platinum <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>

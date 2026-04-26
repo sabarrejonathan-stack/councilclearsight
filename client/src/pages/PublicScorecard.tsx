@@ -214,7 +214,7 @@ export default function PublicScorecard() {
                   Ask your council to get a Council ClearSight score
                 </h2>
                 <p className="text-slate-600 mb-4 leading-relaxed">
-                  If your council doesn't have a Council ClearSight score yet, you can ask them to get one. Every council in England has a public VDTI score — and a full subscription with detailed recommendations starts from £499/yr (Pro tier).
+                  If your council doesn't have a Council ClearSight score yet, you can ask them to get one. Every council in England has a public VDTI score — and a full subscription with detailed recommendations starts from £499/yr (Platinum tier).
                 </p>
                 <p className="text-slate-600 mb-6 leading-relaxed">
                   Copy the message below and send it to your Parish Clerk, or raise it at the next Annual Parish Meeting.
@@ -223,14 +223,14 @@ export default function PublicScorecard() {
               <div className="bg-white rounded-xl border border-amber-200 p-5">
                 <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Message to copy</p>
                 <p className="text-sm text-slate-700 leading-relaxed italic mb-4">
-                  "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Pro subscription with the personalised roadmap, peer benchmarking and direct support is £499/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
+                  "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Platinum subscription with the personalised roadmap, peer benchmarking and direct support is £499/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
                 </p>
                 <Button
                   size="sm"
                   className="w-full bg-amber-500 hover:bg-amber-600 text-white"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Pro subscription with the personalised roadmap, peer benchmarking and direct support is £499/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
+                      "I'd like to ask the council to get a Council ClearSight score. Council ClearSight is an independent performance assessment service that gives parish and town councils a VDTI score — covering digital presence, contact transparency, governance & compliance, and financial accountability. A full Platinum subscription with the personalised roadmap, peer benchmarking and direct support is £499/year. I think it would help the council demonstrate its value to residents and support our LCAS accreditation work. More information at councilclearsight.co.uk/for-clerks."
                     );
                   }}
                 >
@@ -253,9 +253,9 @@ export default function PublicScorecard() {
           </div>
           <div className="grid md:grid-cols-4 gap-5">
             {[
-              { icon: BarChart3, title: "Digital Presence", weight: "25%", desc: "Active website, accessibility statement — verified from the council's recorded URL" },
-              { icon: Users, title: "Contact Transparency", weight: "25%", desc: "Published email, phone number, and named clerk — verified from directories and council websites" },
-              { icon: MapPin, title: "Governance & Compliance", weight: "25%", desc: "Published governance documents including audit notices, asset register, register of interests, financial regulations, and standing orders" },
+              { icon: BarChart3, title: "Core Reachability", weight: "25%", desc: "Active website, accessibility statement — verified from the council's recorded URL" },
+              { icon: Users, title: "Statutory Meeting Transparency", weight: "25%", desc: "Published email, phone number, and named clerk — verified from directories and council websites" },
+              { icon: MapPin, title: "Financial Accountability", weight: "25%", desc: "Published governance documents including audit notices, asset register, register of interests, financial regulations, and standing orders" },
               { icon: ArrowRight, title: "Financial Accountability", weight: "25%", desc: "Annual accounts, governance statement, meeting agendas and minutes — verified from published statutory documents" },
             ].map((p, i) => (
               <div key={i} className="bg-white rounded-xl border border-slate-200 p-5 text-center">

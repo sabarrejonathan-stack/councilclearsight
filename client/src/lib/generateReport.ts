@@ -75,11 +75,10 @@ function getLetterGrade(score: number): string {
 }
 
 function getScoreBand(score: number): string {
-  if (score >= 85) return "Exemplary";
-  if (score >= 70) return "Strong";
-  if (score >= 55) return "Mid-tier";
-  if (score >= 40) return "Below median";
-  return "High-risk";
+  if (score >= 80) return "Excellent";
+  if (score >= 65) return "Good";
+  if (score >= 50) return "Developing";
+  return "Needs Attention";
 }
 
 function formatPopBand(band: string | null): string {
@@ -115,12 +114,12 @@ function generateRecommendations(council: CouncilData) {
   const p3 = n(council.vdtiPillar3Score);
   const p4 = n(council.vdtiPillar4Score);
 
-  // P1: Digital Presence (max 25)
+  // P1: Core Reachability (max 25)
   if (!council.hasWebsite || p1 < 20) {
     recs.push({
       title: "Establish or significantly improve the council website",
       impact: "+8-12 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Moderate",
       body: `A well-structured council website is the foundation of digital transparency. ${council.name} should ensure its website includes clear navigation, up-to-date meeting information, and accessible contact details. Free or low-cost website builders suitable for parish councils are available through providers such as Hugo Fox, 2commune, and Parish Council Websites.`,
       source: "Local Government Transparency Code 2015; NALC website guidance",
@@ -130,7 +129,7 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish meeting agendas online at least 3 clear days before meetings",
       impact: "+4-6 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Low cost",
       body: `Publishing agendas in advance is a legal requirement under the Local Government Act 1972, Schedule 12. ${council.name} should ensure agendas are published on the council website at least 3 clear days before each meeting, in an accessible format. This is one of the most impactful quick wins for improving the Transparency pillar score.`,
       source: "Local Government Act 1972, Schedule 12, para 10(2); Transparency Code 2015",
@@ -140,7 +139,7 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish approved meeting minutes within 28 days",
       impact: "+4-6 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Low cost",
       body: `Meeting minutes should be published on the council website promptly after approval. ${council.name} should aim to publish draft minutes within 28 days of each meeting, with approved minutes clearly marked. This demonstrates accountability and allows residents to follow council decisions.`,
       source: "Local Government Act 1972, Schedule 12; NALC Legal Topic Note 40",
@@ -150,21 +149,21 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish annual accounts and financial information online",
       impact: "+3-5 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Low cost",
       body: `Financial transparency is a core requirement for parish and town councils. ${council.name} should publish its Annual Governance and Accountability Return (AGAR), including the annual return, internal audit report, and notice of public rights, on its website. Councils with turnover exceeding GBP 25,000 must also comply with the Transparency Code.`,
       source: "Accounts and Audit Regulations 2015; Local Government Transparency Code 2015",
     });
   }
 
-  // P2: Contact Transparency (max 25)
+  // P2: Statutory Meeting Transparency (max 25)
   if (p2 < 15) {
     recs.push({
       title: "Establish a structured resident engagement programme with published feedback loops",
       impact: "+6-10 pts",
-      pillar: "Governance & Compliance",
+      pillar: "Financial Accountability",
       effort: "Low cost",
-      body: `A structured engagement programme  -  including a 'You Said, We Did' page on your website, published responses to resident feedback, and regular community drop-in sessions  -  would address a significant gap in the Governance & Compliance pillar. Publishing how the council has responded to feedback demonstrates the accountability loop that distinguishes higher-scoring councils. Guidance is available from NALC and SLCC at no cost.`,
+      body: `A structured engagement programme  -  including a 'You Said, We Did' page on your website, published responses to resident feedback, and regular community drop-in sessions  -  would address a significant gap in the Financial Accountability pillar. Publishing how the council has responded to feedback demonstrates the accountability loop that distinguishes higher-scoring councils. Guidance is available from NALC and SLCC at no cost.`,
       source: "NALC Good Councillor Guide (2022), Section 4: Community Engagement",
     });
   }
@@ -172,19 +171,19 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish comprehensive contact details including a dedicated enquiry form",
       impact: "+3-5 pts",
-      pillar: "Governance & Compliance",
+      pillar: "Financial Accountability",
       effort: "Minimal cost",
       body: `${council.name} should ensure that the clerk's name, email address, phone number, and office hours are clearly published on the council website. Adding a dedicated online enquiry form makes it easier for residents to get in touch and creates a record of interactions.`,
       source: "Local Government Transparency Code 2015; NALC website guidance",
     });
   }
 
-  // P3: Governance & Compliance (max 25)
+  // P3: Financial Accountability (max 25)
   if (p3 < 15) {
     recs.push({
       title: "Publish standing orders and financial regulations",
       impact: "+5-10 pts",
-      pillar: "Governance & Compliance",
+      pillar: "Financial Accountability",
       effort: "Low cost",
       body: `Standing orders and financial regulations are the foundation of proper council governance. ${council.name} should adopt NALC model standing orders and financial regulations, and publish them prominently on the council website. These documents demonstrate that the council operates within a formal governance framework.`,
       source: "NALC Model Standing Orders (2018); NALC Model Financial Regulations",
@@ -194,7 +193,7 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish a register of members' interests",
       impact: "+5 pts",
-      pillar: "Governance & Compliance",
+      pillar: "Financial Accountability",
       effort: "Minimal cost",
       body: `The Localism Act 2011 requires councillors to declare and publish their interests. ${council.name} should ensure a register of members' interests is published on the council website and kept up to date. This demonstrates transparency and helps prevent conflicts of interest.`,
       source: "Localism Act 2011, Chapter 7; Monitoring Officer guidance",
@@ -226,7 +225,7 @@ function generateRecommendations(council: CouncilData) {
     recs.push({
       title: "Publish an accessibility statement on the council website",
       impact: "+5 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Minimal cost",
       body: `Public sector websites are required to meet accessibility standards under the Public Sector Bodies Accessibility Regulations 2018. ${council.name} should publish an accessibility statement explaining what standards it meets and how users can report problems. Template statements are available from the Central Digital and Data Office.`,
       source: "Public Sector Bodies Accessibility Regulations 2018 (SI 2018/952); CDDO guidance",
@@ -246,7 +245,7 @@ function generateRecommendations(council: CouncilData) {
     {
       title: "Create a dedicated planning applications page with council responses",
       impact: "+2-4 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Low cost",
       body: `A dedicated page listing planning applications considered by the council, along with the council's responses, improves transparency around one of the most resident-facing aspects of parish council work. This is particularly valuable in areas experiencing development pressure.`,
       source: "Town and Country Planning Act 1990; NALC planning guidance",
@@ -254,7 +253,7 @@ function generateRecommendations(council: CouncilData) {
     {
       title: "Establish a social media presence with regular updates",
       impact: "+2-4 pts",
-      pillar: "Governance & Compliance",
+      pillar: "Financial Accountability",
       effort: "Minimal cost",
       body: `An active social media presence  -  particularly on Facebook, which has the highest reach among parish council audiences  -  extends the council's digital engagement beyond its website. Regular posts about meetings, decisions, and community events help keep residents informed and engaged.`,
       source: "NALC Digital Communications guidance; LGA social media guide",
@@ -270,7 +269,7 @@ function generateRecommendations(council: CouncilData) {
     {
       title: "Publish grant and Section 137 expenditure records",
       impact: "+1-3 pts",
-      pillar: "Digital Presence",
+      pillar: "Core Reachability",
       effort: "Minimal cost",
       body: `Publishing details of grants awarded and Section 137 expenditure (discretionary spending for community benefit) demonstrates how the council uses public money to support local organisations and causes. This information should be published annually alongside the council's financial statements.`,
       source: "Local Government Act 1972, s.137; Transparency Code 2015",
@@ -424,9 +423,9 @@ export function generateCouncilReport(data: ReportInput): void {
   y += 8;
 
   const pillars = [
-    { name: "Digital Presence", score: p1, max: maxP1, weight: "25%" },
-    { name: "Contact Transparency", score: p2, max: maxP2, weight: "25%" },
-    { name: "Governance & Compliance", score: p3, max: maxP3, weight: "25%" },
+    { name: "Core Reachability", score: p1, max: maxP1, weight: "25%" },
+    { name: "Statutory Meeting Transparency", score: p2, max: maxP2, weight: "25%" },
+    { name: "Financial Accountability", score: p3, max: maxP3, weight: "25%" },
     { name: "Financial Accountability", score: p4, max: maxP4, weight: "25%" },
   ];
 
@@ -508,11 +507,11 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (VDTI v3.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Digital Presence (30), Contact Transparency (30), Governance Documents (25), and Democratic Openness (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
+    `Council ClearSight (VDTI v4.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Core Reachability (30), Statutory Meeting Transparency (30), Financial Accountability (25), and Democratic & Accessibility (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
     ``,
-    `Where a council cannot yet be observed (no website, robots.txt opt-out, or scraper error), affected indicators are marked "Not Assessed" and excluded from the denominator rather than penalised. Pro subscribers receive a full personalised audit within seven days of subscribing, with a written improvement roadmap.`,
+    `Where a council cannot yet be observed (no website, robots.txt opt-out, or scraper error), affected indicators are marked "Not Assessed" and excluded from the denominator rather than penalised. Platinum subscribers receive a full personalised audit within seven days of subscribing, with a written improvement roadmap.`,
     ``,
-    `Every score carries an evidence URL and can be challenged via the public disputes queue. Methodology version: VDTI v3.0.`,
+    `Every score carries an evidence URL and can be challenged via the public disputes queue. Methodology version: VDTI v4.0.`,
   ];
   const methodLines = doc.splitTextToSize(methodText.join("\n"), contentWidth);
   doc.text(methodLines, margin, y);

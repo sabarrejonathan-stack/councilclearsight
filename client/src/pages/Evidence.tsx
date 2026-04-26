@@ -1,5 +1,5 @@
 /**
- * Evidence page — Council ClearSight (VDTI v3)
+ * Evidence page — Council ClearSight (VDTI v4)
  *
  * The statutory and academic basis for the 12 indicators.
  * Three sections: Statutory basis, Sector literature, Peer review.
@@ -199,7 +199,7 @@ export default function Evidence() {
             <Card className="p-6 bg-white border-slate-200">
               <h3 className="font-semibold text-foreground mb-2">See the full methodology</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Read the complete VDTI v3 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
+                Read the complete VDTI v4 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
               </p>
               <Link href="/methodology">
                 <Button size="sm" variant="outline" className="w-full">
@@ -215,14 +215,4 @@ export default function Evidence() {
               </p>
               <Link href="/directory">
                 <Button size="sm" variant="outline" className="w-full">
-                  Find your council <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                </Button>
-              </Link>
-            </Card>
-          </div>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+                  Find your council <ArrowRight class

@@ -24,14 +24,20 @@ type Change = {
 
 const CHANGES: Change[] = [
   {
+    version: "v4.0",
+    status: "accepted",
+    date: "26 April 2026",
+    title: "Universal coverage, three audit states, click-through evidence URLs",
+    rationale: "v4.0 expands the registry from 7,031 to 11,057 councils — every parish, town, city and community council in England (ONS parish register + the Council ClearSight database). Introduces the three audit states (verified / under_audit / under_audit_with_url) so every council page is honest about whether it has been independently scanned. Every verified indicator now carries an evidence_url linking to a public document on the council's own domain. Bands renamed to Excellent (80–100) / Good (65–79) / Developing (50–64) / Needs Attention (0–49) to match the binary 80/65/50 cutoffs. The pillar weighting is corrected to four equal pillars at 25 points each.",
+    proposer: "Jonathan Sabarre (founder)",
+  },
+  {
     version: "v3.0",
     status: "accepted",
     date: "24 April 2026",
     title: "Clean-slate rewrite: deterministic engine, honest gaps, no score cap",
     rationale: "Internal audit revealed non-determinism in v2 scoring, a methodology/data mismatch, and silent imputation of zero for not-assessed indicators. v3 re-architects scoring as a pure function, introduces 'Not Assessed' as distinct from zero, and retires the 95-score cap for non-subscribers.",
     proposer: "Jonathan Sabarre (founder)",
-    reviewer: "[public comment period]",
-    publicCommentDays: 7,
   },
 ];
 

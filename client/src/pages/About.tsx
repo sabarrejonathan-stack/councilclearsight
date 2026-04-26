@@ -1,5 +1,5 @@
 /**
- * About page — Council ClearSight (VDTI v3)
+ * About page — Council ClearSight (VDTI v4)
  *
  * Who we are, why we exist, what we believe, and how to reach us.
  */
@@ -47,7 +47,7 @@ export default function About() {
             {[
               {
                 title: "11,000+ councils, no independent observability",
-                body: "England has 11,057 parish, town, city and community councils. Residents have no single place to see which ones publish their minutes, which are reachable, which are transparent. Councils themselves have little idea how they compare to peers. As of April 2026 we have published verified scores for 1,682 of them — every claim linked to a public document on the council's own domain — and the remaining 9,000+ are progressing through audit. Subscribers are notified the moment a council is verified.",
+                body: "England has 11,057 parish, town, city and community councils. Residents have no single place to see which ones publish their minutes, which are reachable, which are transparent. Councils themselves have little idea how they compare to peers. As of April 2026 we have published verified scores for 1,682 of them — every claim linked to a public document on the council's own domain — and the remaining 9,375 are progressing through audit. Subscribers are notified the moment a council is verified.",
               },
               {
                 title: "£1 billion in precept, unscrutinised",
@@ -132,15 +132,4 @@ export default function About() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Jonathan built the first transparency index after spending three hours searching for a single parish council's meeting minutes. He spent a decade in local government research and community activism. {/* [placeholder — clerk to edit: Prior roles, qualifications, publications] */}
                 </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  He commits to transparent methodology, fair attribution, and building something the sector actually needs rather than something that simply scales.
-                </p>
-              </div>
-            </div>
-          </Card>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+   

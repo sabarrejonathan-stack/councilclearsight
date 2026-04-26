@@ -1,11 +1,11 @@
 /**
- * Portal Recommendations — actionable improvement plan (core Pro value).
+ * Portal Recommendations — actionable improvement plan (core Platinum value).
  *
  * Content:
  *  1. Your roadmap: ordered list of 5–10 recommendations
  *  2. In progress: recommendations the clerk marked as "working on"
  *  3. Completed: done recommendations with dates + points earned
- *  4. Request custom action: form for bespoke guidance (1 request/quarter in Pro)
+ *  4. Request custom action: form for bespoke guidance (1 request/quarter in Platinum)
  */
 
 import { useState } from "react";
@@ -45,7 +45,7 @@ export default function PortalRecommendations() {
   }
 
   const councilScore = council as CouncilScore;
-  const isPro = councilScore.tier === "pro";
+  const isPro = councilScore.tier === "platinum";
 
   const roadmap = recommendations?.filter((r) => r.status === "pending") ?? [];
   const inProgress = recommendations?.filter((r) => r.status === "in_progress") ?? [];
@@ -65,7 +65,7 @@ export default function PortalRecommendations() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">Improvement Roadmap</h1>
           <p className="text-sm text-muted-foreground">
-            {isPro ? "Your personalised action plan to close gaps and reach Exemplary." : "Pro feature — upgrade to unlock."}
+            {isPro ? "Your personalised action plan to close gaps and reach Excellent." : "Platinum feature — upgrade to unlock."}
           </p>
         </div>
 
@@ -77,12 +77,12 @@ export default function PortalRecommendations() {
                 <Lock className="w-8 h-8 text-emerald-600" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-emerald-900 mb-2">Recommendations are a Pro feature</h3>
+                <h3 className="text-lg font-bold text-emerald-900 mb-2">Recommendations are a Platinum feature</h3>
                 <p className="text-sm text-emerald-800 mb-4 leading-relaxed">
                   Get a specific, prioritised action plan: "Publish May 2026 minutes at /minutes/2026-05.pdf and link from your homepage." Each action shows the exact points it'll earn and estimated effort.
                 </p>
                 <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                  Upgrade to Pro <ArrowRight className="w-4 h-4 ml-2" />
+                  Upgrade to Platinum <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
             </div>

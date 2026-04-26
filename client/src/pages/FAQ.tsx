@@ -1,5 +1,5 @@
 /**
- * FAQ page — Council ClearSight (VDTI v3)
+ * FAQ page — Council ClearSight (VDTI v4)
  *
  * Answers to the 12 real questions residents, clerks, and researchers ask.
  * Grouped into three sections: For residents, For clerks, About the methodology.
@@ -59,7 +59,7 @@ export default function FAQ() {
               },
               {
                 q: "How often are scores updated?",
-                a: "The public score is updated once per year (next scheduled update: April 2027). If you file a challenge that results in new evidence, the score updates within 5 working days and the decision is logged publicly. If a council is a VDTI Pro subscriber, their score is recalculated every 90 days, so improvements show up faster.",
+                a: "The public score is updated once per year (next scheduled update: April 2027). If you file a challenge that results in new evidence, the score updates within 5 working days and the decision is logged publicly. If a council is a Platinum subscriber, their score is recalculated every 90 days, so improvements show up faster.",
               },
               {
                 q: "Can I see the exact inputs you used for my council?",
@@ -67,7 +67,7 @@ export default function FAQ() {
               },
               {
                 q: "What's a good score for a council our size?",
-                a: "Scores are size-neutral — a 5-person parish and a 25,000-resident town council are held to the same standard (both should publish meeting minutes if they're holding meetings). However, the Methodology page publishes band definitions: 80–100 is 'Exemplary', 60–79 is 'Strong', 40–59 is 'Developing', 0–39 is 'At Risk'. If your council is 'Developing' or above, it's doing reasonably well relative to the index. You can also see how councils of your type rank in your region on the Directory page.",
+                a: "Scores are size-neutral — a 5-person parish and a 25,000-resident town council are held to the same standard (both should publish meeting minutes if they're holding meetings). However, the Methodology page publishes band definitions: 80–100 is 'Excellent', 60–79 is 'Strong', 40–59 is 'Developing', 0–39 is 'At Risk'. If your council is 'Developing' or above, it's doing reasonably well relative to the index. You can also see how councils of your type rank in your region on the Directory page.",
               },
             ].map((item, i) => (
               <AccordionItem key={i} value={`resident-${i}`} className="border border-border rounded-lg px-5 data-[state=open]:bg-slate-50">
@@ -97,15 +97,15 @@ export default function FAQ() {
               },
               {
                 q: "What if I disagree with a score?",
-                a: "File a challenge via your council's page. The process: (1) tell us which indicator you're challenging, (2) provide evidence (a URL, screenshot, or PDF), (3) we review it within 5 working days, (4) we publish the decision and any resulting score change. If your council is a VDTI Verified or Pro subscriber, challenges get a 3-day SLA. All disputes are logged on a public queue.",
+                a: "File a challenge via your council's page. The process: (1) tell us which indicator you're challenging, (2) provide evidence (a URL, screenshot, or PDF), (3) we review it within 5 working days, (4) we publish the decision and any resulting score change. If your council is a Verified or Platinum subscriber, challenges get a 3-day SLA. All disputes are logged on a public queue.",
               },
               {
                 q: "Do you take down negative information if we ask?",
                 a: "No. VDTI is built on the principle of public verifiability (see the Methodology). If we've recorded a decision (e.g., 'council does not publish minutes'), and that decision was based on evidence we can show, it stays. What changes is the *input* — if you publish minutes next month, the input row updates and the score improves. We don't rewrite history, but we do update as councils improve.",
               },
               {
-                q: "My council is a Pro subscriber — how do quarterly re-scores work?",
-                a: "Pro subscribers are re-scored every 90 days instead of once per year. In addition, the Pro plan includes active monthly website scraping, so if you publish new minutes or agendas, we'll find them faster. When your score updates, you'll get an email with the delta (which indicators changed and by how much).",
+                q: "My council is a Platinum subscriber — how do quarterly re-scores work?",
+                a: "Platinum subscribers are re-scored every 90 days instead of once per year. In addition, the Platinum plan includes active monthly website scraping, so if you publish new minutes or agendas, we'll find them faster. When your score updates, you'll get an email with the delta (which indicators changed and by how much).",
               },
             ].map((item, i) => (
               <AccordionItem key={i} value={`clerk-${i}`} className="border border-border rounded-lg px-5 data-[state=open]:bg-slate-50">

@@ -391,7 +391,7 @@ function DataStateDisclaimer({ council }: { council: CouncilScore }) {
         <div className="flex-1">
           <div className="font-semibold text-amber-950 text-sm mb-1">No website on file for this council</div>
           <p className="text-xs text-amber-900 leading-relaxed mb-2">
-            We don't currently have a website URL for {council.name}. Pillar 1 (Digital Presence) is scored against absence; Pillars 3 and 4 are marked <strong>Not Assessed</strong> rather than zero — we don't punish a council for a gap in our measurement.
+            We don't currently have a website URL for {council.name}. Pillar 1 (Core Reachability) is scored against absence; Pillars 3 and 4 are marked <strong>Not Assessed</strong> rather than zero — we don't punish a council for a gap in our measurement.
           </p>
           <p className="text-xs text-amber-900 leading-relaxed">
             <strong>If you're the clerk and your council does have a website,</strong>{" "}

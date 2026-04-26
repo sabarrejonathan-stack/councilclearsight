@@ -1,7 +1,7 @@
 /**
  * Spotlight — Woolsington Parish Council
  *
- * The full Pro-tier transparency report rendered inline as the marketing
+ * The full Platinum-tier transparency report rendered inline as the marketing
  * showcase for what Council ClearSight Platinum subscribers receive.
  *
  * Data is loaded from /data/spotlight/woolsington-parish-council.json
@@ -9,7 +9,7 @@
  * council's published website, Newcastle City Council records, ONS
  * 2021 Census and the Northumberland Association of Local Councils.
  *
- * Ungated, downloadable, and CTA'd to Pro (£499/yr) throughout.
+ * Ungated, downloadable, and CTA.d to Platinum (£499/yr) throughout.
  */
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
@@ -74,7 +74,7 @@ interface Dossier {
 export default function Spotlight() {
   useSEO({
     title: "Woolsington Parish Council — full Council ClearSight Platinum report (Spotlight)",
-    description: "The full Pro-tier transparency report for Woolsington Parish Council in Newcastle upon Tyne — strengths, gaps, statutory references and the 9 specific improvement opportunities. Showcase example of what Platinum subscribers receive.",
+    description: "The full Platinum-tier transparency report for Woolsington Parish Council in Newcastle upon Tyne — strengths, gaps, statutory references and the 9 specific improvement opportunities. Showcase example of what Platinum subscribers receive.",
     canonicalPath: "/spotlight",
   });
 
@@ -119,7 +119,7 @@ export default function Spotlight() {
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
             <div>
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">
-                {d.methodology_version || "VDTI v3.0"} · Data extracted {d.data_extraction_date || "16 April 2026"} · Spotlight council
+                {d.methodology_version || "VDTI v4.0"} · Data extracted {d.data_extraction_date || "16 April 2026"} · Spotlight council
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-3 leading-tight">{d.name}</h1>
               <div className="flex flex-wrap items-center gap-2 text-sm text-white/70 mb-6">
@@ -319,7 +319,7 @@ export default function Spotlight() {
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">How this report is compiled</Badge>
           <h2 className="text-3xl font-bold mb-5">Verified, statute-grounded, evidence-pinned</h2>
           <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-            {d.compiled_method} Compiled {d.compiled_at} using VDTI v3.0 methodology.
+            {d.compiled_method} Compiled {d.compiled_at} using VDTI v4.0 methodology.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/methodology">
@@ -369,36 +369,4 @@ function RecGroup({ priority, label, recs }: { priority: string; label: string; 
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <Badge variant="outline" className="text-[10px] font-mono">{o.pillar}</Badge>
                   {o.estimated_uplift_points > 0 && (
-                    <Badge className="bg-accent/15 text-accent border-accent/30 text-[10px]">
-                      +{o.estimated_uplift_points} pts available
-                    </Badge>
-                  )}
-                </div>
-                <h3 className="font-bold text-lg mb-2">{o.title}</h3>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">{o.rationale}</p>
-            <div className="grid md:grid-cols-2 gap-3 text-xs pt-3 border-t border-slate-100">
-              <div>
-                <span className="font-semibold text-foreground">Effort:</span>
-                <span className="text-muted-foreground"> {o.effort}</span>
-              </div>
-              {o.evidence_source && (
-                <div>
-                  <span className="font-semibold text-foreground">Source:</span>{" "}
-                  {o.source_url ? (
-                    <a href={o.source_url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      {o.evidence_source} <ExternalLink className="w-3 h-3 inline" />
-                    </a>
-                  ) : (
-                    <span className="text-muted-foreground">{o.evidence_source}</span>
-                  )}
-                </div>
-              )}
-            </div>
-          </Card>
-        ))}
-      </div>
-    </div>
-  );
-}
+                    <Badge className="bg-accent/1

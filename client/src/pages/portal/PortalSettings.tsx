@@ -5,7 +5,7 @@
  *  1. Council: edit contact details (email, phone, chair, clerk)
  *  2. Account: profile, password, 2FA, invite users
  *  3. Billing: tier, invoice history, upgrade/downgrade, cancel
- *  4. Integrations: badge generator, webhooks, API key (Pro only)
+ *  4. Integrations: badge generator, webhooks, API key (Platinum only)
  *  5. Notifications: email preferences, digest toggles
  */
 
@@ -48,7 +48,7 @@ export default function PortalSettings() {
   }
 
   const councilScore = council as CouncilScore;
-  const isPro = councilScore.tier === "pro";
+  const isPro = councilScore.tier === "platinum";
 
   return (
     <PortalLayout council={councilScore}>
@@ -224,7 +224,7 @@ export default function PortalSettings() {
 
             {councilScore.tier === "verified" && (
               <Card className="p-6 bg-gradient-to-r from-indigo-50 to-sky-50 border-indigo-200">
-                <h3 className="text-sm font-semibold text-indigo-900 mb-3">Upgrade to Pro</h3>
+                <h3 className="text-sm font-semibold text-indigo-900 mb-3">Upgrade to Platinum</h3>
                 <p className="text-xs text-indigo-800 mb-4 leading-relaxed">
                   Unlock quarterly re-scoring, custom action plans, peer benchmarking, and more.
                 </p>
@@ -234,11 +234,11 @@ export default function PortalSettings() {
               </Card>
             )}
 
-            {councilScore.tier === "pro" && (
+            {councilScore.tier === "platinum" && (
               <Card className="p-6">
                 <h3 className="text-sm font-semibold text-foreground mb-3">Downgrade to Verified</h3>
                 <p className="text-xs text-muted-foreground mb-4">
-                  You'll lose access to Pro features (benchmarking, quarterly re-scoring, custom roadmap).
+                  You'll lose access to Platinum features (benchmarking, quarterly re-scoring, custom roadmap).
                 </p>
                 <Button variant="outline" size="sm">
                   Downgrade plan
@@ -291,7 +291,7 @@ export default function PortalSettings() {
             </Card>
           </TabsContent>
 
-          {/* ─── 4. Integrations tab (Pro only) ─── */}
+          {/* ─── 4. Integrations tab (Platinum only) ─── */}
           {isPro && (
             <TabsContent value="integrations" className="space-y-6">
               <Card className="p-6">
@@ -369,7 +369,7 @@ export default function PortalSettings() {
                 <CheckboxField label="Score change" defaultChecked={true} description="When your VDTI score changes (up or down)" />
                 <CheckboxField label="Monthly digest" defaultChecked={true} description="A summary of what changed this month" />
                 <CheckboxField label="Challenge decision" defaultChecked={true} description="When we respond to a score challenge" />
-                <CheckboxField label="Pro features update" defaultChecked={false} description="New features and improvements (for Pro subscribers)" />
+                <CheckboxField label="Platinum features update" defaultChecked={false} description="New features and improvements (for Platinum subscribers)" />
               </div>
             </Card>
 

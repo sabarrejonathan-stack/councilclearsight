@@ -35,7 +35,7 @@ export default function PublicFooter() {
             <div className="space-y-1">
               <h3 className="font-bold text-primary-foreground text-lg">The ClearSight Dispatch</h3>
               <p className="text-sm text-primary-foreground/60 max-w-sm">
-                One email a month. Top movers, methodology updates, and the transparency practices separating Exemplary councils from the rest. Unsubscribe any time.
+                One email a month. Top movers, methodology updates, and the transparency practices separating Excellent councils from the rest. Unsubscribe any time.
               </p>
             </div>
             <div className="w-full md:w-auto">
@@ -114,10 +114,4 @@ export default function PublicFooter() {
             &copy; {new Date().getFullYear()} Council ClearSight Ltd. All rights reserved.
           </p>
           <p className="text-xs text-primary-foreground/50">
-            Data processed in accordance with UK GDPR. Not affiliated with any local authority or government body.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+            Data processed in accordance with UK GDPR. Not affiliated with any local aut

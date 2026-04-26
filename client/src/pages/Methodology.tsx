@@ -143,7 +143,7 @@ export default function Methodology() {
             </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground font-mono">
-            <span>VDTI v3.0</span>
+            <span>VDTI v4.0</span>
             <span>·</span>
             <span>Data extraction: 16 April 2026</span>
             <span>·</span>
@@ -281,10 +281,10 @@ export default function Methodology() {
           <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">Once we have the score out of 100, we put the council into one of four bands. The band is just a shortcut — the score itself is what matters.</p>
           <div className="space-y-2.5">
             {[
-              { range: "80 – 100",  name: "Exemplary",        colour: "emerald", body: "The council meets or exceeds almost every observable transparency requirement. It's publishing the documents it should and residents can easily see what's happening." },
-              { range: "60 – 79",   name: "Strong",           colour: "teal",    body: "The council meets most requirements with a handful of specific gaps. It's clearly engaged; the improvements needed are identifiable and achievable." },
-              { range: "40 – 59",   name: "Developing",       colour: "amber",   body: "The council has partial transparency but significant gaps across at least one pillar. There's something to build on but a meaningful amount of work ahead." },
-              { range: "0 – 39",    name: "At Risk",          colour: "red",     body: "The council has substantial gaps in publicly visible transparency. Often this is a small parish with minimal online presence rather than a badly-run council — but the effect on residents is the same." },
+              { range: "80 – 100",  name: "Excellent",       colour: "emerald", body: "The council meets or exceeds almost every observable transparency requirement. It's publishing the documents it should and residents can easily see what's happening." },
+              { range: "65 – 79",   name: "Good",            colour: "teal",    body: "The council meets most requirements with a handful of specific gaps. It's clearly engaged; the improvements needed are identifiable and achievable." },
+              { range: "50 – 64",   name: "Developing",      colour: "amber",   body: "The council has partial transparency but significant gaps across at least one pillar. There's something to build on but a meaningful amount of work ahead." },
+              { range: "0 – 49",    name: "Needs Attention", colour: "red",     body: "The council has substantial gaps in publicly visible transparency. Often this is a small parish with minimal online presence rather than a badly-run council — but the effect on residents is the same." },
               { range: "—",         name: "Not Yet Assessed", colour: "slate",   body: "We don't yet have enough evidence to give this council a meaningful score. They appear in the directory, but we don't band them until we have a fuller picture." },
               { range: "—",         name: "Under Audit",      colour: "sky",     body: "Council ClearSight tracks every council in England (11,057 in total). Councils marked Under Audit are in our queue but not yet fully verified — 1,682 are verified to date, with ~200 newly-verified each week. We never publish a score before verification." },
             ].map((b) => (
@@ -314,22 +314,4 @@ export default function Methodology() {
                 Open any council in the directory and you'll see each of the twelve indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/directory"><Button>Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-                <Link href="/methodology/changelog"><Button variant="outline">Methodology updates</Button></Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── What the score is not ───────────────────────── */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">What the score isn't</h2>
-          <p className="text-muted-foreground text-sm mb-5 max-w-3xl leading-relaxed">
-            It's easy to read any single number as broader judgement than it's meant to be. Four things the score does <em>not</em> measure: political performance, service quality, financial judgement, or resident satisfaction. Those require different forms of evidence and a different kind of assessment.
-          </p>
-        </section>
-
-      </div>
-    </PublicLayout>
-  );
-}
+       

@@ -8,9 +8,9 @@ import { toast } from "sonner";
 import { Settings, Sliders, Globe, Bell } from "lucide-react";
 
 const methodologyWeights = [
-  { pillar: "Digital Presence", key: "governance", weight: 25 },
-  { pillar: "Contact Transparency", key: "resident_voice", weight: 25 },
-  { pillar: "Governance & Compliance", key: "community_engagement", weight: 25 },
+  { pillar: "Core Reachability", key: "governance", weight: 25 },
+  { pillar: "Statutory Meeting Transparency", key: "resident_voice", weight: 25 },
+  { pillar: "Financial Accountability", key: "community_engagement", weight: 25 },
   { pillar: "Financial Accountability", key: "delivery", weight: 25 },
 ];
 

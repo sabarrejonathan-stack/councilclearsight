@@ -32,7 +32,7 @@ const ARTICLES: NewsItem[] = [
     excerpt: "The statutory transparency requirements every parish, town and city council in England must meet — including spending, contracts, governance and senior salaries.",
     url: "https://www.gov.uk/government/publications/local-government-transparency-code-2015",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
-    category: "Governance & Compliance",
+    category: "Financial Accountability",
     date: "2026-04-20",
   },
   {
@@ -105,7 +105,7 @@ const categories = [
   "Transparency & Accountability",
   "Funding & Finance",
   "Community Engagement",
-  "Governance & Compliance",
+  "Financial Accountability",
   "Digital & Innovation",
   "Best Practice",
 ];

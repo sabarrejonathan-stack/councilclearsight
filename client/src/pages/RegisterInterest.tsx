@@ -276,7 +276,7 @@ export default function RegisterInterest() {
                   <div className="absolute -top-2 -right-2">
                     <span className="bg-amber-400 text-amber-900 text-xs font-bold px-2 py-0.5 rounded-full">Popular</span>
                   </div>
-                  <div className="text-2xl font-black">£690<span className="text-sm font-normal opacity-75">/yr</span></div>
+                  <div className="text-2xl font-black">£499<span className="text-sm font-normal opacity-75">/yr</span></div>
                   <div className="font-semibold mt-1">Platinum</div>
                   <p className="text-xs opacity-80 mt-1">Unlimited updates, school insights, ward-level data</p>
                 </div>
@@ -312,7 +312,7 @@ export default function RegisterInterest() {
               {[
                 { icon: Shield, label: "GDPR compliant", sub: "Your data is safe" },
                 { icon: Award, label: "Verified methodology", sub: "Publicly verifiable data" },
-                { icon: Users, label: "10,800+ councils", sub: "Already in the database" },
+                { icon: Users, label: "11,057 councils tracked", sub: "1,682 verified to date" },
               ].map(s => (
                 <div key={s.label} className="p-4 bg-slate-50 rounded-xl">
                   <s.icon className="w-6 h-6 text-teal-600 mx-auto mb-2" />

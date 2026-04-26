@@ -38,16 +38,16 @@ export default function PremiumGate({ featureName, featureDescription }: Premium
 
         <Badge className="mb-4 bg-accent/10 text-accent border-accent/20 hover:bg-accent/10">
           <Star className="h-3 w-3 mr-1" />
-          Gold feature
+          Platinum feature
         </Badge>
 
         <h2 className="text-2xl font-bold text-foreground mb-3">
-          {featureName} is available on Gold
+          {featureName} is available on Platinum
         </h2>
 
         <p className="text-muted-foreground leading-relaxed mb-8">
           {featureDescription ||
-            "This feature is included in the Gold subscription. Upgrade to access unlimited updated assessments, school engagement evidence review, improvement roadmap, and LCAS evidence pack — everything you need to stay ahead of change in your community."}
+            "This feature is included in the Platinum subscription. Upgrade to access quarterly re-scoring, peer benchmarking, the personalised improvement roadmap, and LCAS evidence pack — everything you need to stay ahead of change in your community."}
         </p>
 
         {/* What you get */}
@@ -55,12 +55,12 @@ export default function PremiumGate({ featureName, featureDescription }: Premium
           <div className="p-6">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="font-bold text-foreground">Gold</h3>
+                <h3 className="font-bold text-foreground">Platinum</h3>
                 <p className="text-sm text-muted-foreground">Everything in Gold, plus:</p>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-foreground">£690</div>
-                <div className="text-xs text-muted-foreground">per year + VAT</div>
+                <div className="text-2xl font-bold text-foreground">£499</div>
+                <div className="text-xs text-muted-foreground">per year</div>
               </div>
             </div>
             <div className="space-y-2.5">
@@ -79,7 +79,7 @@ export default function PremiumGate({ featureName, featureDescription }: Premium
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent/90 text-white w-full sm:w-auto">
-              Upgrade to Gold
+              Upgrade to Platinum
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
