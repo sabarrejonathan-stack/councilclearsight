@@ -3,7 +3,7 @@
  *
  * Narrative arc:
  *   Hero — legally required, independently visible
- *   Proof strip — real numbers (11,057 · 4,323 · 100 · 5 days)
+ *   Proof strip — real numbers (10,511 · 4,160 · 100 · 5 days)
  *   Reality check — your residents and journalists are already here
  *   Four pillars — what we measure, grounded in statute
  *   Commercial ladder — Free · Gold · Platinum
@@ -30,15 +30,15 @@ import { METHODOLOGY_VERSION } from "@/lib/scoring";
 const PILLARS = [
   { n: 1, icon: Globe,       label: "Core Reachability",              max: 25, items: "Working website · council email · phone · named clerk (LGA 1972 § 112)" },
   { n: 2, icon: ShieldCheck, label: "Statutory Meeting Transparency", max: 25, items: "Agendas (LGA 1972 § 100B) · minutes (LGA 1972 § 100C)" },
-  { n: 3, icon: BarChart3,   label: "Financial Accountability",       max: 25, items: "AGAR (Accounts & Audit Regs 2015 § 10) · contactable clerk for audit" },
-  { n: 4, icon: Users,       label: "Democratic & Accessibility",     max: 25, items: "Chair named · councillor identified · accessibility statement · HTTPS" },
+  { n: 3, icon: BarChart3,   label: "Financial Accountability",       max: 25, items: "AGAR · Internal Audit Report · Notice of Public Inspection (Accounts & Audit Regs 2015)" },
+  { n: 4, icon: Users,       label: "Democratic & Accessibility",     max: 25, items: "Chair · councillor named · accessibility statement · HTTPS · Register of Members' Interests (Localism Act 2011 § 29)" },
 ];
 
 const PROOF = [
-  { n: "11,057", label: "councils tracked",            sub: "every parish, town, city and community council in England" },
-  { n: "4,323",  label: "fully verified to date",      sub: "every agenda, minute and AGAR link is a live URL on the council's domain" },
-  { n: "100",    label: "points per council",          sub: "across 4 pillars and 12 statute-anchored indicators" },
-  { n: "5 days", label: "to resolve a challenge",      sub: "evidence in, published decision out" },
+  { n: "10,511", label: "councils tracked",            sub: "every parish, town, city and community council in England" },
+  { n: "4,160",  label: "fully verified",              sub: "scored end-to-end with click-through evidence on file" },
+  { n: "100",    label: "points · 14 indicators",      sub: "across 4 statute-anchored pillars · zero opinions" },
+  { n: "£0",     label: "to view any score, ever",     sub: "every council page free, forever, for everyone" },
 ];
 
 const PRO_FEATURES = [
@@ -51,15 +51,15 @@ const PRO_FEATURES = [
 ];
 
 const AUDIENCES = [
-  { icon: Users,       audience: "Residents",                   pitch: "See exactly what your council publishes — and what they don't. Every claim on this site is pinned to a public document." },
+  { icon: Users,       audience: "Residents",                   pitch: "See exactly what your council publishes — and what they don't. Every verified claim on this site is pinned to a public document." },
   { icon: ShieldCheck, audience: "Clerks and councillors",      pitch: "See your council the way residents see it. Fix errors for free in three fields. Subscribe if you want the tools to move up." },
   { icon: BarChart3,   audience: "Journalists and researchers", pitch: "Every score is evidence-first, versioned, and challengeable. Compare any two councils in seconds." },
 ];
 
 export default function Home() {
   useSEO({
-    title: "Council ClearSight — the independent transparency score for every English council",
-    description: "11,057 parish, town and community councils tracked across England. 4,323 fully verified to date — every claim links to a public document. Free to view. Gold £349/yr or Platinum £499/yr.",
+    title: "Council ClearSight — prove your council is well run, in one document",
+    description: "The independent transparency score for every parish, town and community council in England. 10,511 councils, 14 statutory indicators, 4,160 verified end-to-end. Free to view. Gold £349/yr · Platinum £499/yr.",
     canonicalPath: "/",
   });
   return (
@@ -69,20 +69,20 @@ export default function Home() {
         <div className="container max-w-6xl py-20 lg:py-28">
           <div className="max-w-3xl">
             <Badge className="mb-6 bg-accent/20 text-accent border-accent/30 font-mono text-[11px]">
-              {METHODOLOGY_VERSION} · refreshed April 2026
+              {METHODOLOGY_VERSION} · refreshed quarterly
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-[1.05] tracking-tight">
-              Council transparency is<br/>
-              <span className="text-accent">legally required.</span> We make it visible.
+              Prove your council is well run.<br/>
+              <span className="text-accent">In one document.</span> In one afternoon.
             </h1>
             <p className="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              An independent audit of every parish, town, city and community council in England — 11,057 in total. 4,323 fully verified to date, with the rest progressing through audit. Every published score is calculated from twelve things councils are already required to publish, and every claim links to a public document on the council's own domain.
+              The independent transparency score for every parish, town, city and community council in England. 10,511 councils. 14 things the law already requires them to publish. One score residents and auditors can trust — and 4,160 already verified end-to-end with click-through evidence.
             </p>
             <CouncilSearchBar />
             <div className="flex flex-wrap gap-6 mt-10 text-xs text-white/60">
               <span className="flex items-center gap-1.5"><Eye className="w-3.5 h-3.5" />Every score free for everyone</span>
               <span className="flex items-center gap-1.5"><Scale className="w-3.5 h-3.5" />Grounded in statute, not opinion</span>
-              <span className="flex items-center gap-1.5"><Flag className="w-3.5 h-3.5" />Any score can be challenged</span>
+              <span className="flex items-center gap-1.5"><Flag className="w-3.5 h-3.5" />Subscribing never buys a higher score</span>
             </div>
           </div>
         </div>
@@ -103,26 +103,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Reality check ───────────────────────── */}
+      {/* ── What we are (and aren't) ───────────────────────── */}
       <section className="container max-w-5xl py-20">
-        <div className="grid md:grid-cols-[1fr_auto] items-start gap-10">
-          <div className="max-w-2xl">
-            <Badge variant="outline" className="mb-3 font-mono text-[10px]">The uncomfortable truth</Badge>
-            <h2 className="text-3xl font-bold text-foreground mb-5 leading-tight">Your residents are already on this site. So are journalists.</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              The Transparency Code 2015, the Local Government Act 1972, the Accounts &amp; Audit Regulations, the Accessibility Regulations 2018 — all of these require councils to publish specific things. We've never invented an indicator. We check what's already required, then publish what we find.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              That means any council's score is a scorecard of compliance with laws already on the books. The only question is whether residents find out from you — or from us.
-            </p>
-          </div>
-          <Card className="p-6 bg-primary text-white border-primary max-w-xs">
-            <FileCheck className="w-6 h-6 text-accent mb-3" />
-            <div className="font-semibold mb-2">Every indicator cites a law.</div>
-            <p className="text-sm text-white/75 leading-relaxed mb-4">The statutory source is named on the methodology page, with section number.</p>
-            <Link href="/methodology"><Button size="sm" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10 w-full">Read the methodology <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link>
+        <div className="max-w-2xl mb-10">
+          <Badge variant="outline" className="mb-3 font-mono text-[10px]">Three things to know first</Badge>
+          <h2 className="text-3xl font-bold text-foreground mb-5 leading-tight">We don't invent rules. We check the ones already on the books.</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            The Transparency Code 2015, the Local Government Act 1972, the Accounts &amp; Audit Regulations 2015, the Accessibility Regulations 2018 and the Localism Act 2011 already require councils to publish specific things. We aggregate what's required, check whether it's actually published, and pin every claim to a URL on the council's own domain.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Card className="p-5 bg-white border-slate-200">
+            <Scale className="w-5 h-5 text-accent mb-3" />
+            <h3 className="font-semibold mb-2 text-sm">Every indicator cites a statute.</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Each of the 14 indicators maps to a specific section of UK law. We name the statute and section number on the methodology page.</p>
+          </Card>
+          <Card className="p-5 bg-white border-slate-200">
+            <FileCheck className="w-5 h-5 text-accent mb-3" />
+            <h3 className="font-semibold mb-2 text-sm">Wrong scores get fixed in 48 hours, free.</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">If we missed a document or used the wrong URL, submit it through the challenge form. Verified within two working days. No subscription required.</p>
+          </Card>
+          <Card className="p-5 bg-white border-slate-200">
+            <BadgeCheck className="w-5 h-5 text-accent mb-3" />
+            <h3 className="font-semibold mb-2 text-sm">Subscribing does not buy a higher score.</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">The same scoring rules apply to every council. Subscriptions buy roadmap, evidence packs, peer benchmarking and resident-ready summaries — never a different number.</p>
           </Card>
         </div>
+        <div className="mt-8"><Link href="/methodology"><Button variant="outline">Read the methodology <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link></div>
       </section>
 
       {/* ── Four pillars ───────────────────────── */}
@@ -130,7 +137,7 @@ export default function Home() {
         <div className="container max-w-6xl py-20">
           <div className="max-w-3xl mb-12">
             <Badge variant="outline" className="mb-3 font-mono text-[10px]">What we measure</Badge>
-            <h2 className="text-3xl font-bold text-foreground mb-4">Four pillars. Fourteen indicators. One honest number.</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Four pillars. Fourteen statutory indicators. One honest number.</h2>
             <p className="text-muted-foreground leading-relaxed">
               A high score means a resident can find, read, and scrutinise what the council is doing. A low score means they can't — and that's usually a statutory failure, not a stylistic choice.
             </p>
@@ -179,10 +186,10 @@ export default function Home() {
             <div className="flex items-center gap-2 mb-2"><Sparkles className="w-5 h-5 text-accent" /><h3 className="font-bold text-xl">Platinum</h3></div>
             <div className="mb-4"><span className="text-3xl font-bold">£499</span> <span className="text-muted-foreground">/year</span></div>
             <p className="text-sm mb-5 leading-relaxed">Top-12 quarter-sequenced roadmap, weekly tips, 10 peer comparisons + county/regional benchmarking, quarterly re-scoring, resident survey hub.</p>
-            <Link href="/pricing"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum — 14-day trial</Button></Link>
+            <Link href="/pricing"><Button className="w-full bg-accent hover:bg-accent/90 text-white">Start Platinum</Button></Link>
           </Card>
         </div>
-        <p className="text-xs text-center text-muted-foreground mt-6">Both ex VAT. 14-day trial on both. Cancel any time.</p>
+        <p className="text-xs text-center text-muted-foreground mt-6">Both ex VAT · annual billing · cancel any time · no human-support overhead.</p>
       </section>
 
       {/* ── Three sample reports ──────────────────── */}
@@ -273,7 +280,7 @@ export default function Home() {
       <section className="bg-slate-50 border-t border-slate-200">
         <div className="container max-w-4xl py-16 text-center">
           <h2 className="text-3xl font-bold mb-4">Find your council. Read its story.</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Four pillars. Fourteen indicators. One honest number. Every claim pinned to evidence you can click.</p>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Four pillars. Fourteen statutory indicators. One honest number. Every verified claim pinned to evidence you can click.</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/directory"><Button size="lg">Open the directory <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
             <Link href="/methodology"><Button size="lg" variant="outline"><BookOpen className="w-4 h-4 mr-2" /> How scores are calculated</Button></Link>
@@ -292,7 +299,7 @@ const SAMPLE_REPORT_COUNCILS = [
     score: 100,
     band: "Excellent",
     bandClasses: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    story: "What perfect transparency looks like — every statutory document published on a current website with valid evidence URLs across all 12 indicators.",
+    story: "What perfect transparency looks like — every statutory document published on a current website with click-through evidence across the full 14-indicator framework.",
   },
   {
     slug: "allhallows-parish-council",

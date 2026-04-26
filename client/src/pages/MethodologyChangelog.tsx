@@ -24,11 +24,19 @@ type Change = {
 
 const CHANGES: Change[] = [
   {
-    version: "v4.0",
+    version: "v4.1",
     status: "accepted",
     date: "26 April 2026",
+    title: "Eliminate clerk-email double-count; expand to 14 statute-anchored indicators",
+    rationale: "v4.0 had only 12 indicators and double-counted the clerk's email — the same string scored 5 points in indicator 1.2 (council email) and 10 points in indicator 3.2 (clerk email correspondence channel). Audit of 4,300+ verified councils showed 100% co-occurrence of the two values. v4.1 retires the clerk-email indicator and replaces it with two genuinely distinct Pillar-3 transparency items: (3.2) Internal Audit Report or Annual Governance Statement (Accounts and Audit Regs 2015 § 6) and (3.3) Notice of Public Inspection of accounts (Accounts and Audit Regs 2015 § 15). A fourteenth indicator is added in Pillar 4: (4.5) Register of Members' Interests (Localism Act 2011 § 29). Pillar totals stay at 25/25/25/25 = 100. New indicators are marked 'Not Assessed' on existing councils until the v1 evidence scraper backfills them. A directory dedupe also collapses 504 duplicate-name groups so the council count drops from 11,057 to 10,511.",
+    proposer: "Jonathan Sabarre (founder)",
+  },
+  {
+    version: "v4.0",
+    status: "accepted",
+    date: "20 April 2026",
     title: "Universal coverage, three audit states, click-through evidence URLs",
-    rationale: "v4.0 expands the registry from 7,031 to 11,057 councils — every parish, town, city and community council in England (ONS parish register + the Council ClearSight database). Introduces the three audit states (verified / under_audit / under_audit_with_url) so every council page is honest about whether it has been independently scanned. Every verified indicator now carries an evidence_url linking to a public document on the council's own domain. Bands renamed to Excellent (80–100) / Good (65–79) / Developing (50–64) / Needs Attention (0–49) to match the binary 80/65/50 cutoffs. The pillar weighting is corrected to four equal pillars at 25 points each.",
+    rationale: "v4.0 expanded the registry from 7,031 to 11,057 councils — every parish, town, city and community council in England (ONS parish register + the Council ClearSight database). Introduces the three audit states (verified / under_audit / under_audit_with_url) so every council page is honest about whether it has been independently scanned. Every verified indicator now carries an evidence_url linking to a public document on the council's own domain. Bands renamed to Excellent (80–100) / Good (65–79) / Developing (50–64) / Needs Attention (0–49) to match the binary 80/65/50 cutoffs. The pillar weighting is corrected to four equal pillars at 25 points each.",
     proposer: "Jonathan Sabarre (founder)",
   },
   {

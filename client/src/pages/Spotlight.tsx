@@ -39,7 +39,7 @@ interface Opportunity {
   evidence_source?: string;
   source_url?: string;
 }
-interface PillarBreakdownDb { digital?: number; governance?: number; community?: number; accessibility?: number; }
+interface PillarBreakdownDb { reachability?: number; meetings?: number; financial?: number; democratic?: number; }
 interface Dossier {
   slug: string;
   name: string;
@@ -119,7 +119,7 @@ export default function Spotlight() {
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
             <div>
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">
-                {d.methodology_version || "VDTI v4.0"} · Data extracted {d.data_extraction_date || "16 April 2026"} · Spotlight council
+                {d.methodology_version || "VDTI v4.1"} · Data extracted {d.data_extraction_date || "April 2026"} · Spotlight council
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-3 leading-tight">{d.name}</h1>
               <div className="flex flex-wrap items-center gap-2 text-sm text-white/70 mb-6">
@@ -152,10 +152,10 @@ export default function Spotlight() {
               <div className="text-xs text-white/60 mb-3">{d.band} · National rank {d.rank?.toLocaleString()} · Regional rank {d.regional_rank}</div>
               {d.pillar_breakdown_db && (
                 <div className="border-t border-white/10 pt-3 space-y-1 text-xs text-white/75 mb-4">
-                  <div className="flex justify-between"><span>Digital</span><span className="font-mono">{d.pillar_breakdown_db.digital}/25</span></div>
-                  <div className="flex justify-between"><span>Governance</span><span className="font-mono">{d.pillar_breakdown_db.governance}/25</span></div>
-                  <div className="flex justify-between"><span>Community</span><span className="font-mono">{d.pillar_breakdown_db.community}/25</span></div>
-                  <div className="flex justify-between"><span>Accessibility</span><span className="font-mono">{d.pillar_breakdown_db.accessibility}/25</span></div>
+                  <div className="flex justify-between"><span>Core Reachability</span><span className="font-mono">{d.pillar_breakdown_db.reachability ?? 0}/25</span></div>
+                  <div className="flex justify-between"><span>Meeting Transparency</span><span className="font-mono">{d.pillar_breakdown_db.meetings ?? 0}/25</span></div>
+                  <div className="flex justify-between"><span>Financial Accountability</span><span className="font-mono">{d.pillar_breakdown_db.financial ?? 0}/25</span></div>
+                  <div className="flex justify-between"><span>Democratic &amp; Accessibility</span><span className="font-mono">{d.pillar_breakdown_db.democratic ?? 0}/25</span></div>
                 </div>
               )}
               <div className="text-xs text-accent mb-3">+{totalUplift} pts uplift available with Platinum roadmap</div>
@@ -319,7 +319,7 @@ export default function Spotlight() {
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 font-mono text-[10px]">How this report is compiled</Badge>
           <h2 className="text-3xl font-bold mb-5">Verified, statute-grounded, evidence-pinned</h2>
           <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-            {d.compiled_method} Compiled {d.compiled_at} using VDTI v4.0 methodology.
+            {d.compiled_method} Compiled {d.compiled_at} using VDTI v4.1 methodology.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/methodology">

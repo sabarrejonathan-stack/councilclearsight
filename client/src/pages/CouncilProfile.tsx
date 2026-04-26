@@ -220,7 +220,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             </Link>
             <Link href="/for-clerks">
               <Button size="sm" variant="outline" className="w-full text-xs">
-                <Sparkles className="w-3.5 h-3.5 mr-1.5" />What Pro adds (£499/yr)
+                <Sparkles className="w-3.5 h-3.5 mr-1.5" />What Platinum adds (£499/yr)
               </Button>
             </Link>
           </Card>

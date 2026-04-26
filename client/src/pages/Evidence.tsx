@@ -1,7 +1,7 @@
 /**
  * Evidence page — Council ClearSight (VDTI v4)
  *
- * The statutory and academic basis for the 12 indicators.
+ * The statutory and academic basis for the 14 indicators.
  * Three sections: Statutory basis, Sector literature, Peer review.
  */
 
@@ -77,17 +77,19 @@ export default function Evidence() {
                   {
                     pillar: "Pillar 3: Financial Accountability (25 max)",
                     indicators: [
-                      { name: "3.1 — AGAR / annual financial statement published (15)", statute: "Accounts and Audit Regulations 2015 § 10 (publication of AGAR)", link: "https://www.legislation.gov.uk/uksi/2015/234/regulation/10" },
-                      { name: "3.2 — Clerk email — correspondence channel for audit (10)", statute: "Accounts and Audit Regulations 2015 (proper officer must be contactable for audit and inspection)", link: "https://www.legislation.gov.uk/uksi/2015/234/contents" },
+                      { name: "3.1 — AGAR / annual financial statement published (10)", statute: "Accounts and Audit Regulations 2015 § 10 (publication of AGAR)", link: "https://www.legislation.gov.uk/uksi/2015/234/regulation/10" },
+                      { name: "3.2 — Internal Audit Report or Annual Governance Statement (8)", statute: "Accounts and Audit Regulations 2015 § 6 (internal audit and governance reporting)", link: "https://www.legislation.gov.uk/uksi/2015/234/regulation/6" },
+                      { name: "3.3 — Notice of Public Inspection of accounts (7)", statute: "Accounts and Audit Regulations 2015 § 15 (period for the exercise of public rights)", link: "https://www.legislation.gov.uk/uksi/2015/234/regulation/15" },
                     ]
                   },
                   {
                     pillar: "Pillar 4: Democratic & Accessibility Transparency (25 max)",
                     indicators: [
-                      { name: "4.1 — Chair / Mayor named (5)", statute: "Local Government Act 1972 § 15 (chair election and record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/15" },
-                      { name: "4.2 — At least one councillor identified (5)", statute: "Local Government Act 1972 § 15 (electoral framework); Localism Act 2011 § 27 (member conduct)", link: "https://www.legislation.gov.uk/ukpga/2011/20/contents" },
+                      { name: "4.1 — Chair / Mayor named (4)", statute: "Local Government Act 1972 § 15 (chair election and record)", link: "https://www.legislation.gov.uk/ukpga/1972/70/section/15" },
+                      { name: "4.2 — At least one councillor identified (4)", statute: "Local Government Act 1972 § 15 (electoral framework); Localism Act 2011 § 27 (member conduct)", link: "https://www.legislation.gov.uk/ukpga/2011/20/contents" },
                       { name: "4.3 — Accessibility statement published (10)", statute: "Public Sector Bodies (Websites and Mobile Apps) Accessibility Regulations 2018", link: "https://www.legislation.gov.uk/uksi/2018/952/contents" },
-                      { name: "4.4 — Secure connection (HTTPS) (5)", statute: "UK GDPR Art. 32 (security of processing); NCSC HTTPS guidance for public sector", link: "https://www.ncsc.gov.uk/collection/topic-guides/web-management" },
+                      { name: "4.4 — Secure connection (HTTPS) (3)", statute: "UK GDPR Art. 32 (security of processing); NCSC HTTPS guidance for public sector", link: "https://www.ncsc.gov.uk/collection/topic-guides/web-management" },
+                      { name: "4.5 — Register of Members' Interests published (4)", statute: "Localism Act 2011 § 29 (register of members' interests; publication)", link: "https://www.legislation.gov.uk/ukpga/2011/20/section/29" },
                     ]
                   },
                 ].map((group, i) => (
@@ -199,7 +201,7 @@ export default function Evidence() {
             <Card className="p-6 bg-white border-slate-200">
               <h3 className="font-semibold text-foreground mb-2">See the full methodology</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Read the complete VDTI v4 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
+                Read the complete VDTI v4.1 framework, all 14 indicator definitions, scoring formula, dispute process, and change control procedures.
               </p>
               <Link href="/methodology">
                 <Button size="sm" variant="outline" className="w-full">

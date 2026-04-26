@@ -97,13 +97,13 @@ export default function PublicFooter() {
         {/* Trust bar */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40 mb-6">
-            <span>11,057 councils tracked · 4,323 verified</span>
+            <span>10,511 councils tracked · 4,160 verified</span>
             <span className="hidden sm:inline">·</span>
-            <span>4 pillars · 12 indicators · 100 points</span>
+            <span>4 pillars · 14 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>
-            <span>VDTI v4.0</span>
+            <span>VDTI v4.1</span>
             <span className="hidden sm:inline">·</span>
-            <span>Refreshed April 2026</span>
+            <span>Refreshed quarterly</span>
             <span className="hidden sm:inline">·</span>
             <span>Every verified claim pinned to an evidence URL</span>
           </div>

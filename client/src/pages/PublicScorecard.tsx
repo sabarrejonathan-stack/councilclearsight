@@ -248,7 +248,7 @@ export default function PublicScorecard() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-[#0f2942] mb-3">How the score is calculated</h2>
             <p className="text-slate-600 max-w-xl mx-auto">
-              The VDTI score is calculated from 12 observable indicators across four pillars, using only publicly available evidence.
+              The VDTI score is calculated from 14 statute-anchored observable indicators across four pillars, using only publicly available evidence.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-5">

@@ -45,3 +45,15 @@ scraper/**/__pycache__/
 
 # Skill staging folder (installed into user skills dir, not tracked in repo)
 .skill-export/
+
+# In-flight scraper outputs (regenerated each run)
+scraper/data/scrape_results_v41.csv
+scraper/data/crm_contacts.csv
+scraper/data/scrape_results_test50.csv
+scraper/data/crm_test50.csv
+scraper/data/test_input_50.csv
+scraper/data/councils_input_with_url.csv
+scraper/data/scrape.log
+
+# Claude Code session metadata
+.claude/

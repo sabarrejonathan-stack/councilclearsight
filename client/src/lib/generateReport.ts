@@ -507,11 +507,11 @@ export function generateCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (VDTI v4.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Core Reachability (30), Statutory Meeting Transparency (30), Financial Accountability (25), and Democratic & Accessibility (15). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
+    `Council ClearSight (VDTI v4.1) assesses every parish, town, city and community council in England across four pillars and fourteen observable indicators totalling 100 points: Core Reachability (25), Statutory Meeting Transparency (25), Financial Accountability (25), and Democratic & Accessibility (25). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018. We never invent an indicator.`,
     ``,
     `Where a council cannot yet be observed (no website, robots.txt opt-out, or scraper error), affected indicators are marked "Not Assessed" and excluded from the denominator rather than penalised. Platinum subscribers receive a full personalised audit within seven days of subscribing, with a written improvement roadmap.`,
     ``,
-    `Every score carries an evidence URL and can be challenged via the public disputes queue. Methodology version: VDTI v4.0.`,
+    `Every verified claim carries an evidence URL and can be challenged via the public disputes queue. Methodology version: VDTI v4.1.`,
   ];
   const methodLines = doc.splitTextToSize(methodText.join("\n"), contentWidth);
   doc.text(methodLines, margin, y);

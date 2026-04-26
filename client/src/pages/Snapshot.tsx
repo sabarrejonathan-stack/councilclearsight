@@ -143,7 +143,7 @@ export default function Snapshot() {
                 </div>
               )}
               {councilSearch.length < 2 && (
-                <p className="text-xs text-slate-400 mt-3">Type at least 2 characters to search from 11,057 councils</p>
+                <p className="text-xs text-slate-400 mt-3">Type at least 2 characters to search from 10,511 councils</p>
               )}
             </div>
           )}
@@ -262,9 +262,9 @@ export default function Snapshot() {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 12 observable indicators across four pillars." },
-              { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Core Reachability, Statutory Meeting Transparency, Financial Accountability, and Financial Accountability." },
-              { icon: Users, title: "National Ranking", body: "Where your council sits among 4,323 verified councils nationally and within your region." },
+              { icon: BarChart3, title: "VDTI Score", body: "Your council's overall score out of 100, calculated from 14 statute-anchored observable indicators across four pillars." },
+              { icon: ShieldCheck, title: "Pillar Breakdown", body: "Scores for each of the four pillars: Core Reachability, Statutory Meeting Transparency, Financial Accountability, and Democratic & Accessibility." },
+              { icon: Users, title: "National Ranking", body: "Where your council sits among 4,160 verified councils nationally and within your region." },
               { icon: Zap, title: "Top 2 Opportunities", body: "The two most impactful improvements your council could make to increase its VDTI score, with specific recommended actions." },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">

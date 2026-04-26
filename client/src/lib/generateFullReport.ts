@@ -479,7 +479,7 @@ export function generateFullCouncilReport(data: ReportInput): void {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...DARK);
   const methodText = [
-    `Council ClearSight (VDTI v4.0) assesses every parish, town, city and community council in England across four pillars and twelve observable indicators totalling 100 points: Core Reachability (25), Statutory Meeting Transparency (25), Financial Accountability (25), and Democratic & Accessibility (25). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
+    `Council ClearSight (VDTI v4.1) assesses every parish, town, city and community council in England across four pillars and fourteen observable indicators totalling 100 points: Core Reachability (25), Statutory Meeting Transparency (25), Financial Accountability (25), and Democratic & Accessibility (25). Every indicator maps to a statutory requirement — the Local Government Act 1972, the Transparency Code 2015, the Accounts & Audit Regulations 2015, the Localism Act 2011, or the Accessibility Regulations 2018.`,
     ``,
     `Evidence is gathered from council websites (via the ClearSight scraper, which respects robots.txt and enforces a 3-second politeness gate per host), the MHCLG council database, and published governance documents. Where a council cannot yet be observed, affected indicators are marked "Not Assessed" and excluded from the denominator.`,
     ``,

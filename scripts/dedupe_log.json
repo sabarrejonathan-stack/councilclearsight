@@ -1,0 +1,6558 @@
+{
+  "groups": 504,
+  "archived": 546,
+  "audit": [
+    {
+      "keeper": {
+        "slug": "abbess-beauchamp-and-berners-roding-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "abbess-beauchamp-and-berners-roding-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "abbeydore-and-bacton-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "abbeydore-bacton-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "abbotskerswell-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "abbotskerswell",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "addington-meeting-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "addington-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aldborough-thurgarton-parish-council",
+        "audit_status": "verified",
+        "score": 12
+      },
+      "removed": {
+        "slug": "aldborough-and-thurgarton-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aldbrough-st-john-parish-council",
+        "audit_status": "verified",
+        "score": 33
+      },
+      "removed": {
+        "slug": "aldbrough-st-john",
+        "audit_status": "verified",
+        "score": 33
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aldington-bonnington-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "aldington-bonnington",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aldwark-area-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "aldwark-area",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aldwark-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "aldwark-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "alne-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "alne",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "appledore-parish-council",
+        "audit_status": "verified",
+        "score": 84
+      },
+      "removed": {
+        "slug": "appledore",
+        "audit_status": "verified",
+        "score": 84
+      }
+    },
+    {
+      "keeper": {
+        "slug": "appleton-le-moors-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "appleton-le-moors",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "appleton-le-moors-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "appleton-le-moors-parish-council-1",
+        "audit_status": "verified",
+        "score": 35
+      }
+    },
+    {
+      "keeper": {
+        "slug": "arkengarthdale-parish-council",
+        "audit_status": "verified",
+        "score": 49
+      },
+      "removed": {
+        "slug": "arkengarthdale",
+        "audit_status": "verified",
+        "score": 49
+      }
+    },
+    {
+      "keeper": {
+        "slug": "arlington-parish-council-1",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "arlington-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ascott-under-wychwood-parish-council-1",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "ascott-under-wychwood-parish-council",
+        "audit_status": "verified",
+        "score": 16
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashby-de-la-zouch-town-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "ashby-de-la-zouch-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashby-st-mary-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "ashby-st-mary-parish-council-1",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashill-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "ashill-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashton-hayes-and-horton-cum-peel-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "ashton-hayes-horton-cum-peel-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "ashton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "ashton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashurst-colbury-parish-council",
+        "audit_status": "verified",
+        "score": 90
+      },
+      "removed": {
+        "slug": "ashurst-and-colbury-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashwell-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "ashwell-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ashwellthorpe-fundenhall-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "ashwellthorpe-and-fundenhall-parish-council",
+        "audit_status": "verified",
+        "score": 16
+      }
+    },
+    {
+      "keeper": {
+        "slug": "aythorpe-roding",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "aythorpe-roding-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bacton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "bacton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bacton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "bacton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bagby-and-balk-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "bagby-and-balk",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bainbridge-parish-council",
+        "audit_status": "verified",
+        "score": 41
+      },
+      "removed": {
+        "slug": "bainbridge",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "barford-st-martin-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "barford-st-martin-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "barford-st-martin-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "barford-st-martin",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "barsham-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "barsham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "barton-parish-council",
+        "audit_status": "verified",
+        "score": 84
+      },
+      "removed": {
+        "slug": "barton",
+        "audit_status": "verified",
+        "score": 84
+      }
+    },
+    {
+      "keeper": {
+        "slug": "barton-under-needwood-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "barton-under-needwood-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "beal-parish-council",
+        "audit_status": "verified",
+        "score": 69
+      },
+      "removed": {
+        "slug": "beal",
+        "audit_status": "verified",
+        "score": 69
+      }
+    },
+    {
+      "keeper": {
+        "slug": "beausale-haseley-honiley-and-wroxall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "beausale-haseley-honiley-wroxall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "beckingham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "beckingham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bedale-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "bedale",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "beighton-moulton-st-mary-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "beighton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bekesbourne-with-patrixbourne-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "bekesbourne-with-patrixbourne",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bellerby-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "bellerby",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "belton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "belton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "benington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "benington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bentley-parish-council-1",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "bentley-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "berwick-st-john-parish-council",
+        "audit_status": "verified",
+        "score": 43
+      },
+      "removed": {
+        "slug": "berwick-st-john-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bewerley-parish-council",
+        "audit_status": "verified",
+        "score": 95
+      },
+      "removed": {
+        "slug": "bewerley",
+        "audit_status": "verified",
+        "score": 95
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bidford-on-avon-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "bidford-on-avon-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "biggin-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "biggin",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bilbrough-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "bilbrough",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bilsdale-midcable-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "bilsdale-midcable",
+        "audit_status": "verified",
+        "score": 83
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bilsington-parish-council",
+        "audit_status": "verified",
+        "score": 90
+      },
+      "removed": {
+        "slug": "bilsington",
+        "audit_status": "verified",
+        "score": 90
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bilton-in-ainsty-with-bickerton",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "bilton-in-ainsty-with-bickerton-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "birdsall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "birdsall",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "birstwith-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "birstwith",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bishop-monkton-parish-council",
+        "audit_status": "verified",
+        "score": 75
+      },
+      "removed": {
+        "slug": "bishop-monkton",
+        "audit_status": "verified",
+        "score": 75
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bolton-abbey-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "bolton-abbey",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bottesford-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "bottesford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bradenham-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "bradenham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bradfield-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "bradfield-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bradfield-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "bradfield-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bradford-on-avon-town-council",
+        "audit_status": "verified",
+        "score": 43
+      },
+      "removed": {
+        "slug": "bradford-on-avon-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brafferton-and-helperby-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "brafferton-and-helperby",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brayton-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "brayton",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brettenham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "brettenham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bridford-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "bridford",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "broadwell-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "broadwell-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brockhampton-bromyard-bringsty-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "brockhampton-old-gore-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brockley-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "brockley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bromham-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "bromham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brompton-by-sawdon-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "brompton-by-sawdon",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "brompton-parish-council",
+        "audit_status": "verified",
+        "score": 44
+      },
+      "removed": {
+        "slug": "brompton",
+        "audit_status": "verified",
+        "score": 44
+      }
+    },
+    {
+      "keeper": {
+        "slug": "broome-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "broome-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "bullington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "bullington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burley-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "burley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burley-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "burley-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burn-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "burn",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burneston-swainby-with-allerthorpe-and-theakston-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "burneston-swainby-with-allerthorpe-and-theakston",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burnham-on-sea-highbridge-town-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "burnham-on-sea-and-highbridge-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burniston-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "burniston",
+        "audit_status": "verified",
+        "score": 77
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burton-cum-walden-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "burton-cum-walden",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burton-leonard-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "burton-leonard",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "burwell-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "burwell-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "buttermere-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "buttermere-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "caldecote-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "caldecote-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "caldecote-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "caldecote-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "callow-and-haywood-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "callow-haywood-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "camblesforth-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "camblesforth",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "camerton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "camerton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "capel-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "capel-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "carlton-selby-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "carlton-hambleton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "carlton-town-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "carlton-town",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "carthorpe-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "carthorpe",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "castleton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "castleton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cattal-hunsingore-and-walshford-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "cattal-hunsingore-and-walshford",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "catterick-village-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "catterick-village",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chailey-parish-council",
+        "audit_status": "verified",
+        "score": 52
+      },
+      "removed": {
+        "slug": "chailey-parish-council-1",
+        "audit_status": "verified",
+        "score": 46
+      }
+    },
+    {
+      "keeper": {
+        "slug": "challock-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "challock",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "charing-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "charing",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cherington-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "cherington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chestfield-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "chestfield",
+        "audit_status": "verified",
+        "score": 83
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chickney-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "chickney",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chilham-parish-council",
+        "audit_status": "verified",
+        "score": 89
+      },
+      "removed": {
+        "slug": "chilham",
+        "audit_status": "verified",
+        "score": 89
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chilton-parish-council-1",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "chilton-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chislet-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "chislet",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "chorley-wilmslow-west-and-chorley-ward-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "chorley-wrenbury-ward-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "clapham-cum-newby-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "clapham-cum-newby",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "clavering",
+        "audit_status": "verified",
+        "score": 63
+      },
+      "removed": {
+        "slug": "clavering-parish-council",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "clee-st-margaret-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "clee-st-margaret-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "clopton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "clopton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "colby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "colby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "combe-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "combe-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "combe-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "combe-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cossington-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "cossington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cottam-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "cottam-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cotton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "cotton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cranbrook-and-sissinghurst-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "cranbrook-sissinghurst-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "creeting-st-mary-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "creeting-st-mary-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "croft-on-tees-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "croft-on-tees",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "croome-d-abitot-parish",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "croome-dabitot-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cropton-and-cawthorne-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "cropton-and-cawthorne",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "cuddington-malpas-ward-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "cuddington-weaver-and-cuddington-ward-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dadlington-and-sutton-cheney-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "dadlington-sutton-cheney-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dalton-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "dalton",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dalton-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "dalton-richmondshire-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "danby-group-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "danby-group",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "danby-wiske-with-lazenby-parish-council",
+        "audit_status": "verified",
+        "score": 100
+      },
+      "removed": {
+        "slug": "danby-wiske-with-lazenby",
+        "audit_status": "verified",
+        "score": 100
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dartmoor-forest-parish-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "dartmoor-forest-parish",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "debden",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "debden-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "delamere-and-oakmere-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "delamere-oakmere-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "denham-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "denham-parish-council-1",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dishforth-parish-council",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "dishforth",
+        "audit_status": "verified",
+        "score": 51
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ditchling-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "ditchling-parish-council-1",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "drewsteignton-parish-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "drewsteignton-parish",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "driffield-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "driffield-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dunchideock-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "dunchideock",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dunham-on-the-hill-and-hapsford-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "dunham-on-the-hill-and-hapsford-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "dunston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "dunston-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "easby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "easby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "easington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "easington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "easingwold-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "easingwold",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-ayton-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "east-ayton",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-chiltington-parish-council-1",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "east-chiltington-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-cowton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "east-cowton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-dean-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "east-dean-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-harlsey-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "east-harlsey",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "east-witton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "east-witton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "eastfield-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "eastfield",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ebberston-with-yedingham-and-bickley-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "ebberston-with-yedingham-and-bickley",
+        "audit_status": "verified",
+        "score": 88
+      }
+    },
+    {
+      "keeper": {
+        "slug": "egerton-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "egerton",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "elkington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "elkington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ellerby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ellerby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "eryholme-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "eryholme",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "exton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "exton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fawley-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "fawley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fawley-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "fawley-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "featherstone-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "featherstone-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "featherstone-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "featherstone-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "filey-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "filey",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fishbourne-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "fishbourne-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fleet-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "fleet-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fleet-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "fleet-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fordham-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "fordham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "fordham-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "fordham-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "foston-with-thornton-le-clay-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "foston-with-thornton-le-clay",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "frampton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "frampton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "gamston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "gamston-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "germansweek-parish-parish-council",
+        "audit_status": "verified",
+        "score": 75
+      },
+      "removed": {
+        "slug": "germansweek-parish",
+        "audit_status": "verified",
+        "score": 75
+      }
+    },
+    {
+      "keeper": {
+        "slug": "glaisdale-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "glaisdale",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "godshill-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "godshill-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "grassington-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "grassington",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "graveley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "graveley-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "great-canfield-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "great-canfield",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "great-chesterford-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "great-chesterford",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "great-dunmow-parish-council",
+        "audit_status": "verified",
+        "score": 41
+      },
+      "removed": {
+        "slug": "great-dunmow",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "great-easton-and-tilty-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "great-easton-and-tilty",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "great-easton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "great-easton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "green-hammerton-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "green-hammerton",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "grewelthorpe-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "grewelthorpe",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "grinton-and-ellerton-abbey-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "grinton-and-ellerton-abbey",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hackness-and-harwood-dale-group-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "hackness-and-harwood-dale-group",
+        "audit_status": "verified",
+        "score": 77
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hadstock-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "hadstock",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hampsthwaite-parish-council",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "hampsthwaite",
+        "audit_status": "verified",
+        "score": 51
+      }
+    },
+    {
+      "keeper": {
+        "slug": "harbledown-and-rough-common-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "harbledown-and-rough-common",
+        "audit_status": "verified",
+        "score": 88
+      }
+    },
+    {
+      "keeper": {
+        "slug": "harthill-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "harthill-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hastingleigh-parish-council",
+        "audit_status": "verified",
+        "score": 90
+      },
+      "removed": {
+        "slug": "hastingleigh",
+        "audit_status": "verified",
+        "score": 90
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hatfield-broad-oak-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "hatfield-broad-oak",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hawes-and-high-abbotside-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "hawes-and-high-abbotside",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hawnby-parish-council",
+        "audit_status": "verified",
+        "score": 22
+      },
+      "removed": {
+        "slug": "hawnby",
+        "audit_status": "verified",
+        "score": 22
+      }
+    },
+    {
+      "keeper": {
+        "slug": "healaugh-and-catterton-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "healaugh-and-catterton",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "healey-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "healey-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "heck-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "heck",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "henham-parish-council",
+        "audit_status": "verified",
+        "score": 81
+      },
+      "removed": {
+        "slug": "henham",
+        "audit_status": "verified",
+        "score": 81
+      }
+    },
+    {
+      "keeper": {
+        "slug": "henley-in-arden-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "henley-in-arden-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hennock-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "hennock",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hensall-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "hensall",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hermitage-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hermitage-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hersden-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "hersden",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hewelsfield-and-brockweir-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "hewelsfield-brockweir-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hewick-and-hutton-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "hewick-and-hutton",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "high-and-low-bishopside-pateley-bridge-town-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "high-and-low-bishopside-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "high-easter-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "high-easter",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "high-roding-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "high-roding",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "higham-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "higham-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hilton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hilton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hilton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hilton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hilton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hilton-parish-4",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hilton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hilton-parish-5",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hilton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "hilton-parish-6",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hinton-st-george-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "hinton-st-george-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hirst-courtney-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "hirst-courtney",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hoath-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "hoath",
+        "audit_status": "verified",
+        "score": 88
+      }
+    },
+    {
+      "keeper": {
+        "slug": "holton-st-mary-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "holton-st-mary-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "holwell-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "holwell-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "holwell-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "holwell-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hope-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "hope-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hornby-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "hornby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "horrabridge-parish-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "horrabridge-parish",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "horton-in-ribblesdale-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "horton-in-ribblesdale",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "houghton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "houghton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "houghton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "houghton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "how-caple-sollershope-and-yatton-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "how-caple-sollershope-yatton-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hudswell-and-district-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "hudswell-and-district",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hunston-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "hunston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "husthwaite-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "husthwaite",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "hutton-le-hole",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "hutton-le-hole-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "huttons-ambo-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "huttons-ambo",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "iford-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "iford-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ingham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ingham-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ingham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ingham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ingleby-arncliffe-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "ingleby-arncliffe",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ipplepen-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "ipplepen",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "irton-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "irton",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "islip-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "islip-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kenardington-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "kenardington",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kenn-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "kenn-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "keswick-intwood-parish-council",
+        "audit_status": "verified",
+        "score": 35
+      },
+      "removed": {
+        "slug": "keswick-and-intwood-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kettlewell-with-starbotton-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kettlewell-with-starbotton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kettlewell-with-starbotton-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kettlewell-with-starbotton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kexby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kexby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kilham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kilham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "killinghall-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "killinghall",
+        "audit_status": "verified",
+        "score": 77
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kimpton-parish",
+        "audit_status": "verified",
+        "score": 35
+      },
+      "removed": {
+        "slug": "kimpton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kings-bromley-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kings-bromley-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kingsnorth-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "kingsnorth",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kingston-parish-council-1",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "kingston-parish-council-2",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kingston-st-mary-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "kingston-st-mary-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirby-hill-and-district-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "kirby-hill-and-district",
+        "audit_status": "verified",
+        "score": 83
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirby-hill-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "kirby-hill-parish-meeting-richmondshire",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirby-wiske-and-newsham-with-breckenbrough-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "kirby-wiske-and-newsham-with-breckenbrough",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirk-deighton-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "kirk-deighton",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirk-hammerton-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "kirk-hammerton",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirkby-malzeard-laverton-and-dallowgill-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "kirkby-malzeard-laverton-and-dallowgill",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirkby-overblow-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "kirkby-overblow",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "kirkbymoorside-parish-council",
+        "audit_status": "verified",
+        "score": 95
+      },
+      "removed": {
+        "slug": "kirkbymoorside",
+        "audit_status": "verified",
+        "score": 95
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lamerton-parish-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "lamerton-parish",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "landrake-with-st-erney-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "landrake-with-st-erney-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "langford-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "langford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "langford-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "langford-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "langford-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "langford-parish-4",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "langthorpe-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "langthorpe",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "latimer-and-ley-hill-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "latimer-ley-hill-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "laxton-and-moorhouse-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "laxton-moorhouse-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "laxton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "laxton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lea-by-backford-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "lea-by-backford-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "leaden-roding-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "leaden-roding",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "leavening-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "leavening",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ledsham-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "ledsham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lewes-town-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "lewes-town-council-1",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "leyburn-town-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "leyburn-town",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lindsell-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "lindsell",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lingwood-burlingham-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "lingwood-and-burlingham-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "linton-bromyard-bringsty-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "linton-penyard-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-bardfield-parish-council",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "little-bardfield",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-chart-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "little-chart",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-chesterford-parish-council",
+        "audit_status": "verified",
+        "score": 41
+      },
+      "removed": {
+        "slug": "little-chesterford",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-dunmow-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "little-dunmow",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-easton-parish-council",
+        "audit_status": "verified",
+        "score": 81
+      },
+      "removed": {
+        "slug": "little-easton",
+        "audit_status": "verified",
+        "score": 81
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-hallingbury-parish-council",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "little-hallingbury",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-ouseburn-kirby-hall-and-thorpe-underwoods",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "little-ouseburn-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "little-smeaton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "little-smeaton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "littlebourne-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      },
+      "removed": {
+        "slug": "littlebourne",
+        "audit_status": "verified",
+        "score": 57
+      }
+    },
+    {
+      "keeper": {
+        "slug": "littlebury-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "littlebury",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "llanwarne-and-district-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "llanwarne-district-group-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "long-preston-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "long-preston",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "longdon-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "longdon-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lothersdale-parish-council",
+        "audit_status": "verified",
+        "score": 69
+      },
+      "removed": {
+        "slug": "lothersdale",
+        "audit_status": "verified",
+        "score": 69
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lowick-parish",
+        "audit_status": "verified",
+        "score": 35
+      },
+      "removed": {
+        "slug": "lowick-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lowick-parish",
+        "audit_status": "verified",
+        "score": 35
+      },
+      "removed": {
+        "slug": "lowick-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "luddington-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "luddington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ludford-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "ludford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lullington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "lullington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "lutton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "lutton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "luttons-parish-council",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "luttons",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "maltby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "maltby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "malton-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "malton",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "manston-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "manston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "manton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "manton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "margaret-roding-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "margaret-roding",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "marton-le-moor-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "marton-le-moor-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "marton-le-moor-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "marton-le-moor",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "marwood-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "marwood-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "meavy-parish-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "meavy-parish",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "mersham-parish-council",
+        "audit_status": "verified",
+        "score": 90
+      },
+      "removed": {
+        "slug": "mersham",
+        "audit_status": "verified",
+        "score": 90
+      }
+    },
+    {
+      "keeper": {
+        "slug": "mickleton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "mickleton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "molash-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "molash",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "monkton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "monkton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "moretonhampstead-parish-council",
+        "audit_status": "verified",
+        "score": 40
+      },
+      "removed": {
+        "slug": "moretonhampstead",
+        "audit_status": "verified",
+        "score": 40
+      }
+    },
+    {
+      "keeper": {
+        "slug": "muker-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "muker",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "nateby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "nateby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "nawton-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "nawton",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newbiggin-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "newbiggin-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newbiggin-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "newbiggin-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newby-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "newby",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newchurch-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "newchurch-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newhaven-town-council-1",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "newhaven-town-council",
+        "audit_status": "verified",
+        "score": 51
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newick-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "newick-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-by-the-sea-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "newton-by-the-sea-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-golden-valley-south-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-parish-4",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-parish-5",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "newton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "newton-queenswood-ward-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "no-mans-heath-and-district-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "no-mans-heath-district-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "normanton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "normanton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "north-bovey-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "north-bovey",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "north-duffield-parish-council",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "north-duffield",
+        "audit_status": "verified",
+        "score": 51
+      }
+    },
+    {
+      "keeper": {
+        "slug": "north-tawton-town-parish-council",
+        "audit_status": "verified",
+        "score": 81
+      },
+      "removed": {
+        "slug": "north-tawton-town",
+        "audit_status": "verified",
+        "score": 81
+      }
+    },
+    {
+      "keeper": {
+        "slug": "northallerton-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      },
+      "removed": {
+        "slug": "northallerton",
+        "audit_status": "verified",
+        "score": 57
+      }
+    },
+    {
+      "keeper": {
+        "slug": "northlew-parish-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "northlew-parish",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "norton-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "norton-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ogbourne-st-george-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ogbourne-st-george-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ogwell-parish-council",
+        "audit_status": "verified",
+        "score": 35
+      },
+      "removed": {
+        "slug": "ogwell",
+        "audit_status": "verified",
+        "score": 35
+      }
+    },
+    {
+      "keeper": {
+        "slug": "okehampton-hamlets-parish-parish-council",
+        "audit_status": "verified",
+        "score": 75
+      },
+      "removed": {
+        "slug": "okehampton-hamlets-parish",
+        "audit_status": "verified",
+        "score": 75
+      }
+    },
+    {
+      "keeper": {
+        "slug": "osmotherley-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "osmotherley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "otley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "otley-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "oving-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "oving-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "pannal-and-burn-bridge-parish-council",
+        "audit_status": "verified",
+        "score": 63
+      },
+      "removed": {
+        "slug": "pannal-and-burn-bridge",
+        "audit_status": "verified",
+        "score": 63
+      }
+    },
+    {
+      "keeper": {
+        "slug": "parham-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "parham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "peacehaven-town-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "peacehaven-town-council-1",
+        "audit_status": "verified",
+        "score": 81
+      }
+    },
+    {
+      "keeper": {
+        "slug": "petham-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "petham",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "pickering-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "pickering",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "pickhill-with-roxby-and-sinderby-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "pickhill-with-roxby-and-sinderby",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "plasterdown-grouped-parish-parish-council",
+        "audit_status": "verified",
+        "score": 40
+      },
+      "removed": {
+        "slug": "plasterdown-grouped-parish",
+        "audit_status": "verified",
+        "score": 40
+      }
+    },
+    {
+      "keeper": {
+        "slug": "pluckley-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "pluckley",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "preston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "preston-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "preston-parish-4",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "preston-parish-5",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-under-scar-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "preston-under-scar-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "preston-under-scar-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "preston-under-scar",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "pulham-st-mary-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "pulham-st-mary-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "quendon-and-rickling-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "quendon-and-rickling",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "radcliffe-on-trent-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "radcliffe-on-trent-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "radwinter-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "radwinter",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "raskelf-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "raskelf",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rawcliffe-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "rawcliffe-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "redmire-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "redmire",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "richard-s-castle-shropshire-parish",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "richards-castle-hereford-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "richards-castle-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "richards-castle-herefordshire-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ringmer-parish-council",
+        "audit_status": "verified",
+        "score": 100
+      },
+      "removed": {
+        "slug": "ringmer-parish-council-1",
+        "audit_status": "verified",
+        "score": 94
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ripley-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "ripley",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ripon-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "ripon",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rochford-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "rochford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rodmell-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "rodmell-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rodsley-and-yeaveley-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "rodsley-and-yeaveley",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rolleston-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "rolleston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "romanby-parish-council",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "romanby",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "romsley-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "romsley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rosedale-east-and-west-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "rosedale-east-and-west",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rothley-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "rothley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "roughton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "roughton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "roxby-group-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "roxby-group",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rudby-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "rudby",
+        "audit_status": "verified",
+        "score": 83
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rushton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "rushton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "rushton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "rushton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ryther-cum-ossendyke-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ryther-cum-ossendyke",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "saffron-walden-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "saffron-walden",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sandford-st-martin-parish-council",
+        "audit_status": "verified",
+        "score": 51
+      },
+      "removed": {
+        "slug": "sandford-st-martin-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sandhutton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "sandhutton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "scarborough-town-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "scarborough-town",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "scrayingham-parish-council",
+        "audit_status": "verified",
+        "score": 64
+      },
+      "removed": {
+        "slug": "scrayingham",
+        "audit_status": "verified",
+        "score": 64
+      }
+    },
+    {
+      "keeper": {
+        "slug": "seaford-town-council-1",
+        "audit_status": "verified",
+        "score": 89
+      },
+      "removed": {
+        "slug": "seaford-town-council",
+        "audit_status": "verified",
+        "score": 89
+      }
+    },
+    {
+      "keeper": {
+        "slug": "seamer-scarborough",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "seamer-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "selby-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "selby",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "settle-parish-council",
+        "audit_status": "verified",
+        "score": 52
+      },
+      "removed": {
+        "slug": "settle",
+        "audit_status": "verified",
+        "score": 52
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sewards-end-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "sewards-end",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sharow-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "sharow",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sheepstor-parish-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "sheepstor-parish",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sherborne-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "sherborne-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sherburn-in-elmet-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "sherburn-in-elmet",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sherburn-in-elmet-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "sherburn-in-elmet-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sheringham-upper-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "sheringham-town-council",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "shillingford-st-george-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "shillingford-st-george",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "shipston-on-stour-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "shipston-on-stour-town-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "shipton-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "shipton",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "siddington-parish",
+        "audit_status": "verified",
+        "score": 41
+      },
+      "removed": {
+        "slug": "siddington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "singleton-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "singleton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "skeeby-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "skeeby",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "skipton-on-swale-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "skipton-on-swale-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "skipton-parish-council",
+        "audit_status": "verified",
+        "score": 52
+      },
+      "removed": {
+        "slug": "skipton",
+        "audit_status": "verified",
+        "score": 52
+      }
+    },
+    {
+      "keeper": {
+        "slug": "somerby-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "somerby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "south-stoke-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "south-stoke-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "south-tawton-parish-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "south-tawton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "southease-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "southease-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sowerby-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "sowerby",
+        "audit_status": "verified",
+        "score": 47
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-agnes-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-agnes-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-albans-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "st-albans-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-allen-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-allen-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-ann-without-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-ann-without-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-blaise-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-blaise-town-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-breock-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-breock-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-breward-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-breward-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-cleer-parish-council",
+        "audit_status": "verified",
+        "score": 48
+      },
+      "removed": {
+        "slug": "st-cleer-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-clement-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "st-clement-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-columb-major-town-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "st-columb-major-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-day-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-day-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-dennis-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-dennis-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-endellion-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "st-endellion-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-enoder-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "st-enoder-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-erme-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "st-erme-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-erth-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "st-erth-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-ervan-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-ervan-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-eval-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-eval-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-ewe-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-ewe-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-gennys-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-gennys-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-germans-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-germans-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-hilary-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-hilary-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-issey-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-issey-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-ives-town-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-ives-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-john-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "st-john-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-juliot-parish-council",
+        "audit_status": "verified",
+        "score": 90
+      },
+      "removed": {
+        "slug": "st-juliot-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-just-in-roseland-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      },
+      "removed": {
+        "slug": "st-just-in-roseland-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-keverne-parish-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "st-keverne-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-kew-parish-council",
+        "audit_status": "verified",
+        "score": 36
+      },
+      "removed": {
+        "slug": "st-kew-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-levan-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "st-levan-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-mabyn-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-mabyn-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-martin-in-meneage-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-martin-in-meneage-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-martin-s-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-martin-s-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-martin-s-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-martin-s-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-martins-parish-council-1",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "st-martins",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-martins-parish-council-1",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "st-martins-parish-council-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-mary-bourne-parish-council",
+        "audit_status": "verified",
+        "score": 94
+      },
+      "removed": {
+        "slug": "st-mary-bourne-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-mellion-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-mellion-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-mewan-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-mewan-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-michael-s-mount-parish",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-michaels-mount-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-minver-highlands-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-minver-highlands-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-minver-lowlands-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "st-minver-lowlands-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-neot-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "st-neot-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-neots-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-neots-town-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-newlyn-east-parish-council",
+        "audit_status": "verified",
+        "score": 74
+      },
+      "removed": {
+        "slug": "st-newlyn-east-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-pinnock-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-pinnock-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-sampson-parish-council",
+        "audit_status": "verified",
+        "score": 81
+      },
+      "removed": {
+        "slug": "st-sampson-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-stephen-in-brannel-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-stephen-in-brannel-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-teath-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "st-teath-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-tudy-parish-council",
+        "audit_status": "verified",
+        "score": 74
+      },
+      "removed": {
+        "slug": "st-tudy-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-veep-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-veep-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "st-weonards-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "st-weonards-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stanhope-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "stanhope",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stansted-mountfitchet-parish-council",
+        "audit_status": "verified",
+        "score": 94
+      },
+      "removed": {
+        "slug": "stansted-mountfitchet",
+        "audit_status": "verified",
+        "score": 94
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stanwick-st-john-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "stanwick-st-john",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "staunton-coleford-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "staunton-glos-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      }
+    },
+    {
+      "keeper": {
+        "slug": "staunton-parish",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "staunton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "staveley-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "staveley-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stokeinteignhead-parish-council",
+        "audit_status": "verified",
+        "score": 70
+      },
+      "removed": {
+        "slug": "stokeinteignhead",
+        "audit_status": "verified",
+        "score": 70
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stokesley-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "stokesley",
+        "audit_status": "verified",
+        "score": 88
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stowford-parish-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "stowford-parish",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "streat-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "streat-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "strethall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "strethall",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "strumpshaw-buckenham-hassingham-parish-council",
+        "audit_status": "verified",
+        "score": 69
+      },
+      "removed": {
+        "slug": "strumpshaw-parish-council",
+        "audit_status": "verified",
+        "score": 41
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sturry-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "sturry",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "stutton-with-hazlewood-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "stutton-with-hazlewood",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "sutton-in-craven-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "sutton-in-craven",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tadcaster-parish-council",
+        "audit_status": "verified",
+        "score": 81
+      },
+      "removed": {
+        "slug": "tadcaster",
+        "audit_status": "verified",
+        "score": 81
+      }
+    },
+    {
+      "keeper": {
+        "slug": "takeley-parish-council",
+        "audit_status": "verified",
+        "score": 46
+      },
+      "removed": {
+        "slug": "takeley",
+        "audit_status": "verified",
+        "score": 46
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tarring-neville-parish-meeting-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "tarring-neville-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "taynton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "taynton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tedburn-st-mary-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "tedburn-st-mary",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "telscombe-town-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "telscombe-town-council-1",
+        "audit_status": "verified",
+        "score": 77
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tenterden-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "tenterden",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "terrington-st-clement-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "terrington-st-clement-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tharston-and-hapton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "tharston-hapton-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thirsk-parish-council",
+        "audit_status": "verified",
+        "score": 75
+      },
+      "removed": {
+        "slug": "thirsk",
+        "audit_status": "verified",
+        "score": 75
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornbury-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thornbury-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornbury-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thornbury-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thorney-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thorney-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornton-in-craven-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thornton-in-craven-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornton-le-dale-parish-council",
+        "audit_status": "verified",
+        "score": 77
+      },
+      "removed": {
+        "slug": "thornton-le-dale",
+        "audit_status": "verified",
+        "score": 77
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornton-le-moor-and-thornton-le-street-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thornton-le-moor-and-thornton-le-street",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thornton-le-moors-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thornton-le-moors-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thorpe-st-andrew-town-council",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "thorpe-st-andrew-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "threshfield-parish-council",
+        "audit_status": "verified",
+        "score": 88
+      },
+      "removed": {
+        "slug": "threshfield",
+        "audit_status": "verified",
+        "score": 88
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thruxton-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "thruxton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thurlaston-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "thurlaston-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thurlby-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thurlby-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "thurnham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "thurnham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tilney-st-lawrence-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "tilney-st-lawrence-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tiverton-and-tilstone-fearnall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "tiverton-tilstone-fearnall-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "topcliffe-parish-council",
+        "audit_status": "verified",
+        "score": 28
+      },
+      "removed": {
+        "slug": "topcliffe",
+        "audit_status": "verified",
+        "score": 28
+      }
+    },
+    {
+      "keeper": {
+        "slug": "towton-grimston-and-kirkby-wharfe-with-north-milford-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "towton-grimston-and-kirkby-wharfe-with-north-milford",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "tunstall-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "tunstall",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "uffington-parish-council-1",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      },
+      "removed": {
+        "slug": "uffington-parish-council",
+        "audit_status": "under_audit_with_url",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "ugley-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "ugley",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "upper-heyford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "upper-heyford-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "waddington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "waddington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "walkhampton-parish-parish-council",
+        "audit_status": "verified",
+        "score": 65
+      },
+      "removed": {
+        "slug": "walkhampton-parish",
+        "audit_status": "verified",
+        "score": 65
+      }
+    },
+    {
+      "keeper": {
+        "slug": "waltham-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      },
+      "removed": {
+        "slug": "waltham",
+        "audit_status": "verified",
+        "score": 57
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wanborough-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wanborough-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "warthill-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "warthill",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "watlington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "watlington-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "watton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "watton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "weeting-with-broomhill-parish-council",
+        "audit_status": "verified",
+        "score": 57
+      },
+      "removed": {
+        "slug": "weeting-with-broomhill-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "weeton-parish-council",
+        "audit_status": "verified",
+        "score": 32
+      },
+      "removed": {
+        "slug": "weeton",
+        "audit_status": "verified",
+        "score": 32
+      }
+    },
+    {
+      "keeper": {
+        "slug": "welburn-kirkbymoorside-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "welburn-malton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "welburn-kirkbymoorside-parish-meeting",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "welburn-sheriff-hutton-derwent-ward-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "welford-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "welford-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wendens-ambo-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wendens-ambo",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "west-end-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "west-end-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "west-witton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "west-witton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "weston-underwood-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "weston-underwood-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "westwell-parish-council",
+        "audit_status": "verified",
+        "score": 72
+      },
+      "removed": {
+        "slug": "westwell",
+        "audit_status": "verified",
+        "score": 72
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whaddon-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whaddon-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wharram-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wharram",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whitchurch-on-thames-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whitchurch-on-thames-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whittingham-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whittingham-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whitton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whitton-parish-3",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whitton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whitton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "whorlton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "whorlton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wicken-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wicken-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wickhambreaux-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "wickhambreaux",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wiggenhall-st-mary-magdalen-parish-council-1",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wiggenhall-st-mary-magdalen-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "willey-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "willey-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wimbish-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "wimbish",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wing-parish",
+        "audit_status": "verified",
+        "score": 59
+      },
+      "removed": {
+        "slug": "wing-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wistow-parish-council",
+        "audit_status": "verified",
+        "score": 53
+      },
+      "removed": {
+        "slug": "wistow",
+        "audit_status": "verified",
+        "score": 53
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wold-newton-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wold-newton-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "wombleton-parish-council",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "wombleton",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "womenswold-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "womenswold",
+        "audit_status": "verified",
+        "score": 78
+      }
+    },
+    {
+      "keeper": {
+        "slug": "womersley-parish-council",
+        "audit_status": "verified",
+        "score": 83
+      },
+      "removed": {
+        "slug": "womersley",
+        "audit_status": "verified",
+        "score": 83
+      }
+    },
+    {
+      "keeper": {
+        "slug": "woodbastwick-panxworth-ranworth-parish-council",
+        "audit_status": "verified",
+        "score": 78
+      },
+      "removed": {
+        "slug": "woodbastwick-parish-council",
+        "audit_status": "verified",
+        "score": 59
+      }
+    },
+    {
+      "keeper": {
+        "slug": "woodborough-parish",
+        "audit_status": "verified",
+        "score": 16
+      },
+      "removed": {
+        "slug": "woodborough-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "woodland-parish",
+        "audit_status": "verified",
+        "score": 47
+      },
+      "removed": {
+        "slug": "woodland-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "woodmancote-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "woodmancote-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "woolfardisworthy-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      },
+      "removed": {
+        "slug": "woolfardisworthy-parish",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    },
+    {
+      "keeper": {
+        "slug": "worthington-parish",
+        "audit_status": "verified",
+        "score": 41
+      },
+      "removed": {
+        "slug": "worthington-parish-2",
+        "audit_status": "under_audit",
+        "score": null
+      }
+    }
+  ]
+}

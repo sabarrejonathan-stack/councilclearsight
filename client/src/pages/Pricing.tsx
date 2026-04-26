@@ -182,7 +182,7 @@ export default function Pricing() {
           <Card className="p-7 bg-gradient-to-br from-white to-accent/5 border-2 border-accent rounded-3xl relative shadow-lg">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold px-4 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">Recommended for active councils</span>
             <div className="flex items-center gap-2 mb-3"><Sparkles className="w-6 h-6 text-accent" /><h2 className="text-2xl font-bold">Platinum</h2></div>
-            <p className="text-sm leading-relaxed mb-5">For councils that want deeper benchmarking and automated resident engagement tools.</p>
+            <p className="text-sm leading-relaxed mb-5">Everything in Gold, plus deeper benchmarking, weekly tips and automated resident engagement.</p>
             <div className="mb-5">
               <div className="flex items-baseline gap-1">
                 <span className="text-5xl font-bold">£499</span>
@@ -193,9 +193,97 @@ export default function Pricing() {
             <Link href="/subscribe/platinum">
               <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">Choose Platinum <ArrowRight className="w-4 h-4 ml-2" /></Button>
             </Link>
-            <p className="text-[11px] text-center text-muted-foreground mt-3">Most popular for councils pursuing LCAS Quality Gold.</p>
+            <p className="text-[11px] text-center text-muted-foreground mt-2">Cancel any time · Most popular for councils pursuing LCAS Quality Gold</p>
+            <div className="mt-6 pt-6 border-t border-accent/30">
+              <p className="text-xs uppercase tracking-wider text-accent font-semibold mb-3">Everything in Gold, plus</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start gap-2.5"><Target className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Top 12 quarter-sequenced improvement actions</li>
+                <li className="flex items-start gap-2.5"><TrendingUp className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />10 matched peer comparisons + county/regional benchmarking</li>
+                <li className="flex items-start gap-2.5"><Calendar className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Quarterly score refresh + change alerts</li>
+                <li className="flex items-start gap-2.5"><FileText className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Quarterly resident summary PDF + web blocks</li>
+                <li className="flex items-start gap-2.5"><Megaphone className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Weekly clerk tips + press &amp; website copy generator</li>
+                <li className="flex items-start gap-2.5"><Users className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Resident survey templates with automated analysis</li>
+                <li className="flex items-start gap-2.5"><BookOpen className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />LCAS Foundation + Quality + Quality Gold mapping</li>
+                <li className="flex items-start gap-2.5"><ClipboardCheck className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Auto-generated quarterly chair/clerk briefing pack</li>
+                <li className="flex items-start gap-2.5"><Download className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Trend history export + branded social/web asset pack</li>
+                <li className="flex items-start gap-2.5"><BadgeCheck className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />Peer movement alerts when neighbouring councils change</li>
+              </ul>
+            </div>
           </Card>
         </div>
+      </section>
+
+      {/* ── Detailed feature comparison ───────────── */}
+      <section className="container max-w-5xl mb-20">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold mb-3">Detailed comparison</h2>
+          <p className="text-muted-foreground">Every line item in both tiers, grouped by outcome.</p>
+        </div>
+        <div className="space-y-6">
+          {FEATURE_GROUPS.map((g) => {
+            const GIcon = g.icon;
+            return (
+              <Card key={g.title} className="overflow-hidden border-slate-200">
+                <div className="bg-slate-50 border-b border-slate-200 px-5 py-3 flex items-center gap-2">
+                  <GIcon className="w-4 h-4 text-accent" />
+                  <h3 className="font-semibold text-sm">{g.title}</h3>
+                </div>
+                <table className="w-full text-sm">
+                  <thead className="text-xs uppercase tracking-wider text-muted-foreground border-b border-slate-200">
+                    <tr>
+                      <th className="text-left p-3 font-medium">Feature</th>
+                      <th className="text-center p-3 font-medium w-32">Gold</th>
+                      <th className="text-center p-3 font-medium w-32">Platinum</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {g.rows.map((r) => (
+                      <tr key={r.label}>
+                        <td className="p-3 text-foreground">{r.label}</td>
+                        <td className="p-3 text-center"><FeatureCell value={r.gold} /></td>
+                        <td className="p-3 text-center"><FeatureCell value={r.platinum} /></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── Add-ons ───────────────────────────────── */}
+      <section className="bg-slate-50 border-y border-slate-200">
+        <div className="container max-w-5xl py-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-3">Optional add-ons</h2>
+            <p className="text-muted-foreground">One-off digital packs available on top of either tier. No bespoke editing — automated outputs only.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {ADDONS.map((a) => (
+              <Card key={a.title} className="p-5 bg-white border-slate-200">
+                <div className="flex items-baseline justify-between mb-2">
+                  <h3 className="font-semibold text-sm">{a.title}</h3>
+                  <span className="font-mono font-bold text-lg">£{a.price}</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">{a.body}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ───────────────────────────────────── */}
+      <section className="container max-w-3xl py-16">
+        <h2 className="text-3xl font-bold text-center mb-10">Frequently asked</h2>
+        <Accordion type="single" collapsible className="space-y-2">
+          {FAQS.map((f) => (
+            <AccordionItem key={f.q} value={f.q} className="border border-slate-200 rounded-xl px-4 bg-white">
+              <AccordionTrigger className="text-left hover:no-underline py-4 text-sm font-medium">{f.q}</AccordionTrigger>
+              <AccordionContent className="pb-4 text-sm text-muted-foreground leading-relaxed">{f.a}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </section>
     </PublicLayout>
   );

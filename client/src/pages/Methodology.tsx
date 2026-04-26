@@ -21,7 +21,7 @@ import {
   HelpCircle, ChevronRight,
 } from "lucide-react";
 
-// ─── Layman's explanations for each of the 12 indicators ──────────────
+// ─── Layman's explanations for each of the 14 v4.1 indicators ──────────────
 // Warm, specific, and honest. Every explanation answers three questions:
 //   Why this matters · How we check · What it's worth
 
@@ -38,15 +38,15 @@ const INDICATORS: Indicator[] = [
   // ── Pillar 1 — Core Reachability (25 max) ──
   { id: "1.1", pillar: 1, title: "Working council website", points: "10 points",
     why: "When a resident wants to know about their council — who runs it, when meetings happen, what was decided — the first place they look is online. If there is no working website, the council is effectively invisible to anyone who didn't attend the last meeting in person. The Local Government Act 1972 requires councils to give 'proper notice' of business, which in 2026 means online.",
-    how: "We check whether a website URL is on file for the council. The indicator earns full points only when a URL is recorded.",
+    how: "We check whether a website URL is on file for the council and that it returns a 200 response. The indicator earns full points only when a live URL is verified.",
   },
   { id: "1.2", pillar: 1, title: "Council email address published", points: "5 points",
     why: "Residents have questions. A working email address — published and actually monitored — is the single most useful thing a council can provide after a website. The Transparency Code 2015 § 2.2 expects every council to publish at least one contact point.",
-    how: "We check whether a valid email address (containing @) is recorded for the council.",
+    how: "We check whether a valid email address (containing @) is recorded for the council and verify it appears on a published contact page.",
   },
   { id: "1.3", pillar: 1, title: "Phone number published", points: "5 points",
     why: "Not every resident uses email. A phone number — even a clerk's mobile — gives people a second route in. Required for the contact point under Transparency Code 2015 § 2.2.",
-    how: "We check whether a phone number is recorded for the council.",
+    how: "We check whether a phone number is recorded for the council and visible on a published contact page.",
   },
   { id: "1.4", pillar: 1, title: "Named clerk identified", points: "5 points",
     why: "The clerk is the council's principal officer under Section 112 of the Local Government Act 1972. Publishing who they are is the most basic form of accountability: residents know who to call, the press knows who to interview, and auditors know who is responsible for the council's records.",
@@ -56,39 +56,47 @@ const INDICATORS: Indicator[] = [
   // ── Pillar 2 — Statutory Meeting Transparency (25 max) ──
   { id: "2.1", pillar: 2, title: "Meeting agendas published", points: "15 points",
     why: "Section 100B of the Local Government Act 1972 requires every council to publish meeting agendas at least three clear days before each meeting. Without an agenda, residents cannot see what will be discussed and cannot meaningfully attend. A council that doesn't publish agendas is, in effect, meeting in private.",
-    how: "We record whether the council is known to publish meeting agendas. Recency and document-level verification will be added once our scraper has confirmed the URL of each agenda PDF.",
+    how: "We follow links on the council website to find an agendas page or list. The indicator passes when at least one agenda PDF or page is dated within the last 12 months and the URL is on the council's domain.",
   },
   { id: "2.2", pillar: 2, title: "Meeting minutes published", points: "10 points",
     why: "Section 100C of the Local Government Act 1972 requires that minutes of meetings be available for public inspection and preserved for at least six years. Minutes are the statutory record of what the council decided and how it spent public money. Without them, residents cannot scrutinise council decisions and auditors cannot retrace the council's reasoning.",
-    how: "We record whether the council is known to publish meeting minutes. Recency rules will be added once our scraper has confirmed the URL of each minutes PDF.",
+    how: "We follow links on the council website to find a minutes page or list. The indicator passes when at least one minutes PDF or page is dated within the last 12 months and the URL is on the council's domain.",
   },
 
   // ── Pillar 3 — Financial Accountability (25 max) ──
-  { id: "3.1", pillar: 3, title: "AGAR / annual financial statement published", points: "15 points",
+  { id: "3.1", pillar: 3, title: "AGAR / annual financial statement published", points: "10 points",
     why: "Section 10 of the Accounts and Audit Regulations 2015 requires every smaller authority to publish an Annual Governance and Accountability Return (AGAR). This is the council's statutory financial statement — what it collected in precept, what it spent it on. The single most important transparency document a council produces. Larger councils additionally publish under the Transparency Code 2015.",
-    how: "We record whether the council is known to publish its AGAR. Document-level verification (most recent AGAR, audit certificate, notice of public rights) will be added once our scraper has read each PDF.",
+    how: "We look for an AGAR PDF for the most recently completed financial year on the council's website (or NALC SAAA portal link). Document-level verification confirms the audit certificate is attached.",
   },
-  { id: "3.2", pillar: 3, title: "Clerk email — correspondence channel for audit", points: "10 points",
-    why: "The Accounts and Audit Regulations 2015 require the council's proper officer (the clerk under LGA 1972 § 112) to be the contactable point for audit correspondence and resident inspection requests. Without a published clerk email, the audit cycle and the right to inspect under § 100 cannot function.",
-    how: "We check whether a valid email address (containing @) is recorded specifically for the clerk.",
+  { id: "3.2", pillar: 3, title: "Internal Audit Report or Annual Governance Statement", points: "8 points",
+    why: "Regulation 6 of the Accounts and Audit Regulations 2015 requires every smaller authority to obtain an effective system of internal audit and to publish either the Internal Audit Report or the Annual Governance Statement. This is a separate document from the AGAR — it tells residents whether the council's own controls are working. Replaces the v4.0 'clerk email' indicator, which double-counted the council email.",
+    how: "We look for an Internal Audit Report or Annual Governance Statement PDF on the council's website, dated within the last 18 months.",
+  },
+  { id: "3.3", pillar: 3, title: "Notice of Public Inspection of accounts", points: "7 points",
+    why: "Regulation 15 of the Accounts and Audit Regulations 2015 requires every smaller authority to publish — every June/July — a Notice of the Period for the Exercise of Public Rights, telling residents when and how they can inspect the accounts. This is a time-bound, statutorily required publication: the single most concrete transparency item in a parish's annual calendar.",
+    how: "We look for a Notice of Public Rights, Notice of Period for Inspection, or equivalent dated publication on the council's website. Notices from the most recent inspection window count.",
   },
 
   // ── Pillar 4 — Democratic & Accessibility Transparency (25 max) ──
-  { id: "4.1", pillar: 4, title: "Chair / Mayor named", points: "5 points",
+  { id: "4.1", pillar: 4, title: "Chair / Mayor named", points: "4 points",
     why: "The chair or mayor is the council's elected leader under Section 15 of the Local Government Act 1972. Publishing who they are lets residents know who represents them democratically. A field containing a semicolon-separated list of names is treated as a councillor list mis-attributed to the chair field — it does not count as a named chair.",
     how: "We check whether a single chair or mayor name is recorded. Lists of multiple names (joined by ';') do not count.",
   },
-  { id: "4.2", pillar: 4, title: "At least one councillor identified", points: "5 points",
+  { id: "4.2", pillar: 4, title: "At least one councillor identified", points: "4 points",
     why: "Councillors are elected volunteers who shape decisions on behalf of residents. A council that doesn't publish at least one councillor by name is asking residents to trust an anonymous body. Section 15 of the Local Government Act 1972 sets the electoral framework that makes councillor identification a baseline requirement.",
-    how: "We check whether at least one councillor is recorded with a name.",
+    how: "We check whether at least one councillor is recorded with a name on a councillors / members page.",
   },
   { id: "4.3", pillar: 4, title: "Accessibility statement published", points: "10 points",
     why: "Since 2018, every public body's website has been legally required to publish an accessibility statement describing how the site works for people who use screen readers, keyboard navigation or other assistive technology. The Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018 are not optional — the Equality and Human Rights Commission can issue compliance notices.",
-    how: "We record whether the council's website is known to publish an accessibility statement. Page-level verification will be added once our scraper has confirmed the URL of the statement.",
+    how: "We follow accessibility links on the council website and confirm the destination references WCAG 2.1 AA or the 2018 Regulations. Page-level URL is recorded as evidence.",
   },
-  { id: "4.4", pillar: 4, title: "Secure connection (HTTPS)", points: "5 points",
+  { id: "4.4", pillar: 4, title: "Secure connection (HTTPS)", points: "3 points",
     why: "UK GDPR Article 32 requires appropriate technical measures to protect personal data. NCSC guidance and the GOV.UK service standard both make HTTPS a baseline expectation for any public-sector website. A council website served over plain HTTP exposes its visitors to interception and tampering.",
     how: "We check whether the council's website URL begins with https:// (i.e. has a valid TLS certificate). Plain HTTP scores zero.",
+  },
+  { id: "4.5", pillar: 4, title: "Register of Members' Interests published", points: "4 points",
+    why: "Section 29 of the Localism Act 2011 requires every council to maintain a Register of Members' Interests and to publish it. The register lets residents see what business interests, employment, property and gifts each councillor has — the foundation for spotting and challenging conflicts of interest. A council that doesn't publish its register is asking residents to trust that no conflict has gone undeclared.",
+    how: "We look for a Register of Members' Interests page or PDF on the council's website. The indicator passes when at least one councillor's register entry is published.",
   },
 ];
 
@@ -109,7 +117,7 @@ function pillarClasses(p: 1|2|3|4) {
 export default function Methodology() {
   useSEO({
     title: "Methodology — How we score every council, explained clearly | Council ClearSight",
-    description: "A clear, human explanation of how the Council ClearSight Transparency Index is calculated. Four pillars, twelve indicators, scored from publicly observable information. No jargon.",
+    description: "A clear, human explanation of how the Council ClearSight Transparency Index is calculated. Four pillars, fourteen indicators, scored from publicly observable information. No jargon.",
     canonicalPath: "/methodology",
   });
 
@@ -143,13 +151,13 @@ export default function Methodology() {
             </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground font-mono">
-            <span>VDTI v4.0</span>
+            <span>VDTI v4.1</span>
             <span>·</span>
-            <span>Data extraction: 16 April 2026</span>
+            <span>Data extraction: April 2026</span>
             <span>·</span>
-            <span>Assessment window: January – March 2026</span>
+            <span>Assessment cadence: quarterly</span>
             <span>·</span>
-            <span>Next assessment: January 2027</span>
+            <span>Next published refresh: July 2026</span>
           </div>
         </section>
 
@@ -191,7 +199,7 @@ export default function Methodology() {
         {/* ─── Four pillars overview ──────────────────────── */}
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">Four pillars</h2>
-          <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">The twelve indicators are grouped into four pillars, each answering a slightly different question about a council.</p>
+          <p className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed">The fourteen indicators are grouped into four pillars, each answering a slightly different question about a council.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {([1,2,3,4] as const).map((p) => {
               const meta = PILLAR_META[p];
@@ -215,7 +223,7 @@ export default function Methodology() {
           <div className="mt-5 p-4 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3 text-xs text-slate-700 leading-relaxed">
             <Layers className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
             <p>
-              <strong className="text-foreground">Why the pillars are equal in weight.</strong> All four pillars carry 25 points each so no single dimension dominates the score. Digital reachability, statutory meeting transparency, financial accountability and democratic openness are each rooted in distinct legal duties; weighting them equally avoids any inadvertent over-emphasis on what is easiest to observe. None of the weights were chosen to flatter any particular council, and the methodology is reproducible across every one of the 11,057 councils we track.
+              <strong className="text-foreground">Why the pillars are equal in weight.</strong> All four pillars carry 25 points each so no single dimension dominates the score. Digital reachability, statutory meeting transparency, financial accountability and democratic openness are each rooted in distinct legal duties; weighting them equally avoids any inadvertent over-emphasis on what is easiest to observe. None of the weights were chosen to flatter any particular council, and the methodology is reproducible across every one of the 10,511 councils we track.
             </p>
           </div>
         </section>
@@ -286,7 +294,7 @@ export default function Methodology() {
               { range: "50 – 64",   name: "Developing",      colour: "amber",   body: "The council has partial transparency but significant gaps across at least one pillar. There's something to build on but a meaningful amount of work ahead." },
               { range: "0 – 49",    name: "Needs Attention", colour: "red",     body: "The council has substantial gaps in publicly visible transparency. Often this is a small parish with minimal online presence rather than a badly-run council — but the effect on residents is the same." },
               { range: "—",         name: "Not Yet Assessed", colour: "slate",   body: "We don't yet have enough evidence to give this council a meaningful score. They appear in the directory, but we don't band them until we have a fuller picture." },
-              { range: "—",         name: "Under Audit",      colour: "sky",     body: "Council ClearSight tracks every council in England (11,057 in total). Councils marked Under Audit are in our queue but not yet fully verified — 4,323 are verified to date, with ~200 newly-verified each week. We never publish a score before verification." },
+              { range: "—",         name: "Under Audit",      colour: "sky",     body: "Council ClearSight tracks every council in England (10,511 in total). Councils marked Under Audit are in our queue but not yet fully verified — 4,160 are verified to date, with ~200 newly-verified each week. We never publish a score before verification." },
             ].map((b) => (
               <div key={b.name} className={`flex items-start gap-4 p-4 bg-${b.colour}-50 border border-${b.colour}-200 rounded-xl`}>
                 <div className={`flex-shrink-0 mt-0.5`}><span className={`inline-block w-2 h-2 rounded-full bg-${b.colour}-500`} /></div>
@@ -311,7 +319,7 @@ export default function Methodology() {
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">The evidence for every score lives on the council's page</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Open any council in the directory and you'll see each of the twelve indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
+                Open any council in the directory and you'll see each of the fourteen indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
               </p>
               <div className="flex flex-wrap gap-3">
                <Link href="/directory"><Button size="sm" className="bg-accent hover:bg-accent/90 text-white">Browse the directory <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link>

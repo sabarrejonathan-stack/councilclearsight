@@ -6,18 +6,18 @@
  * pillar metadata, and helpers for the UI to present them consistently.
  */
 
-export const METHODOLOGY_VERSION = "VDTI v4.0";
+export const METHODOLOGY_VERSION = "VDTI v4.1";
 export const METHODOLOGY_CHANGELOG_PATH = "/methodology/changelog";
 export const DISPUTES_QUEUE_PATH = "/methodology/disputes";
 
 export type Pillar = 1 | 2 | 3 | 4;
 
-// VDTI v4.0 methodology — 4 equal-weight pillars × 25 = 100.
+// VDTI v4.1 methodology — 4 equal-weight pillars × 25 = 100; 14 indicators, no double-count.
 export const PILLAR_META: Record<Pillar, { label: string; shortLabel: string; max: number; description: string; tone: string }> = {
   1: { label: "Core Reachability",                shortLabel: "Reachability",   max: 25, description: "Can residents find and contact this council? Working website, email, phone, and a named clerk under LGA 1972 § 112.", tone: "digital" },
   2: { label: "Statutory Meeting Transparency",   shortLabel: "Meetings",       max: 25, description: "Are meeting agendas and minutes published? Required by Local Government Act 1972 §§ 100B and 100C.",                tone: "governance" },
-  3: { label: "Financial Accountability",         shortLabel: "Financial",      max: 25, description: "Is the council's annual financial statement (AGAR) published? Required by the Accounts and Audit Regulations 2015.", tone: "community" },
-  4: { label: "Democratic & Accessibility",       shortLabel: "Democratic",     max: 25, description: "Are councillors and chair named, the website accessible, and the connection secure? Localism Act 2011 + Accessibility Regs 2018.", tone: "accessibility" },
+  3: { label: "Financial Accountability",         shortLabel: "Financial",      max: 25, description: "AGAR, internal audit report and the Notice of Public Inspection — three distinct financial publications required by the Accounts and Audit Regulations 2015.", tone: "community" },
+  4: { label: "Democratic & Accessibility",       shortLabel: "Democratic",     max: 25, description: "Chair, councillors, accessibility statement, HTTPS, and the Register of Members' Interests under the Localism Act 2011.", tone: "accessibility" },
 };
 
 export type IndicatorMeta = {
@@ -29,7 +29,8 @@ export type IndicatorMeta = {
   statute?: string;
 };
 
-// VDTI v4.0 indicators — 12 indicators, statute-anchored, observably verifiable.
+// VDTI v4.1 indicators — 14 distinct, statute-anchored, observably verifiable.
+// Each indicator has a unique observable artifact (no double-counting on the same input).
 export const INDICATORS: IndicatorMeta[] = [
   { id: "1.1", pillar: 1, label: "Working council website",          max: 10, inputFields: ["website"], statute: "LGA 1972 § 96–101" },
   { id: "1.2", pillar: 1, label: "Council email address published",  max: 5,  inputFields: ["email"],   statute: "Transparency Code 2015 § 2.2" },
@@ -37,12 +38,14 @@ export const INDICATORS: IndicatorMeta[] = [
   { id: "1.4", pillar: 1, label: "Named clerk identified",           max: 5,  inputFields: ["clerk_name"], statute: "Local Government Act 1972 § 112" },
   { id: "2.1", pillar: 2, label: "Meeting agendas published",        max: 15, inputFields: ["has_agendas"], statute: "Local Government Act 1972 § 100B" },
   { id: "2.2", pillar: 2, label: "Meeting minutes published",        max: 10, inputFields: ["has_minutes"], statute: "Local Government Act 1972 § 100C" },
-  { id: "3.1", pillar: 3, label: "AGAR / annual financial statement published", max: 15, inputFields: ["has_financials"], statute: "Accounts and Audit Regulations 2015 § 10" },
-  { id: "3.2", pillar: 3, label: "Clerk email — correspondence channel for audit", max: 10, inputFields: ["clerk_email"], statute: "Accounts and Audit Regulations 2015" },
-  { id: "4.1", pillar: 4, label: "Chair / Mayor named",              max: 5,  inputFields: ["chair_name"], statute: "Local Government Act 1972 § 15" },
-  { id: "4.2", pillar: 4, label: "At least one councillor identified", max: 5, inputFields: ["councillors_listed"], statute: "Local Government Act 1972 § 15" },
+  { id: "3.1", pillar: 3, label: "AGAR / annual financial statement published", max: 10, inputFields: ["has_financials"], statute: "Accounts and Audit Regulations 2015 § 10" },
+  { id: "3.2", pillar: 3, label: "Internal Audit Report or Annual Governance Statement", max: 8, inputFields: ["has_internal_audit"], statute: "Accounts and Audit Regulations 2015 § 6" },
+  { id: "3.3", pillar: 3, label: "Notice of Public Inspection of accounts", max: 7, inputFields: ["has_public_inspection_notice"], statute: "Accounts and Audit Regulations 2015 § 15" },
+  { id: "4.1", pillar: 4, label: "Chair / Mayor named",              max: 4,  inputFields: ["chair_name"], statute: "Local Government Act 1972 § 15" },
+  { id: "4.2", pillar: 4, label: "At least one councillor identified", max: 4, inputFields: ["councillors_listed"], statute: "Local Government Act 1972 § 15" },
   { id: "4.3", pillar: 4, label: "Accessibility statement published", max: 10, inputFields: ["has_accessibility_statement"], statute: "Accessibility Regs 2018" },
-  { id: "4.4", pillar: 4, label: "Secure connection (HTTPS)",        max: 5,  inputFields: ["website"],   statute: "UK GDPR Art. 32" },
+  { id: "4.4", pillar: 4, label: "Secure connection (HTTPS)",        max: 3,  inputFields: ["website"],   statute: "UK GDPR Art. 32" },
+  { id: "4.5", pillar: 4, label: "Register of Members' Interests published", max: 4, inputFields: ["has_register_of_interests"], statute: "Localism Act 2011 § 29" },
 ];
 
 export function indicatorsForPillar(p: Pillar): IndicatorMeta[] {
@@ -169,17 +172,22 @@ export type ScoredResult = {
 
 export type CouncilFieldsV4 = CouncilFields & {
   has_financials?: boolean;
+  has_internal_audit?: boolean | null;
+  has_public_inspection_notice?: boolean | null;
+  has_register_of_interests?: boolean | null;
   has_accessibility_statement?: boolean;
   councillors_listed?: boolean;
 };
 
+// Score a council against the v4.1 14-indicator schema.
+// New indicators (3.2, 3.3, 4.5) accept `null` to mean "Not Assessed" — those
+// rows are emitted with assessed: false so they're excluded from the denominator.
 export function scoreCouncil(f: CouncilFieldsV4): ScoredResult {
   const inds: IndicatorResult[] = [];
   const hasWebsite = present(f.website);
   const hasEmail = isValidEmail(f.email);
   const hasPhone = present(f.phone);
   const hasClerk = present(f.clerk_name);
-  const hasClerkEmail = isValidEmail(f.clerk_email);
   const hasChair = isValidChair(f.chair_name);
   const hasAgendas = !!f.has_agendas;
   const hasMinutes = !!f.has_minutes;
@@ -188,28 +196,46 @@ export function scoreCouncil(f: CouncilFieldsV4): ScoredResult {
   const hasCouncillorList = !!(f as any).councillors_listed;
   const isHttps = hasWebsite && /^https:\/\//i.test(String(f.website));
 
-  const push = (id: string, pillar: Pillar, label: string, max: number, earned: number, snap: Record<string, unknown>) => {
-    inds.push({ id, pillar, label, max_points: max, earned, assessed: true, input_snapshot: snap });
+  // Tri-state for new v4.1 indicators: undefined/null → Not Assessed; bool → assessed
+  const triState = (v: unknown): "na" | "yes" | "no" => v == null ? "na" : (v ? "yes" : "no");
+  const intAudit = triState((f as any).has_internal_audit);
+  const pubInsp  = triState((f as any).has_public_inspection_notice);
+  const register = triState((f as any).has_register_of_interests);
+
+  const push = (id: string, pillar: Pillar, label: string, max: number, earned: number, assessed: boolean, snap: Record<string, unknown>) => {
+    inds.push({ id, pillar, label, max_points: max, earned, assessed, input_snapshot: snap });
   };
 
-  push("1.1", 1, "Working council website",         10, hasWebsite ? 10 : 0, { website: f.website || null });
-  push("1.2", 1, "Council email address published", 5,  hasEmail ? 5 : 0,    { email: f.email || null });
-  push("1.3", 1, "Phone number published",          5,  hasPhone ? 5 : 0,    { phone: f.phone || null });
-  push("1.4", 1, "Named clerk identified",          5,  hasClerk ? 5 : 0,    { clerk_name: f.clerk_name || null });
-  push("2.1", 2, "Meeting agendas published",       15, hasAgendas ? 15 : 0, { has_agendas: hasAgendas });
-  push("2.2", 2, "Meeting minutes published",       10, hasMinutes ? 10 : 0, { has_minutes: hasMinutes });
-  push("3.1", 3, "AGAR / annual financial statement published", 15, hasFinancials ? 15 : 0, { has_financials: hasFinancials });
-  push("3.2", 3, "Clerk email — correspondence channel for audit", 10, hasClerkEmail ? 10 : 0, { clerk_email: f.clerk_email || null });
-  push("4.1", 4, "Chair / Mayor named",             5,  hasChair ? 5 : 0,            { chair_name: f.chair_name || null });
-  push("4.2", 4, "At least one councillor identified", 5, hasCouncillorList ? 5 : 0,  { councillors_listed: hasCouncillorList });
-  push("4.3", 4, "Accessibility statement published", 10, hasAccessibility ? 10 : 0, { has_accessibility_statement: hasAccessibility });
-  push("4.4", 4, "Secure connection (HTTPS)",       5,  isHttps ? 5 : 0,             { website: f.website || null, https: isHttps });
+  push("1.1", 1, "Working council website",         10, hasWebsite ? 10 : 0, true, { website: f.website || null });
+  push("1.2", 1, "Council email address published", 5,  hasEmail ? 5 : 0,    true, { email: f.email || null });
+  push("1.3", 1, "Phone number published",          5,  hasPhone ? 5 : 0,    true, { phone: f.phone || null });
+  push("1.4", 1, "Named clerk identified",          5,  hasClerk ? 5 : 0,    true, { clerk_name: f.clerk_name || null });
+  push("2.1", 2, "Meeting agendas published",       15, hasAgendas ? 15 : 0, true, { has_agendas: hasAgendas });
+  push("2.2", 2, "Meeting minutes published",       10, hasMinutes ? 10 : 0, true, { has_minutes: hasMinutes });
+  push("3.1", 3, "AGAR / annual financial statement published", 10, hasFinancials ? 10 : 0, true, { has_financials: hasFinancials });
+  push("3.2", 3, "Internal Audit Report or Annual Governance Statement", 8,
+       intAudit === "yes" ? 8 : 0, intAudit !== "na", { has_internal_audit: intAudit === "na" ? null : intAudit === "yes" });
+  push("3.3", 3, "Notice of Public Inspection of accounts", 7,
+       pubInsp === "yes" ? 7 : 0, pubInsp !== "na", { has_public_inspection_notice: pubInsp === "na" ? null : pubInsp === "yes" });
+  push("4.1", 4, "Chair / Mayor named",             4,  hasChair ? 4 : 0,    true, { chair_name: f.chair_name || null });
+  push("4.2", 4, "At least one councillor identified", 4, hasCouncillorList ? 4 : 0, true, { councillors_listed: hasCouncillorList });
+  push("4.3", 4, "Accessibility statement published", 10, hasAccessibility ? 10 : 0, true, { has_accessibility_statement: hasAccessibility });
+  push("4.4", 4, "Secure connection (HTTPS)",       3,  isHttps ? 3 : 0,     true, { website: f.website || null, https: isHttps });
+  push("4.5", 4, "Register of Members' Interests published", 4,
+       register === "yes" ? 4 : 0, register !== "na", { has_register_of_interests: register === "na" ? null : register === "yes" });
 
   const pillar_earned: Record<string, number> = { "1": 0, "2": 0, "3": 0, "4": 0 };
-  for (const i of inds) pillar_earned[String(i.pillar)] += i.earned;
-  const pillar_max_assessed: Record<string, number> = { "1": 25, "2": 25, "3": 25, "4": 25 };
-  const score = inds.reduce((s, i) => s + i.earned, 0);
-  return { indicators: inds, pillar_earned, pillar_max_assessed, score, numerator: score, denominator: 100, completeness: 1.0 };
+  const pillar_max_assessed: Record<string, number> = { "1": 0, "2": 0, "3": 0, "4": 0 };
+  for (const i of inds) {
+    if (!i.assessed) continue;
+    pillar_earned[String(i.pillar)] += i.earned;
+    pillar_max_assessed[String(i.pillar)] += i.max_points;
+  }
+  const numerator = inds.filter(i => i.assessed).reduce((s, i) => s + i.earned, 0);
+  const denominator = inds.filter(i => i.assessed).reduce((s, i) => s + i.max_points, 0);
+  const score = denominator > 0 ? Math.round((numerator / denominator) * 100) : 0;
+  const completeness = denominator / 100;
+  return { indicators: inds, pillar_earned, pillar_max_assessed, score, numerator, denominator, completeness };
 }
 
 export const BAND_META = {
