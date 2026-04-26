@@ -1,0 +1,53 @@
+slug,name,audit_status,url,discovery_method,scrape_status,indicators_evidence_found_count,error,attempted_at
+ab-kettleby-parish-council,Ab Kettleby Parish Council,url_discovered_pending_scrape,https://www.abkettlebyparishcouncil.gov.uk/community-wp,web_search,,,,2026-04-26T13:18:50+00:00
+abbas-and-templecombe-parish-council,Abbas and Templecombe Parish Council,url_discovered_pending_scrape,https://www.parishcouncils.uk/parish-council/abbas-and-templecombe-parish-council/,web_search,,,,2026-04-26T13:19:24+00:00
+abberley-parish-council,Abberley Parish Council,verified,https://www.abberleyparish.org.uk,pre-existing,ok,3,,2026-04-26T13:19:57+00:00
+abberton-parish-council,Abberton Parish Council,url_discovered_pending_scrape,https://kelvedonparishcouncil.gov.uk/author/suegreen/page/140/,web_search,,,,2026-04-26T13:19:57+00:00
+abbess-beauchamp-and-berners-roding-parish-council,"Abbess, Beauchamp and Berners Roding Parish Council",verified,https://www.abbr-pc.gov.uk,pre-existing,ok,0,,2026-04-26T13:20:30+00:00
+abbess-beauchamp-and-berners-roding-parish-council-1,Abbess Beauchamp and Berners Roding Parish Council,url_discovered_pending_scrape,https://e-voice.org.uk/abbrpc/meetings/agendas/,web_search,,,,2026-04-26T13:20:30+00:00
+abbey-hill-parish-council,Abbey Hill Parish Council,url_discovered_pending_scrape,https://amber-hill.parish.lincolnshire.gov.uk/council-business/annual-parish-meeting/11,web_search,,,,2026-04-26T13:21:01+00:00
+abbeydore-and-bacton-group-parish-council,Abbeydore and Bacton Group Parish Council,url_discovered_pending_scrape,https://abbeydoreandbacktongroup-pc.gov.uk/,excel,,,,2026-04-26T13:21:34+00:00
+abbeydore-bacton-group-parish-council,Abbeydore & Bacton Group Parish Council,url_discovered_pending_scrape,https://abbeydoreandbactongroup-pc.gov.uk/news,web_search,,,,2026-04-26T13:21:34+00:00
+abbots-bickington-parish-council,Abbots Bickington Parish Council,url_discovered_pending_scrape,https://www.burringtonnorthdevon.com/parish-council/agendas/,web_search,,,,2026-04-26T13:22:05+00:00
+abbots-bromley-parish-council,Abbots Bromley Parish Council,verified,http://www.abbotsbromley.com/council,pre-existing,ok,5,,2026-04-26T13:22:36+00:00
+abbots-langley-parish-council,Abbots Langley Parish Council,url_discovered_pending_scrape,https://www.abbotslangley-pc.gov.uk/parish-council/minutes-archive/,web_search,,,,2026-04-26T13:22:36+00:00
+abbots-ripton-parish-council,Abbots Ripton Parish Council,verified,https://www.abbotsripton-pc.gov.uk,pre-existing,ok,2,,2026-04-26T13:23:07+00:00
+abbotskerswell,Abbotskerswell,url_discovered_pending_scrape,https://www.abbotskerswell-pc.gov.uk/,pattern,,,,2026-04-26T13:23:07+00:00
+abbotskerswell-parish-council,Abbotskerswell Parish Council,url_discovered_pending_scrape,https://www.abbotskerswell-pc.gov.uk/,pattern,,,,2026-04-26T13:23:11+00:00
+abbotsley-parish-council,Abbotsley Parish Council,verified,https://www.abbotsleyparishcouncil.gov.uk,pre-existing,ok,8,,2026-04-26T13:23:13+00:00
+abbotts-ann-parish-council,Abbotts Ann Parish Council,url_discovered_pending_scrape,https://www.abbottsann-pc.gov.uk,excel,,,,2026-04-26T13:23:13+00:00
+abdon-and-heath-parish-council,Abdon and Heath Parish Council,url_discovered_pending_scrape,https://www.abdonandheathparish.gov.uk/community/abdon-and-heath-parish-gov-uk-10606/parish-council/,web_search,,,,2026-04-26T13:23:13+00:00
+above-derw-parish-council,Above Derw Parish Council,url_discovered_pending_scrape,https://checkmypostcode.uk/ex54rf,web_search,,,,2026-04-26T13:23:45+00:00
+abthorpe-parish-council,Abthorpe Parish Council,verified,https://www.abthorpeparish.gov.uk,pre-existing,ok,5,,2026-04-26T13:24:33+00:00
+aby-with-greenfield-parish-council,Aby with Greenfield Parish Council,url_discovered_pending_scrape,https://aby-greenfield.parish.lincolnshire.gov.uk/council-business/agendas-2023/7,web_search,,,,2026-04-26T13:24:33+00:00
+acaster-selby-parish-council,Acaster Selby Parish Council,url_discovered_pending_scrape,https://docslib.org/doc/55794/bramhope-newsletter-spring-2021,web_search,,,,2026-04-26T13:25:06+00:00
+acaster-selby-parish-council,Acaster Selby Parish Council,url_discovered_pending_scrape,https://docslib.org/doc/55794/bramhope-newsletter-spring-2021,web_search,,,,2026-04-26T13:25:16+00:00
+acklam-parish-meeting,Acklam (Parish Meeting),url_discovered_pending_scrape,https://theddlethorpe.parish.lincolnshire.gov.uk/council-business/2023-parish-council-meeting-minutes/5,web_search,,,,2026-04-26T13:25:46+00:00
+acklington-parish-council,Acklington Parish Council,url_discovered_pending_scrape,https://www.acklington-pc.gov.uk/community/acklington-and-guyzance-parish-council-21180/home/,pattern,,,,2026-04-26T13:26:24+00:00
+ackworth-parish-council,Ackworth Parish Council,url_discovered_pending_scrape,https://www.ackworthparishcouncil.gov.uk/,pattern,,,,2026-04-26T13:26:27+00:00
+acle-parish-council,Acle Parish Council,url_discovered_pending_scrape,https://acleparishcouncil.gov.uk/,pattern,,,,2026-04-26T13:26:50+00:00
+acol-parish-council,Acol Parish Council,url_discovered_pending_scrape,https://www.acol-pc.gov.uk/community/acol-parish-council-13724/home/,pattern,,,,2026-04-26T13:27:07+00:00
+acomb-parish-council,Acomb Parish Council,url_discovered_pending_scrape,https://www.sandhoeparishcouncil.co.uk/news-events,web_search,,,,2026-04-26T13:27:09+00:00
+aconbury-parish-meeting,Aconbury Parish Meeting,url_discovered_pending_scrape,https://councillors.herefordshire.gov.uk/mgParishCouncilDetails.aspx?ID=648&LS=3,web_search,,,,2026-04-26T13:27:46+00:00
+acrise-parish-council,Acrise Parish Council,url_discovered_pending_scrape,https://aldingtonandbonnington-pc.gov.uk/community-life/war-memorial/webb-stewart-or-stuart-corban-private-g-26568/,web_search,,,,2026-04-26T13:28:20+00:00
+acton-beauchamp-group-parish-council,Acton Beauchamp Group Parish Council,url_discovered_pending_scrape,https://councillors.herefordshire.gov.uk/mgParishCouncilDetails.aspx?ID=649&LS=3,web_search,,,,2026-04-26T13:28:57+00:00
+acton-bridge-parish-council,Acton Bridge Parish Council,url_discovered_pending_scrape,https://actonbridge-pc.gov.uk/meetings/,web_search,,,,2026-04-26T13:29:30+00:00
+acton-parish-council,Acton Parish Council,verified,https://www.actonparishcouncil.gov.uk,pre-existing,ok,4,,2026-04-26T13:30:02+00:00
+acton-round-parish-council,Acton Round Parish Council,url_discovered_pending_scrape,https://actonparishcouncil.gov.uk/your-council/councillors,web_search,,,,2026-04-26T13:30:02+00:00
+acton-trussell-and-bednall-parish-council,Acton Trussell and Bednall Parish Council,url_discovered_pending_scrape,https://www.actontrussellbednall-pc.gov.uk/community/acton-trussell-bednall-parish-council-13659/council-meetings/,web_search,,,,2026-04-26T13:30:34+00:00
+adderbury-parish-council,Adderbury Parish Council,verified,https://www.adderburyparishcouncil.gov.uk,pre-existing,ok,10,,2026-04-26T13:31:06+00:00
+adderley-parish-council,Adderley Parish Council,url_discovered_pending_scrape,https://adderleyparish.co.uk/category/parish-council/,web_search,,,,2026-04-26T13:31:06+00:00
+adderstone-with-lucker-parish-council,Adderstone with Lucker Parish Council,verified,https://www.adderstonewithluckerparish.gov.uk,pre-existing,ok,0,,2026-04-26T13:31:38+00:00
+addington-meeting,Addington (meeting),url_discovered_pending_scrape,https://addingtonpc.co.uk/council-meetings/,web_search,,,,2026-04-26T13:31:38+00:00
+addington-meeting-parish-council,Addington (meeting) Parish Council,url_discovered_pending_scrape,https://addingtonpc.co.uk/council-meetings/,web_search,,,,2026-04-26T13:32:11+00:00
+addington-parish-council,Addington Parish Council,verified,https://www.addington-pc.gov.uk,pre-existing,ok,10,,2026-04-26T13:32:43+00:00
+adisham,Adisham,verified,https://www.adisham-pc.gov.uk,pre-existing,ok,1,,2026-04-26T13:32:43+00:00
+adlestrop-parish-meeting,Adlestrop Parish Meeting,url_discovered_pending_scrape,https://adlestrop.org.uk/,pattern,,,,2026-04-26T13:32:43+00:00
+adlington-parish-council,Adlington Parish Council,verified,https://www.adlington-pc.org.uk,pre-existing,ok,5,,2026-04-26T13:32:56+00:00
+admington-parish-council,Admington Parish Council,url_discovered_pending_scrape,https://admintonparishcouncil.co.uk,excel,,,,2026-04-26T13:32:56+00:00
+adstock-parish-council,Adstock Parish Council,url_discovered_pending_scrape,https://www.adstockparish.gov.uk,excel,,,,2026-04-26T13:32:56+00:00
+adstone-parish-meeting,Adstone Parish Meeting,url_discovered_pending_scrape,https://adstone.parish.uk/parish-council/,web_search,,,,2026-04-26T13:32:56+00:00
+advent-parish-meeting,Advent Parish Meeting,url_discovered_pending_scrape,https://owmby-spital.parish.lincolnshire.gov.uk/council-business/2021-parish-council-minutes-meetings,web_search,,,,2026-04-26T13:33:31+00:00
+adwick-on-dearne-parish-council,Adwick-on-Dearne Parish Council,url_discovered_pending_scrape,https://cadeby.parish.uk/,web_search,,,,2026-04-26T13:34:08+00:00
+agden-parish-council,Agden Parish Council,url_discovered_pending_scrape,https://www.littlebollington.org/what-s-going-on/,web_search,,,,2026-04-26T13:34:43+00:00
+aighton-bailey-and-chaigley-parish-council,"Aighton, Bailey and Chaigley Parish Council",url_discovered_pending_scrape,https://www.aightonbaileyandchaigley-pc.gov.uk/agendas-and-minutes/,web_search,,,,2026-04-26T13:35:14+00:00
