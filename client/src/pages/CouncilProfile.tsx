@@ -10,16 +10,19 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PublicLayout from "@/components/PublicLayout";
 import { useSEO } from "@/hooks/useSEO";
 import { useCouncilBySlug } from "@/lib/staticData";
+import UnderAuditProfile from "./UnderAuditProfile";
 import {
   ArrowLeft, ArrowRight, Mail, Phone, Globe, User, BookOpen,
   CheckCircle2, XCircle, MinusCircle, Flag, Scale, FileText,
-  BadgeCheck, Sparkles, FileDown, AlertCircle, ShieldOff, WifiOff, Search,
+  BadgeCheck, Sparkles, FileDown, ShieldOff, Search,
+  ExternalLink, Calendar,
 } from "lucide-react";
 import {
   PILLAR_META, INDICATORS, indicatorsForPillar,
   bandColorClasses, pillarColorClasses,
   formatScore, formatCompleteness, ordinal,
   METHODOLOGY_VERSION,
+  isUnderAudit,
   type CouncilScore, type IndicatorResult,
 } from "@/lib/scoring";
 import SampleReportModal from "@/components/SampleReportModal";
@@ -36,6 +39,11 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
   });
 
   if (isLoading || !council) return <PublicLayout><div className="container py-24 text-center text-muted-foreground">Loading…</div></PublicLayout>;
+
+  // Under-audit councils get a different page entirely — no score, drives subscription
+  if (isUnderAudit((council as any).audit_status)) {
+    return <UnderAuditProfile council={council} />;
+  }
 
   const bandCls = bandColorClasses(council.band as any);
 
@@ -268,6 +276,9 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
   const StatusIcon = status === "pass" ? CheckCircle2 : status === "fail" ? XCircle : MinusCircle;
   const statusText = status === "pass" ? "Evidence found" : status === "fail" ? "Evidence not found" : "Not yet assessed";
   const statusCls = status === "pass" ? "text-emerald-700 bg-emerald-50 border-emerald-200" : status === "fail" ? "text-red-700 bg-red-50 border-red-200" : "text-slate-600 bg-slate-50 border-slate-200";
+  const evidenceUrl = (indicator.input_snapshot as any)?.evidence_url as string | null | undefined;
+  const documentDate = (indicator.input_snapshot as any)?.document_date as string | null | undefined;
+  const fileFormat = (indicator.input_snapshot as any)?.file_format as string | null | undefined;
 
   return (
     <div className="border border-slate-200 bg-white rounded-xl overflow-hidden">
@@ -277,6 +288,25 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="outline" className="text-[10px] font-mono">{indicator.id}</Badge>
             <span className="font-medium text-sm">{indicator.label}</span>
+            {evidenceUrl && (
+              <a
+                href={evidenceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-1 text-[11px] text-accent hover:underline font-medium"
+                title="Open the evidence document on the council's own website"
+              >
+                <ExternalLink className="w-3 h-3" /> evidence
+              </a>
+            )}
+            {documentDate && (
+              <span className="inline-flex items-center gap-1 text-[10px] text-muted-foreground font-mono">
+                <Calendar className="w-2.5 h-2.5" />
+                {new Date(documentDate).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                {fileFormat && <span className="uppercase opacity-60">· {fileFormat}</span>}
+              </span>
+            )}
           </div>
         </div>
         <div className={`text-xs font-mono px-2 py-0.5 rounded-full border ${statusCls}`}>{statusText}</div>
@@ -296,6 +326,15 @@ function IndicatorRow({ indicator, slug }: { indicator: IndicatorResult; slug: s
                 ))}
               </div>
             </div>
+            {evidenceUrl && (
+              <div className="text-xs">
+                <a href={evidenceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-accent hover:underline font-medium break-all">
+                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                  <span className="break-all">{evidenceUrl}</span>
+                </a>
+                <p className="text-[11px] text-muted-foreground mt-1">Opens on the council's own domain — every claim on this page links to a document we can show you.</p>
+              </div>
+            )}
             <div className="flex flex-wrap gap-3 text-xs">
               <Link href={`/challenge?slug=${slug}&indicator=${indicator.id}`} className="text-accent hover:underline inline-flex items-center gap-1">
                 <Flag className="w-3 h-3" />Think this is wrong? Challenge it.

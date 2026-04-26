@@ -215,7 +215,7 @@ export default function Methodology() {
           <div className="mt-5 p-4 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3 text-xs text-slate-700 leading-relaxed">
             <Layers className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
             <p>
-              <strong className="text-foreground">Why the pillars aren't equal in weight.</strong> Digital presence and contact transparency each carry 30 points because they are the most reliably observable. Governance documents carry 25 because they take more effort to verify at scale. Democratic openness carries 15 because the artefacts are harder to check consistently across 11,000 councils. None of the weights were chosen to flatter any particular council.
+              <strong className="text-foreground">Why the pillars are equal in weight.</strong> All four pillars carry 25 points each so no single dimension dominates the score. Digital reachability, statutory meeting transparency, financial accountability and democratic openness are each rooted in distinct legal duties; weighting them equally avoids any inadvertent over-emphasis on what is easiest to observe. None of the weights were chosen to flatter any particular council, and the methodology is reproducible across every one of the 11,057 councils we track.
             </p>
           </div>
         </section>
@@ -286,6 +286,7 @@ export default function Methodology() {
               { range: "40 – 59",   name: "Developing",       colour: "amber",   body: "The council has partial transparency but significant gaps across at least one pillar. There's something to build on but a meaningful amount of work ahead." },
               { range: "0 – 39",    name: "At Risk",          colour: "red",     body: "The council has substantial gaps in publicly visible transparency. Often this is a small parish with minimal online presence rather than a badly-run council — but the effect on residents is the same." },
               { range: "—",         name: "Not Yet Assessed", colour: "slate",   body: "We don't yet have enough evidence to give this council a meaningful score. They appear in the directory, but we don't band them until we have a fuller picture." },
+              { range: "—",         name: "Under Audit",      colour: "sky",     body: "Council ClearSight tracks every council in England (11,057 in total). Councils marked Under Audit are in our queue but not yet fully verified — 1,682 are verified to date, with ~200 newly-verified each week. We never publish a score before verification." },
             ].map((b) => (
               <div key={b.name} className={`flex items-start gap-4 p-4 bg-${b.colour}-50 border border-${b.colour}-200 rounded-xl`}>
                 <div className={`flex-shrink-0 mt-0.5`}><span className={`inline-block w-2 h-2 rounded-full bg-${b.colour}-500`} /></div>

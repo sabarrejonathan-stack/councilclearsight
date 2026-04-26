@@ -11,14 +11,17 @@ export type DirectoryRow = {
   slug: string;
   name: string;
   type: string;
-  county: string;
-  region: string;
+  county: string | null;
+  region: string | null;
+  principal_authority?: string | null;
   score: number | null;
   band: string;
   completeness: number;
   rank_national: number | null;
   rank_type: number | null;
   rank_region: number | null;
+  audit_status?: "verified" | "under_audit" | "under_audit_with_url";
+  has_website?: boolean;
 };
 
 async function fetchJson<T>(url: string): Promise<T> {
@@ -27,24 +30,16 @@ async function fetchJson<T>(url: string): Promise<T> {
   return res.json();
 }
 
-/**
- * Fetch the slim directory (every council, just enough for search + listing).
- * Cached aggressively; 2 MB file hits the network once per session.
- */
 export function useDirectory(options?: { enabled?: boolean }) {
   return useQuery<DirectoryRow[]>({
     queryKey: ["directory"],
     queryFn: () => fetchJson<DirectoryRow[]>("/data/directory.json"),
     enabled: options?.enabled ?? true,
-    staleTime: 1000 * 60 * 60, // 1h — matches Netlify cache header
+    staleTime: 1000 * 60 * 60,
     gcTime: 1000 * 60 * 60 * 24,
   });
 }
 
-/**
- * Fetch one council's full detail (with indicators and evidence snapshots).
- * Each slug is a separate ~3KB file — loads fast even over a slow connection.
- */
 export function useCouncilBySlug(slug: string | undefined) {
   return useQuery<CouncilScore>({
     queryKey: ["council", slug],

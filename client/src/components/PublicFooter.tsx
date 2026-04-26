@@ -97,7 +97,7 @@ export default function PublicFooter() {
         {/* Trust bar */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40 mb-6">
-            <span>7,031 councils scored</span>
+            <span>11,057 councils tracked · 1,682 verified</span>
             <span className="hidden sm:inline">·</span>
             <span>4 pillars · 12 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>
@@ -105,7 +105,7 @@ export default function PublicFooter() {
             <span className="hidden sm:inline">·</span>
             <span>Refreshed April 2026</span>
             <span className="hidden sm:inline">·</span>
-            <span>Every claim pinned to an evidence URL</span>
+            <span>Every verified claim pinned to an evidence URL</span>
           </div>
         </div>
 

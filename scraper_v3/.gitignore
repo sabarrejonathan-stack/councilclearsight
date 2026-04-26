@@ -1,0 +1,22 @@
+# Generated runtime data — re-creatable by re-running the pipeline.
+# Keep them out of git so the cache (~5GB after a full crawl) doesn't bloat
+# the repository.
+data/cache.sqlite
+data/cache.sqlite-journal
+data/cache.sqlite-wal
+data/cache.sqlite-shm
+data/scraper.jsonl
+data/stage1.jsonl
+data/stage2.jsonl
+data/stage3.jsonl
+data/stage4.jsonl
+
+# Detection results are smaller (~30MB) — gitignored by default but you can
+# remove this line if you want them committed.
+data/detections/
+
+# Pyc / venv / IDE
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/

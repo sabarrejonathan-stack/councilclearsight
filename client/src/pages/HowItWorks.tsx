@@ -68,7 +68,7 @@ export default function HowItWorks() {
               icon: Search,
               title: "Discover",
               summary: "We find every English council and their public contact details.",
-              body: "We start with three authoritative sources: (1) the Council ClearSight API seed corpus (7,031 councils), (2) independent .gov.uk domain discovery (adds +772 more), and (3) ModernGov directories from English district councils (adds clerk records from 2,000+ councils). The goal is 11,337 — every parish, town, community and city council in England.",
+              body: "We start with three authoritative sources: (1) the ONS parish register (10,460 English parishes), (2) the Council ClearSight database of 7,031 councils with contact baselines, and (3) independent .gov.uk domain discovery for additional town and community councils. The merged universe is 11,057 councils — every parish, town, community and city council in England. 1,682 of those have been fully verified end-to-end as of April 2026; the rest progress through audit at ~200 newly-verified per week.",
               sources: "ClearSight API · .gov.uk domain probe · ModernGov directories",
             },
             {

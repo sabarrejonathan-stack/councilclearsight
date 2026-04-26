@@ -46,8 +46,8 @@ export default function About() {
           <div className="space-y-6">
             {[
               {
-                title: "10,000+ councils, no independent observability",
-                body: "England has more than 10,000 parish, town, city and community councils. Residents have no single place to see which ones publish their minutes, which are reachable, which are transparent. Councils themselves have little idea how they compare to peers. As of April 2026 we've scored 7,031 of them; the remainder are being onboarded.",
+                title: "11,000+ councils, no independent observability",
+                body: "England has 11,057 parish, town, city and community councils. Residents have no single place to see which ones publish their minutes, which are reachable, which are transparent. Councils themselves have little idea how they compare to peers. As of April 2026 we have published verified scores for 1,682 of them — every claim linked to a public document on the council's own domain — and the remaining 9,000+ are progressing through audit. Subscribers are notified the moment a council is verified.",
               },
               {
                 title: "£1 billion in precept, unscrutinised",

@@ -1,0 +1,14 @@
+# scraper_v3 -- first-party evidence pipeline
+httpx[http2]>=0.27.0
+selectolax>=0.3.21
+pdfplumber>=0.11.0
+aiosqlite>=0.20.0
+pydantic>=2.7.0
+structlog>=24.1.0
+pyyaml>=6.0
+tldextract>=5.1.2
+python-dateutil>=2.9.0
+openpyxl>=3.1.0
+pandas>=2.2.0
+pytest>=8.2.0
+pytest-asyncio>=0.23.0

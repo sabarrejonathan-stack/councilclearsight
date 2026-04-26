@@ -1,0 +1,47 @@
+# scraper_v3 runtime configuration
+
+http:
+  user_agent: "CouncilClearSight/3.0 (+https://councilclearsight.org.uk/about/bot - info@councilclearsight.org.uk)"
+  timeout_seconds: 8
+  per_host_delay_seconds: 3.0
+  global_concurrency: 100
+  retry_on_codes: [429, 502, 503, 504]
+  backoff_seconds: [10, 30, 90]
+  max_retries: 3
+
+crawl:
+  max_depth: 3
+  max_pages_per_host: 60
+  max_pdf_size_mb: 30
+  follow_external: false
+  allowed_extensions: [".html", ".htm", ".pdf", ""]
+
+robots:
+  cache_ttl_hours: 24
+
+cache:
+  path: "scraper_v3/data/cache.sqlite"
+  ttl_hours_html: 24
+  ttl_hours_pdf: 168
+
+detection:
+  recency_days_agenda: 90
+  recency_days_minutes: 90
+
+discovery:
+  # Top-5 highest-yield patterns only. Dropped 11 low-yield variants that
+  # produced almost no hits in the first run (-parish-council-pc, etc.)
+  pattern_candidates:
+    - "https://www.{slug}-pc.gov.uk"
+    - "https://{slug}-pc.gov.uk"
+    - "https://www.{slug}-tc.gov.uk"
+    - "https://www.{slug}.gov.uk"
+    - "https://www.{slug}parishcouncil.gov.uk"
+  # Drop DuckDuckGo fallback — it's slow, rate-limited, and produced few wins.
+  # Set search_engine to empty string to disable.
+  search_engine: ""
+  search_results_to_score: 0
+  min_confidence_to_accept: 0.6
+  # parishcouncils.uk directory lookup — invoked only when database/pattern
+  # don't produce an above-threshold URL. Politely rate-limited (1 req / 1.5s).
+  use_directory: true
