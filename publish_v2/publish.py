@@ -124,7 +124,10 @@ def load_v2() -> dict[str, dict]:
 
 
 def load_v1() -> dict[str, dict]:
+    """v1 scraper output is optional — used only as a chair_name fallback."""
     out = {}
+    if not V1.exists():
+        return out
     with V1.open(newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             out[r["slug"]] = r

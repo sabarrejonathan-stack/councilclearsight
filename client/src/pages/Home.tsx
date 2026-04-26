@@ -3,7 +3,7 @@
  *
  * Narrative arc:
  *   Hero — legally required, independently visible
- *   Proof strip — real numbers (11,057 · 1,682 · 100 · 5 days)
+ *   Proof strip — real numbers (11,057 · 4,323 · 100 · 5 days)
  *   Reality check — your residents and journalists are already here
  *   Four pillars — what we measure, grounded in statute
  *   Commercial ladder — Free · Gold · Platinum
@@ -36,7 +36,7 @@ const PILLARS = [
 
 const PROOF = [
   { n: "11,057", label: "councils tracked",            sub: "every parish, town, city and community council in England" },
-  { n: "1,682",  label: "fully verified to date",      sub: "every agenda, minute and AGAR link is a live URL on the council's domain" },
+  { n: "4,323",  label: "fully verified to date",      sub: "every agenda, minute and AGAR link is a live URL on the council's domain" },
   { n: "100",    label: "points per council",          sub: "across 4 pillars and 12 statute-anchored indicators" },
   { n: "5 days", label: "to resolve a challenge",      sub: "evidence in, published decision out" },
 ];
@@ -59,7 +59,7 @@ const AUDIENCES = [
 export default function Home() {
   useSEO({
     title: "Council ClearSight — the independent transparency score for every English council",
-    description: "11,057 parish, town and community councils tracked across England. 1,682 fully verified to date — every claim links to a public document. Free to view. Gold £349/yr or Platinum £499/yr.",
+    description: "11,057 parish, town and community councils tracked across England. 4,323 fully verified to date — every claim links to a public document. Free to view. Gold £349/yr or Platinum £499/yr.",
     canonicalPath: "/",
   });
   return (
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-accent">legally required.</span> We make it visible.
             </h1>
             <p className="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              An independent audit of every parish, town, city and community council in England — 11,057 in total. 1,682 fully verified to date, with the rest progressing through audit. Every published score is calculated from twelve things councils are already required to publish, and every claim links to a public document on the council's own domain.
+              An independent audit of every parish, town, city and community council in England — 11,057 in total. 4,323 fully verified to date, with the rest progressing through audit. Every published score is calculated from twelve things councils are already required to publish, and every claim links to a public document on the council's own domain.
             </p>
             <CouncilSearchBar />
             <div className="flex flex-wrap gap-6 mt-10 text-xs text-white/60">

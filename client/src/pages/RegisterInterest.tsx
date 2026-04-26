@@ -312,7 +312,7 @@ export default function RegisterInterest() {
               {[
                 { icon: Shield, label: "GDPR compliant", sub: "Your data is safe" },
                 { icon: Award, label: "Verified methodology", sub: "Publicly verifiable data" },
-                { icon: Users, label: "11,057 councils tracked", sub: "1,682 verified to date" },
+                { icon: Users, label: "11,057 councils tracked", sub: "4,323 verified to date" },
               ].map(s => (
                 <div key={s.label} className="p-4 bg-slate-50 rounded-xl">
                   <s.icon className="w-6 h-6 text-teal-600 mx-auto mb-2" />
