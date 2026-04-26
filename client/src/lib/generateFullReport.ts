@@ -809,4 +809,6 @@ export function generateFullCouncilReport(data: ReportInput): void {
   addPageFooter(pageNum.value);
 
   // ─── Save ──────────────────────────────────────────────────────────────────
-  const filename = `Council_
+  const filename = `Council_ClearSight_Full_Report_${council.slug}.pdf`;
+  doc.save(filename);
+}

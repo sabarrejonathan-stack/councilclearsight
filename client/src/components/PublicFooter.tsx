@@ -114,4 +114,10 @@ export default function PublicFooter() {
             &copy; {new Date().getFullYear()} Council ClearSight Ltd. All rights reserved.
           </p>
           <p className="text-xs text-primary-foreground/50">
-            Data processed in accordance with UK GDPR. Not affiliated with any local aut
+            Data processed in accordance with UK GDPR. Not affiliated with any local authority.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

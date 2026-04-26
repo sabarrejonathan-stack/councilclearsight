@@ -581,10 +581,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-"score"] for r in verified]
-        print(f"  score range: {min(scores)} - {max(scores)}, mean {sum(scores)/len(scores):.1f}")
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

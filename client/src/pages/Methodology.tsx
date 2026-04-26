@@ -314,4 +314,13 @@ export default function Methodology() {
                 Open any council in the directory and you'll see each of the twelve indicators with a clear pass / fail / not-assessed marker. Click through and the page shows exactly what we saw — the website URL we checked, the email address we found, the clerk name we recorded. If any of it is wrong, there is a one-click challenge button to tell us.
               </p>
               <div className="flex flex-wrap gap-3">
-       
+               <Link href="/directory"><Button size="sm" className="bg-accent hover:bg-accent/90 text-white">Browse the directory <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link>
+                <Link href="/methodology/changelog"><Button size="sm" variant="outline">Methodology changelog</Button></Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </PublicLayout>
+  );
+}

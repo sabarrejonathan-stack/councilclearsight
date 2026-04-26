@@ -95,5 +95,5 @@ export default function PremiumGate({ featureName, featureDescription }: Premium
         </p>
       </div>
     </div>
-  );
+   );
 }

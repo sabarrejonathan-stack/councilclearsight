@@ -141,15 +141,10 @@ function ChangeCard({ change }: { change: Change }) {
             <span className="capitalize">{change.status}</span>
           </span>
         </div>
-        <div className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="w-3 h-3" />{change.date}</div>
+        <div className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="w-3 h-3" /> {change.date}</div>
       </div>
-      <h3 className="text-lg font-semibold mb-2 leading-snug">{change.title}</h3>
-      <p className="text-sm text-muted-foreground leading-relaxed mb-4">{change.rationale}</p>
-      <div className="grid sm:grid-cols-2 gap-3 text-xs bg-slate-50 border border-slate-200 rounded-lg p-3">
-        <div><span className="text-muted-foreground">Proposer: </span><span className="font-medium">{change.proposer}</span></div>
-        {change.reviewer && <div><span className="text-muted-foreground">Reviewer: </span><span className="font-medium">{change.reviewer}</span></div>}
-        {change.publicCommentDays && <div><span className="text-muted-foreground">Public comment: </span><span className="font-medium">{change.publicCommentDays} days</span></div>}
-      </div>
+      <h3 className="text-base font-semibold text-foreground mb-2">{change.title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{change.rationale}</p>
     </Card>
   );
 }

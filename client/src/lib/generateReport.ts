@@ -855,3 +855,5 @@ export function generateCouncilReport(data: ReportInput): void {
   addPageFooter(pageNum.value);
 
   // ─── Save ───────────────────────────────────────────────────
+  doc.save(`Council_ClearSight_Report_${council.slug}.pdf`);
+}

@@ -132,4 +132,11 @@ export default function About() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Jonathan built the first transparency index after spending three hours searching for a single parish council's meeting minutes. He spent a decade in local government research and community activism. {/* [placeholder — clerk to edit: Prior roles, qualifications, publications] */}
                 </p>
-   
+                </div>
+            </div>
+          </Card>
+        </section>
+      </div>
+    </PublicLayout>
+  );
+}

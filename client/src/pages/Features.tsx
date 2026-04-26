@@ -120,5 +120,20 @@ export default function Features() {
       </section>
 
       <section className="container max-w-4xl py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">See features against a real council</h2>
-        <div className="flex flex-wrap gap-
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Link href="/council/woolsington-parish-council">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
+              See Woolsington's full profile <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
+          <Link href="/directory">
+            <Button size="lg" variant="outline">
+              Browse all 11,057 councils
+            </Button>
+          </Link>
+        </div>
+        <p className="text-xs text-muted-foreground mt-4">Spotlight council: a fully verified Excellent-band example showing every feature in context.</p>
+      </section>
+    </PublicLayout>
+  );
+}

@@ -172,23 +172,12 @@ export default function ForClerks() {
         <div className="text-center mb-8"><h2 className="text-3xl font-bold">What clerks ask before signing up</h2></div>
         <Accordion type="single" collapsible className="space-y-2">
           {FAQS.map((item, i) => (
-            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl px-4 bg-white">
-              <AccordionTrigger className="text-sm font-medium hover:no-underline py-3">{item.q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{item.a}</AccordionContent>
+            <AccordionItem key={i} value={`f${i}`} className="border border-border rounded-xl px-4">
+              <AccordionTrigger className="text-sm font-semibold py-3">{item.q}</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-      </section>
-
-      <section className="bg-primary text-white">
-        <div className="container max-w-4xl py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to take ownership of your page?</h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">Start with the free clerk badge, then upgrade to Platinum for the full automation-led roadmap.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/directory"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Find your council <ArrowRight className="w-4 h-4 ml-2" /></Button></Link>
-            <Link href="/pricing"><Button size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/10">See pricing</Button></Link>
-          </div>
-        </div>
       </section>
     </PublicLayout>
   );

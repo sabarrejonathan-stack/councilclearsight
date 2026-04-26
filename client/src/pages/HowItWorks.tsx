@@ -187,5 +187,7 @@ export default function HowItWorks() {
             );
           })}
         </section>
-
-        {/* ─── The integrity guarantee ──────────────────�
+      </div>
+    </PublicLayout>
+  );
+}

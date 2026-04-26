@@ -368,5 +368,20 @@ function RecGroup({ priority, label, recs }: { priority: string; label: string; 
               <div className="flex-1 min-w-[280px]">
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <Badge variant="outline" className="text-[10px] font-mono">{o.pillar}</Badge>
-                  {o.estimated_uplift_points > 0 && (
-                    <Badge className="bg-accent/1
+                  <Badge className="bg-accent/10 text-accent border-accent/20 text-[10px] font-mono">+{o.estimated_uplift_points} pts</Badge>
+                </div>
+                <h3 className="font-semibold text-base mb-1">{o.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{o.what_to_do}</p>
+              </div>
+            </div>
+            {o.statutory_reference && (
+              <div className="text-[11px] text-muted-foreground font-mono mt-2 pt-2 border-t border-slate-100">
+                {o.statutory_reference}
+              </div>
+            )}
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
