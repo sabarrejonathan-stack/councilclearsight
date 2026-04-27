@@ -236,19 +236,25 @@ CLERK_NAME_RE_POST = re.compile(rf"{_NAME}[\s,:\-]+(?i:Clerk to the Council|Cler
 CHAIR_NAME_RE_PRE  = re.compile(rf"(?i:Chairman|Chairperson|Chair|Mayor)[\s:–\-]*{_NAME}")
 CHAIR_NAME_RE_POST = re.compile(rf"{_NAME}[\s,:\-]+(?i:Chairman|Chairperson|Chair|Mayor)\b")
 
-NAME_BLOCKLIST = {"Vice Chair", "Vice Chairman", "The Council", "Parish Clerk", "Town Clerk", "Council Clerk", "Locum Clerk"}
+NAME_BLOCKLIST = {"Vice Chair", "Vice Chairman", "The Council", "Parish Clerk", "Town Clerk", "Council Clerk", "Locum Clerk", "Skip To", "Skip Main", "Read More", "Find Out", "Contact Us", "About Us", "About The"}
+# Words that, if they appear as the SECOND word of a captured 2-word name,
+# almost certainly mean the regex hit a navigation label rather than a person.
+SUSPECT_SECOND_WORDS = {"Contact", "Council", "Council.", "Information", "Documents", "Policies", "Meetings", "Audit", "Finance", "Allotments", "Cemetery", "Halls", "Gallery", "History", "Community", "Parish", "Town", "City", "Village"}
 
 
 def _clean_name(s: str) -> Optional[str]:
     s = s.strip(" .,-:")
-    # Reject if it starts with a non-letter or contains email/url chars
     if not s or not s[0].isalpha():
         return None
     if any(ch in s for ch in ("@", "/", "_", "{", "}")):
         return None
     if s in NAME_BLOCKLIST:
         return None
-    if len(s.split()) < 2:
+    parts = s.split()
+    if len(parts) < 2:
+        return None
+    # Reject when the second word is a navigation/topic word (e.g. "Cosby Contact").
+    if parts[1].rstrip(".,") in SUSPECT_SECOND_WORDS:
         return None
     return s
 
@@ -313,13 +319,16 @@ def classify_email(email: str, council_name: str) -> str:
 KEYWORDS = {
     "agendas": ["agenda", "agendas", "meeting papers"],
     "minutes": ["minute", "minutes"],
-    "financials": ["agar", "annual return", "annual governance accountability", "accounts", "financial statement", "finance", "precept"],
-    "internal_audit": ["internal audit", "audit report", "annual governance statement", "governance statement"],
-    "public_inspection": ["public inspection", "exercise of public rights", "notice of public rights", "period of inspection", "right to inspect", "inspection of accounts"],
-    "register": ["register of interest", "members' interests", "members interests", "declaration of interest", "register of members"],
-    "councillors": ["councillor", "councillors", "your council", "who's who", "members of the council", "council members"],
+    "financials": ["agar", "annual return", "annual governance accountability", "annual finance", "annual financial", "accounts", "financial statement", "finance", "precept", "budget"],
+    "internal_audit": ["internal audit", "audit report", "annual governance statement", "governance statement", "annual finance audit", "annual audit"],
+    "public_inspection": ["public inspection", "exercise of public rights", "notice of public rights", "period of inspection", "right to inspect", "inspection of accounts", "section 27 notice"],
+    "register": ["register of interest", "members' interests", "members interests", "declaration of interest", "register of members", "councillor interests", "pecuniary interests"],
+    "councillors": ["councillor", "councillors", "your council", "who's who", "members of the council", "council members", "the council", "your members", "parish councillors", "town councillors"],
     "accessibility": ["accessibility statement", "accessibility"],
     "contact": ["contact us", "contact", "get in touch"],
+    # "Hub" pages — generic governance landing pages that often link out to the
+    # specific docs we want. We crawl into these and re-harvest links.
+    "hub": ["the council", "about the council", "about us", "documents", "policies and procedures", "policies", "publications", "access to information", "council information", "governance", "publication scheme"],
 }
 
 
@@ -327,11 +336,68 @@ def classify_link(href: str, text: str) -> Optional[str]:
     """Bucket a link into one of the keyword categories (or None)."""
     h = (href or "").lower()
     t = (text or "").lower()
-    for cat, kws in KEYWORDS.items():
-        for k in kws:
+    # Specific categories take precedence over the generic "hub" bucket.
+    ordered = [k for k in KEYWORDS.keys() if k != "hub"] + ["hub"]
+    for cat in ordered:
+        for k in KEYWORDS[cat]:
             if k in h or k in t:
                 return cat
     return None
+
+
+# Page-content signals — phrases that, when present in the body text or h1/h2
+# of a fetched page, are strong evidence of the corresponding indicator. Used
+# in addition to URL/anchor matching so we still score councils whose URL
+# scheme is non-standard (e.g. Cosby's /annual-finance-audit hub page).
+CONTENT_SIGNALS = {
+    "financials": [
+        "annual governance and accountability return",
+        "annual return",
+        "agar",
+        "section 1 ",
+        "section 2 ",
+        "annual financial statement",
+    ],
+    "internal_audit": [
+        "internal audit report",
+        "annual internal audit",
+        "annual governance statement",
+        "internal auditor",
+    ],
+    "public_inspection": [
+        "exercise of public rights",
+        "notice of public rights",
+        "notice of period for the exercise",
+        "period for the exercise of public rights",
+        "right to inspect the accounts",
+        "section 27 notice",
+    ],
+    "register": [
+        "register of members' interests",
+        "register of interests",
+        "register of members interests",
+        "declaration of interest",
+        "pecuniary interests",
+    ],
+    "accessibility": [
+        "accessibility statement",
+        "wcag 2.1",
+        "accessibility regulations 2018",
+        "public sector bodies (websites and mobile applications)",
+    ],
+}
+
+
+def detect_content_signals(text: str) -> Set[str]:
+    """Return the set of indicator categories the page's body text supports."""
+    found: Set[str] = set()
+    t = text.lower()
+    for cat, phrases in CONTENT_SIGNALS.items():
+        for p in phrases:
+            if p in t:
+                found.add(cat)
+                break
+    return found
 
 
 def harvest_links(soup: BeautifulSoup, base_url: str) -> Dict[str, List[Tuple[str, str]]]:
@@ -541,6 +607,48 @@ def scan_council(council: dict) -> ScanResult:
             if len(sub_pages) >= MAX_FOLLOW_PAGES * 6:
                 break
 
+    # ---- Hub-page recursion: visit "About / Documents / Policies / The Council"
+    # style pages and re-harvest their links. Many councils put governance docs
+    # on these hub pages rather than linking them from the homepage.
+    HUB_LIMIT = 4
+    hub_visited = 0
+    for href, text in buckets.get("hub", []):
+        if hub_visited >= HUB_LIMIT:
+            break
+        if href in visited:
+            continue
+        r = fetch(href, allow_pdf=False)
+        visited.add(href)
+        if r is None or r.is_pdf:
+            continue
+        hub_visited += 1
+        hub_soup = BeautifulSoup(r.text, "html.parser")
+        # Re-harvest links from this hub page and merge into buckets so the
+        # follow-on per-category fetch picks them up.
+        more = harvest_links(hub_soup, r.final_url)
+        for cat, items in more.items():
+            buckets[cat].extend(items)
+        # The hub page itself may BE the evidence (e.g. "Annual Finance Audit"
+        # page that lists all docs inline). Detect content signals on it.
+        hub_signals = detect_content_signals(text_of(hub_soup))
+        for sig in hub_signals:
+            sub_pages.append((sig, text, r))
+
+    # Now follow the freshly-discovered category links from hub pages.
+    for cat in ("agendas", "minutes", "financials", "internal_audit",
+                "public_inspection", "register", "councillors", "accessibility"):
+        if any(p[0] == cat for p in sub_pages):
+            continue  # already have evidence for this cat
+        for href, text in buckets.get(cat, [])[:3]:
+            if href in visited:
+                continue
+            r = fetch(href, allow_pdf=True)
+            visited.add(href)
+            if r is None:
+                continue
+            sub_pages.append((cat, text, r))
+            break
+
     # ---- URL-pattern fallback: try common paths for categories we still don't have
     # Many councils bury governance docs behind nav menus we can't expand.
     base = f"{urlparse(homepage.final_url).scheme}://{urlparse(homepage.final_url).netloc}"
@@ -548,13 +656,13 @@ def scan_council(council: dict) -> ScanResult:
                               "public_inspection", "register", "councillors", "accessibility")
                   if any(p[0] == c for p in sub_pages)}
     URL_PATTERNS = {
-        "agendas":           ["/agendas", "/meetings/agendas", "/council-meetings/agendas", "/parish-council/agendas", "/the-council/agendas", "/meeting-agendas"],
+        "agendas":           ["/agendas", "/agendas-and-minutes", "/agendas-minutes", "/meetings/agendas", "/council-meetings/agendas", "/parish-council/agendas", "/the-council/agendas", "/meeting-agendas", "/council-meetings"],
         "minutes":            ["/minutes", "/meetings/minutes", "/council-meetings/minutes", "/parish-council/minutes", "/the-council/minutes", "/meeting-minutes"],
-        "financials":         ["/finance", "/finances", "/agar", "/annual-return", "/accounts", "/financial-information"],
-        "internal_audit":     ["/internal-audit", "/audit", "/governance"],
-        "public_inspection":  ["/public-inspection", "/notice-of-public-rights", "/exercise-of-public-rights", "/inspection-of-accounts"],
-        "register":           ["/register-of-interests", "/members-interests", "/declarations-of-interest", "/councillor-interests"],
-        "councillors":        ["/councillors", "/your-councillors", "/our-councillors", "/members", "/the-council/councillors", "/parish-council/councillors", "/about-us/councillors"],
+        "financials":         ["/finance", "/finances", "/agar", "/annual-return", "/annual-finance-audit", "/annual-finance", "/annual-audit", "/accounts", "/financial-information"],
+        "internal_audit":     ["/internal-audit", "/audit", "/governance", "/annual-finance-audit", "/annual-audit", "/audit-and-governance"],
+        "public_inspection":  ["/public-inspection", "/notice-of-public-rights", "/exercise-of-public-rights", "/inspection-of-accounts", "/section-27-notice"],
+        "register":           ["/register-of-interests", "/members-interests", "/declarations-of-interest", "/councillor-interests", "/access-to-information", "/access-to-information1"],
+        "councillors":        ["/councillors", "/your-councillors", "/our-councillors", "/members", "/the-council", "/the-council/councillors", "/parish-council/councillors", "/about-us/councillors", "/about-the-council"],
         "accessibility":      ["/accessibility", "/accessibility-statement"],
     }
     for cat in URL_PATTERNS:
@@ -586,6 +694,22 @@ def scan_council(council: dict) -> ScanResult:
     by_cat: Dict[str, List] = defaultdict(list)
     for cat, text, r in sub_pages:
         by_cat[cat].append((cat, text, r))
+
+    # ---- Content-signal pass: for any sub-page we already fetched, scan its
+    # body text for phrases that prove a missing category. This catches Cosby's
+    # /annual-finance-audit hub page (which mentions "Annual Governance and
+    # Accountability Return", "Internal Audit Report" and "Notice of Public
+    # Rights" inline) and similar non-standard URL schemes.
+    for cat, text, r in sub_pages:
+        if r.is_pdf:
+            continue
+        try:
+            sigs = detect_content_signals(text_of(BeautifulSoup(r.text, "html.parser")))
+        except Exception:
+            continue
+        for sig in sigs:
+            if not by_cat[sig]:
+                by_cat[sig].append((sig, text, r))
 
     # Pillar 2 — agendas / minutes
     if by_cat["agendas"]:

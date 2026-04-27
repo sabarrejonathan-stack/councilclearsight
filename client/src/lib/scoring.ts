@@ -285,7 +285,11 @@ export function formatScore(score: number | null | undefined): string {
 
 export function formatCompleteness(c: number | null | undefined): string {
   if (c === null || c === undefined || Number.isNaN(c)) return "\u2014";
-  return `${Math.round(c * 100)}%`;
+  // Accept either fractions (0..1, as stored on per-slug JSONs) or integer
+  // percentages (0..100, as stored in directory.json). Anything > 1 is
+  // treated as already-percentage.
+  const pct = c > 1 ? c : c * 100;
+  return `${Math.round(pct)}%`;
 }
 
 export function ordinal(n: number): string {
