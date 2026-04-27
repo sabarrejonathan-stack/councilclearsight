@@ -1,5 +1,5 @@
 /**
- * Directory — searchable list of every council in England (11,057 total).
+ * Directory — searchable list of every council in England (10,511 total).
  *
  * Two states:
  *   - Verified  → ranked, scored, click-through evidence
@@ -56,7 +56,7 @@ const STATUSES = [
 export default function Directory() {
   useSEO({
     title: "Directory — every council in England | Council ClearSight",
-    description: "Search 11,057 parish, town, city and community councils in England. 4,323 fully verified to date — every claim links to evidence on the council's own website.",
+    description: "Search 10,511 parish, town, city and community councils in England. 4,174 fully verified to date — every claim links to evidence on the council's own website.",
     canonicalPath: "/directory",
   });
 

@@ -227,30 +227,39 @@ PHONE_RE = re.compile(
 )
 DATE_FROM_URL_RE = re.compile(r"(20\d{2})[-_/]?(\d{1,2})[-_/]?(\d{1,2})?")
 
-_NAME = r"((?:Mr|Mrs|Ms|Miss|Mx|Dr|Cllr)?\.?\s*[A-Z][a-zA-Z'\-]+(?:\s+[A-Z][a-zA-Z'\-]+){1,2})"
-CLERK_NAME_RE_PRE = re.compile(
-    rf"(?:Clerk|Town Clerk|Parish Clerk|Proper Officer|RFO|Clerk to the Council)[\s:–\-]*{_NAME}",
-    re.I,
-)
-CLERK_NAME_RE_POST = re.compile(
-    rf"{_NAME}[\s,:\-]+(?:Clerk|Town Clerk|Parish Clerk|RFO|Proper Officer|Clerk to the Council)\b",
-    re.I,
-)
-CHAIR_NAME_RE_PRE = re.compile(
-    rf"(?:Chair|Chairman|Chairperson|Mayor)[\s:–\-]*{_NAME}",
-    re.I,
-)
-CHAIR_NAME_RE_POST = re.compile(
-    rf"{_NAME}[\s,:\-]+(?:Chair|Chairman|Chairperson|Mayor)\b",
-    re.I,
-)
+# Name capture: case-sensitive on the name itself (must start with a capital
+# letter), case-insensitive on the surrounding role label. Old behaviour with
+# re.I on the full pattern matched ".uk Vice" as a name.
+_NAME = r"((?:Mr|Mrs|Ms|Miss|Mx|Dr|Cllr)?\.?\s*[A-Z][a-z][a-zA-Z'\-]+(?:\s+[A-Z][a-z][a-zA-Z'\-]+){1,2})"
+CLERK_NAME_RE_PRE  = re.compile(rf"(?i:Clerk to the Council|Clerk|Town Clerk|Parish Clerk|Proper Officer|RFO)[\s:–\-]*{_NAME}")
+CLERK_NAME_RE_POST = re.compile(rf"{_NAME}[\s,:\-]+(?i:Clerk to the Council|Clerk|Town Clerk|Parish Clerk|RFO|Proper Officer)\b")
+CHAIR_NAME_RE_PRE  = re.compile(rf"(?i:Chairman|Chairperson|Chair|Mayor)[\s:–\-]*{_NAME}")
+CHAIR_NAME_RE_POST = re.compile(rf"{_NAME}[\s,:\-]+(?i:Chairman|Chairperson|Chair|Mayor)\b")
+
+NAME_BLOCKLIST = {"Vice Chair", "Vice Chairman", "The Council", "Parish Clerk", "Town Clerk", "Council Clerk", "Locum Clerk"}
+
+
+def _clean_name(s: str) -> Optional[str]:
+    s = s.strip(" .,-:")
+    # Reject if it starts with a non-letter or contains email/url chars
+    if not s or not s[0].isalpha():
+        return None
+    if any(ch in s for ch in ("@", "/", "_", "{", "}")):
+        return None
+    if s in NAME_BLOCKLIST:
+        return None
+    if len(s.split()) < 2:
+        return None
+    return s
 
 
 def find_clerk_name(text: str) -> Optional[str]:
     for r in (CLERK_NAME_RE_PRE, CLERK_NAME_RE_POST):
         m = r.search(text)
         if m:
-            return m.group(1).strip()
+            cleaned = _clean_name(m.group(1))
+            if cleaned:
+                return cleaned
     return None
 
 
@@ -258,7 +267,9 @@ def find_chair_name(text: str) -> Optional[str]:
     for r in (CHAIR_NAME_RE_PRE, CHAIR_NAME_RE_POST):
         m = r.search(text)
         if m:
-            return m.group(1).strip()
+            cleaned = _clean_name(m.group(1))
+            if cleaned:
+                return cleaned
     return None
 
 
@@ -527,8 +538,42 @@ def scan_council(council: dict) -> ScanResult:
             if r is None:
                 continue
             sub_pages.append((cat, text, r))
-            if len(sub_pages) >= MAX_FOLLOW_PAGES * 4:
+            if len(sub_pages) >= MAX_FOLLOW_PAGES * 6:
                 break
+
+    # ---- URL-pattern fallback: try common paths for categories we still don't have
+    # Many councils bury governance docs behind nav menus we can't expand.
+    base = f"{urlparse(homepage.final_url).scheme}://{urlparse(homepage.final_url).netloc}"
+    found_cats = {c for c in ("agendas", "minutes", "financials", "internal_audit",
+                              "public_inspection", "register", "councillors", "accessibility")
+                  if any(p[0] == c for p in sub_pages)}
+    URL_PATTERNS = {
+        "agendas":           ["/agendas", "/meetings/agendas", "/council-meetings/agendas", "/parish-council/agendas", "/the-council/agendas", "/meeting-agendas"],
+        "minutes":            ["/minutes", "/meetings/minutes", "/council-meetings/minutes", "/parish-council/minutes", "/the-council/minutes", "/meeting-minutes"],
+        "financials":         ["/finance", "/finances", "/agar", "/annual-return", "/accounts", "/financial-information"],
+        "internal_audit":     ["/internal-audit", "/audit", "/governance"],
+        "public_inspection":  ["/public-inspection", "/notice-of-public-rights", "/exercise-of-public-rights", "/inspection-of-accounts"],
+        "register":           ["/register-of-interests", "/members-interests", "/declarations-of-interest", "/councillor-interests"],
+        "councillors":        ["/councillors", "/your-councillors", "/our-councillors", "/members", "/the-council/councillors", "/parish-council/councillors", "/about-us/councillors"],
+        "accessibility":      ["/accessibility", "/accessibility-statement"],
+    }
+    for cat in URL_PATTERNS:
+        if cat in found_cats:
+            continue
+        for path in URL_PATTERNS[cat][:4]:  # try max 4 patterns per missing cat
+            url2 = base + path
+            if url2 in visited:
+                continue
+            r = fetch(url2, allow_pdf=True)
+            visited.add(url2)
+            if r is None:
+                continue
+            # Only accept 200-OK responses (a 200 page that just redirected to home is filtered later by URL match)
+            if r.final_url.rstrip("/") == base or r.final_url.rstrip("/") == homepage.final_url.rstrip("/"):
+                continue
+            sub_pages.append((cat, "", r))
+            found_cats.add(cat)
+            break
 
     def latest_date_from(group):
         best = None
@@ -583,10 +628,16 @@ def scan_council(council: dict) -> ScanResult:
         res.councillors_listed_count = len(set(names))
         # Try to find chair on the councillors page if not already
         if not res.chair_name:
-            ch2 = CHAIR_NAME_RE.search(cllr_text)
+            ch2 = find_chair_name(cllr_text)
             if ch2:
-                res.chair_name = ch2.group(1).strip()
+                res.chair_name = ch2
                 res.chair_name_evidence_url = cllr_url.final_url
+        # And clerk if homepage missed it
+        if not res.clerk_name:
+            cl2 = find_clerk_name(cllr_text)
+            if cl2:
+                res.clerk_name = cl2
+                res.clerk_name_evidence_url = cllr_url.final_url
 
     if by_cat["accessibility"]:
         a_page = by_cat["accessibility"][0][2]

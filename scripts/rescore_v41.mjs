@@ -118,7 +118,20 @@ function scoreV41(c) {
 
 function reEmit(c) {
   const isUnderAudit = c.audit_status === "under_audit" || c.audit_status === "under_audit_with_url";
+  // Capture old evidence URLs by indicator id so we can carry them forward.
+  const oldEvidence = {};
+  for (const i of (c.indicators || [])) {
+    if (i.input_snapshot && i.input_snapshot.evidence_url) {
+      oldEvidence[i.id] = i.input_snapshot.evidence_url;
+    }
+  }
   const { rows, pe, pm, num, den, score } = scoreV41(c);
+  // Re-attach evidence URLs from previous indicators (so rescore is non-destructive).
+  for (const r of rows) {
+    if (oldEvidence[r.id] && r.assessed && r.earned > 0) {
+      r.input_snapshot.evidence_url = oldEvidence[r.id];
+    }
+  }
   c.indicators = rows;
   c.pillar_earned = { "1": pe[1], "2": pe[2], "3": pe[3], "4": pe[4] };
   c.pillar_max_assessed = { "1": pm[1], "2": pm[2], "3": pm[3], "4": pm[4] };

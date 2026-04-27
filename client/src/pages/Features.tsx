@@ -19,7 +19,7 @@ const GROUPS = [
       { label: "Evidence trail", body: "Every source link, last-verified date, and input value." },
       { label: "Methodology document", body: "Explained clearly. Versioned in a changelog." },
       { label: "Public challenge route", body: "Any member of the public can challenge any indicator." },
-      { label: "Directory search & sort", body: "All 11,057 councils in England, searchable and sortable." },
+      { label: "Directory search & sort", body: "All 10,511 councils in England, searchable and sortable." },
     ],
   },
   {
@@ -128,7 +128,7 @@ export default function Features() {
           </Link>
           <Link href="/directory">
             <Button size="lg" variant="outline">
-              Browse all 11,057 councils
+              Browse all 10,511 councils
             </Button>
           </Link>
         </div>
