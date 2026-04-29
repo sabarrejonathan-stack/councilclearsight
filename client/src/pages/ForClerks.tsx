@@ -11,7 +11,7 @@ import { useSEO } from "@/hooks/useSEO";
 import { ArrowRight, AlertCircle, CheckCircle2, BadgeCheck, Sparkles, Target, Megaphone, TrendingUp, MessageCircle, HeartHandshake, Users } from "lucide-react";
 
 const STEPS = [
-  { n: "01", title: "Find your council", body: "Search the directory. Open your page. Read the twelve indicators.", cta: "Open the directory", href: "/directory" },
+  { n: "01", title: "Find your council", body: "Search the directory. Open your page. Read the fourteen indicators.", cta: "Open the directory", href: "/directory" },
   { n: "02", title: "Submit a correction", body: "If a field is wrong — an old email, a changed URL — file a challenge. No account required.", cta: "Submit a challenge", href: "/challenge" },
   { n: "03", title: "Read the methodology", body: "How your score is calculated, explained clearly. Share it with your chair.", cta: "Read the methodology", href: "/methodology" },
 ];

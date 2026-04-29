@@ -133,7 +133,7 @@ export default function CouncilProfile({ params }: { params: { slug: string } })
             <h2 className="text-base font-bold text-sky-950 mb-2">What this score does — and what it does not — measure</h2>
             <div className="text-sm text-sky-900/90 leading-relaxed space-y-2">
               <p>
-                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same twelve observable indicators across four pillars.
+                The score shows how easy it is for residents to find core council information online. It is calculated identically for every council from the same fourteen statute-anchored observable indicators across four pillars.
               </p>
               <p>
                 A lower score does not automatically mean poor decision-making. It means important evidence may not be easy to find publicly. If something appears missing, you can <Link href="/challenge" className="underline text-sky-700 hover:text-sky-900">submit a score challenge with evidence</Link>, or contact the council constructively to ask where it can be found.

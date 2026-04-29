@@ -82,7 +82,7 @@ export default function UnderAuditProfile({ council }: { council: CouncilScore }
           <section className="bg-white border border-slate-200 rounded-2xl p-6">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2"><Bell className="w-5 h-5 text-accent" /> Be first to know when this audit completes</h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-              Our scanner audits 200+ new councils every week and grades them against twelve statutory transparency indicators. Subscribers receive an email the moment {council.name}'s score is published — including the full evidence pack.
+              Our scanner audits hundreds of new councils every week and grades them against fourteen statute-anchored transparency indicators. Subscribers receive an email the moment {council.name}'s score is published — including the full evidence pack.
             </p>
             <div className="grid sm:grid-cols-3 gap-3">
               <Link href="/pricing" className="block">
@@ -112,7 +112,7 @@ export default function UnderAuditProfile({ council }: { council: CouncilScore }
           <section className="bg-white border border-slate-200 rounded-2xl p-6">
             <h2 className="text-xl font-bold mb-3">What we'll publish once verified</h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              When this audit completes, this page becomes a full transparency scorecard — twelve statute-anchored indicators across four pillars, every score click-through verifiable against a document on {council.name}'s own website.
+              When this audit completes, this page becomes a full transparency scorecard — fourteen statute-anchored indicators across four pillars, every score click-through verifiable against a document on {council.name}'s own website.
             </p>
             <div className="grid sm:grid-cols-2 gap-3 text-xs">
               {[1,2,3,4].map((p) => {
