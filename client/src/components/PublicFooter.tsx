@@ -97,7 +97,7 @@ export default function PublicFooter() {
         {/* Trust bar */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40 mb-6">
-            <span>10,511 councils tracked · 4,174 verified</span>
+            <span>10,511 councils tracked · 4,500 verified</span>
             <span className="hidden sm:inline">·</span>
             <span>4 pillars · 14 indicators · 100 points</span>
             <span className="hidden sm:inline">·</span>

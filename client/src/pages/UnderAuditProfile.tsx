@@ -2,7 +2,7 @@
  * UnderAuditProfile — page state for councils we haven't yet verified.
  *
  * Council ClearSight tracks all 11,000+ parish/town/community/city councils in
- * England. Of those, ~4,476 have a fully verified score (every claim linked
+ * England. Of those, ~4,500 have a fully verified score (every claim linked
  * to a public document on the council's own domain). The remaining ~9,000 are
  * "under audit" — known by name (and where we have it, contact info) but not
  * yet re-scanned end-to-end.
@@ -70,7 +70,7 @@ export default function UnderAuditProfile({ council }: { council: CouncilScore }
                 We track every parish, town, city and community council in England — 10,511 in total. {hasUrl
                   ? <>This council's website is on file and queued for full evidence-pack verification.</>
                   : <>We're still locating this council's primary website. If you know where {council.name} publishes its agendas, minutes and AGAR, you can submit it below.</>}{" "}
-                When we publish a verified score for this council, every claim will link to a public document on the council's own domain — the same standard used for our 4,476 already-verified councils.
+                When we publish a verified score for this council, every claim will link to a public document on the council's own domain — the same standard used for our 4,500 already-verified councils.
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function UnderAuditProfile({ council }: { council: CouncilScore }
             <Sparkles className="w-5 h-5 mb-3 text-accent" />
             <h3 className="font-semibold mb-2">Auditing every council in England</h3>
             <p className="text-xs text-white/75 leading-relaxed mb-4">
-              4,476 councils verified to date. 6,035 remaining. Every audit produces a click-through evidence pack — pinned to public documents, never invented.
+              4,500 councils verified to date. 6,011 remaining. Every audit produces a click-through evidence pack — pinned to public documents, never invented.
             </p>
             <Link href="/methodology"><Button size="sm" className="w-full bg-white text-primary hover:bg-white/90">Read the methodology <ArrowRight className="w-3.5 h-3.5 ml-1.5" /></Button></Link>
           </Card>

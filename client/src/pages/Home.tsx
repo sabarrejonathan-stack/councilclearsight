@@ -3,7 +3,7 @@
  *
  * Narrative arc:
  *   Hero — legally required, independently visible
- *   Proof strip — real numbers (10,511 · 4,476 · 100 · 5 days)
+ *   Proof strip — real numbers (10,511 · 4,500 · 100 · 5 days)
  *   Reality check — your residents and journalists are already here
  *   Four pillars — what we measure, grounded in statute
  *   Commercial ladder — Free · Gold · Platinum
@@ -36,7 +36,7 @@ const PILLARS = [
 
 const PROOF = [
   { n: "10,511", label: "councils tracked",            sub: "every parish, town, city and community council in England" },
-  { n: "4,476",  label: "fully verified",              sub: "scored end-to-end with click-through evidence on file" },
+  { n: "4,500",  label: "fully verified",              sub: "scored end-to-end with click-through evidence on file" },
   { n: "100",    label: "points · 14 indicators",      sub: "across 4 statute-anchored pillars · zero opinions" },
   { n: "£0",     label: "to view any score, ever",     sub: "every council page free, forever, for everyone" },
 ];
@@ -59,7 +59,7 @@ const AUDIENCES = [
 export default function Home() {
   useSEO({
     title: "Council ClearSight — prove your council is well run, in one document",
-    description: "The independent transparency score for every parish, town and community council in England. 10,511 councils, 14 statutory indicators, 4,476 verified end-to-end. Free to view. Gold £349/yr · Platinum £499/yr.",
+    description: "The independent transparency score for every parish, town and community council in England. 10,511 councils, 14 statutory indicators, 4,500 verified end-to-end. Free to view. Gold £349/yr · Platinum £499/yr.",
     canonicalPath: "/",
   });
   return (
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-accent">In one document.</span> In one afternoon.
             </h1>
             <p className="text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              The independent transparency score for every parish, town, city and community council in England. 10,511 councils. 14 things the law already requires them to publish. One score residents and auditors can trust — and 4,476 already verified end-to-end with click-through evidence.
+              The independent transparency score for every parish, town, city and community council in England. 10,511 councils. 14 things the law already requires them to publish. One score residents and auditors can trust — and 4,500 already verified end-to-end with click-through evidence.
             </p>
             <CouncilSearchBar />
             <div className="flex flex-wrap gap-6 mt-10 text-xs text-white/60">
