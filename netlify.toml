@@ -16,11 +16,13 @@
   to = "/index.html"
   status = 200
 
-# Cache headers — score JSON refreshes once a day at most.
+# Cache headers — score JSON. 5-minute cache + must-revalidate so users see
+# fresh scores within 5 minutes of a publish, not 1 hour. Cheap to revalidate
+# (304 if unchanged) and Netlify edge handles the load.
 [[headers]]
   for = "/data/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=300, must-revalidate"
 
 [[headers]]
   for = "/assets/*"
