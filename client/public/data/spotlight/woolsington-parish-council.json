@@ -8,7 +8,7 @@
   "principal_authority": "Newcastle City Council",
   "website": "https://www.woolsington-parish-council.com",
   "compiled_at": "2026-04-25",
-  "compiled_method": "Score derived under VDTI v4.0 — statute-anchored binary scoring of observable database fields. Personally verified against the council's published website on 25 April 2026 (multi-year meeting archive 2018-2026, audited AGARs every year, named clerk, comprehensive councillor list). Some Pillar 3 / Pillar 4 indicators await verification by scraper_v3 for full credit.",
+  "compiled_method": "Score derived under VDTI v4.1 — statute-anchored binary scoring of observable database fields. Personally verified against the council's published website on 25 April 2026 (multi-year meeting archive 2018-2026, audited AGARs every year, named clerk, comprehensive councillor list). Some Pillar 3 / Pillar 4 indicators await verification by scraper_v3 for full credit.",
   "demographics": {
     "population_2021_census": 8519,
     "population_2011_census": 11160,
